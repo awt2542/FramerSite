@@ -19,6 +19,9 @@ li {margin-left: 2em; list-style-type: circle;}
 
 p {padding-right: 10px;}
 
+a {color: #808080; text-decoration:none}
+a:hover {color: #3F3F3F; text-decoration:none}
+
 /* IU ELEMENTS */
 
 .button {
@@ -56,7 +59,8 @@ p {padding-right: 10px;}
 	color: #808080;
 }
 
-#global-nav li.selected {
+
+#global-nav li.selected a {
 	color: #3892E3;
 }
 
