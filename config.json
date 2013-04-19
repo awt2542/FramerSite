@@ -1,0 +1,6 @@
+{
+    "aws-access-key": "AKIAIV5C2U4YJM6DRMRQ", 
+    "aws-bucket-name": "framer2", 
+    "aws-bucket-website": "framer2.s3-website-us-east-1.amazonaws.com", 
+    "port": 8873
+}

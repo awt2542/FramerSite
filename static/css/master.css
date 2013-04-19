@@ -1,0 +1,122 @@
+/* BASICS */
+
+body {
+	font: 15px/1.8em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 40px 40px;
+	color: #010b14;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {font-weight: bold;}
+
+h1 {font-size: 180%; margin-bottom: .8em;}
+h2 {font-size: 140%; margin-bottom: .6em;}
+h3 {font-size: 100%; margin-bottom: 0;}
+
+p, ul {margin-bottom: 1em;}
+
+li {margin-left: 2em; list-style-type: circle;}
+
+p {padding-right: 10px;}
+
+/* IU ELEMENTS */
+
+.button {
+	border-radius: 40px;
+	background: #3892E3;
+	border: 1px solid rgba(0,0,0,0.10);
+	color: rgba(0,0,0,0.00);
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+	padding: 0 16px 2px 16px;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* PAGE MARGINS */
+
+#content-wrap {
+	max-width: 840px;
+	margin: auto;
+}
+
+/* NAVIGATION */
+
+#global-nav h1 {
+	font-size: 24px;
+	font-weight: bold;
+	float: left;
+	margin-right: 40px;
+}
+
+#global-nav li {
+	margin-left: 0;
+	margin-right: 20px;
+	display: inline;
+	font-weight: bold;
+	color: #808080;
+}
+
+#global-nav li.selected {
+	color: #3892E3;
+}
+
+#global-nav .button {
+	float: right;
+}
+
+footer {
+	border-top: 1px #e5e5e5 solid;
+	margin: 30px 0;
+	padding: 10px 0;
+	font-size: 11px;
+	color: #808080
+}
+
+
+/* INTRO */
+
+#intro {
+	margin: 0 -20px;
+	border-radius: 10px;
+	background-image: linear-gradient(180deg, #242424 0%, #3C3C3C 100%);
+	border: 1px solid #000000;
+	color: #808080;
+	text-shadow: 0px 1px 1px #000000;
+}
+
+#intro article {
+	font-weight: bold;
+	height: 360px;
+	text-align: center;
+}
+
+#intro div.preview {
+	background-color: rgba(255, 255, 255, 0.05);
+	border-radius: 6px;
+	margin: 40px auto 20px auto;
+	width: 220px;
+	height: 240px;
+}
+
+#intro-text {
+	font-size: 150%;
+	line-height: 150%;
+	color: #676767;
+/* 	line-height: 25px; */
+	margin: 40px 0;
+}
+
+.upsell {
+	line-height: 170%;
+}
+
+.upsell p {
+
+	font-size: 14px;
+}
+
+/* CONTENT */
+
+#content {
+	margin-top: 40px;
+}

@@ -1,0 +1,18 @@
+body {
+	margin: 40px 20px;
+}
+
+
+#global-nav li {
+	display: block;
+	clear: both;
+}
+
+#intro {
+	display: none;
+}
+
+
+/*#intro article {
+	display: none;
+}*/
