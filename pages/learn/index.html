@@ -1,6 +1,224 @@
 {% extends "base.html" %}
 {% block content %}
 
-Learn
+<div class="divider"></div>
+
+<section class="row">
+	<article class="col span_3 clr submenu">
+		
+		<h3>Tools</h3>
+		
+		<ul>
+			<li><a href="#Photoshop">Photoshop</a></li>
+			<li><a href="#Javascript">Javascript</a></li>
+			<li><a href="#Debugging">Debugging</a></li>
+		</ul>
+		
+		<h3>Lessons</h3>
+		
+		<ul>
+			<li><a href="#Views">Views</a></li>
+			<li><a href="#View Hierarchy">View Hierarchy</a></li>
+			<li><a href="#View Types">View Types</a></li>
+			<li><a href="#Animation">Animation</a></li>
+			<li><a href="#Styling">Styling</a></li>
+			<li><a href="#Events">Events</a></li>
+		</ul>
+
+		<h3>Strategies</h3>
+		
+		<ul>
+			<li><a href="#Organizing Code">Organizing Code</a></li>
+			<li><a href="#Animation States">Animation States</a></li>
+			<li><a href="#Pimp Your Framer">Pimp Your Framer</a></li>
+		</ul>
+
+	</article>
+	
+	
+	<article class="col span_9 clr">
+		
+		<h1 id="Photoshop">Photoshop Integration</h1>
+		
+		<p>
+			Framer comes with an application to convert your Photoshop document into a Framer project. This eliminates the need for slicing up your images and rebuilding your views in Framer. To get a quick overview of how this works see this video.
+		</p>
+		
+		<p>
+			<iframe src="http://player.vimeo.com/video/64468083" width="100%" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</p>
+		
+		<p>
+			To begin, just open the Framer application, a Photoshop document and click Run. After running you will be presented with a folder containing your project. The project folder contents consists of images, the framework, view data, an index.html and app.js file. Open the index.html file in your browser to see your project.
+		</p>
+
+		<p>
+			The <span class="code">app.js</span> file is where you start coding. By default it contains some example code that you can safely remove. Framer added an object called <span class="code">PSD</span> that has references to all your views by name. So if your layer group is called <span class="code">iPhone</span>, you can access it's views with <span class="code">PSD.iPhone</span> or <span class="code">PSD["iPhone"]</span>. The views are normal Framer views, so for example to animate an the view created from the layer group named iPhone you can do:
+			<pre class="code">
+  PSD.iPhone.on("click", function() {
+    PSD.iPhone.animate({
+      properties: {scale: 2.0}
+    })
+  })</pre>
+		</p>
+
+		<p>
+			From this point you can use Framer like you normally would to basically add behavior to your Photoshop mock. You can also safely run Framer again after a change in Photoshop, it will update the views but not touch your code.
+		</p>
+
+		<p>
+			The rules for converting Photoshop files are:
+			<ul>
+				<li>Every layer group will become an ImageView, backed by the pixel and/or shape layers in that layer group.</li>
+				<li>Views are accessible by name under the <span class="code">PSD</span> object.</li>
+				<li>Framer respects the layer hierarchy, so a sub layer group will become a subview. This way you can define your view structure in Photoshop.</li>
+				<li>Layer groups with vector masks will become views with clipping enables. You can optionally add scroll to the layer group name to make it a ScrollView.</li>
+				<li>Layer group names should be unique, if they're not Framer will silently rename them on export.</li>
+			</ul>
+		</p>
+
+
+
+		<div class="divider"></div>
+		<h1 id="Javascript">Learning Javascript</h1>
+
+		<p>
+			If you don't know any Javascript or are just beginning, don't worry. There are many great resources to get started and while it might seem hard at first you'll see that you'll get better quickly. It's also good to know that learning Javascript is worth learning even apart from Framer as you can do web, application and backend development with it.
+		</p>
+
+		<p>
+			Some great Javascript resources:
+		</p>
+
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th>Site</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td><a href="http://www.codecademy.com/tracks/javascript">Code Academy</a></td>
+				<td>Free high quality online Javascript course. Start here if you don't know any Javascript</td>
+			</tr>
+			<tr>
+				<td><a href="https://developer.mozilla.org/en-US/learn/javascript">Mozilla Dev Center</a></td>
+				<td>Mozilla's resources to get started with Javascript.</td>
+			</tr>
+		</table>
+		
+		
+		<div class="divider"></div>
+
+		<h1 id="Debugging">Debugging</h1>
+		
+		<p>
+			Because Framer runs in the browser you can use all the <a href="https://developers.google.com/chrome-developer-tools/">debugging tools</a> available like the console, timeline, profiler and debugger. Framer will alert you when a Javascript error occurred.
+		</p>
+
+		<p>
+			Framer has a few keyboard shortcuts to help with specific debug tasks:
+		</p>
+
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th>Key</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>Escape (toggle)</td>
+				<td>Switch between the normal view and a debug view of all layers. Useful to inspect structure and positions.</td>
+			</tr>
+			<tr>
+				<td>Shift (hold)</td>
+				<td>While shift is pressed, Framer will delay the time by 25x. This will slow down animations and timers like utils.delay and utils.interval. Great to examine animations in depth.</td>
+			</tr>
+		</table>
+
+
+	<div class="divider"></div>
+
+	<h1>A Step by Step Explanation</h1>
+
+	<p>Load any of the examples below and play around with them in the editor to see the results.</p>
+	
+	<div class="divider"></div>
+	
+	<a class="example button" href="{{ ROOT_URL }}/editor/?path=lessons/views.js" target="new">Show Example</a>
+	<h2 id="Views">Views</h2>
+	
+
+	<p>A view is just a square that draws stuff. It has a set of basic properties like x, y, width and height so it knows where to draw. Next to that it has more visual properties like opacity and scale. Views can display images or text, or a combination.</p>
+
+	<div class="divider"></div>
+	
+	<a class="example button" href="{{ ROOT_URL }}/editor/?path=lessons/hierarchy.js" target="new">Show Example</a>
+	<h2 id="View Hierarchy">View Hierarchy</h2>
+
+	<p>Views can contain other views. We call these subviews. The parent of a view is called a superview. Views influence their subviews. For example, if you change the opacity of a view all subviews will become opaque too.</p>
+
+	<p>A views coordinates are based on it's superview. So with an x and y of zero, a view gets placed in the most top left corner of its superview.</p>
+	
+	<div class="divider"></div>
+	
+	<a class="example button" href="{{ ROOT_URL }}/editor/?path=lessons/viewtypes.js" target="new">Show Example</a>
+	<h2 id="View Types">Types of Views</h2>
+
+	<p>Everything is based on a view. But some views have a specific task like scrolling their contents or showing an image. We call these subclasses of a view, for example an ImageView or ScrollView.</p>
+
+	<p>It is easy to create components consisting of multiple views that you can re-use across projects, for example a collection view.</p>
+
+	<div class="divider"></div>
+
+	<a class="example button" href="{{ ROOT_URL }}/editor/?path=lessons/animation.js" target="new">Show Example</a>
+	<h2 id="Animation">Animation</h2>
+
+	<p>Most properties of a view can be animated: x, y, width, height, scale, opacity. You can animate multiple properties at the same time.</p>
+
+	<p>Animations optionally take a curve that describes the type of animation. You can used pre defined curves like linear or ease-in, custom ones or spring animations.</p>
+
+	<p>You can create an animation explicitly with <span class="code">myAnimation = new Animation({..})</span> or with the shortcut on any view <span class="code">myView.animate({..})</span>.</p>
+
+	<div class="divider"></div>
+
+	<a class="example button" href="{{ ROOT_URL }}/editor/?path=lessons/styling.js" target="new">Show Example</a>
+	<h2 id="Styling">Styling</h2>
+
+	<p>Because Framer runs in the browser, you can simply use html and css to style any view. To set the html contents of a view use <span class="code">someView.html = "hello"</span>. You can set some text or html.</p>
+
+	<p>To add css styling you can edit the properties of the style attribute. You can set one at the time like <span class="code">view.style.backgroundColor = "red"</span> or update multiple properties at the same time as in the example. Please note that while most Framer properties take numeric values, the style attribute requires specific css values like <span class="code">view.style.lineHeight = "16px"</span>. You can also set a css class on a view by doing <span class="code">view.class = "myClass"</span>. This way you can use an external css file for styling.</p>
+
+	<div class="divider"></div>
+	
+	<a class="example button" href="{{ ROOT_URL }}/editor/?path=lessons/events.js" target="new">Show Example</a>
+	<h2 id="Events">Events</h2>
+	
+	<p>Events are things that can happen to a view, for example a user click or mouse over, but also a scroll. You can listen to these events and respond to it to build complex interactions.</p>
+
+	<p>There are <a href="http://en.wikipedia.org/wiki/DOM_events#Common.2FW3C_events">many events</a> you can listen to, but the most interesting are probably click, dblclick, mouseover, mouseout, and keydown. Mobile browsers have specific <a href="http://en.wikipedia.org/wiki/DOM_events#Touch_events"> touch events</a>: touchstart, touchmove and touchend.</p>
+
+	<p>To listen to an event use <span class="code">view.on(&lt;event&gt;, &lt;function&gt;)</span>. To stop listening you can use <span class="code">view.off(&lt;event&gt;, &lt;function&gt;)</span>. You can listen to multiple events at the same time.</p>
+
+
+	<div class="divider"></div>
+	<h1 id="Code Organization">Code Organization</h1>
+	<p>Once you get to a certain point, it might make sense to apply some well known code organization strategies.</p>
+
+
+	<div class="divider"></div>
+	<h1 id="Animation States">Animation States</h1>
+
+	<p>Something about state machines.</p>
+	http://docs.unity3d.com/Documentation/Manual/AnimationStateMachines.html
+
+
+	<div class="divider"></div>
+	<h1 id="Pimp Your Framer">Pimp Your Framer</h1>
+	<p>Make your Framer development easier by using CoffeeScript or a live reload tool.</p>
+
+
+	</article>
+
+
+
+</section>
 
 {% endblock %}
