@@ -49,13 +49,13 @@ $(document).ready(function() {
 	
 	retina();
 	
-	// // Manage the height of the more block
-	// function setMoreHeight() {
-	// 	$("#more").css("height", window.innerHeight - 40 + "px")
-	// }
-	// 
-	// setMoreHeight()
-	// $(window).resize(setMoreHeight)
+	// Manage the height of the more block
+	function setMoreHeight() {
+		$("#subpage").css("min-height", window.innerHeight - 40 + "px")
+	}
+	
+	setMoreHeight()
+	$(window).resize(setMoreHeight)
 	// 
 	// // Set up navigation
 	// 

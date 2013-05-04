@@ -291,10 +291,11 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 	left: 0;
 	bottom: 0;
 	width: 240px;
-	height: 100%;
-	overflow: scroll;
+	bottom: 20px;
 	left: 50%;
 	margin-left: -480px; /* Half of the width */
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 @media (max-width: 960px) {
@@ -321,6 +322,12 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 #submenu ul {
 	margin-top: 4px;
 	font-size: 14px;
+}
+
+#submenu .footer {
+	margin: 20px;
+	font-size: 11px;
+	line-height: 16px;
 }
 
 
