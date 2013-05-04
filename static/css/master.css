@@ -80,6 +80,29 @@ a:hover {cursor: pointer; text-decoration: underline}
 	margin: auto;
 }
 
+table 		{width:100%; margin-bottom:30px; border-collapse: collapse; font-size:13px; line-height:1.5em; border-width:1px 1px 0 1px; border-color:#dadadc; border-style:solid;}
+th, td 		{text-align: left; padding-right:20px; vertical-align:top;}
+th 			{border-bottom:1px solid black;}
+td 			{border-bottom:1px solid #C8C8C8; border-spacing:none;}
+
+table td {border-color:#dadadc; border-style:solid; padding:1em 15px; border-width:0 0 1px 0;}
+thead th, th {
+	text-align:left;
+	padding:2px 15px;
+	height:20px;
+	font-size:11px;
+	color:#696c72;
+	font-weight:normal;
+	border-bottom:1px solid #dadadc;
+	cursor:default;
+ 	white-space:nowrap;
+	background-color:#fafafa;}
+	
+	
+span.code	{font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px;}
+pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px solid #d0d4da; padding:10px; margin-bottom:3em; background-color:#fdfdfd; font-size:14px;  overflow:auto;}
+
+
 
 /******************************************************/
 /* INTRO PAGE */
@@ -243,30 +266,42 @@ a:hover {cursor: pointer; text-decoration: underline}
 
 
 /******************************************************/
-/* MORE */
+/* SUBPAGE */
 
-#more {
-	margin-top: 90px;
+#subpage {
+	margin-top: 20px;
 	margin-bottom: 20px;
+	margin-left: 240px;
 	background-color: #fff;
-	width: 960px;
-	height: 500px;
+	width: 720px;
 	border-radius: 6px;
 	-moz-box-shadow:    0px 0px 5px 0px rgba(0,0,0,0.15);
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
 	box-shadow:         0px 0px 5px 0px rgba(0,0,0,0.15);
 }
 
+
+#main {
+	padding: 50px;
+}
+
 #submenu {
-	position: relative;
-	float: left;
-	top: 0;
+	position: fixed;
+	top: 60px;
 	left: 0;
 	bottom: 0;
 	width: 240px;
 	height: 100%;
-	border-right: 1px solid #eaecef;
 	overflow: scroll;
+	left: 50%;
+	margin-left: -480px; /* Half of the width */
+}
+
+@media (max-width: 960px) {
+	#submenu {
+		left: 0px;
+		margin-left: 0px;
+	}
 }
 
 #submenu .item {
