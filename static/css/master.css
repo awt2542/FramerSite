@@ -38,29 +38,6 @@ a:hover {cursor: pointer; text-decoration: underline}
 
 .clear {clear:both}
 
-
-/******************************************************/
-/* SCROLLBARS */
-
-::-webkit-scrollbar {
-	width: 4px;
-	height: 4px;
-}
-/*::-webkit-scrollbar-track {
-	background-color: rgba(113,112,107,0.1);
-	-webkit-border-radius: 5px;
-}*/
-::-webkit-scrollbar-thumb:vertical {
-	background-color: rgba(0,0,0,.05);
-	-webkit-border-radius: 6px;
-}
-::-webkit-scrollbar-thumb:vertical:hover,
-::-webkit-scrollbar-thumb:horizontal:hover {
-	background-color: rgba(0,0,0,.3);
-}
-
-
-
 /******************************************************/
 /* GLOBAL */
 
@@ -335,10 +312,17 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 /* SITEMAP */
 
 #sitemap {
-	border-top: 1px solid #E5E5E5;
-	margin-top: 60px;
-	padding-top: 30px;
-	padding-bottom: 40px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: 80px;
+	padding: 40px 0;
+	background-color: #222426;
+}
+
+#sitemap .wrapper {
+	width: 960px;
+	margin: 0 auto;
 }
 
 #sitemap .item {
@@ -349,7 +333,7 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 #sitemap a {
 	font-weight: 600;
 	font-size: 14px;
-	color: #26292d;
+	color: #fff;
 }
 
 #sitemap ul a {
@@ -363,3 +347,13 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 	line-height: 22px;
 }
 
+/******************************************************/
+/* FOOTER */
+
+/*#footer p {
+	margin: 40px 0 20px 0;
+	text-align: center;
+	font-size: 12px;
+	color: #B3B8C0;
+}
+*/
