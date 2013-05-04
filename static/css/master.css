@@ -138,6 +138,12 @@ a:hover {cursor: pointer; text-decoration: underline}
 	margin-bottom: 4px;
 }
 
+#intro .button {
+	-webkit-user-select: none;
+	display: inline-block;
+	float: left;
+}
+
 #intro .button a {
 	margin-top: 34px;
 	width: 240px;
@@ -153,7 +159,7 @@ a:hover {cursor: pointer; text-decoration: underline}
 	-moz-box-shadow:    0px 1px 2px 0px rgba(0,0,0,0.20), inset 0px 1px 1px 0px #B3CEFF;
 	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.20), inset 0px 1px 1px 0px #B3CEFF;
 	box-shadow:         0px 1px 2px 0px rgba(0,0,0,0.20), inset 0px 1px 1px 0px #B3CEFF;
-	font-family: OpenSans-Semibold;
+	font-weight: 600;
 	font-size: 16px;
 	color: #FFFFFF;
 	line-height: 40px;
@@ -203,15 +209,18 @@ a:hover {cursor: pointer; text-decoration: underline}
 }
 
 #intro .source p {
+	display: inline-block;
+	border-top: 1px solid #d9dcdf;
+	border-bottom: 1px solid #d9dcdf;
+	margin: 0px;
 	margin-top: 34px;
+	margin-left: 40px;
 	width: 240px;
 	height: 44px;
-	display: inline-block;
-	position: relative;
-	float:left;
-	font-family: OpenSans-Semibold;
+	font-weight: 600;
 	font-size: 14px;
-	line-height: 19px;
+	text-align: center;
+	line-height: 41px;
 }
 
 #phone {
@@ -303,13 +312,13 @@ a:hover {cursor: pointer; text-decoration: underline}
 }
 
 #sitemap a {
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 14px;
 	color: #26292d;
 }
 
 #sitemap ul a {
-	font-weight: normal;
+	font-weight: 400;
 	color: #878b93;
 }
 
