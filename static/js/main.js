@@ -1,28 +1,63 @@
-NavigationMap = {
-	"": 			"about",
-	"learn": 		"learn",
-	"examples": 	"examples",
-	"docs": 		"docs",
-	"community": 	"community",
+function startFramerDemo() {
+	$("#screen").attr("src", "/static/examples/Intro/index.html");
 }
 
-$(function(){
+$(document).ready(function() {
 	
-	// Set the body class to the sub page
+	// Only start loading the dramer demo after a second
+	setTimeout(startFramerDemo, 1000);
 	
-	var className = "about";
-	var parts = window.location.pathname.split("/");
 	
-	if (parts.length > 2) {
-		if (NavigationMap.hasOwnProperty(parts[1])) {
-			className = NavigationMap[parts[1]];
-		};
-	};
+	// Manage the height of the more block
+	function setMoreHeight() {
+		$("#more").css("height", window.innerHeight - 40 + "px")
+	}
+	
+	setMoreHeight()
+	$(window).resize(setMoreHeight)
+
+	// Set up navigation
+	
+	function deepLink(href) {
 		
-	$("body").addClass(className);
+		href = href.split("#")[1];
+		
+		var part1 = href.split("/")[0]
+		var part2 = href.split("/")[1]
+		
+		var url = "/more/" + part1 + ".html#" + part2;
+		
+		$("#main").attr("src", url);
+		
+	}
 	
-	// Select the menu link
+	$("#more a").map(function(index, link) {
+		$(link).click(function() {
+			deepLink($(link).prop("href"));
+		})
+	})
 	
-	$("#global-nav li." + className).addClass("selected");
+	// See if we arrived here with a link
+	if (window.location.hash) {
+		deepLink(window.location.hash);
+	}
 	
-});
+	// Header
+	
+	function showHeader() {
+		$("#intro").show();
+		$("#phone").show();
+	}
+	
+	function hideHeader() {
+		$("#intro").hide();
+		$("#phone").hide();
+	}
+	
+	// hideHeader()
+	
+	$(document).scroll(function(event) {
+		console.log($(window).scrollTop())
+	})
+	
+})
