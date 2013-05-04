@@ -6,6 +6,20 @@ PSD.BottomBar.y += PSD.BottomBar.height
 
 PSD.Logo.opacity = 0
 
+pagingView = new ui.PagingView()
+pagingView.frame = PSD.PagingView
+pagingView.width = 320
+pagingView.superView = PSD.PagingView.superView
+
+PSD.PagingView.subViews.map(function(view) {
+	view.superView = pagingView.contentView
+})
+
+pagingView.scrollY = false
+pagingView.sendToBack()
+
+PSD.PagingView.destroy()
+
 
 start = function() {
 

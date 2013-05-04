@@ -36,6 +36,8 @@ p {margin-bottom: 16px;}
 a {color: #878b93; text-decoration: none}
 a:hover {cursor: pointer; text-decoration: underline}
 
+.clear {clear:both}
+
 
 /******************************************************/
 /* SCROLLBARS */
@@ -233,6 +235,35 @@ a:hover {cursor: pointer; text-decoration: underline}
 	height: 100%;
 }
 
+/******************************************************/
+/* SITEMAP */
 
+#sitemap {
+	border-top: 1px solid #E5E5E5;
+	margin-top: 60px;
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
 
+#sitemap .item {
+	width: 160px;
+	float: left;
+}
+
+#sitemap a {
+	font-weight: bold;
+	font-size: 14px;
+	color: #26292d;
+}
+
+#sitemap ul a {
+	font-weight: normal;
+	color: #878b93;
+}
+
+#sitemap ul {
+	margin-top: 2px;
+	font-size: 12px;
+	line-height: 22px;
+}
 

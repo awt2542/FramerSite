@@ -1,10 +1,11 @@
 {"docName":"Intro","path":"~/Desktop/Framer2/static/examples/Intro","relativeImagePath":"images","imagePath":"~/Desktop/Framer2/static/examples/Intro/images","framerPath":"~/Desktop/Framer2/static/examples/Intro/framer","viewInfoPath":"~/Desktop/Framer2/static/examples/Intro/framer/views.Intro.js","logPaths":["/tmp/framerps.log","~/Desktop/Framer2/static/examples/Intro/framer/framerps.log"]}
 
 Running for ~/Desktop/Framer2/static/examples/Intro
-IntroView: Exporting image
-PROGRESS: 83.3333333333333
-PROGRESS: 83.3333333333333
-2 views changed
+View2: Exporting image
+PROGRESS: 55.5555555555556
+PROGRESS: 66.6666666666667
+PROGRESS: 66.6666666666667
+3 views changed
 Skipping ~/Desktop/Framer2/static/examples/Intro/index.html (exists)
 Skipping ~/Desktop/Framer2/static/examples/Intro/app.js (exists)
 Skipping ~/Desktop/Framer2/static/examples/Intro/framer/framer.js (exists)
