@@ -16,7 +16,7 @@
 
 <p>
 	The <span class="code">app.js</span> file is where you start coding. By default it contains some example code that you can safely remove. Framer added an object called <span class="code">PSD</span> that has references to all your views by name. So if your layer group is called <span class="code">iPhone</span>, you can access it's views with <span class="code">PSD.iPhone</span> or <span class="code">PSD["iPhone"]</span>. The views are normal Framer views, so for example to animate an the view created from the layer group named iPhone you can do:
-	<pre class="code">
+	<pre class="code" data-language="javascript">
 PSD.iPhone.on("click", function() {
   PSD.iPhone.animate({
     properties: {scale: 2.0}

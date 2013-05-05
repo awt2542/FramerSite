@@ -1,8 +1,91 @@
 {% extends "base-menu.html" %}
 {% block main %}
 
-<h1>Examples</h1>
+<h1>Quickies</h1>
+<p>Quick interactive examples of everyday things.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<table border="0" cellspacing="0" cellpadding="0" class="api">
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><a href="{{ ROOT_URL }}/editor/?path=quickies/bouncy.js" target="new">Bouncy Dialog</a></td>
+		<td>Click to bounce a square</td>
+	</tr>
+	<tr>
+		<td><a href="{{ ROOT_URL }}/editor/?path=quickies/navigation.js" target="new">iOS Like View Animating</a></td>
+		<td>Replacing views with other views</td>
+	</tr>
+	<tr>
+		<td><a href="{{ ROOT_URL }}/editor/?path=quickies/draggable.js" target="new">Draggable Views</a></td>
+		<td>Move views around</td>
+	</tr>
+	<tr>
+		<td><a href="{{ ROOT_URL }}/editor/?path=quickies/cycler.js" target="new">Value Cycler</a></td>
+		<td>Cycle through a list of scale values</td>
+	</tr>
+	<tr>
+		<td><a href="{{ ROOT_URL }}/editor/?path=quickies/scrollview.js" target="new">ScrollView events</a></td>
+		<td>Do something when scrolling</td>
+	</tr>
+</table>
+
+
+<h1>Full Examples</h1>
+
+<p>Complete examples of larger prototypes that you can try for yourself including the Photoshop files.</p>
+
+<div class="items">
+
+	<div>
+		<a class="button small">Download</a>
+		<a class="button small">Try</a>
+		<h3>Facebook News Feed</h3>
+		<p>Large part of the Facebook iOS app.</p>
+	</div>
+
+	<div>
+		<a class="button small">Download</a>
+		<a class="button small">Try</a>
+		<h3>Instagram Twitter Links</h3>
+		<p>Design for Twitter photo shares in Instagram by Maykel Loomans</p>
+
+	</div>
+	
+	<div>
+		<a class="button small">Download</a>
+		<a class="button small">Try</a>
+		<h3>Commuter App</h3>
+		<p>Concept for a commuting app by Kristoffer Brady</p>
+
+	</div>
+
+	<div>
+		<a class="button small">Download</a>
+		<a class="button small">Try</a>
+		<h3>Google Now for iOS</h3>
+		<p>Concept for a commuting app by Noah Stokes</p>
+
+	</div>
+
+	<div>
+		<a class="button small">Download</a>
+		<a class="button small">Try</a>
+		<h3>Fictional iOS App</h3>
+		<p>Some app that will never exist</p>
+
+	</div>
+
+</div>
+
+<h1>Gallery</h1>
+
+<p>
+	Other work made with Framer that we can't share the source for due to copyright issues or creator lazyness. If you made something cool please share so others can learn from it.
+</p>
+
+
 
 {% endblock %}

@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="{{ STATIC_URL }}/css/master.css">
 	<link rel="stylesheet" href="{{ STATIC_URL }}/css/mobile.css" 
 		media='screen and (max-width: 768px)'>
+	<link href="{{ STATIC_URL }}/rainbow/themes/framer.css" rel="stylesheet" type="text/css">
 
 	{% block header %}
 	<title>Framer - Prototyping Tool</title>
@@ -28,6 +29,7 @@
 	{% block scripts %}
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="{{ STATIC_URL }}/js/main.js"></script>
+	<script src="{{ STATIC_URL }}/rainbow/rainbow.min.js"></script>
 	
 	{% include "analytics.html" %}
 	{% endblock %}

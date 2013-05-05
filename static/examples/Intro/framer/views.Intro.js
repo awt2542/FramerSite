@@ -54,10 +54,10 @@
 						"children": [
 							
 						],
-						"modification": "1239785505"
+						"modification": "493952080"
 					}
 				],
-				"modification": "289704477"
+				"modification": "229442211"
 			},
 			{
 				"id": 74,
@@ -93,7 +93,7 @@
 						"children": [
 							
 						],
-						"modification": "714236025"
+						"modification": "699136771"
 					},
 					{
 						"id": 77,
@@ -117,7 +117,7 @@
 						"children": [
 							
 						],
-						"modification": "869268416"
+						"modification": "1366647683"
 					},
 					{
 						"id": 53,
@@ -161,39 +161,44 @@
 								"children": [
 									
 								],
-								"modification": "1817285338"
+								"modification": "2047234555"
 							},
 							{
 								"id": 47,
 								"name": "Logo",
 								"layerFrame": {
-									"x": 0,
-									"y": 0,
-									"width": 1573,
-									"height": 568
+									"x": 56,
+									"y": 184,
+									"width": 212,
+									"height": 212
 								},
-								"maskFrame": null,
+								"maskFrame": {
+									"x": 56,
+									"y": 184,
+									"width": 212,
+									"height": 212
+								},
 								"image": {
 									"path": "images/Logo.png",
 									"frame": {
-										"x": 98,
-										"y": 226,
-										"width": 123,
-										"height": 139
+										"x": 56,
+										"y": 184,
+										"width": 212,
+										"height": 212
 									}
 								},
 								"children": [
 									
 								],
-								"modification": "1910202572"
+								"modification": "1834518561"
 							}
 						],
-						"modification": "477090137"
+						"modification": "2078331796"
 					}
 				],
-				"modification": "1479347741"
+				"modification": "2046842194"
 			}
 		],
-		"modification": "1193698819"
+		"modification": "1937257719"
 	}
 ]
