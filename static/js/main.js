@@ -39,7 +39,9 @@ function retina() {
 
 
 function startFramerDemo() {
-	$("#screen").attr("src", "/static/examples/Intro/index.html");
+	// $("#screen").attr("src", "/static/examples/Intro/index.html");
+	// $("#screen").attr("src", "/static/examples/GoogleNow/index.html");
+	$("#screen").attr("src", "/static/examples/NewsFeed/index.html");
 }
 
 $(document).ready(function() {

@@ -11,6 +11,7 @@
 		},
 		"maskFrame": null,
 		"image": null,
+		"imageType": null,
 		"children": [
 			{
 				"id": 51,
@@ -60,8 +61,8 @@
 				"modification": "229442211"
 			},
 			{
-				"id": 74,
-				"name": "PagingView",
+				"id": 53,
+				"name": "IntroView",
 				"layerFrame": {
 					"x": 0,
 					"y": 0,
@@ -69,11 +70,20 @@
 					"height": 568
 				},
 				"maskFrame": null,
-				"image": null,
+				"image": {
+					"path": "images/IntroView.png",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"width": 320,
+						"height": 568
+					}
+				},
+				"imageType": "png",
 				"children": [
 					{
-						"id": 84,
-						"name": "View2 copy",
+						"id": 55,
+						"name": "Gloss",
 						"layerFrame": {
 							"x": 0,
 							"y": 0,
@@ -82,66 +92,19 @@
 						},
 						"maskFrame": null,
 						"image": {
-							"path": "images/View2 copy.png",
-							"frame": {
-								"x": 640,
-								"y": 0,
-								"width": 320,
-								"height": 568
-							}
-						},
-						"children": [
-							
-						],
-						"modification": "699136771"
-					},
-					{
-						"id": 77,
-						"name": "View2",
-						"layerFrame": {
-							"x": 0,
-							"y": 0,
-							"width": 1573,
-							"height": 568
-						},
-						"maskFrame": null,
-						"image": {
-							"path": "images/View2.png",
-							"frame": {
-								"x": 320,
-								"y": 0,
-								"width": 320,
-								"height": 568
-							}
-						},
-						"children": [
-							
-						],
-						"modification": "1366647683"
-					},
-					{
-						"id": 53,
-						"name": "IntroView",
-						"layerFrame": {
-							"x": 0,
-							"y": 0,
-							"width": 1573,
-							"height": 568
-						},
-						"maskFrame": null,
-						"image": {
-							"path": "images/IntroView.png",
+							"path": "images/Gloss.png",
 							"frame": {
 								"x": 0,
 								"y": 0,
 								"width": 320,
-								"height": 568
+								"height": 554
 							}
 						},
+						"imageType": "png",
 						"children": [
 							{
-								"id": 55,
-								"name": "Gloss",
+								"id": 92,
+								"name": "CodeButton",
 								"layerFrame": {
 									"x": 0,
 									"y": 0,
@@ -150,55 +113,56 @@
 								},
 								"maskFrame": null,
 								"image": {
-									"path": "images/Gloss.png",
+									"path": "images/CodeButton.png",
 									"frame": {
-										"x": 0,
-										"y": 0,
-										"width": 320,
-										"height": 554
+										"x": 80,
+										"y": 440,
+										"width": 162,
+										"height": 32
 									}
 								},
+								"imageType": "png",
 								"children": [
 									
 								],
-								"modification": "2047234555"
-							},
-							{
-								"id": 47,
-								"name": "Logo",
-								"layerFrame": {
-									"x": 56,
-									"y": 184,
-									"width": 212,
-									"height": 212
-								},
-								"maskFrame": {
-									"x": 56,
-									"y": 184,
-									"width": 212,
-									"height": 212
-								},
-								"image": {
-									"path": "images/Logo.png",
-									"frame": {
-										"x": 56,
-										"y": 184,
-										"width": 212,
-										"height": 212
-									}
-								},
-								"children": [
-									
-								],
-								"modification": "1834518561"
+								"modification": "815500407"
 							}
 						],
-						"modification": "2078331796"
+						"modification": "439805695"
+					},
+					{
+						"id": 47,
+						"name": "Logo",
+						"layerFrame": {
+							"x": 56,
+							"y": 184,
+							"width": 212,
+							"height": 212
+						},
+						"maskFrame": {
+							"x": 56,
+							"y": 184,
+							"width": 212,
+							"height": 212
+						},
+						"image": {
+							"path": "images/Logo.png",
+							"frame": {
+								"x": 56,
+								"y": 184,
+								"width": 212,
+								"height": 212
+							}
+						},
+						"children": [
+							
+						],
+						"modification": "1834518561"
 					}
 				],
-				"modification": "2046842194"
+				"modification": "775135514"
 			}
 		],
-		"modification": "1937257719"
+		"modification": "889076662"
 	}
 ]

@@ -17,6 +17,7 @@ body {
 	color: #878b93;
 	background-color: #eff1f4;
 	-webkit-font-smoothing: antialiased;
+	padding: 0px 20px;
 }
 
 * {
@@ -237,8 +238,9 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 	width: 320px; 
 	height: 568px;
 	left: 40px;
-	top: 113px;
+	top: 116px;
 	background-color: #000;
+	border: 1px solid #eaeaea
 }
 
 
@@ -307,7 +309,7 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 }
 
 #main a {
-	color: #43535E
+	color: #454545
 }
 
 #main h1 {
@@ -387,13 +389,11 @@ table.api td:first-child {
 	display: inline-block;
 	margin: 20px;
 	font-size: 16px;
-	border-bottom: 1px solid #eaecef;
 }
 
 #submenu .item {
-	padding: 14px 22px;
+	padding: 10px 20px;
 	font-size: 16px;
-	border-bottom: 1px solid #eaecef;
 }
 
 #submenu a {
@@ -407,7 +407,10 @@ table.api td:first-child {
 #submenu ul {
 	margin-top: 4px;
 	font-size: 14px;
+	line-height: 26px;
 }
+
+
 
 #submenu .footer {
 	margin: 20px;

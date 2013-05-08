@@ -1,0 +1,22 @@
+{"docName":"NewsFeed","path":"~/Desktop/FramerExamples/NewsFeed","relativeImagePath":"images","imagePath":"~/Desktop/FramerExamples/NewsFeed/images","framerPath":"~/Desktop/FramerExamples/NewsFeed/framer","viewInfoPath":"~/Desktop/FramerExamples/NewsFeed/framer/views.NewsFeed.js","logPaths":["/tmp/framerps.log","~/Desktop/FramerExamples/NewsFeed/framer/framerps.log"]}
+
+Running for ~/Desktop/FramerExamples/NewsFeed
+Phone: Exporting image
+Screen: Calculating vector mask bounds
+PROGRESS: 18.75
+PROGRESS: 18.75
+PROGRESS: 43.75
+FeedScroll: Calculating vector mask bounds
+PROGRESS: 56.25
+PROGRESS: 56.25
+BookmarkScroll: Calculating vector mask bounds
+PROGRESS: 68.75
+DiveBarScroll: Calculating vector mask bounds
+PROGRESS: 81.25
+7 views changed
+Skipping ~/Desktop/FramerExamples/NewsFeed/index.html (exists)
+Skipping ~/Desktop/FramerExamples/NewsFeed/app.js (exists)
+Skipping ~/Desktop/FramerExamples/NewsFeed/framer/framer.js (exists)
+Skipping ~/Desktop/FramerExamples/NewsFeed/framer/framerps.js (exists)
+
+SUCCESS: ~/Desktop/FramerExamples/NewsFeed

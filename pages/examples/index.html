@@ -1,11 +1,11 @@
 {% extends "base-menu.html" %}
 {% block main %}
 
-<h1>Quickies</h1>
+<h1 id="quickies">Quickies</h1>
 <p>Quick interactive examples of everyday things.</p>
 
 
-<table border="0" cellspacing="0" cellpadding="0" class="api">
+<table border="0" cellspacing="0" cellpadding="0">
 	<tr>
 		<th>Name</th>
 		<th>Description</th>
@@ -33,7 +33,7 @@
 </table>
 
 
-<h1>Full Examples</h1>
+<h1 id="full">Full Examples</h1>
 
 <p>Complete examples of larger prototypes that you can try for yourself including the Photoshop files.</p>
 
@@ -44,6 +44,14 @@
 		<a class="button small">Try</a>
 		<h3>Facebook News Feed</h3>
 		<p>Large part of the Facebook iOS app.</p>
+	</div>
+
+	<div>
+		<a class="button small">Download</a>
+		<a class="button small">Try</a>
+		<h3>Google Now</h3>
+		<p>Actual Google Now iOS animations by <a href="http://www.nlevin.com/">Noah Levin</a></p>
+
 	</div>
 
 	<div>
@@ -62,13 +70,7 @@
 
 	</div>
 
-	<div>
-		<a class="button small">Download</a>
-		<a class="button small">Try</a>
-		<h3>Google Now for iOS</h3>
-		<p>Concept for a commuting app by Noah Stokes</p>
 
-	</div>
 
 	<div>
 		<a class="button small">Download</a>
@@ -80,7 +82,7 @@
 
 </div>
 
-<h1>Gallery</h1>
+<h1 id="gallery">Gallery</h1>
 
 <p>
 	Other work made with Framer that we can't share the source for due to copyright issues or creator lazyness. If you made something cool please share so others can learn from it.

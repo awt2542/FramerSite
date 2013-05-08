@@ -1,21 +1,36 @@
 ################################################################
 # SETUP
 
-View.prototype._postCreate = ->
+View.prototype._postCreate = =>
 	@style.backgroundColor = "rgba(255,0,0,0.5)"
 
 View.prototype.__insertElement = ->
 	$("#canvas").append @_element
 
 
+
 ################################################################
 # UTILITIES
 
 urlVars = ->
+	
 	vars = {}
-	for pair in window.location.search.replace("?", "").split("&")
+	
+	# Hack hack hack....
+	if window.location.href.indexOf("#") isnt -1
+		data = window.location.href.split("#")[1]
+	else
+		data = window.location.search.replace("?", "")
+		
+	if data[-1..] is "/"
+		data = data[0..(data.length - 2)]
+	
+	for pair in data.split("&")
 		pair = pair.split("=")
-		vars[pair[0]] = pair[1]
+		vars[pair[0]] = pair[1].replace(/\/$/, "")
+	
+	console.log vars
+	
 	return vars
 
 debounce = (threshold, func, execAsap) ->
@@ -43,7 +58,9 @@ debounce = (threshold, func, execAsap) ->
 
 class Editor
 	
-	LocalSaveKey = "framer.editor.code"
+	LocalSaveKey = "framer.editor.code:#{window.location.href}"
+	
+	console.log "LocalSaveKey", LocalSaveKey
 	
 	constructor: ->
 		
@@ -71,21 +88,70 @@ class Editor
 		@_editor.getValue()
 	
 	saveLocal: ->
+		
+		console.log "saveLocal"
+		
 		localStorage.setItem @LocalSaveKey, @getCode()
 		@_savePoint = @_editCount
 		
 	loadLocal: ->
+		
+		console.log "loadLocal"
+		
 		@setCode localStorage.getItem @LocalSaveKey
 		@run()
 
 	fileUrl: -> urlVars().path
 	
+	exampleUrl: -> urlVars().example
+	
+	loadExample: (path, callback) ->
+		
+		path = "GoogleNow"
+		
+		path1 = "/static/examples/#{path}/framer/views.#{path}.js"
+		path2 = "/static/examples/#{path}/framer/framer.js"
+		path3 = "/static/examples/#{path}/framer/framerps.js"
+		
+		path4 = "/static/examples/#{path}/app.js"
+		
+		cssNode = $("<link/>", {
+			rel: "stylesheet",
+			type: "text/css",
+			href: "/static/examples/#{path}/style.css"
+		}).appendTo("head");
+		
+		$.getScript path1, =>
+			$.getScript path2, =>
+				
+				Framer.config.baseUrl = "/static/examples/#{path}/"
+				
+				View.prototype.__insertElement = ->
+					$("#canvas").append @_element
+				
+				$.get path3, (data) =>
+					@_prependEval = data
+					@loadFile path4, callback
+
+	
 	gistId: -> urlVars().gist
 
 	loadFile: (path) =>
-		$.get path, (data) =>
+		
+		promise = $.get path
+		
+		done = (data) =>
 			@setCode data
-	
+			@_editCount = 0
+		
+		promise.fail (xhr) =>
+			if xhr.responseText
+				done xhr.responseText
+			else
+				console.log "loadFile error", xhr
+				
+		promise.done (data) => done data
+
 	loadGist: ->
 		
 	saveGist: ->
@@ -93,6 +159,9 @@ class Editor
 			editor.setValue data
 			editor.session.selection.clearSelection()
 			editor.moveCursorTo 0,0
+	
+	hasEdits: ->
+		window.location.href.indexOf("#edited") isnt -1
 	
 	_updateChangeCount: ->
 		@_editCount += 1
@@ -102,7 +171,7 @@ class Editor
 		@_track "Editor", "Edit"
 		@run()
 		
-	_clearTimers: ->
+	_clearTimers: =>
 		# Clear the Framer timers
 		if window._delayTimers
 			for timer in window._delayTimers
@@ -120,7 +189,14 @@ class Editor
 		return if not code
 
 		$("#canvas").html("")
+		eval @_prependEval if @_prependEval
 		eval code
+		
+		if @_editCount > 0
+			if not @hasEdits()
+				history.pushState({}, "", window.location + "#edited");
+		
+		@saveLocal()
 		
 		# try
 		# 	$("#canvas").html("")
@@ -130,7 +206,7 @@ class Editor
 		# 	console.log "Error", error
 		# 	@_track "Editor", "Error"
 		
-		@saveLocal()
+		
 		
 		
 ################################################################
@@ -138,14 +214,18 @@ class Editor
 
 $(document).ready ->
 	
-	editor = new Editor()
+	window.editor = new Editor()
 	
 	
-	if editor.fileUrl()
-		editor.loadFile editor.fileUrl()
-	
-	else
+	if editor.exampleUrl()
+		editor.loadExample editor.exampleUrl(), ->
+			if editor.hasEdits()
+				editor.loadLocal()
+	else if editor.hasEdits()
 		editor.loadLocal()
+	else if editor.fileUrl()
+		editor.loadFile editor.fileUrl()
+		
 
 
 	# utils.delay 500, ->
