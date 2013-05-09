@@ -1,0 +1,3 @@
+[submodule "Framer"]
+	path = Framer
+	url = git://github.com/koenbok/Framer

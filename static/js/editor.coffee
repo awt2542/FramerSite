@@ -1,7 +1,7 @@
 ################################################################
 # SETUP
 
-View.prototype._postCreate = =>
+View.prototype._postCreate = ->
 	@style.backgroundColor = "rgba(255,0,0,0.5)"
 
 View.prototype.__insertElement = ->
@@ -27,7 +27,7 @@ urlVars = ->
 	
 	for pair in data.split("&")
 		pair = pair.split("=")
-		vars[pair[0]] = pair[1].replace(/\/$/, "")
+		vars[pair[0]] = pair[1]
 	
 	console.log vars
 	
@@ -196,7 +196,7 @@ class Editor
 			if not @hasEdits()
 				history.pushState({}, "", window.location + "#edited");
 		
-		@saveLocal()
+		# @saveLocal()
 		
 		# try
 		# 	$("#canvas").html("")
@@ -221,8 +221,8 @@ $(document).ready ->
 		editor.loadExample editor.exampleUrl(), ->
 			if editor.hasEdits()
 				editor.loadLocal()
-	else if editor.hasEdits()
-		editor.loadLocal()
+	# else if editor.hasEdits()
+	# 	editor.loadLocal()
 	else if editor.fileUrl()
 		editor.loadFile editor.fileUrl()
 		

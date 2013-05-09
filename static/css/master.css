@@ -96,7 +96,7 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 }
 
 #intro .logo {
-	font-weight:normal;
+	font-weight:600;
 	font-size: 18px;
 	margin-bottom: 30px;
 	color: #26292d;
@@ -211,8 +211,8 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 
 #intro .source p {
 	display: inline-block;
-	border-top: 1px solid #d9dcdf;
-	border-bottom: 1px solid #d9dcdf;
+/*	border-top: 1px solid #d9dcdf;
+	border-bottom: 1px solid #d9dcdf;*/
 	margin: 0px;
 	margin-top: 34px;
 	margin-left: 40px;
@@ -220,8 +220,13 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 	height: 44px;
 	font-weight: 600;
 	font-size: 14px;
-	text-align: center;
-	line-height: 41px;
+	/*text-align: center*/;
+	line-height: 42px;
+}
+
+#intro .source span {
+	font-weight: normal;
+
 }
 
 #phone {
@@ -243,34 +248,50 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 	border: 1px solid #eaeaea
 }
 
+#title {
+	font-weight: 600;
+	color: #26292d;
+	font-size: 13px;
+	position:absolute;
+	top: 72px;
+	left: 40px;
+	width: 320px;
+	background-color: rgba(255,0,0,.1);
+	background-color: #fff;
+	text-align: center;
+}
+
+#title a {
+	font-weight: normal;
+}
+
+#phone a.buttonl, #phone a.buttonr {
+	display: block;
+	position: absolute;
+	top: 330px;
+	opacity: .4;
+}
+
+#phone a.buttonl:hover, #phone a.buttonr:hover {
+	opacity: 1;
+}
+
+#phone a.buttonl {
+	left: -26px;
+}
+
+#phone a.buttonr {
+	left: 384px;
+}
 
 /******************************************************/
 /* SITEMAP */
-
-#sitemap {
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin-top: 80px;
-	padding: 40px 0;
-	background-color: #222426;
-}
-
-#sitemap .wrapper {
-	width: 960px;
-	margin: 0 auto;
-}
-
-#sitemap .item {
-	width: 160px;
-	float: left;
-}
 
 #sitemap h3 {
 	font-family: "Open Sans";
 	font-weight: 600;
 	font-size: 14px;
-	color: #fff;
+	color: #26292d;
 }
 
 #sitemap ul a {
@@ -282,6 +303,25 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 	margin-top: 2px;
 	font-size: 12px;
 	line-height: 22px;
+}
+
+
+#sitemap {
+	border-top: 1px solid #e5e5e5;
+	margin-top: 60px;
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
+
+#sitemap .item {
+	width: 160px;
+	float: left;
+}
+
+#sitemap a {
+	font-weight: 600;
+	font-size: 14px;
+	color: #26292d;
 }
 
 /******************************************************/
@@ -431,11 +471,11 @@ a.button.small {
 
 	border-radius: 4px;
 
-	background-image: -o-linear-gradient(180deg, #F7F9FC 0%, #E9EBEE 100%);
-	background-image: -moz-linear-gradient(-180deg, #F7F9FC 0%, #E9EBEE 100%);
-	background-image: -webkit-linear-gradient(-180deg, #F7F9FC 0%, #E9EBEE 100%);
-	background-image: -ms-linear-gradient(-180deg, #F7F9FC 0%, #E9EBEE 100%);
-	background-image: linear-gradient(-180deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: -o-linear-gradient(-90deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: -moz-linear-gradient(-90deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: -webkit-linear-gradient(-90deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: -ms-linear-gradient(-90deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: linear-gradient(0deg, #F7F9FC 0%, #E9EBEE 100%);
 
 	border: 1px solid #DBDBDB;
 
@@ -450,21 +490,21 @@ a.button.small:hover {
 }
 
 a.button.small:active {
-	background-image: -o-linear-gradient(0deg, #F7F9FC 0%, #E9EBEE 100%);
-	background-image: -moz-linear-gradient(-0deg, #F7F9FC 0%, #E9EBEE 100%);
-	background-image: -webkit-linear-gradient(-0deg, #F7F9FC 0%, #E9EBEE 100%);
-	background-image: -ms-linear-gradient(-0deg, #F7F9FC 0%, #E9EBEE 100%);
-	background-image: linear-gradient(-0deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: -o-linear-gradient(90deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: -moz-linear-gradient(90deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: -webkit-linear-gradient(90deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: -ms-linear-gradient(90deg, #F7F9FC 0%, #E9EBEE 100%);
+	background-image: linear-gradient(180deg, #F7F9FC 0%, #E9EBEE 100%);
 }
 
 
 /******************************************************/
 /* FOOTER */
 
-/*#footer p {
+#footer {
 	margin: 40px 0 20px 0;
 	text-align: center;
 	font-size: 12px;
 	color: #B3B8C0;
 }
-*/
+

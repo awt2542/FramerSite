@@ -37,23 +37,30 @@
 		</ul>
 	</div>
 	<div class="button">
-		<a>Download Framer</a>
+		<a href="{{ STATIC_URL }}/downloads/Framer.zip">Download Framer</a>
 		<div class="shadow"></div>
 	</div>
 	<div class="source">
-		<p>Version 2.0 – Source on <a href="https://github.com/koenbok/Framer" target="new">Github</a></p>
+		<p>
+			Version 2.0 <span>– Source on <a href="https://github.com/koenbok/Framer" target="new">Github</a></span>
+		</p>
 	</div>
 </div>
 
 <div id="phone">
+	<div id="title"></div>
 	<iframe id="screen"></iframe>
+	<a class="buttonl">
+		<img src="{{ STATIC_URL }}/img/Resources/button-left.png" width="42" height="94" alt="Button Left">
+	</a>
+	<a class="buttonr">
+		<img src="{{ STATIC_URL }}/img/Resources/button-right.png" width="42" height="94" alt="Button Left">
+	</a>
 </div>
 
 <div id="sitemap">
-	<div class="wrapper">
-		{% include "menu.html" %}
-		<div class="clear"></div>
-	</div>
+	{% include "menu.html" %}
+	<div class="clear"></div>
 </div>
 
 {% endblock %}

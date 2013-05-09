@@ -37,17 +37,32 @@ function retina() {
 	});
 };
 
+function preloadImages() {
+	
+	function preloadImage(url) {
+		var image = new Image()
+		image.src = url;
+	}
 
-function startFramerDemo() {
-	// $("#screen").attr("src", "/static/examples/Intro/index.html");
-	// $("#screen").attr("src", "/static/examples/GoogleNow/index.html");
-	$("#screen").attr("src", "/static/examples/NewsFeed/index.html");
+	var preloadImageList = [
+		"/static/examples/GoogleNow/images/MovieCard.png",
+		"/static/examples/GoogleNow/images/TrafficCard.png",
+		"/static/examples/GoogleNow/images/Background.png",
+		"/static/examples/GoogleNow/images/Context.png",
+		
+		"/static/examples/NewsFeed/images/Bookmark.png",
+		"/static/examples/NewsFeed/images/Feed.png",
+		"/static/examples/NewsFeed/images/DiveBar.png",
+		"/static/examples/NewsFeed/images/Photo.png",
+	]
+
+	preloadImageList.map(preloadImage)
 }
 
+setTimeout(preloadImages, 3000);
+
+
 $(document).ready(function() {
-	
-	// Only start loading the dramer demo after a second
-	setTimeout(startFramerDemo, 1000);
 	
 	retina();
 	
@@ -58,53 +73,41 @@ $(document).ready(function() {
 	
 	setMoreHeight()
 	$(window).resize(setMoreHeight)
-	// 
-	// // Set up navigation
-	// 
-	// function deepLink(href) {
-	// 	
-	// 	href = href.split("#")[1];
-	// 	
-	// 	var part1 = href.split("/")[0]
-	// 	var part2 = href.split("/")[1]
-	// 	
-	// 	var url = "/more/" + part1 + ".html#" + part2;
-	// 	
-	// 	$("#main").attr("src", url);
-	// 	
-	// }
-	// 
-	// $("#more a").map(function(index, link) {
-	// 	$(link).click(function() {
-	// 		deepLink($(link).prop("href"));
-	// 	})
-	// })
-	// 
-	// // See if we arrived here with a link
-	// if (window.location.hash) {
-	// 	deepLink(window.location.hash);
-	// }
-	// 
-	// // Header
-	// 
-	// function showHeader() {
-	// 	$("#intro").show();
-	// 	$("#phone").show();
-	// }
-	// 
-	// function hideHeader() {
-	// 	$("#intro").hide();
-	// 	$("#phone").hide();
-	// }
 	
-	// hideHeader()
+	// Set up the demos
 	
-	// $(document).scroll(function(event) {
-	// 
-	// 	if (($(window).scrollTop() + $(window).height()) > ($(document).height() - 10)) {
-	// 		hideHeader()
-	// 	}
-	// 	
-	// })
+	var demoNames = [
+		{url: "Intro", name: "Introduction"},
+		{url: "GoogleNow", name: "Google Now"},
+		{url: "NewsFeed", name: "News Feed"},
+	];
+	
+	var demoNamesCurrentIndex = 1000 * demoNames.length;
+
+	function loadDemo(index) {
+		console.log("loadDemo", demoNamesCurrentIndex, index, demoNames[index])
+		
+		$("#screen").attr("src", "/static/examples/" + demoNames[index].url + "/index.html");
+		$("#title").html("" + demoNames[index].name + " – <a href='/editor?example=" + demoNames[index].url + "' target='blank'>Show Code</a>");
+	}
+
+	function nextDemo() {
+		demoNamesCurrentIndex++;
+		loadDemo(demoNamesCurrentIndex % demoNames.length)
+	}
+	function prevDemo() {
+		demoNamesCurrentIndex--;
+		loadDemo(demoNamesCurrentIndex % demoNames.length)
+	}
+	
+	// Only start loading the dramer demo after a second
+	setTimeout(function() {
+		loadDemo(demoNamesCurrentIndex % demoNames.length)
+	}, 1000);
+	
+	$("#phone .buttonl").click(prevDemo)
+	$("#phone .buttonr").click(nextDemo)
+	
+	
 	
 })

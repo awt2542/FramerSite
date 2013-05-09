@@ -16,9 +16,11 @@ PSD.DiveBarScroll.height = PSD.Screen.height - PSD.DiveBarScroll.y
 
 // Set up the news feed views
 PSD.NewsFeed.superView = PSD.Screen
-PSD.NewsFeed.x = 0
+PSD.NewsFeed.x = PSD.BookmarkScroll.maxX
 PSD.NewsFeed.y = PSD.Status.maxY
+PSD.NewsFeed.style["z-index"] = 1000
 PSD.FeedScroll.height = PSD.Screen.height - PSD.NewsFeed.y
+PSD.BookmarkScroll.placeBefore(PSD.DiveBarScroll)
 
 // A little helper for 2 -> 1x
 halfSize = function(view) {
@@ -29,47 +31,48 @@ halfSize = function(view) {
 
 halfSize(PSD.Phone)
 
+animationCurve = "spring(1500,70,2500)"
+
 // Set up the bookmark animations
 
 showBookmarks = function() {
-	PSD.BookmarkScroll.style["z-index"] = 0
-	PSD.DiveBarScroll.style["z-index"] = -1
+	PSD.BookmarkScroll.placeBefore(PSD.DiveBarScroll)
 	PSD.NewsFeed.animate({
 		properties: {x:PSD.BookmarkScroll.maxX},
-		curve: "spring(500,41,1500)"
+		curve: animationCurve
 	})
 }
 
 hideBookmarks = function() {
 	PSD.NewsFeed.animate({
 		properties: {x:0},
-		curve: "spring(500,41,1500)"
+		curve: animationCurve
 	})	
 }
 
-bookmarkToggle = utils.toggle(showBookmarks, hideBookmarks)
+bookmarkToggle = utils.toggle(hideBookmarks, showBookmarks)
 
 PSD.BookmarkButton.on("click", function() {
 	bookmarkToggle()()
 })
 
+utils.delay(1000, hideBookmarks)
 
 
 // Set up the divebar animations
 
 showDivebar = function() {
-	PSD.BookmarkScroll.style["z-index"] = -1
-	PSD.DiveBarScroll.style["z-index"] = 0
+	PSD.DiveBarScroll.placeBefore(PSD.BookmarkScroll)
 	PSD.NewsFeed.animate({
 		properties: {x:0-PSD.DiveBarScroll.width+1},
-		curve: "spring(500,41,1500)"
+		curve: animationCurve
 	})
 }
 
 hideDivebar = function() {
 	PSD.NewsFeed.animate({
 		properties: {x:0},
-		curve: "spring(500,41,1500)"
+		curve: animationCurve
 	})	
 }
 
@@ -103,12 +106,12 @@ clickToZoom = function(photoView) {
 	
 		photoView.animate({
 			properties: {scale:1.14/2, y:16},
-			curve: "spring(500,41,1500)"
+			curve: animationCurve
 		})
 
 		PSD.Screen.animate({
 			properties: {opacity:0.1},
-			curve: "spring(500,41,1500)"
+			curve: animationCurve
 		})
 		
 
@@ -118,12 +121,12 @@ clickToZoom = function(photoView) {
 		
 		animation = photoView.animate({
 			properties: {scale:.5, y:screenFrame.y},
-			curve: "spring(500,41,1500)"
+			curve: animationCurve
 		})
 
 		PSD.Screen.animate({
 			properties: {opacity:1},
-			curve: "spring(500,41,1500)"
+			curve: animationCurve
 		})
 		
 		animation.on("end", function() {

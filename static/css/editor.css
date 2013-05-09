@@ -27,7 +27,7 @@ p {
 	position: fixed;
 	background: black url('../img/checker-pattern.png') repeat scroll top left;
 	font: 28px/1em "Helvetica";
-	color: #000;
+	color: #fff;
 	overflow: hidden;
 	-webkit-user-select:none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);

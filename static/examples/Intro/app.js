@@ -1,14 +1,7 @@
 PSD.IntroView.opacity = 0
-
-
-PSD.BottomBar.originalFrame = PSD.BottomBar.frame
-PSD.BottomBar.y += PSD.BottomBar.height
-
 PSD.Logo.opacity = 0
+PSD.Text.opacity = 0
 
-PSD.CodeButton.on("click", function() {
-	window.open("/editor#example=Intro");
-})
 
 start = function() {
 	
@@ -16,14 +9,6 @@ start = function() {
 	PSD.IntroView.animate({
 		properties: {opacity:1},
 		time: 100
-	})
-	
-	// Move in the bottom bar
-	utils.delay(100, function() {
-		PSD.BottomBar.animate({
-			properties: PSD.BottomBar.originalFrame,
-			curve: "spring(500,50,2000)"
-		})
 	})
 	
 	// Make the logo appear
@@ -67,9 +52,24 @@ start = function() {
 			properties: {x:oldX},
 			curve: "spring(1200,6,500)"
 		})
+		PSD.Text.animate({
+			properties: {opacity:1},
+			curve: "ease-in",
+			time: 100
+		})
 	})
-	
-	
+
+	// Bounce the logo on click
+	utils.delay(1500 * 5, function() {
+		PSD.Logo.on("click", function() {
+			PSD.Logo.scale = 0.5
+			PSD.Logo.animate({
+				properties: {scale:1},
+				curve: "spring(1200,6,500)"
+			})
+		})
+	})
+
 
 }
 
