@@ -1,0 +1,36 @@
+- Finish logo
+- Finish announcement blog post
+- Finalize intro page copy
+
+- New Feed example
+- New Photoshop example movie
+
++ Fix editor redirect bug
++ Fix editor dropping lines bug
+
+- Make reasonable on mobile
+
+- Finish Flexible icon
+
+- Better template welcome page
+
+# Checklist
+
+- Are all the names and links correct
+- Check for symlinks
+- CloudFare setup
+- FramerSite repo public
+- Are fonts gzipped?
+
+
+# Maybe
+
+- Make Photoshop stuff more prominent
+- Favicon
+- Nicer progress bar
+- Twitter/FB link?
+
+# Future
+
+- Add re-run button to editor
+- Add gist saving to editor

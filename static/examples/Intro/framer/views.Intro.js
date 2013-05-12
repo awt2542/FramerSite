@@ -60,17 +60,17 @@
 								"image": {
 									"path": "images/Logo.png",
 									"frame": {
-										"x": 101,
-										"y": 192,
-										"width": 121,
-										"height": 135
+										"x": 95,
+										"y": 189,
+										"width": 132,
+										"height": 141
 									}
 								},
 								"imageType": "png",
 								"children": [
 									
 								],
-								"modification": "2103548783"
+								"modification": "341064732"
 							},
 							{
 								"id": 55,
@@ -95,7 +95,7 @@
 								"children": [
 									
 								],
-								"modification": "1449104027"
+								"modification": "1145405019"
 							},
 							{
 								"id": 96,
@@ -111,7 +111,7 @@
 									"path": "images/Text.png",
 									"frame": {
 										"x": 55,
-										"y": 336,
+										"y": 327,
 										"width": 208,
 										"height": 55
 									}
@@ -120,15 +120,15 @@
 								"children": [
 									
 								],
-								"modification": "116511178"
+								"modification": "1058247647"
 							}
 						],
-						"modification": "2096043428"
+						"modification": "1210445779"
 					}
 				],
-				"modification": "716958906"
+				"modification": "309957716"
 			}
 		],
-		"modification": "387150712"
+		"modification": "1318983381"
 	}
 ]

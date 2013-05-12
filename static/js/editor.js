@@ -29,7 +29,6 @@
       pair = pair.split("=");
       vars[pair[0]] = pair[1];
     }
-    console.log(vars);
     return vars;
   };
 
@@ -62,8 +61,6 @@
 
     LocalSaveKey = "framer.editor.code:" + window.location.href;
 
-    console.log("LocalSaveKey", LocalSaveKey);
-
     function Editor() {
       this._run = __bind(this._run, this);
       this._clearTimers = __bind(this._clearTimers, this);
@@ -77,7 +74,8 @@
       this._editor.getSession().on("change", this._onChange);
     }
 
-    Editor.prototype.run = debounce(100, function() {
+    Editor.prototype.run = debounce(300, function() {
+      console.log("run");
       return this._run();
     });
 
@@ -95,18 +93,6 @@
       return this._editor.getValue();
     };
 
-    Editor.prototype.saveLocal = function() {
-      console.log("saveLocal");
-      localStorage.setItem(this.LocalSaveKey, this.getCode());
-      return this._savePoint = this._editCount;
-    };
-
-    Editor.prototype.loadLocal = function() {
-      console.log("loadLocal");
-      this.setCode(localStorage.getItem(this.LocalSaveKey));
-      return this.run();
-    };
-
     Editor.prototype.fileUrl = function() {
       return urlVars().path;
     };
@@ -119,7 +105,6 @@
       var cssNode, path1, path2, path3, path4,
         _this = this;
 
-      path = "GoogleNow";
       path1 = "/static/examples/" + path + "/framer/views." + path + ".js";
       path2 = "/static/examples/" + path + "/framer/framer.js";
       path3 = "/static/examples/" + path + "/framer/framerps.js";
@@ -135,7 +120,7 @@
           View.prototype.__insertElement = function() {
             return $("#canvas").append(this._element);
           };
-          return $.get(path3, function(data) {
+          return _this._getFile(path3, function(data) {
             _this._prependEval = data;
             return _this.loadFile(path4, callback);
           });
@@ -143,43 +128,21 @@
       });
     };
 
-    Editor.prototype.gistId = function() {
-      return urlVars().gist;
-    };
-
     Editor.prototype.loadFile = function(path) {
-      var done, promise,
-        _this = this;
+      var _this = this;
 
-      promise = $.get(path);
-      done = function(data) {
+      return this._getFile(path, function(data) {
         _this.setCode(data);
         return _this._editCount = 0;
-      };
-      promise.fail(function(xhr) {
-        if (xhr.responseText) {
-          return done(xhr.responseText);
-        } else {
-          return console.log("loadFile error", xhr);
-        }
-      });
-      return promise.done(function(data) {
-        return done(data);
       });
     };
 
-    Editor.prototype.loadGist = function() {};
-
-    Editor.prototype.saveGist = function() {
-      return $.get(path, function(data) {
-        editor.setValue(data);
-        editor.session.selection.clearSelection();
-        return editor.moveCursorTo(0, 0);
+    Editor.prototype._getFile = function(path, success) {
+      return $.ajax({
+        url: path,
+        dataType: "html",
+        success: success
       });
-    };
-
-    Editor.prototype.hasEdits = function() {
-      return window.location.href.indexOf("#edited") !== -1;
     };
 
     Editor.prototype._updateChangeCount = function() {
@@ -188,7 +151,6 @@
 
     Editor.prototype._onChange = function() {
       this._updateChangeCount();
-      this._track("Editor", "Edit");
       return this.run();
     };
 
@@ -206,16 +168,10 @@
       }
     };
 
-    Editor.prototype._track = debounce(500, function(module, type, data) {
-      if (this._editCount < 6) {
-        return;
-      }
-      return _gaq.push(["_trackEvent", module, type, data]);
-    });
-
     Editor.prototype._run = function() {
       var code;
 
+      console.log("_run");
       this._clearTimers();
       code = this.getCode();
       if (!code) {
@@ -225,12 +181,7 @@
       if (this._prependEval) {
         eval(this._prependEval);
       }
-      eval(code);
-      if (this._editCount > 0) {
-        if (!this.hasEdits()) {
-          return history.pushState({}, "", window.location + "#edited");
-        }
-      }
+      return eval(code);
     };
 
     return Editor;
@@ -240,11 +191,7 @@
   $(document).ready(function() {
     window.editor = new Editor();
     if (editor.exampleUrl()) {
-      return editor.loadExample(editor.exampleUrl(), function() {
-        if (editor.hasEdits()) {
-          return editor.loadLocal();
-        }
-      });
+      return editor.loadExample(editor.exampleUrl());
     } else if (editor.fileUrl()) {
       return editor.loadFile(editor.fileUrl());
     }

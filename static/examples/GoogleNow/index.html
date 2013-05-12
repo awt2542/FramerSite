@@ -43,24 +43,18 @@
 		}
 		</style>
 		
-		
 	</head>
 	<body>
 		<script src="framer/views.GoogleNow.js"></script>
 		<script src="framer/framer.js"></script>
-		<script src="framer/framerps.js"></script>
-		<script src="app.js"></script>
 		<script>
-			// if (!navigator.userAgent.match(/iPad/i) && !navigator.userAgent.match(/iPhone/i)) {
-			// 	document.write('<script type="text/javascript" src="desktop/iphone5.js"><\/script>');
-			// }
-			isChrome = function() { 
-			  return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+			if (window.location.protocol == "file:") {
+				utils.domLoadScript("framer/framerps.js", function() {
+					utils.domLoadScript("app.js");
+				})
+			} else {
+				utils.domLoadScript("/static/js/example.preload.js");
 			}
-			if (isChrome()) {
-				// Weirdly, chrome and safari render webkit filters differently....
-				document.write('<style>body.now div[name="Logo"] {-webkit-filter: brightness(0%) invert() drop-shadow(rgba(0,0,0,0.2) 0 2px 1px);}<\/style>');
-			}
-		</script> 
+		</script>
 	</body>
 </html>

@@ -10,7 +10,7 @@ examples:
 optimize:
 	find . -name "*.png" -exec optipng -o7 {} \;
 
-deploy:
+upload:
 	cactus deploy
 
 gitupdate:
@@ -19,5 +19,7 @@ gitupdate:
 	git submodule update
 	cd Framer; rm build/framer.js; git checkout framer2; git pull; npm install;
 	cd Framer; make dist
+	
+	find . -name "framer.js" -exec cp build/framer.js {} \;
 
 .PHONY: examples optimize deploy

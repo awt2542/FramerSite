@@ -50,7 +50,7 @@ hideBookmarks = function() {
 	})	
 }
 
-bookmarkToggle = utils.toggle(hideBookmarks, showBookmarks)
+bookmarkToggle = utils.toggle(showBookmarks, hideBookmarks)
 
 PSD.BookmarkButton.on("click", function() {
 	bookmarkToggle()()
@@ -88,22 +88,22 @@ PSD.DiveBarButton.on("click", function() {
 
 
 clickToZoom = function(photoView) {
-	
+
 	offset = 200
-	
+
 	zoomInPhoto = function() {
-		
+	
 		currentPhotoView = photoView.superView
 		currentPhotoViewFrame = photoView.frame
-	
+
 		screenFrame = photoView.screenFrame()
 		screenFrame.y = (screenFrame.y / 2) + 2
-		
-		
+	
+	
 		photoView.scale = .5
 		photoView.superView = null
 		photoView.frame = screenFrame
-	
+
 		photoView.animate({
 			properties: {scale:1.14/2, y:16},
 			curve: animationCurve
@@ -113,12 +113,12 @@ clickToZoom = function(photoView) {
 			properties: {opacity:0.1},
 			curve: animationCurve
 		})
-		
+	
 
 	}
-	
+
 	zoomOutPhoto = function() {
-		
+	
 		animation = photoView.animate({
 			properties: {scale:.5, y:screenFrame.y},
 			curve: animationCurve
@@ -128,7 +128,7 @@ clickToZoom = function(photoView) {
 			properties: {opacity:1},
 			curve: animationCurve
 		})
-		
+	
 		animation.on("end", function() {
 			photoView.superView = currentPhotoView
 			photoView.scale = 1
@@ -136,9 +136,9 @@ clickToZoom = function(photoView) {
 		})
 
 	}
-	
+
 	toggler = utils.toggle(zoomInPhoto, zoomOutPhoto)
-	
+
 	photoView.on("click", function() {
 		toggler()()
 	})
@@ -146,3 +146,4 @@ clickToZoom = function(photoView) {
 }
 
 clickToZoom(PSD.Photo)
+
