@@ -1,22 +1,44 @@
-{"docName":"NewsFeed","path":"~/Desktop/FramerExamples/NewsFeed","relativeImagePath":"images","imagePath":"~/Desktop/FramerExamples/NewsFeed/images","framerPath":"~/Desktop/FramerExamples/NewsFeed/framer","viewInfoPath":"~/Desktop/FramerExamples/NewsFeed/framer/views.NewsFeed.js","logPaths":["/tmp/framerps.log","~/Desktop/FramerExamples/NewsFeed/framer/framerps.log"]}
+{"docName":"NewsFeed","path":"~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed","relativeImagePath":"images","imagePath":"~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed/images","framerPath":"~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed/framer","viewInfoPath":"~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed/framer/views.NewsFeed.js","logPaths":["/tmp/framerps.log","~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed/framer/framerps.log"]}
 
-Running for ~/Desktop/FramerExamples/NewsFeed
+Running for ~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed
 Phone: Exporting image
 Screen: Calculating vector mask bounds
-PROGRESS: 18.75
-PROGRESS: 18.75
-PROGRESS: 43.75
+Status: Exporting image
+PROGRESS: 16.6666666666667
+PROGRESS: 16.6666666666667
+PROGRESS: 16.6666666666667
+Nav: Exporting image
+DiveBarButton: Exporting image
+PROGRESS: 38.8888888888889
+BookmarkButton: Exporting image
+PROGRESS: 44.4444444444444
+PROGRESS: 44.4444444444444
+PROGRESS: 44.4444444444444
 FeedScroll: Calculating vector mask bounds
-PROGRESS: 56.25
-PROGRESS: 56.25
+Feed: Exporting image
+Photo1: Exporting image
+PROGRESS: 61.1111111111111
+Photo2: Exporting image
+PROGRESS: 66.6666666666667
+Photo3: Exporting image
+PROGRESS: 72.2222222222222
+Photo4: Exporting image
+PROGRESS: 77.7777777777778
+PROGRESS: 77.7777777777778
+PROGRESS: 77.7777777777778
+PROGRESS: 77.7777777777778
 BookmarkScroll: Calculating vector mask bounds
-PROGRESS: 68.75
+Bookmark: Exporting image
+PROGRESS: 88.8888888888889
+PROGRESS: 88.8888888888889
 DiveBarScroll: Calculating vector mask bounds
-PROGRESS: 81.25
-7 views changed
-Skipping ~/Desktop/FramerExamples/NewsFeed/index.html (exists)
-Skipping ~/Desktop/FramerExamples/NewsFeed/app.js (exists)
-Skipping ~/Desktop/FramerExamples/NewsFeed/framer/framer.js (exists)
-Skipping ~/Desktop/FramerExamples/NewsFeed/framer/framerps.js (exists)
+DiveBar: Exporting image
+PROGRESS: 100
+PROGRESS: 100
+18 views changed
+Skipping ~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed/index.html (exists)
+Skipping ~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed/app.js (exists)
+Skipping ~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed/framer/framer.js (exists)
+Skipping ~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed/framer/framerps.js (exists)
 
-SUCCESS: ~/Desktop/FramerExamples/NewsFeed
+SUCCESS: ~/Dropbox/Documents/Sites/framerjs.com/static/examples/NewsFeed

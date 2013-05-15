@@ -62,13 +62,13 @@
 						"children": [
 							
 						],
-						"modification": "1714817759"
+						"modification": "1386452261"
 					}
 				],
-				"modification": "1428847994"
+				"modification": "895509065"
 			}
 		],
-		"modification": "1662928831"
+		"modification": "1872981948"
 	},
 	{
 		"id": 65,
@@ -140,7 +140,7 @@
 								"children": [
 									
 								],
-								"modification": "2011876260"
+								"modification": "1886429267"
 							},
 							{
 								"id": 81,
@@ -165,38 +165,13 @@
 								"children": [
 									
 								],
-								"modification": "2011876256"
+								"modification": "1886429243"
 							}
 						],
-						"modification": "1274116537"
-					},
-					{
-						"id": 44,
-						"name": "Composer",
-						"layerFrame": {
-							"x": 0,
-							"y": 0,
-							"width": 3796,
-							"height": 5580
-						},
-						"maskFrame": null,
-						"image": {
-							"path": "images/Composer.png",
-							"frame": {
-								"x": 1627,
-								"y": 148,
-								"width": 644,
-								"height": 93
-							}
-						},
-						"imageType": "png",
-						"children": [
-							
-						],
-						"modification": "757635893"
+						"modification": "2130445945"
 					}
 				],
-				"modification": "587063166"
+				"modification": "741675195"
 			},
 			{
 				"id": 54,
@@ -232,14 +207,14 @@
 								"x": 1627,
 								"y": 60,
 								"width": 640,
-								"height": 4439
+								"height": 3945
 							}
 						},
 						"imageType": "png",
 						"children": [
 							{
-								"id": 83,
-								"name": "Photo",
+								"id": 96,
+								"name": "Photo1",
 								"layerFrame": {
 									"x": 0,
 									"y": 0,
@@ -248,28 +223,103 @@
 								},
 								"maskFrame": null,
 								"image": {
-									"path": "images/Photo.png",
+									"path": "images/Photo1.png",
 									"frame": {
-										"x": 1667,
-										"y": 400,
-										"width": 560,
-										"height": 560
+										"x": 1638,
+										"y": 447,
+										"width": 618,
+										"height": 618
 									}
 								},
 								"imageType": "png",
 								"children": [
 									
 								],
-								"modification": "1299313972"
+								"modification": "967054401"
+							},
+							{
+								"id": 99,
+								"name": "Photo2",
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 3796,
+									"height": 5580
+								},
+								"maskFrame": null,
+								"image": {
+									"path": "images/Photo2.png",
+									"frame": {
+										"x": 1638,
+										"y": 1463,
+										"width": 618,
+										"height": 618
+									}
+								},
+								"imageType": "png",
+								"children": [
+									
+								],
+								"modification": "962814363"
+							},
+							{
+								"id": 102,
+								"name": "Photo3",
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 3796,
+									"height": 5580
+								},
+								"maskFrame": null,
+								"image": {
+									"path": "images/Photo3.png",
+									"frame": {
+										"x": 1638,
+										"y": 2378,
+										"width": 618,
+										"height": 618
+									}
+								},
+								"imageType": "png",
+								"children": [
+									
+								],
+								"modification": "879111289"
+							},
+							{
+								"id": 105,
+								"name": "Photo4",
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 3796,
+									"height": 5580
+								},
+								"maskFrame": null,
+								"image": {
+									"path": "images/Photo4.png",
+									"frame": {
+										"x": 1638,
+										"y": 3351,
+										"width": 618,
+										"height": 464
+									}
+								},
+								"imageType": "png",
+								"children": [
+									
+								],
+								"modification": "854842621"
 							}
 						],
-						"modification": "22676754"
+						"modification": "930052217"
 					}
 				],
-				"modification": "1465353583"
+				"modification": "851103403"
 			}
 		],
-		"modification": "1910379692"
+		"modification": "770324850"
 	},
 	{
 		"id": 28,
@@ -305,17 +355,17 @@
 						"x": 1079,
 						"y": 60,
 						"width": 518,
-						"height": 4584
+						"height": 1512
 					}
 				},
 				"imageType": "png",
 				"children": [
 					
 				],
-				"modification": "2011876288"
+				"modification": "344749044"
 			}
 		],
-		"modification": "1348873342"
+		"modification": "421525958"
 	},
 	{
 		"id": 21,
@@ -351,16 +401,16 @@
 						"x": 2297,
 						"y": 60,
 						"width": 512,
-						"height": 2940
+						"height": 1462
 					}
 				},
 				"imageType": "png",
 				"children": [
 					
 				],
-				"modification": "2011876316"
+				"modification": "668530077"
 			}
 		],
-		"modification": "1676555157"
+		"modification": "1829419703"
 	}
 ]

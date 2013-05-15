@@ -1,18 +1,18 @@
-- Finish logo
-- Finish announcement blog post
-- Finalize intro page copy
-
-- New Feed example
-- New Photoshop example movie
-
-+ Fix editor redirect bug
-+ Fix editor dropping lines bug
-
-- Make reasonable on mobile
-
-- Finish Flexible icon
+## Website Todo
 
 - Better template welcome page
+- Fix the types of views lesson
+- Remove the username logging code
+- New Photoshop example movie
+
++ Make reasonable on mobile
++ Finish announcement blog post
++ Finalize intro page copy
++ Merge framer2 into 1
++ Fix editor redirect bug
++ Fix editor dropping lines bug
++ Finish logo
++ New Feed example
 
 # Checklist
 
@@ -26,7 +26,7 @@
 # Maybe
 
 - Make Photoshop stuff more prominent
-- Favicon
++ Favicon
 - Nicer progress bar
 - Twitter/FB link?
 

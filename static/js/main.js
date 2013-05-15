@@ -37,30 +37,6 @@ function retina() {
 	});
 };
 
-// function preloadImages() {
-// 	
-// 	function preloadImage(url) {
-// 		var image = new Image()
-// 		image.src = url;
-// 	}
-// 
-// 	var preloadImageList = [
-// 		"/static/examples/GoogleNow/images/MovieCard.png",
-// 		"/static/examples/GoogleNow/images/TrafficCard.png",
-// 		"/static/examples/GoogleNow/images/Background.png",
-// 		"/static/examples/GoogleNow/images/Context.png",
-// 		
-// 		"/static/examples/NewsFeed/images/Bookmark.png",
-// 		"/static/examples/NewsFeed/images/Feed.png",
-// 		"/static/examples/NewsFeed/images/DiveBar.png",
-// 		"/static/examples/NewsFeed/images/Photo.png",
-// 	]
-// 
-// 	preloadImageList.map(preloadImage)
-// }
-// 
-// setTimeout(preloadImages, 3000);
-
 
 $(document).ready(function() {
 	

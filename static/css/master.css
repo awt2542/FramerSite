@@ -77,7 +77,7 @@ thead th, th {
 	background-color:#fafafa;}
 	
 	
-span.code	{font-family:Menlo, Monaco, Courier; font-size:14px; color: #686868;}
+span.code	{font-family:Menlo, Monaco, Courier; font-size:14px; color: #686868; background-color:#f9f9f9;}
 pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px solid #E9EEF4; padding:10px; margin-bottom:3em; background-color:#fdfdfd; font-size:14px;  overflow:auto;}
 
 
@@ -100,6 +100,10 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 	font-size: 18px;
 	margin-bottom: 30px;
 	color: #26292d;
+}
+
+#intro .logo img {
+	margin-top: 1px;
 }
 
 #intro h1 {
@@ -382,6 +386,7 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 
 #main .items div:last-child  {
 	border-bottom: 1px solid #EAEAEA;
+	margin-bottom: 30px;
 }
 
 #main td.group {
@@ -426,10 +431,23 @@ table.api td:first-child {
 }
 
 #submenu .logo {
-	display: inline-block;
-	margin: 20px;
-	font-size: 16px;
+	font-weight:600;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+	color: #26292d;
 }
+
+#submenu .logo img {
+	margin-right: 6px;
+	margin-bottom: -6px;
+}
+
+#submenu .logo a:hover{
+	text-decoration: none;
+}
+
 
 #submenu .item {
 	padding: 10px 20px;

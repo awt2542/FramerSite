@@ -1,16 +1,57 @@
 {% extends "base-menu.html" %}
 {% block main %}
 
-<h1>Organizing Code</h1>
+<h1 id="code">Organizing Code</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>
+	When your projects become larger then say a hunderd lines of code it becomes more important to organize your code. This also makes it easier to collaborate with others or change things at later stage. How you organize code is more a Javascript problem in general and there are <a href="http://www.klauskomenda.com/code/javascript-programming-patterns/">many approaches</a> which all mostly come down to personal preference. Because of that I'll just introduce the standard tools you have for organization: files and namespaces.
+</p>
 
-<h1>Animation</h1>
+<p>
+	It's easy to split up your projects in different files. You can just create a new file, add the code and include the script in the index.html page header like this: <span class="code">&lt;script src=&quot;my-code.js&quot;&gt;&lt;/script&gt;</span>. This will include and run the code. The ordering is important, so if a specific file depends on something else make sure you load the dependant first. You can add as many files as you'd like.
+</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>
+	Generally it's a bad idea to pollute your global namepace with random variables because it's hard to keep track of them. For example, if you define a variable <span class="code">i</span> somewhere, and then you use the same variable in a loop in another file that then changes that value you can get really unexpected results that are hard to debug. So a simple sollution is to use objects as namespaces. Say you have a set of views that you'd like to reference by name then you could make a global views variable that holds all the views by name like this:
+	
+	<pre class="code" data-language="javascript">
+var app = {}
+app.views = {}
 
-<h1>Exporting CSS Keyframes</h1>
+app.views.screenView = new View({width:100, height:100})
+app.views.tabView = new View({width:100, height:100})</pre>
+	
+</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h1 id="keyframes">Exporting CSS Keyframes</h1>
+
+<p>
+	Beacuse Framer uses CSS keyframes you can easily re-use animations on any website. The easiest way is to run your project in Safari or Chrome and open the developer console (command-option-i). In there select the "Elements" tab and search in the tree for the "head" element. In there should be a list of "style" elements where the last one is the animation you last ran. Just select the one you want and copy it (command-c). Now you can paste it in any css file and you can use that animation on any website.
+</p>
+
+<h1 id="pimp">Pimp Your Framer</h1>
+
+<p>
+	There are a varietey of ways where you can make your Framer workflow more efficient. These are the ones that I use most. Let me know if you like to see something added here.
+	
+	<table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<th>Thing</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td><a href="http://coffeescript.org/">Coffee&nbsp;Script</a></td>
+			<td>An alternative language that compiles to Javascript that is more concise</td>
+		</tr>
+		<tr>
+			<td><a href="https://github.com/koenbok/Cactus">Cactus</a></td>
+			<td>Basically I use it to auto reload my browser on file changes so I get immediate feedback.</td>
+		</tr>
+	</table>
+</p>
+
+<h1 id="animation">Animation</h1>
+
+<p>Here I would like to write something about how to use finite state machines for animation. Coming soon I hope.</p>
 
 {% endblock %}

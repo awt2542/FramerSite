@@ -19,19 +19,7 @@ nowTimeY = "1380";
 nowCardBorder = "1px solid transparent";
 nowCardShadowSize = "0 2px 1px rgba(0,0,0,.2)";
 
-halfSize = function(view) {
-	view.scale = .5
-	view.x = 0 - view.width / 4
-	view.y = 0 - view.height / 4
-}
-
-halfSize(PSD["StatusBar"])
-halfSize(PSD["Content"])
-PSD["Content"].y += 20
-
-// Downsize the entire prototype to 1x
-
-
+PSD["Content"].y += 40
 
 gotoNow = function() {
 	

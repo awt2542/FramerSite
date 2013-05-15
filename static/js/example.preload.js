@@ -50,7 +50,7 @@
         return loader.onload = function() {
           ViewsToLoad = _.without(ViewsToLoad, info.image.path);
           console.log(info.image.path, "loaded", ViewsToLoad.length);
-          loadingElement.innerHTML = "Loading " + ViewsToLoad.length;
+          loadingElement.innerHTML = "Loading " + (ViewsToLoad.length + 1);
           if (ViewsToLoad.length === 0 ? callback : void 0) {
             return callback();
           }

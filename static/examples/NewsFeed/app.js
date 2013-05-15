@@ -5,13 +5,13 @@ PSD.DiveBarButton.opacity = 0
 // Set up the navigation menu
 PSD.BookmarkScroll.superView = PSD.Screen
 PSD.BookmarkScroll.x = 0
-PSD.BookmarkScroll.y = PSD.Status.maxY - 1
+PSD.BookmarkScroll.y = PSD.Status.maxY
 PSD.BookmarkScroll.height = PSD.Screen.height - PSD.BookmarkScroll.y
 
 // Set up the divebar menu
 PSD.DiveBarScroll.superView = PSD.Screen
 PSD.DiveBarScroll.maxX = PSD.Screen.width
-PSD.DiveBarScroll.y = PSD.Status.maxY - 1
+PSD.DiveBarScroll.y = PSD.Status.maxY
 PSD.DiveBarScroll.height = PSD.Screen.height - PSD.DiveBarScroll.y
 
 // Set up the news feed views
@@ -22,16 +22,7 @@ PSD.NewsFeed.style["z-index"] = 1000
 PSD.FeedScroll.height = PSD.Screen.height - PSD.NewsFeed.y
 PSD.BookmarkScroll.placeBefore(PSD.DiveBarScroll)
 
-// A little helper for 2 -> 1x
-halfSize = function(view) {
-	view.scale = .5
-	view.x = 0 - view.width / 4
-	view.y = 0 - view.height / 4
-}
-
-halfSize(PSD.Phone)
-
-animationCurve = "spring(1500,70,2500)"
+animationCurve = "spring(600,40,500)"
 
 // Set up the bookmark animations
 
@@ -89,61 +80,76 @@ PSD.DiveBarButton.on("click", function() {
 
 clickToZoom = function(photoView) {
 
-	offset = 200
 
-	zoomInPhoto = function() {
-	
-		currentPhotoView = photoView.superView
-		currentPhotoViewFrame = photoView.frame
 
-		screenFrame = photoView.screenFrame()
-		screenFrame.y = (screenFrame.y / 2) + 2
-	
-	
-		photoView.scale = .5
+	zoomInPhoto = function(photoView) {
+
+		photoView.transitioning = true
+		
+		photoView.originalSuperView = photoView.superView
+		photoView.originalFrame = photoView.frame
+		photoView.originalScreenFrame = photoView.screenFrame()
+		
+		PSD.FeedScroll.scrollVertical = false
+		
 		photoView.superView = null
-		photoView.frame = screenFrame
+		photoView.frame = photoView.originalScreenFrame
 
-		photoView.animate({
-			properties: {scale:1.14/2, y:16},
+		animation1 = photoView.animate({
+			properties: {scale:1.04, y:(PSD.Screen.height - photoView.height) / 2},
 			curve: animationCurve
 		})
 
-		PSD.Screen.animate({
-			properties: {opacity:0.1},
+		animation2 = PSD.Screen.animate({
+			properties: {opacity:0.1, scale:.98},
 			curve: animationCurve
 		})
-	
-
+		
+		animation2.on("end", function() {
+			photoView.transitioning = false
+		})
 	}
 
-	zoomOutPhoto = function() {
-	
-		animation = photoView.animate({
-			properties: {scale:.5, y:screenFrame.y},
+	zoomOutPhoto = function(photoView) {
+
+		photoView.transitioning = true
+
+		animation1 = photoView.animate({
+			properties: {scale:1, y:photoView.originalScreenFrame.y},
 			curve: animationCurve
 		})
 
-		PSD.Screen.animate({
-			properties: {opacity:1},
+		animation2 = PSD.Screen.animate({
+			properties: {opacity:1, scale:1},
 			curve: animationCurve
 		})
 	
-		animation.on("end", function() {
-			photoView.superView = currentPhotoView
-			photoView.scale = 1
-			photoView.frame = currentPhotoViewFrame
+		animation1.on("end", function() {
+			photoView.superView = photoView.originalSuperView
+			photoView.frame = photoView.originalFrame
+			
+			PSD.FeedScroll.scrollVertical = true
+			photoView.transitioning = false
 		})
 
 	}
-
+	
 	toggler = utils.toggle(zoomInPhoto, zoomOutPhoto)
-
+	
 	photoView.on("click", function() {
-		toggler()()
+		
+		if (photoView.transitioning) {
+			return
+		}
+
+		toggler()(photoView)
 	})
+
 
 }
 
-clickToZoom(PSD.Photo)
+clickToZoom(PSD.Photo1)
+clickToZoom(PSD.Photo2)
+clickToZoom(PSD.Photo3)
+clickToZoom(PSD.Photo4)
 

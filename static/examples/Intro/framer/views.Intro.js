@@ -6,7 +6,7 @@
 		"layerFrame": {
 			"x": 0,
 			"y": 0,
-			"width": 1573,
+			"width": 320,
 			"height": 568
 		},
 		"maskFrame": null,
@@ -19,7 +19,7 @@
 				"layerFrame": {
 					"x": 0,
 					"y": 0,
-					"width": 1573,
+					"width": 320,
 					"height": 568
 				},
 				"maskFrame": null,
@@ -32,7 +32,7 @@
 						"layerFrame": {
 							"x": 0,
 							"y": 0,
-							"width": 1573,
+							"width": 320,
 							"height": 568
 						},
 						"maskFrame": null,
@@ -48,29 +48,54 @@
 						"imageType": "png",
 						"children": [
 							{
-								"id": 47,
-								"name": "Logo",
+								"id": 138,
+								"name": "IntroButton",
 								"layerFrame": {
 									"x": 0,
 									"y": 0,
-									"width": 1573,
+									"width": 320,
 									"height": 568
 								},
 								"maskFrame": null,
 								"image": {
-									"path": "images/Logo.png",
+									"path": "images/IntroButton.png",
 									"frame": {
-										"x": 95,
-										"y": 189,
-										"width": 132,
-										"height": 141
+										"x": 65,
+										"y": 469,
+										"width": 188,
+										"height": 34
 									}
 								},
 								"imageType": "png",
 								"children": [
 									
 								],
-								"modification": "341064732"
+								"modification": "877085918"
+							},
+							{
+								"id": 112,
+								"name": "Logo",
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 320,
+									"height": 568
+								},
+								"maskFrame": null,
+								"image": {
+									"path": "images/Logo.png",
+									"frame": {
+										"x": 99,
+										"y": 176,
+										"width": 124,
+										"height": 131
+									}
+								},
+								"imageType": "png",
+								"children": [
+									
+								],
+								"modification": "1357715350"
 							},
 							{
 								"id": 55,
@@ -78,7 +103,7 @@
 								"layerFrame": {
 									"x": 0,
 									"y": 0,
-									"width": 1573,
+									"width": 320,
 									"height": 568
 								},
 								"maskFrame": null,
@@ -95,7 +120,7 @@
 								"children": [
 									
 								],
-								"modification": "1145405019"
+								"modification": "1843949632"
 							},
 							{
 								"id": 96,
@@ -103,7 +128,7 @@
 								"layerFrame": {
 									"x": 0,
 									"y": 0,
-									"width": 1573,
+									"width": 320,
 									"height": 568
 								},
 								"maskFrame": null,
@@ -111,7 +136,7 @@
 									"path": "images/Text.png",
 									"frame": {
 										"x": 55,
-										"y": 327,
+										"y": 309,
 										"width": 208,
 										"height": 55
 									}
@@ -120,15 +145,15 @@
 								"children": [
 									
 								],
-								"modification": "1058247647"
+								"modification": "442645133"
 							}
 						],
-						"modification": "1210445779"
+						"modification": "1197790012"
 					}
 				],
-				"modification": "309957716"
+				"modification": "1923582213"
 			}
 		],
-		"modification": "1318983381"
+		"modification": "234769710"
 	}
 ]

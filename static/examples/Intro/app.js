@@ -2,6 +2,10 @@ PSD.IntroView.opacity = 0
 PSD.Logo.opacity = 0
 PSD.Text.opacity = 0
 
+PSD.IntroButton.on("click", function() {
+	window.open("https://vimeo.com/66280463","new")
+})
+
 
 start = function() {
 	
