@@ -60,17 +60,17 @@
 								"image": {
 									"path": "images/IntroButton.png",
 									"frame": {
-										"x": 65,
-										"y": 469,
-										"width": 188,
-										"height": 34
+										"x": 79,
+										"y": 397,
+										"width": 161,
+										"height": 120
 									}
 								},
 								"imageType": "png",
 								"children": [
 									
 								],
-								"modification": "877085918"
+								"modification": "1550039007"
 							},
 							{
 								"id": 112,
@@ -86,7 +86,7 @@
 									"path": "images/Logo.png",
 									"frame": {
 										"x": 99,
-										"y": 176,
+										"y": 118,
 										"width": 124,
 										"height": 131
 									}
@@ -95,7 +95,7 @@
 								"children": [
 									
 								],
-								"modification": "1357715350"
+								"modification": "1491634044"
 							},
 							{
 								"id": 55,
@@ -120,7 +120,7 @@
 								"children": [
 									
 								],
-								"modification": "1843949632"
+								"modification": "1681292346"
 							},
 							{
 								"id": 96,
@@ -136,7 +136,7 @@
 									"path": "images/Text.png",
 									"frame": {
 										"x": 55,
-										"y": 309,
+										"y": 251,
 										"width": 208,
 										"height": 55
 									}
@@ -145,15 +145,15 @@
 								"children": [
 									
 								],
-								"modification": "442645133"
+								"modification": "187904984"
 							}
 						],
-						"modification": "1197790012"
+						"modification": "1525086829"
 					}
 				],
-				"modification": "1923582213"
+				"modification": "510813741"
 			}
 		],
-		"modification": "234769710"
+		"modification": "298730859"
 	}
 ]

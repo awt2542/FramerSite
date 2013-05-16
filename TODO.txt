@@ -1,10 +1,9 @@
 ## Website Todo
 
-- Better template welcome page
-- Fix the types of views lesson
-- Remove the username logging code
-- New Photoshop example movie
-
++ Better template welcome page
++ Fix the types of views lesson
++ Remove the username logging code
++ New Photoshop example movie
 + Make reasonable on mobile
 + Finish announcement blog post
 + Finalize intro page copy
