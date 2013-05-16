@@ -93,6 +93,18 @@ $(document).ready(function() {
 		$("#phone .buttonr").click(nextDemo)
 	}
 	
+	// Set up downloads
+	
+	function download() {
+		
+		_gaq.push(["_trackEvent", "Download", "Framer"])
+		
+		setTimeout(function() {
+			window.location = "/static/downloads/Framer.zip";
+		}, 500);
+	}
+	
+	$("#download").click(download);
 	
 
 	
