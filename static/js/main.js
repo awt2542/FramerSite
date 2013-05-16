@@ -76,13 +76,27 @@ $(document).ready(function() {
 		loadDemo(demoNamesCurrentIndex % demoNames.length)
 	}
 	
-	// Only start loading the dramer demo after a second
-	setTimeout(function() {
-		loadDemo(demoNamesCurrentIndex % demoNames.length)
-	}, 1000);
 	
-	$("#phone .buttonl").click(prevDemo)
-	$("#phone .buttonr").click(nextDemo)
+	if (!window.WebKitCSSMatrix) {
+		
+		$("#screen").attr("src", "/firefox.html");
+		$("#phone .buttonl").hide()
+		$("#phone .buttonr").hide()
+		
+	} else {
+		// Only start loading the dramer demo after a second
+		setTimeout(function() {
+			loadDemo(demoNamesCurrentIndex % demoNames.length)
+		}, 1000);
+		
+		$("#phone .buttonl").click(prevDemo)
+		$("#phone .buttonr").click(nextDemo)
+	}
+	
+	
+
+	
+
 	
 	
 	
