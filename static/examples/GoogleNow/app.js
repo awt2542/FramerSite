@@ -1,21 +1,21 @@
 // By Noah Levin www.noahlevin.com
 
-animateSpeed = "300";
-animateCurveSpeed = "500";
-animateInCurve = "bezier-curve(0.535, 0, 0.135, 1.35)";
+animateSpeed = 300;
+animateCurveSpeed = 500;
+animateInCurve = "bezier-curve(0.39, 0.575, 0.565, 1)";
 animateOutCurve = animateInCurve;
 animateOrigin = "50% 50%";
 homeCardBorder = "1px solid rgba(0,0,0,.2)";
 homeCardShadowSize = "0 1px 2px rgba(0,0,0,.2)";
-homeTrafficScale = ".952";
-homeTrafficY = "960";
-homeMovieScale = ".92";
-homeMovieY = "927";
-homeTimeScale = ".88";
-homeTimeY = "946";
-nowTrafficY = "298";
-nowMovieY = "795";
-nowTimeY = "1380";
+homeTrafficScale = .952;
+homeTrafficY = 960;
+homeMovieScale = .92;
+homeMovieY = 927;
+homeTimeScale = .88;
+homeTimeY = 946;
+nowTrafficY = 298;
+nowMovieY = 795;
+nowTimeY = 1380;
 nowCardBorder = "1px solid transparent";
 nowCardShadowSize = "0 2px 1px rgba(0,0,0,.2)";
 
@@ -24,6 +24,8 @@ PSD["Content"].y += 40
 gotoNow = function() {
 	
 	document.getElementsByTagName('body')[0].className = 'now';
+	
+	PSD["Logo"].style.webkitFilter = "brightness(0%) invert() drop-shadow(rgba(0,0,0,0.2) 0 2px 1px)"
 	
 	PSD["Logo"].animate({
 		properties: {
@@ -102,6 +104,8 @@ gotoNow = function() {
 gotoHome = function() {
 	
 	document.getElementsByTagName('body')[0].className = 'home';
+	
+	PSD["Logo"].style.webkitFilter = null
 	
 	PSD["Logo"].animate({
 		properties: {
