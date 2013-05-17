@@ -1,7 +1,7 @@
 {
     "aws-access-key": "AKIAIV5C2U4YJM6DRMRQ", 
-    "aws-bucket-name": "framer-new-2", 
-    "aws-bucket-website": "framer-new-2.s3-website-us-east-1.amazonaws.com", 
+    "aws-bucket-name": "www.framerjs.com", 
+    "aws-bucket-website": "www.framerjs.com.s3-website-us-east-1.amazonaws.com", 
     "ignore": [
         "*.psd"
     ], 

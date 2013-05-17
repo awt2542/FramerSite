@@ -1,4 +1,4 @@
-// By Noah Levin www.noahlevin.com
+// By Noah Levin www.nlevin.com
 
 animateSpeed = 300;
 animateCurveSpeed = 500;
