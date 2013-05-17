@@ -1,3 +1,6 @@
 build
 .build
 .DS_Store
+plugins/coffeescript.pyc
+
+plugins/version.pyc
