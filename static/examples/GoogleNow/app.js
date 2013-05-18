@@ -1,31 +1,27 @@
 // By Noah Levin www.nlevin.com
 
-animateSpeed = 300;
-animateCurveSpeed = 500;
-animateInCurve = "bezier-curve(0.39, 0.575, 0.565, 1)";
+// Settings
+animateSpeed = "180";
+animateCurveSpeed = "200";
+animateInCurve = "spring(400,30,200)";
 animateOutCurve = animateInCurve;
 animateOrigin = "50% 50%";
 homeCardBorder = "1px solid rgba(0,0,0,.2)";
 homeCardShadowSize = "0 1px 2px rgba(0,0,0,.2)";
-homeTrafficScale = .952;
-homeTrafficY = 960;
-homeMovieScale = .92;
-homeMovieY = 927;
-homeTimeScale = .88;
-homeTimeY = 946;
-nowTrafficY = 298;
-nowMovieY = 795;
-nowTimeY = 1380;
+homeTrafficScale = ".953";
+homeTrafficY = "960";
+homeMovieScale = ".92";
+homeMovieY = "927";
+homeTimeScale = ".88";
+homeTimeY = "946";
+nowTrafficY = "298";
+nowMovieY = "795";
+nowTimeY = "1380";
 nowCardBorder = "1px solid transparent";
-nowCardShadowSize = "0 2px 1px rgba(0,0,0,.2)";
+nowCardShadowSize = "0 1px 1px rgba(0,0,0,.2)";
 
-PSD["Content"].y += 40
-
+// Animate to Now View
 gotoNow = function() {
-	
-	document.getElementsByTagName('body')[0].className = 'now';
-	
-	PSD["Logo"].style.webkitFilter = "brightness(0%) invert() drop-shadow(rgba(0,0,0,0.2) 0 2px 1px)"
 	
 	PSD["Logo"].animate({
 		properties: {
@@ -39,7 +35,7 @@ gotoNow = function() {
 	PSD["Searchbox"].animate({
 		properties: {
 			y: 165,
-			scale: 1.05,
+			scale: 1.03,
 			height: 73
 		},
 		curve: animateInCurve,
@@ -99,14 +95,14 @@ gotoNow = function() {
 		curve: "ease-out",
 		time: animateSpeed
 	});
+
+	document.getElementsByTagName('body')[0].className = 'now';
+
 };
 
+// Animate back home
 gotoHome = function() {
-	
-	document.getElementsByTagName('body')[0].className = 'home';
-	
-	PSD["Logo"].style.webkitFilter = null
-	
+		
 	PSD["Logo"].animate({
 		properties: {
 			y: 301,
@@ -158,7 +154,7 @@ gotoHome = function() {
 			y: 820,
 			opacity: 1
 		},
-		curve: "ease-in",
+		curve: animateOutCurve,
 		time: animateSpeed
 	});
 	
@@ -167,7 +163,7 @@ gotoHome = function() {
 			y: 22,
 			opacity: 1
 		},
-		curve: "ease-in",
+		curve: animateOutCurve,
 		time: animateSpeed
 	});
 	
@@ -176,9 +172,11 @@ gotoHome = function() {
 			opacity: 0,
 			y: 0
 		},
-		curve: "ease-in",
+		curve: animateOutCurve,
 		time: animateSpeed
 	});
+
+	document.getElementsByTagName('body')[0].className = 'home';
 	
 };
 
@@ -186,6 +184,10 @@ isIphone = function() {
 	if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
 		return true;
 	}
+};
+
+isSafari = function() {
+	return navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 
 };
 
 toggler = utils.toggle(gotoNow, gotoHome);
@@ -198,8 +200,12 @@ gotoHome();
 
 pointerType = "click";
 
+// Don't show status bar on iPhone
 if (isIphone()) {
 	pointerType = "touchstart";
+	PSD["StatusBar"].opacity = 0
+} else {
+	PSD["Content"].y += 40
 }
 
 PSD["Content"].on(pointerType, function(e) {
@@ -210,3 +216,7 @@ PSD["Content"].on(pointerType, function(e) {
 	return movePage();
 });
 
+// Chrome and safari render webkit filters differently, adjust to turn logo white accordingly
+if (isSafari() || isIphone()) {
+	document.getElementsByTagName('html')[0].className = 'safari';
+};	

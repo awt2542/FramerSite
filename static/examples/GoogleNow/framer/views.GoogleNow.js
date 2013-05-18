@@ -28,7 +28,7 @@
 					"frame": {
 						"x": 36,
 						"y": 470,
-						"width": 569,
+						"width": 568,
 						"height": 93
 					}
 				},
@@ -36,7 +36,7 @@
 				"children": [
 					
 				],
-				"modification": "1363253030"
+				"modification": "399337242"
 			},
 			{
 				"id": 28,
@@ -61,7 +61,7 @@
 				"children": [
 					
 				],
-				"modification": "1363253054"
+				"modification": "1895413222"
 			},
 			{
 				"id": 35,
@@ -86,7 +86,7 @@
 				"children": [
 					
 				],
-				"modification": "1363253058"
+				"modification": "1895413224"
 			},
 			{
 				"id": 33,
@@ -111,7 +111,7 @@
 				"children": [
 					
 				],
-				"modification": "1363253062"
+				"modification": "1895413227"
 			},
 			{
 				"id": 39,
@@ -136,7 +136,7 @@
 				"children": [
 					
 				],
-				"modification": "1363282568"
+				"modification": "1895413229"
 			},
 			{
 				"id": 41,
@@ -161,7 +161,7 @@
 				"children": [
 					
 				],
-				"modification": "1363282574"
+				"modification": "1895413253"
 			},
 			{
 				"id": 15,
@@ -186,7 +186,7 @@
 				"children": [
 					
 				],
-				"modification": "1079211296"
+				"modification": "408926027"
 			},
 			{
 				"id": 23,
@@ -211,7 +211,7 @@
 				"children": [
 					
 				],
-				"modification": "2076152754"
+				"modification": "1319611731"
 			},
 			{
 				"id": 43,
@@ -236,10 +236,10 @@
 				"children": [
 					
 				],
-				"modification": "1086689512"
+				"modification": "1895532603"
 			}
 		],
-		"modification": "424363071"
+		"modification": "448877635"
 	},
 	{
 		"id": 74,
@@ -257,62 +257,13 @@
 				"x": 0,
 				"y": 0,
 				"width": 640,
-				"height": 40
+				"height": 44
 			}
 		},
 		"imageType": "png",
 		"children": [
-			{
-				"id": 71,
-				"name": "bars",
-				"layerFrame": {
-					"x": 0,
-					"y": 0,
-					"width": 640,
-					"height": 1096
-				},
-				"maskFrame": null,
-				"image": {
-					"path": "images/bars.png",
-					"frame": {
-						"x": 8,
-						"y": 9,
-						"width": 38,
-						"height": 20
-					}
-				},
-				"imageType": "png",
-				"children": [
-					
-				],
-				"modification": "911915084"
-			},
-			{
-				"id": 64,
-				"name": "carrier",
-				"layerFrame": {
-					"x": 0,
-					"y": 0,
-					"width": 640,
-					"height": 1096
-				},
-				"maskFrame": null,
-				"image": {
-					"path": "images/carrier.png",
-					"frame": {
-						"x": 52,
-						"y": 8,
-						"width": 140,
-						"height": 21
-					}
-				},
-				"imageType": "png",
-				"children": [
-					
-				],
-				"modification": "930959674"
-			}
+			
 		],
-		"modification": "1565249211"
+		"modification": "1263573184"
 	}
 ]
