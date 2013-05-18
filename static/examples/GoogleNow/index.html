@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Now</title>
+		<title>Google Now</title>
 		<link rel="stylesheet" href="style.css">
 		<link href="icons/gsa-57.png"  sizes="57x57" rel="apple-touch-icon-precomposed"  />
 		<link href="icons/gsa-72.png"  sizes="72x72" rel="apple-touch-icon-precomposed"  />
@@ -26,6 +26,7 @@
 
 		body {
 		  font: 28px/1em "Helvetica";
+		  background: #000;
 		  color: #FFF;
 		  overflow: hidden;
 		  -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -41,10 +42,13 @@
 		  height: 0px;
 		}
 
-		#FramerRoot {
-			-webkit-transform: scale(0.5, 0.5); rotate(.1deg);;
-			-webkit-transform-origin: 0% 0%;
+		@media only screen and (max-width: 320px) {
+			#FramerRoot {
+				-webkit-transform: scale(0.5, 0.5); rotate(.1deg);;
+				-webkit-transform-origin: 0% 0%;
+			}
 		}
+
 		</style>
 		
 	</head>
@@ -55,6 +59,9 @@
 			if (window.location.protocol == "file:") {
 				utils.domLoadScript("framer/framerps.js", function() {
 					utils.domLoadScript("app.js");
+					if (!navigator.userAgent.match(/iPad/i) && !navigator.userAgent.match(/iPhone/i)) {
+						utils.domLoadScript("desktop/iphone5.js");
+					}
 				})
 			} else {
 				utils.domLoadScript("/static/js/example.preload.js");
