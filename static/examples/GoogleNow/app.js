@@ -180,41 +180,47 @@ gotoHome = function() {
 	
 };
 
+// Check device types
 isIphone = function() {
 	if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
 		return true;
 	}
 };
 
+isWebApp = function() {
+	return window.navigator.standalone;
+};
+
 isSafari = function() {
 	return navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 
 };
 
-toggler = utils.toggle(gotoNow, gotoHome);
-
-delay = function(ms, func) {
-	return setTimeout(func, ms);
-};
-
+// Set stage
 gotoHome();
 
+// Check pointer types
 pointerType = "click";
 
-// Don't show status bar on iPhone
 if (isIphone()) {
 	pointerType = "touchstart";
-	PSD["StatusBar"].opacity = 0
-} else {
-	PSD["Content"].y += 40
-}
+} 
+
+// Trigger animation on click/tap anywhere
+toggler = utils.toggle(gotoNow, gotoHome);
 
 PSD["Content"].on(pointerType, function(e) {
 	var movePage;
-
 	e.preventDefault();
 	movePage = toggler();
 	return movePage();
 });
+
+// Don't show status bar for web apps
+if (isWebApp()) {
+	PSD["StatusBar"].opacity = 0
+} else {
+	PSD["Content"].y += 40
+}
 
 // Chrome and safari render webkit filters differently, adjust to turn logo white accordingly
 if (isSafari() || isIphone()) {
