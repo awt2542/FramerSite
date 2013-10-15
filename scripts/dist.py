@@ -32,7 +32,7 @@ os.system("mv 'Framer.app' Framer")
 
 # Part two, add the latest template
 
-os.system("cp -R ../Framer/build/template Framer/Template")
+os.system("cp -R ../Framer/build/Framer Framer/Template")
 os.system("zip -r Framer.zip Framer")
 
 
