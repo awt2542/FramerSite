@@ -11,19 +11,19 @@
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td><a href="{{ ROOT_URL }}/editor/?path=quickies/bouncy.js" target="new">Bouncy Dialog</a></td>
+		<td><a href="{% url '/editor/index.html' %}?path=quickies/bouncy.js" target="new">Bouncy Dialog</a></td>
 		<td>Click to bounce a square</td>
 	</tr>
 	<tr>
-		<td><a href="{{ ROOT_URL }}/editor/?path=quickies/navigation.js" target="new">iOS Like View Animating</a></td>
+		<td><a href="{% url '/editor/index.html' %}?path=quickies/navigation.js" target="new">iOS Like View Animating</a></td>
 		<td>Replacing views with other views</td>
 	</tr>
 	<tr>
-		<td><a href="{{ ROOT_URL }}/editor/?path=quickies/draggable.js" target="new">Draggable Views</a></td>
+		<td><a href="{% url '/editor/index.html' %}?path=quickies/draggable.js" target="new">Draggable Views</a></td>
 		<td>Move views around</td>
 	</tr>
 	<tr>
-		<td><a href="{{ ROOT_URL }}/editor/?path=quickies/cycler.js" target="new">Value Cycler</a></td>
+		<td><a href="{% url '/editor/index.html' %}?path=quickies/cycler.js" target="new">Value Cycler</a></td>
 		<td>Cycle through a list of scale values</td>
 	</tr>
 </table>
@@ -36,36 +36,36 @@
 <div class="items">
 
 	<div>
-		<a class="button small" href="{{ STATIC_URL }}/examples/NewsFeed.zip">Download</a>
-		<a class="button small" href="{{ ROOT_URL }}/editor/?example=NewsFeed">Try</a>
+		<a class="button small" href="{% static '/static/examples/NewsFeed.zip' %}">Download</a>
+		<a class="button small" href="{% url '/editor/index.html' %}?example=NewsFeed">Try</a>
 		<h3>Facebook News Feed</h3>
 		<p>Part of the Facebook iOS app.</p>
 	</div>
 
 	<div>
-		<a class="button small" href="{{ STATIC_URL }}/examples/GoogleNow.zip">Download</a>
-		<a class="button small" href="{{ ROOT_URL }}/editor/?example=GoogleNow">Try</a>
+		<a class="button small" href="{% static '/static/examples/GoogleNow.zip' %}">Download</a>
+		<a class="button small" href="{% url '/editor/index.html' %}?example=GoogleNow">Try</a>
 		<h3>Google Now</h3>
 		<p>Actual Google Now iOS animations by <a href="http://www.nlevin.com/">Noah Levin</a></p>
 
 	</div>
 	<div>
-		<a class="button small" href="{{ STATIC_URL }}/examples/Intro.zip">Download</a>
-		<a class="button small" href="{{ ROOT_URL }}/editor/?example=Intro">Try</a>
+		<a class="button small" href="{% static '/static/examples/Intro.zip' %}">Download</a>
+		<a class="button small" href="{% url '/editor/index.html' %}?example=Intro">Try</a>
 		<h3>Framer Intro</h3>
 		<p>The intro animation on the homepage</a></p>
 
 	</div>
 	<div>
-		<a class="button small" href="{{ STATIC_URL }}/movies/commuter.mov">Download</a>
+		<a class="button small" href="{% static '/static/movies/commuter.mov' %}">Download</a>
 		<h3>Commuter App (Movie only)</h3>
 		<p>Concept for a commuting app by Kristoffer Brady</p>
 
 	</div>
 
 	<!-- <div>
-		<a class="button small" href="{{ STATIC_URL }}/examples/NewsFeed.zip">Download</a>
-		<a class="button small" href="{{ ROOT_URL }}/editor/?example=NewsFeed">Try</a>
+		<a class="button small" href="{% static '/static/examples/NewsFeed.zip' %}">Download</a>
+		<a class="button small" href="{% url '/editor/index.html?example=NewsFeed' %}">Try</a>
 		<h3>Fictional iOS App</h3>
 		<p>Some app that will never exist</p>
 	</div> -->

@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="shortcut icon" href="{{ STATIC_URL }}/favicon.ico">
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/editor.css">
+	<link rel="shortcut icon" href="{% static '/static/img/favicon.png' %}">
+	<link rel="stylesheet" href="{% static '/static/css/editor.css' %}">
 
 	<title>Framer Editor</title>
 
@@ -25,14 +25,14 @@
 	
 	{% include "analytics.html" %}
 	
-	<script src="{{ STATIC_URL }}/js/framer.js"></script>
+	<script src="{% static '/static/js/framer.js' %}"></script>
 
-	<!-- <script src="{{ STATIC_URL }}/js/editor/zepto.js"></script> -->
+	<!-- <script src="{% static '/static/js/editor/zepto.js' %}"></script> -->
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
-	<script src="{{ STATIC_URL }}/js/editor.js"></script>
-	<script src="{{ STATIC_URL }}/js/editor/ace/ace.js"></script>
+	<script src="{% static '/static/js/editor.js' %}"></script>
+	<script src="{% static '/static/js/editor/ace/ace.js' %}"></script>
 
 </body>
 </html>

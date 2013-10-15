@@ -5,15 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}/img/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="{% static '/static/img/favicon.png' %}">
 	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 	
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/vendor/reset.css">
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/master.css">
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/mobile.css" 
+	<link rel="stylesheet" href="{% static '/static/css/vendor/reset.css' %}">
+	<link rel="stylesheet" href="{% static '/static/css/master.css' %}">
+	<link rel="stylesheet" href="{% static '/static/css/mobile.css' %}" 
 		media='screen and (max-width: 768px)'>
-	<link href="{{ STATIC_URL }}/rainbow/themes/framer.css" rel="stylesheet" type="text/css">
+	<link href="{% static '/static/rainbow/themes/framer.css' %}" rel="stylesheet" type="text/css">
 
 	{% block header %}
 	<title>Framer - Prototyping Tool</title>
@@ -32,8 +32,8 @@
 
 	{% block scripts %}
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="{{ STATIC_URL }}/js/main.js"></script>
-	<script src="{{ STATIC_URL }}/rainbow/rainbow.min.js"></script>
+	<script src="{% static '/static/js/main.js' %}"></script>
+	<script src="{% static '/static/rainbow/rainbow.min.js' %}"></script>
 	
 	{% include "analytics.html" %}
 	{% endblock %}

@@ -4,7 +4,7 @@
 <div id="intro">
 	
 	<div class="logo">
-		<img src="{{ STATIC_URL }}/img/Resources/framer-logo.png" width="21" height="24" alt="Framer Logo" class="2x">
+		<img src="{% static '/static/img/Resources/framer-logo.png' %}" width="21" height="24" alt="Framer Logo" class="2x">
 		Framer
 	</div>
 	
@@ -16,22 +16,22 @@
 	<div id="upsells">
 		<ul>
 			<li>
-				<img src="{{ STATIC_URL }}/img/Resources/photoshop.png" class="2x" width="32" height="32">
+				<img src="{% static '/static/img/Resources/photoshop.png' %}" class="2x" width="32" height="32">
 				<h3>Photoshop</h3>
 				Framer integrated with Photoshop to quickly export assets and set up a project.
 			</li>
 			<li>
-				<img src="{{ STATIC_URL }}/img/Resources/animation.png" class="2x" width="32" height="32">
+				<img src="{% static '/static/img/Resources/animation.png' %}" class="2x" width="32" height="32">
 				<h3>Animation</h3>
 				Animate any view in full 3D space with spring physics and bezier curves.
 			</li>
 			<li>
-				<img src="{{ STATIC_URL }}/img/Resources/performance.png" class="2x" width="32" height="32">
+				<img src="{% static '/static/img/Resources/performance.png' %}" class="2x" width="32" height="32">
 				<h3>Performance</h3>
 				Hardware accelerated for high frame rates. Based on CSS keyframes.
 			</li>
 			<li>
-				<img src="{{ STATIC_URL }}/img/Resources/flexible.png" class="2x" width="32" height="32">
+				<img src="{% static '/static/img/Resources/flexible.png' %}" class="2x" width="32" height="32">
 				<h3>Flexible</h3>
 				Works well for desktop, mobile and tablets. Plays well with the rest of the browser.
 			</li>
@@ -43,6 +43,7 @@
 	</div>
 	<div class="source">
 		<p>
+			<a href="https://www.facebook.com/groups/framerjs/" class="fb">Facebook Group</a><br>
 			Version 2.0 <span>– Source on <a href="https://github.com/koenbok/Framer" target="new">Github</a></span>
 		</p>
 	</div>
@@ -52,10 +53,10 @@
 	<div id="title"></div>
 	<iframe id="screen"></iframe>
 	<a class="buttonl">
-		<img src="{{ STATIC_URL }}/img/Resources/button-left.png" width="42" height="94" alt="Button Left">
+		<img src="{% static '/static/img/Resources/button-left.png' %}" width="42" height="94" alt="Button Left">
 	</a>
 	<a class="buttonr">
-		<img src="{{ STATIC_URL }}/img/Resources/button-right.png" width="42" height="94" alt="Button Left">
+		<img src="{% static '/static/img/Resources/button-right.png' %}" width="42" height="94" alt="Button Left">
 	</a>
 </div>
 

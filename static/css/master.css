@@ -218,14 +218,19 @@ pre			{font-family:Menlo, Monaco, Courier; white-space:pre-wrap; border: 1px sol
 /*	border-top: 1px solid #d9dcdf;
 	border-bottom: 1px solid #d9dcdf;*/
 	margin: 0px;
-	margin-top: 34px;
+	margin-top: 36px;
 	margin-left: 40px;
 	width: 240px;
 	height: 44px;
 	font-weight: 600;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#intro .source a.fb {
 	font-size: 14px;
-	/*text-align: center*/;
-	line-height: 42px;
+	color: rgb(98, 132, 197);
 }
 
 #intro .source span {
