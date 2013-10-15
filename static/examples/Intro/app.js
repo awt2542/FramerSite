@@ -1,10 +1,16 @@
 PSD.IntroView.opacity = 0
 PSD.Logo.opacity = 0
 PSD.Text.opacity = 0
-PSD.IntroButton.addClass("IntroButton")
+
+PSD.IntroButton.addClass("Button")
+PSD.OverviewButton.addClass("Button")
 
 PSD.IntroButton.on("click", function() {
 	window.open("https://vimeo.com/66300587","new")
+})
+
+PSD.OverviewButton.on("click", function() {
+	window.open("https://vimeo.com/74712901","new")
 })
 
 
