@@ -56,7 +56,7 @@
 		<script src="framer/views.GoogleNow.js"></script>
 		<script src="framer/framer.js"></script>
 		<script>
-			if (window.location.protocol == "file:") {
+			if (window.location.host.indexOf("framerjs.com") == -1) {
 				utils.domLoadScript("framer/framerps.js", function() {
 					utils.domLoadScript("app.js");
 					if (!navigator.userAgent.match(/iPad/i) && !navigator.userAgent.match(/iPhone/i)) {
