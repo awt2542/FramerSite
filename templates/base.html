@@ -25,7 +25,12 @@
 	<div id="content">
 		{% block content %}{% endblock %}
 		<div id="footer">
-			&copy; 2013 <a href="http://www.koenbok.com">Koen Bok</a>. Site built with <a href="http://github.com/koenbok/Cactus">Cactus</a>.
+			&copy; 2013 <a href="http://www.koenbok.com">Koen Bok</a>. Site built with <a href="http://github.com/koenbok/Cactus">Cactus</a>.<br>
+			<div style="margin-top:12px; display:inline-block">
+				<a href="https://mixpanel.com/f/partner">
+					<img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics">
+				</a>
+			</div>	
 		</div>
 	</div>
 
@@ -37,5 +42,6 @@
 	
 	{% include "analytics.html" %}
 	{% endblock %}
+
 </body>
 </html>
