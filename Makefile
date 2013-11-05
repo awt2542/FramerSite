@@ -21,7 +21,6 @@ gitupdate:
 	cd Framer; make dist
 
 jsupdate:
-	make gitupdate
 	find . -name "framer.js" -exec cp Framer/build/framer.js {} \;
 
 .PHONY: examples optimize deploy
