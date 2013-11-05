@@ -1,3 +1,5 @@
+
+
 ################################################################
 # SETUP
 
@@ -159,12 +161,16 @@ class Editor
 ################################################################
 # RUN
 
-$(document).ready ->
-	
-	window.editor = new Editor()
-	
-	if editor.exampleUrl()
-		editor.loadExample editor.exampleUrl()
-	else if editor.fileUrl()
-		editor.loadFile editor.fileUrl()
+require(["ace"], (ace) ->
+
+	window.ace = ace
+
+	$(document).ready ->
+		
+		window.editor = new Editor()
+		
+		if editor.exampleUrl()
+			editor.loadExample editor.exampleUrl()
+		else if editor.fileUrl()
+			editor.loadFile editor.fileUrl()
 
