@@ -99,7 +99,7 @@ PSD.iPhone.on("click", function() {
 
 <h2>Why does performance on mobile seem worse?</h2>
 <p>
-	If you see delays when running you prototype on mobile, it's very likely that it because of the <a href="https://developers.google.com/mobile/articles/fast_buttons">500ms click delay in mobile browsers</a>. In a nutshell, mobile browsers have to distinguish a click event from a hover or right click and they use a small delay to do so.
+	If you see delays when running you prototype on mobile, it's very likely that it is because of the <a href="https://developers.google.com/mobile/articles/fast_buttons">500ms click delay in mobile browsers</a>. In a nutshell, mobile browsers have to distinguish a click event from a hover or right click and they use a small delay to do so.
 </p>
 <p>
 	Fortunately it is easy to get rid of these. The most straightforward way is to use a "touchstart" or "touchend" event instead of the "click" event. For other ways you can check this <a href="http://stackoverflow.com/questions/12238587/eliminate-300ms-delay-on-click-events-in-mobile-safari">stack overflow thread</a>.
