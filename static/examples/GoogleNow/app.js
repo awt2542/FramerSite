@@ -93,6 +93,14 @@ gotoNow = function() {
 		time: noBounceCurveSpeed
 	});
 
+	PSD.Background.animate({
+		properties: {
+			brightness: 100
+		},
+		curve: noBounceCurve,
+		time: noBounceCurveSpeed
+	})
+
 };
 
 // Animate back home
@@ -179,6 +187,14 @@ goHome = function() {
 		},
 		curve: animateOutCurve
 	});
+
+	PSD.Background.animate({
+		properties: {
+			brightness: 104
+		},
+		curve: noBounceCurve,
+		time: noBounceCurveSpeed
+	})
 
 };
 
