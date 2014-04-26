@@ -7,28 +7,53 @@
 			"x": 0,
 			"y": 0,
 			"width": 640,
-			"height": 1096
+			"height": 2500
 		},
 		"maskFrame": null,
 		"image": null,
 		"imageType": null,
 		"children": [
 			{
-				"id": 26,
-				"name": "Searchbox",
+				"id": 74,
+				"name": "StatusBar",
 				"layerFrame": {
 					"x": 0,
 					"y": 0,
 					"width": 640,
-					"height": 1096
+					"height": 2500
 				},
 				"maskFrame": null,
 				"image": {
-					"path": "images/Searchbox.png",
+					"path": "images/StatusBar.png",
 					"frame": {
-						"x": 36,
-						"y": 470,
-						"width": 568,
+						"x": 0,
+						"y": 0,
+						"width": 640,
+						"height": 73
+					}
+				},
+				"imageType": "png",
+				"children": [
+					
+				],
+				"modification": "1378447927"
+			},
+			{
+				"id": 166,
+				"name": "WhiteLogo",
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 640,
+					"height": 2500
+				},
+				"maskFrame": null,
+				"image": {
+					"path": "images/WhiteLogo.png",
+					"frame": {
+						"x": 188,
+						"y": 89,
+						"width": 265,
 						"height": 93
 					}
 				},
@@ -36,107 +61,173 @@
 				"children": [
 					
 				],
-				"modification": "399337242"
+				"modification": "400064102"
 			},
 			{
 				"id": 28,
-				"name": "Logo",
+				"name": "ColorLogo",
 				"layerFrame": {
 					"x": 0,
 					"y": 0,
 					"width": 640,
-					"height": 1096
+					"height": 2500
 				},
 				"maskFrame": null,
 				"image": {
-					"path": "images/Logo.png",
+					"path": "images/ColorLogo.png",
 					"frame": {
-						"x": 112,
-						"y": 301,
-						"width": 417,
-						"height": 144
+						"x": 123,
+						"y": 297,
+						"width": 395,
+						"height": 134
 					}
 				},
 				"imageType": "png",
 				"children": [
 					
 				],
-				"modification": "1895413222"
+				"modification": "1093681495"
 			},
 			{
-				"id": 35,
-				"name": "TrafficCard",
+				"id": 146,
+				"name": "Mic",
 				"layerFrame": {
 					"x": 0,
 					"y": 0,
 					"width": 640,
-					"height": 1096
+					"height": 2500
 				},
 				"maskFrame": null,
 				"image": {
-					"path": "images/TrafficCard.png",
+					"path": "images/Mic.png",
 					"frame": {
-						"x": 25,
-						"y": 312,
-						"width": 588,
-						"height": 460
+						"x": 534,
+						"y": 513,
+						"width": 32,
+						"height": 45
 					}
 				},
 				"imageType": "png",
 				"children": [
 					
 				],
-				"modification": "1895413224"
+				"modification": "128837027"
 			},
 			{
-				"id": 33,
-				"name": "MovieCard",
+				"id": 170,
+				"name": "Searchbox",
 				"layerFrame": {
 					"x": 0,
 					"y": 0,
 					"width": 640,
-					"height": 1096
+					"height": 2500
 				},
 				"maskFrame": null,
 				"image": {
-					"path": "images/MovieCard.png",
+					"path": "images/Searchbox.png",
 					"frame": {
-						"x": 23,
-						"y": 104,
-						"width": 596,
-						"height": 889
+						"x": 28,
+						"y": 477,
+						"width": 584,
+						"height": 120
 					}
 				},
 				"imageType": "png",
 				"children": [
 					
 				],
-				"modification": "1895413227"
+				"modification": "1547254643"
 			},
 			{
-				"id": 39,
-				"name": "TimeCard",
+				"id": 156,
+				"name": "Cards",
 				"layerFrame": {
 					"x": 0,
 					"y": 0,
 					"width": 640,
-					"height": 1096
+					"height": 2500
 				},
 				"maskFrame": null,
-				"image": {
-					"path": "images/TimeCard.png",
-					"frame": {
-						"x": 21,
-						"y": 479,
-						"width": 596,
-						"height": 139
-					}
-				},
-				"imageType": "png",
+				"image": null,
+				"imageType": null,
 				"children": [
-					
+					{
+						"id": 35,
+						"name": "TrafficCard",
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 640,
+							"height": 2500
+						},
+						"maskFrame": null,
+						"image": {
+							"path": "images/TrafficCard.png",
+							"frame": {
+								"x": 16,
+								"y": 922,
+								"width": 608,
+								"height": 471
+							}
+						},
+						"imageType": "png",
+						"children": [
+							
+						],
+						"modification": "1580255934"
+					},
+					{
+						"id": 33,
+						"name": "MovieCard",
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 640,
+							"height": 2500
+						},
+						"maskFrame": null,
+						"image": {
+							"path": "images/MovieCard.png",
+							"frame": {
+								"x": 16,
+								"y": 1406,
+								"width": 608,
+								"height": 897
+							}
+						},
+						"imageType": "png",
+						"children": [
+							
+						],
+						"modification": "2057552958"
+					},
+					{
+						"id": 39,
+						"name": "TimeCard",
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 640,
+							"height": 2500
+						},
+						"maskFrame": null,
+						"image": {
+							"path": "images/TimeCard.png",
+							"frame": {
+								"x": 16,
+								"y": 2322,
+								"width": 608,
+								"height": 147
+							}
+						},
+						"imageType": "png",
+						"children": [
+							
+						],
+						"modification": "1769032992"
+					}
 				],
-				"modification": "1895413229"
+				"modification": "14948658"
 			},
 			{
 				"id": 41,
@@ -145,7 +236,7 @@
 					"x": 0,
 					"y": 0,
 					"width": 640,
-					"height": 1096
+					"height": 2500
 				},
 				"maskFrame": null,
 				"image": {
@@ -154,39 +245,14 @@
 						"x": 0,
 						"y": 0,
 						"width": 640,
-						"height": 291
+						"height": 360
 					}
 				},
 				"imageType": "png",
 				"children": [
 					
 				],
-				"modification": "1895413253"
-			},
-			{
-				"id": 15,
-				"name": "Actions",
-				"layerFrame": {
-					"x": 0,
-					"y": 0,
-					"width": 640,
-					"height": 1096
-				},
-				"maskFrame": null,
-				"image": {
-					"path": "images/Actions.png",
-					"frame": {
-						"x": 108,
-						"y": 820,
-						"width": 430,
-						"height": 99
-					}
-				},
-				"imageType": "png",
-				"children": [
-					
-				],
-				"modification": "408926027"
+				"modification": "1561001561"
 			},
 			{
 				"id": 23,
@@ -195,15 +261,15 @@
 					"x": 0,
 					"y": 0,
 					"width": 640,
-					"height": 1096
+					"height": 2500
 				},
 				"maskFrame": null,
 				"image": {
 					"path": "images/Top.png",
 					"frame": {
-						"x": 21,
+						"x": 42,
 						"y": 22,
-						"width": 585,
+						"width": 578,
 						"height": 60
 					}
 				},
@@ -211,7 +277,7 @@
 				"children": [
 					
 				],
-				"modification": "1319611731"
+				"modification": "426364866"
 			},
 			{
 				"id": 43,
@@ -220,7 +286,7 @@
 					"x": 0,
 					"y": 0,
 					"width": 640,
-					"height": 1096
+					"height": 2500
 				},
 				"maskFrame": null,
 				"image": {
@@ -229,41 +295,16 @@
 						"x": 0,
 						"y": 0,
 						"width": 640,
-						"height": 1096
+						"height": 1136
 					}
 				},
 				"imageType": "png",
 				"children": [
 					
 				],
-				"modification": "1895532603"
+				"modification": "1236727460"
 			}
 		],
-		"modification": "448877635"
-	},
-	{
-		"id": 74,
-		"name": "StatusBar",
-		"layerFrame": {
-			"x": 0,
-			"y": 0,
-			"width": 640,
-			"height": 1096
-		},
-		"maskFrame": null,
-		"image": {
-			"path": "images/StatusBar.png",
-			"frame": {
-				"x": 0,
-				"y": 0,
-				"width": 640,
-				"height": 44
-			}
-		},
-		"imageType": "png",
-		"children": [
-			
-		],
-		"modification": "1263573184"
+		"modification": "1790745047"
 	}
 ]

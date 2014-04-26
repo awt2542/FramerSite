@@ -1,228 +1,226 @@
-// By Noah Levin www.nlevin.com
+// By Noah Levin - www.nlevin.com
 
 // Settings
-animateSpeed = "180";
-animateCurveSpeed = "200";
 animateInCurve = "spring(400,30,200)";
-animateOutCurve = animateInCurve;
-animateOrigin = "50% 50%";
-homeCardBorder = "1px solid rgba(0,0,0,.2)";
-homeCardShadowSize = "0 1px 2px rgba(0,0,0,.2)";
-homeTrafficScale = ".953";
-homeTrafficY = "960";
-homeMovieScale = ".92";
-homeMovieY = "927";
-homeTimeScale = ".88";
-homeTimeY = "946";
-nowTrafficY = "298";
-nowMovieY = "795";
-nowTimeY = "1380";
-nowCardBorder = "1px solid transparent";
-nowCardShadowSize = "0 1px 1px rgba(0,0,0,.2)";
+animateOutCurve = "spring(350,30,100)";
+noBounceCurve = "ease-out"
+noBounceCurveSpeed = "220";
 
 // Animate to Now View
 gotoNow = function() {
 	
-	PSD["Logo"].animate({
+	PSD.ColorLogo.animate({
 		properties: {
-			y: 17,
-			scale: 0.6
+			y: 70,
+			scale: 0.665,
+			opacity: 0
 		},
-		curve: animateInCurve,
-		time: animateCurveSpeed
+		curve: animateInCurve
+	});
+
+	PSD.WhiteLogo.animate({
+		properties: {
+			y: 90,
+			scale: 1,
+			opacity: 1
+		},
+		curve: animateInCurve
+	});
+
+	PSD.StatusBar.animate({
+		properties: {
+			opacity: 1
+		},
+		curve: animateInCurve
+	});
+
+	PSD.Searchbox.animate({
+		properties: {
+			y: 205,
+			scaleY: 0.90,
+			scaleX: 1.0425
+		},
+		curve: animateInCurve
 	});
 	
-	PSD["Searchbox"].animate({
+	PSD.TrafficCard.animate({
 		properties: {
-			y: 165,
-			scale: 1.03,
-			height: 73
-		},
-		curve: animateInCurve,
-		time: animateCurveSpeed
-	});
-	
-	PSD["TrafficCard"].animate({
-		properties: {
-			y: nowTrafficY,
+			y: -560,
 			scale: 1
 		},
-		curve: animateInCurve,
-		time: animateCurveSpeed
+		curve: animateInCurve
 	});
 	
-	PSD["MovieCard"].animate({
+	PSD.MovieCard.animate({
 		properties: {
-			y: nowMovieY,
+			y: -74,
 			scale: 1
 		},
-		curve: animateInCurve,
-		time: animateCurveSpeed
+		curve: animateInCurve
 	});
 	
-	PSD["TimeCard"].animate({
+	PSD.TimeCard.animate({
 		properties: {
-			y: nowTimeY,
+			y: 840,
 			scale: 1
 		},
-		curve: animateInCurve,
-		time: animateCurveSpeed
+		curve: animateInCurve
 	});
 	
-	PSD["Context"].animate({
+	PSD.Context.animate({
 		properties: {
 			opacity: 1,
 			y: -20
 		},
-		curve: "ease-out",
-		time: animateSpeed
+		curve: noBounceCurve,
+		time: noBounceCurveSpeed
 	});
-	
-	PSD["Actions"].animate({
+
+	PSD.Mic.animate({
 		properties: {
-			y: 760,
-			opacity: 0
+			x: 550,
+			y: 242
 		},
-		curve: "ease-out",
-		time: animateSpeed
+		curve: animateInCurve
 	});
 	
-	PSD["Top"].animate({
+	PSD.Top.animate({
 		properties: {
 			y: -20,
 			opacity: 0
 		},
-		curve: "ease-out",
-		time: animateSpeed
+		curve: noBounceCurve,
+		time: noBounceCurveSpeed
 	});
 
-	document.getElementsByTagName('body')[0].className = 'now';
+	PSD.Background.animate({
+		properties: {
+			brightness: 100
+		},
+		curve: noBounceCurve,
+		time: noBounceCurveSpeed
+	})
 
 };
 
 // Animate back home
-gotoHome = function() {
+goHome = function() {
 		
-	PSD["Logo"].animate({
+	PSD.ColorLogo.animate({
 		properties: {
 			y: 301,
-			scale: 1
+			scale: 1,
+			opacity: 1
 		},
-		curve: animateOutCurve,
-		time: animateCurveSpeed
+		curve: animateOutCurve
+	});
+
+	PSD.WhiteLogo.animate({
+		properties: {
+			y: 321,
+			scale: 1.5,
+			opacity: 0
+		},
+		curve: animateOutCurve
+	});
+
+	PSD.StatusBar.animate({
+		properties: {
+			opacity: 0
+		},
+		curve: animateOutCurve
 	});
 	
-	PSD["Searchbox"].animate({
+	PSD.Searchbox.animate({
 		properties: {
 			y: 470,
 			scale: 1,
-			height: 93
 		},
-		curve: animateOutCurve,
-		time: animateCurveSpeed
+		curve: animateOutCurve
 	});
 	
-	PSD["TrafficCard"].animate({
+	PSD.TrafficCard.animate({
 		properties: {
-			y: homeTrafficY,
-			scale: homeTrafficScale
+			y: 0,
+			scale: .953
 		},
-		curve: animateOutCurve,
-		time: animateCurveSpeed
+		curve: animateOutCurve
 	});
 	
-	PSD["MovieCard"].animate({
+	PSD.MovieCard.animate({
 		properties: {
-			y: homeMovieY,
-			scale: homeMovieScale
+			y: -36,
+			scale: .92
 		},
-		curve: animateOutCurve,
-		time: animateCurveSpeed
+		curve: animateOutCurve
 	});
 	
-	PSD["TimeCard"].animate({
+	PSD.TimeCard.animate({
 		properties: {
-			y: homeTimeY,
-			scale: homeTimeScale
+			y: -20,
+			scale: .88
 		},
-		curve: animateOutCurve,
-		time: animateCurveSpeed
+		curve: animateOutCurve
 	});
 	
-	PSD["Actions"].animate({
-		properties: {
-			y: 820,
-			opacity: 1
-		},
-		curve: animateOutCurve,
-		time: animateSpeed
-	});
-	
-	PSD["Top"].animate({
+	PSD.Top.animate({
 		properties: {
 			y: 22,
 			opacity: 1
 		},
-		curve: animateOutCurve,
-		time: animateSpeed
+		curve: animateOutCurve
 	});
 	
-	PSD["Context"].animate({
+	PSD.Context.animate({
 		properties: {
 			opacity: 0,
 			y: 0
 		},
-		curve: animateOutCurve,
-		time: animateSpeed
+		curve: noBounceCurve,
+		time: noBounceCurveSpeed
 	});
 
-	document.getElementsByTagName('body')[0].className = 'home';
-	
+	PSD.Mic.animate({
+		properties: {
+			x: 534,
+			y: 508
+		},
+		curve: animateOutCurve
+	});
+
+	PSD.Background.animate({
+		properties: {
+			brightness: 104
+		},
+		curve: noBounceCurve,
+		time: noBounceCurveSpeed
+	})
+
 };
 
-// Check device types
-isIphone = function() {
-	if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
-		return true;
-	}
-};
-
-isWebApp = function() {
-	return window.navigator.standalone;
-};
-
-isSafari = function() {
-	return navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 
-};
+// Hide cards that fall off the screen
+PSD.Content.style.overflow = "hidden"
 
 // Set stage
-gotoHome();
+goHome();
 
-// Check pointer types
+// Click if desktop, touchstart if mobile to simulate dragging
 pointerType = "click";
-
-if (isIphone()) {
+if (utils.isTouch()) {
 	pointerType = "touchstart";
-} 
+}
+
+// Shrink view for desktop only
+if (!utils.isMobile()) {
+	document.body.className += "desktop";
+}
 
 // Trigger animation on click/tap anywhere
-toggler = utils.toggle(gotoNow, gotoHome);
+toggler = utils.toggle(gotoNow, goHome);
 
-PSD["Content"].on(pointerType, function(e) {
+PSD.Content.on(pointerType, function(e) {
 	var movePage;
 	e.preventDefault();
 	movePage = toggler();
 	return movePage();
 });
-
-// Don't show status bar for web apps
-if (isWebApp()) {
-	PSD["StatusBar"].opacity = 0
-} else {
-	PSD["Content"].y += 40
-}
-
-// Chrome and safari render webkit filters differently, adjust to turn logo white accordingly
-if (isSafari() || isIphone()) {
-	document.getElementsByTagName('html')[0].className = 'safari';
-};	
