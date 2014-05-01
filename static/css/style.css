@@ -20,9 +20,10 @@ p {
 	-webkit-font-smoothing: antialiased;
 }
 
-p+p {
-	margin-top: 20px;
+p {
+	margin-bottom: 20px;
 }
+
 
 strong {
 	font-weight: 500;
@@ -158,6 +159,7 @@ h4 {
 	font-size: 20px;
 	color: #222; margin-bottom: 15px;
 }
+
 
 
 /* ================= Content ================= */

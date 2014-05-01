@@ -63,6 +63,13 @@ It's easy to split up your projects in different files. You can just create a ne
 
 Generally it's a bad idea to pollute your global namepace with random variables because it's hard to keep track of them. For example, if you define a variable i somewhere, and then you use the same variable in a loop in another file that then changes that value you can get really unexpected results that are hard to debug. So a simple sollution is to use objects as namespaces. Say you have a set of views that you'd like to reference by name then you could make a global views variable that holds all the views by name like this:
 
+<pre><code data-language="coffeescript">layer = new Layer width:100, height:100
+
+# Define a set of states with names (the original state is 'default')
+layer.states.add "second", {y: 200, scale:1.2}
+layer.states.add "third",  {y: 400, scale:0.8}
+</code></pre>
+
 <hr>
 
 ### Exporting CSS Keyframes
@@ -74,3 +81,5 @@ Because Framer uses CSS keyframes you can easily re-use animations on any websit
 </section>
 
 {% endblock content%}
+
+

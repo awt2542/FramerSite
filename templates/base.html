@@ -7,6 +7,7 @@
 
 	<link rel="shortcut icon" href="{% static '/static/images/favicon.ico' %}">
 	<link rel="stylesheet" href="{% static '/static/css/style.css' %}">
+	<link rel="stylesheet" href="{% static '/static/css/code.css' %}">
 	
 	<!-- Colfax Typeface -->
 	<script type="text/javascript" src="//use.typekit.net/ivi1pzu.js"></script>
@@ -24,7 +25,11 @@
 
 	{% block scripts %}
 	<script src="//code.jquery.com/jquery.min.js"></script>
-	<script src="{% static '/static/js/main.js' %}"></script>
+	<script src="{% static '/js/main.js' %}"></script>
+	<script src="{% static '/js/rainbow.min.js' %}"></script>
+	<script src="{% static '/js/language/javascript.js' %}"></script>
+	<script src="{% static '/js/language/coffeescript.js' %}"></script>
+	<script src="{% static '/js/language/python.js' %}"></script>
 	{% endblock scripts%}
 </body>
 </html>
