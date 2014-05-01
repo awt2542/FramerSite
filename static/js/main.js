@@ -1,4 +1,4 @@
-$('#topbar').click( function(){
+$('#topbar img').click( function(){
     $("#sidebar").toggleClass("appear");
 });
 

@@ -47,7 +47,7 @@ a:active {
 	max-width: 680px;
 	position: relative;
 	margin:0 auto;
-	padding: 100px 40px 60px 40px;
+	padding: 100px 40px;
 }
 
 #sidebar {
@@ -207,7 +207,7 @@ body {
 
 #wrapper {
 	max-width: 600px;
-	padding-top: 50px;
+	padding: 80px 60px;
 }
 
 ul#features li {
@@ -226,8 +226,7 @@ body {
 }
 
 #wrapper {
-	max-width: 580px;
-	padding-top: 40px;
+	padding: 80px 60px;
 }
 
 ul#features li {
@@ -236,6 +235,11 @@ ul#features li {
 
 h1 {
 	font-size: 36px;
+}
+
+/* Vertical Spacing */
+hr {
+	margin: 40px auto;
 }
 }
 
@@ -280,16 +284,19 @@ body {
 #topbar img {
 	position: absolute; top: 10px; right: 10px;
 	height: 32px; width: 32px;
+	cursor: hand; cursor: pointer;
 }
 
 #topbar h1 {
 	color: #fff;
 	font-size: 16px; font-weight: 500;
 	text-transform: uppercase;
+	display: inline-block;
 }
 
 #wrapper {
 	max-width: 580px;
+	padding: 60px;
 }
 
 ul#features li {
@@ -308,6 +315,7 @@ ul#features li {
 @media only screen and (max-width: 440px) {
 #wrapper {
 	padding:20px;
+	padding-top: 40px;
 }
 
 h1 {
