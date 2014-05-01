@@ -1,68 +1,82 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div id="intro">
-	
-	<div class="logo">
-		<img src="{% static '/static/img/Resources/framer-logo.png' %}" width="21" height="24" alt="Framer Logo" class="2x">
-		Framer
-	</div>
-	
-	<div>
-		<h1>A prototyping tool for animation and interaction on desktop and mobile.</h1>
-		<p>Framer can help you to quickly build interactions and animations. Built for designers and integrates with Photoshop. Great alternative to Quartz Composer, Flash or Keynote.</p>
-	</div>
-	
-	<div id="upsells">
+<aside id="sidebar">
+	<nav>
 		<ul>
-			<li>
-				<img src="{% static '/static/img/Resources/photoshop.png' %}" class="2x" width="32" height="32">
-				<h3>Photoshop</h3>
-				Framer integrated with Photoshop to quickly export assets and set up a project.
-			</li>
-			<li>
-				<img src="{% static '/static/img/Resources/animation.png' %}" class="2x" width="32" height="32">
-				<h3>Animation</h3>
-				Animate any view in full 3D space with spring physics and bezier curves.
-			</li>
-			<li>
-				<img src="{% static '/static/img/Resources/performance.png' %}" class="2x" width="32" height="32">
-				<h3>Performance</h3>
-				Hardware accelerated for high frame rates. Based on CSS keyframes.
-			</li>
-			<li>
-				<img src="{% static '/static/img/Resources/flexible.png' %}" class="2x" width="32" height="32">
-				<h3>Flexible</h3>
-				Works well for desktop, mobile and tablets. Plays well with the rest of the browser.
-			</li>
+			<li class="headline green"># Framer</li>
+			<li><a href="#">Intro</a></li>
+			<li><a href="#">Examples</a></li>
 		</ul>
-	</div>
-	<div class="button" id="download">
-		<a href="#">Download Framer</a>
-		<div class="shadow"></div>
-	</div>
-	<div class="source">
-		<p>
-			<a href="https://www.facebook.com/groups/framerjs/" class="fb">Facebook Group</a><br>
-			Version 2.0 <span>– Source on <a href="https://github.com/koenbok/Framer" target="new">Github</a></span>
-		</p>
-	</div>
-</div>
+		
+		<ul>
+			<li class="headline"># Start</li>
+			<li><a href="#">Install</a></li>
+			<li><a href="#">Javascript</a></li>
+			<li><a href="#">Resources</a></li>
+			<li><a href="#">Photoshop</a></li>
+			<li><a href="#">Sketch</a></li>
+			<li><a href="#">FAQ</a></li>
+		</ul>
+		
+		<ul>
+			<li class="headline"># Learn</li>
+			<li><a href="#">Layers</a></li>
+			<li><a href="#">Hierarchy</a></li>
+			<li><a href="#">Types</a></li>
+			<li><a href="#">Animation</a></li>
+			<li><a href="#">Styling</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">State Machine</a></li>
+		</ul>
+		
+		<ul>
+			<li class="headline"># Docs</li>
+			<li><a href="#">Layers</a></li>
+			<li><a href="#">Animations</a></li>
+			<li><a href="#">Utilities</a></li>
+			<li><a href="#">Defaults</a></li>
+		</ul>
+		
+		<ul>
+			<li class="headline"># More</li>
+			<li><a href="#">Organizing Code</a></li>
+			<li><a href="#">CSS Keyframes</a></li>
+			<li><a href="#">Philosophy</a></li>
+			<li><a href="#">Debugging</a></li>
+		</ul>
+	
+	</nav>
+</aside>
 
-<div id="phone">
-	<div id="title"></div>
-	<iframe id="screen"></iframe>
-	<a class="buttonl">
-		<img src="{% static '/static/img/Resources/button-left.png' %}" width="42" height="94" alt="Button Left">
-	</a>
-	<a class="buttonr">
-		<img src="{% static '/static/img/Resources/button-right.png' %}" width="42" height="94" alt="Button Left">
-	</a>
-</div>
 
-<div id="sitemap">
-	{% include "menu.html" %}
-	<div class="clear"></div>
-</div>
-
-{% endblock %}
+<section id="wrapper">
+	<figure id="icon"><img class="center" src="/static/images/appicon.png"></figure>
+	
+	<h1>A prototyping framework for animation & interaction</h1>
+	
+	<h2>Framer lets you create prototypes with complex interaction and fluid animation. Make your static design work tactile, iterate rapidly and start experimenting.</h2>
+	
+	<ul id="features" class="group">
+		<li>
+			<h3>Animation</h3>
+			<h4>Framer lets you create prototypes with complex interaction and fluid animation.</h4>
+		</li>
+		<li>
+			<h3>Gestures</h3>
+			<h4>Framer lets you create prototypes with complex interaction and fluid animation.</h4>
+		</li>		
+		<li>
+			<h3>Performance</h3>
+			<h4>Framer lets you create prototypes with complex interaction and fluid animation.</h4>
+		</li>
+		<li>
+			<h3>Flexible</h3>
+			<h4>Framer lets you create prototypes with complex interaction and fluid animation.</h4>
+		</li>
+	</ul>
+	
+	
+	<p>The <strong>default template</strong> is a barebones starting point for your project. <br/> It has all the files you need to set up a website, yet barely any pre-defined styles. If you’d like to start from scratch, this one’s for you.</p> 
+</section>
+{% endblock content%}

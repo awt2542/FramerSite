@@ -1,9 +1,1 @@
-{
-    "aws-access-key": "AKIAJPD7XYUEPAKP22SQ",
-    "aws-bucket-name": "www.framerjs.com",
-    "aws-bucket-website": "www.framerjs.com.s3-website-us-east-1.amazonaws.com",
-    "ignore": [
-        "*.psd"
-    ],
-    "port": 8873
-}
+{"port":8857}
