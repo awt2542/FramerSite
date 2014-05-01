@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+<header id="topbar"> <h1>Framer</h1>  <img class="2x" src="/static/images/menu-icon.png"></header>
+<aside id="sidebar">
+	<nav>
+		<ul>
+			<li class="headline green"># Framer</li>
+			<li><a href="index.html">Intro</a></li>
+			<li><a href="#">Examples</a></li>
+		</ul>
+		
+		<ul>
+			<li class="headline"># Start</li>
+			<li><a href="#">Install</a></li>
+			<li><a href="#">Javascript</a></li>
+			<li><a href="#">Resources</a></li>
+			<li><a href="#">Photoshop</a></li>
+			<li><a href="#">Sketch</a></li>
+			<li><a href="#">FAQ</a></li>
+		</ul>
+		
+		<ul>
+			<li class="headline"># Learn</li>
+			<li><a href="#">Layers</a></li>
+			<li><a href="#">Hierarchy</a></li>
+			<li><a href="#">Types</a></li>
+			<li><a href="#">Animation</a></li>
+			<li><a href="#">Styling</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">State Machine</a></li>
+		</ul>
+		
+		<ul>
+			<li class="headline"># Docs</li>
+			<li><a href="#">Layers</a></li>
+			<li><a href="#">Animations</a></li>
+			<li><a href="#">Utilities</a></li>
+			<li><a href="#">Defaults</a></li>
+		</ul>
+		
+		<ul>
+			<li class="headline"># More</li>
+			<li><a href="#">Organizing Code</a></li>
+			<li><a href="#">CSS Keyframes</a></li>
+			<li><a href="#">Philosophy</a></li>
+			<li><a href="#">Debugging</a></li>
+		</ul>
+	
+	</nav>
+</aside>
+
+
+<section id="wrapper">
+	
+	<h3>Organizing Code</h3>
+	
+	<p>When your projects become larger then say a hundred lines of code it becomes more important to organize your code. This also makes it easier to collaborate with others or change things at later stage. How you organize code is more a Javascript problem in general and there are many approaches which all mostly come down to personal preference. Because of that I'll just introduce the standard tools you have for organization: files and namespaces.
+	
+	It's easy to split up your projects in different files. You can just create a new file, add the code and include the script in the index.html page header like this: <script src="my-code.js"></script>. This will include and run the code. The ordering is important, so if a specific file depends on something else make sure you load the dependant first. You can add as many files as you'd like.
+	
+	Generally it's a bad idea to pollute your global namepace with random variables because it's hard to keep track of them. For example, if you define a variable i somewhere, and then you use the same variable in a loop in another file that then changes that value you can get really unexpected results that are hard to debug. So a simple sollution is to use objects as namespaces. Say you have a set of views that you'd like to reference by name then you could make a global views variable that holds all the views by name like this:</p>
+	
+	<hr>
+	
+	<h3>Exporting CSS Keyframes</h3>
+	<p>Because Framer uses CSS keyframes you can easily re-use animations on any website. The easiest way is to run your project in Safari or Chrome and open the developer console (command-option-i). In there select the "Elements" tab and search in the tree for the "head" element. In there should be a list of "style" elements where the last one is the animation you last ran. Just select the one you want and copy it (command-c). Now you can paste it in any css file and you can use that animation on any website.</p>	
+	<hr>
+	
+</section>
+{% endblock content%}

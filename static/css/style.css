@@ -8,7 +8,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .group { zoom: 1;}
 
 body {
-	font:16px/1 "colfax-web", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font:17px/1 "colfax-web", "Helvetica Neue",Helvetica,Arial,sans-serif;
 	text-rendering:optimizeLegibility;
 	height: 100%; color:#666;
 	overflow-x: hidden;
@@ -17,6 +17,7 @@ body {
 
 p {
 	line-height:1.8;
+	-webkit-font-smoothing: antialiased;
 }
 
 strong {
@@ -42,7 +43,7 @@ a:active {
 	max-width: 680px;
 	position: relative;
 	margin:0 auto;
-	padding: 80px 40px 60px 40px;
+	padding: 100px 40px 60px 40px;
 }
 
 #sidebar {
@@ -98,12 +99,16 @@ a:active {
 hr {
 	border: none;  width: 100%;
 	border-bottom: 1px dashed #ddd;
-	display: block; margin: 40px auto;
+	display: block; margin: 60px auto;
 }
 /* ================= Typography ================= */
 
 img {
 	display: inline-block;
+}
+
+.icon-and-headline {
+	margin-top: -20px;
 }
 
 #icon {
@@ -133,13 +138,15 @@ h2 {
 }
 
 h3 {
+	font-size: 22px;
+	color: #222; margin-bottom: 30px;
+}
+
+h4 {
 	font-size: 20px;
 	color: #222; margin-bottom: 15px;
 }
 
-h4 {
-	line-height: 1.5;
-}
 
 /* ================= Content ================= */
 
