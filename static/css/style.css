@@ -51,8 +51,8 @@ a:active {
 }
 
 #sidebar {
-	position: absolute;
-	top: 0; left: 0; z-index: 20;
+	position: fixed;
+	top: 0; left: 0; bottom: 0; z-index: 20;
 	width: 260px; height: 100%;
 	background: #1E2229;
 	padding: 60px;
@@ -74,6 +74,14 @@ a:active {
 #sidebar ul li a {
 	color: #fff;
 	font-weight: 300;
+}
+
+#sidebar ul li a:hover {
+	color: rgba(255,255,255,0.5); opacity: 1;
+}
+
+#sidebar ul li a:active {
+	color: #fff;
 }
 
 #sidebar ul li.headline {
