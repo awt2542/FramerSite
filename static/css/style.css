@@ -42,7 +42,7 @@ a:active {
 	max-width: 680px;
 	position: relative;
 	margin:0 auto;
-	padding: 60px 40px 60px 40px;
+	padding: 80px 40px 60px 40px;
 }
 
 #sidebar {
@@ -95,6 +95,11 @@ a:active {
 	margin: 0 auto;
 }
 
+hr {
+	border: none;  width: 100%;
+	border-bottom: 1px dashed #ddd;
+	display: block; margin: 40px auto;
+}
 /* ================= Typography ================= */
 
 img {
@@ -103,6 +108,9 @@ img {
 
 #icon {
 	text-align: center;
+}
+
+#icon, h1 {
 	margin-bottom: 40px;
 }
 
@@ -112,10 +120,9 @@ h1, h2 strong, strong, .headline {
 }
 
 h1 {
-	font-size: 42px; line-height: 1.3;
+	font-size: 36px; line-height: 1.3;
 	font-weight: 300;
 	color: #222;
-	margin-bottom: 40px;
 }
 
 h2 {
@@ -138,7 +145,6 @@ h4 {
 
 ul#features {
 	list-style: none;
-	margin-bottom: 60px;	
 }
 
 ul#features li {
@@ -163,6 +169,11 @@ body {
 #sidebar {
 	width: 240px;
 }
+
+#wrapper {
+	max-width: 640px;
+}
+
 }
 
 @media only screen and (max-width: 980px) {
@@ -177,6 +188,7 @@ body {
 
 #wrapper {
 	max-width: 600px;
+	padding-top: 50px;
 }
 
 ul#features li {
@@ -196,6 +208,7 @@ body {
 
 #wrapper {
 	max-width: 580px;
+	padding-top: 40px;
 }
 
 ul#features li {
@@ -208,8 +221,7 @@ h1 {
 }
 
 /* ================= Mobile (Navigation)  ================= */
-
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 760px) {
 body {
 	padding-left: 0;
 	padding-top: 50px; /* Same as topbar height */
@@ -259,16 +271,28 @@ body {
 
 #wrapper {
 	max-width: 580px;
-	padding:20px;
 }
+
+ul#features li {
+	max-width: 240px;
+}
+}
+
+@media only screen and (max-width: 580px) {
 
 ul#features li {
 	max-width: 100%;
 	margin-bottom: 40px;
 }
+}
+
+@media only screen and (max-width: 440px) {
+#wrapper {
+	padding:20px;
+}
 
 h1 {
-	font-size: 26px;
+	font-size: 26px; font-weight: 400;
 }
 
 h2 {
