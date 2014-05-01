@@ -84,6 +84,10 @@ a:active {
 	color: #63e541;
 }
 
+#topbar {
+	display: none;
+}
+
 /* ================= Helpers ================= */
 
 .center {
@@ -203,28 +207,72 @@ h1 {
 }
 }
 
-/* ================= Mobile Navigation  ================= */
+/* ================= Mobile (Navigation)  ================= */
 
 @media only screen and (max-width: 460px) {
 body {
 	padding-left: 0;
+	padding-top: 50px; /* Same as topbar height */
 }
 
 #sidebar {
 	width: 100%;
+	padding: 0;
+	position: relative; opacity: 0;
+	max-height: 0; overflow: hidden;
+}
+
+#sidebar nav {
 	padding: 40px;
+	position: relative;
+	top: -60px;
+	-webkit-transition: top 0.3s ease, opacity 0.3s ease;
+	opacity: 0;
+}
+
+#sidebar.appear {
+	opacity: 1; visibility: visible;
+	max-height: 2000px; -webkit-transition: max-height 1s ease;
+}
+
+#sidebar.appear nav {
+	top: 0; opacity: 1;
+}
+
+#topbar {
+	display: block; height: 50px; width: 100%;
+	background: #14181d;
+	position: fixed; top: 0; z-index: 30; left: 0;
+	padding: 18px;
+}
+
+#topbar img {
+	position: absolute; top: 10px; right: 10px;
+	height: 32px; width: 32px;
+}
+
+#topbar h1 {
+	color: #fff;
+	font-size: 16px; font-weight: 500;
+	text-transform: uppercase;
 }
 
 #wrapper {
 	max-width: 580px;
+	padding:20px;
 }
 
 ul#features li {
-	max-width: 240px;
+	max-width: 100%;
+	margin-bottom: 40px;
 }
 
 h1 {
-	font-size: 36px;
+	font-size: 26px;
+}
+
+h2 {
+	font-size: 19px;
 }
 }
 
