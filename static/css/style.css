@@ -136,12 +136,6 @@ table {
 	border-radius: 6px;
 }
 
-th,td {
-	text-align:left;
-	padding-right:20px;
-	vertical-align:top;
-}
-
 table td,td {
 	border-spacing:none;
 	border-style:solid;
@@ -157,8 +151,7 @@ thead th,th {
 	text-align:left;
 	padding:10px 15px;
 	font-size:13px; font-weight:500;
-	color:#333;
-	cursor:default; white-space:nowrap;
+	color:#333; cursor:default; white-space:nowrap;
 }
 
 /* ================= Typography ================= */
