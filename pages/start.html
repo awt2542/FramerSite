@@ -2,7 +2,7 @@
 {% block content %}
 {% filter markdown %}
 
-### Install
+### <span id="install">Install</span>
 
 To get started, <a href="">download Framer</a> and unzip it. From there you use the Framer app to generate a new project from a Photoshop file. Or you can begin from scratch with the template:
 
@@ -11,11 +11,9 @@ To get started, <a href="">download Framer</a> and unzip it. From there you use 
 	<li>Start editing app.js</li>
 </ul>
 
-### Javascript
+### <span id="javascript">Javascript</span>
 
-If you don't know any Javascript or are just beginning, don't worry. There are many great resources to get started and while it might seem hard at first you'll see that you'll get better quickly. It's also good to know that Javascript is worth learning even apart from Framer, as you can do web, application and backend development with it. Most people agree it's a language with a future.
-
-Some great Javascript resources:
+If you don't know any Javascript or are just beginning, don't worry. There are many great resources to get started and while it might seem hard at first you'll see that you'll get better quickly. It's also good to know that Javascript is worth learning even apart from Framer, as you can do web, application and backend development with it. Most people agree it's a language with a future. Some great Javascript resources:
 
 <table>
 		<tbody><tr>
@@ -33,14 +31,43 @@ Some great Javascript resources:
 	</tbody>
 </table>
 
+### <span id="resources">Resources</span>
 
-### Resources
+### <span id="photoshop">Photoshop</span>
 
-### Photoshop
+Framer comes with an application to convert your Photoshop document into a Framer project. This eliminates the need for slicing up your images and rebuilding your views in Framer. To get a quick overview of how this works see this video.
 
-### Sketch
+<iframe src="http://player.vimeo.com/video/66300587" width="100%" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-### FAQ
+To begin, just open the Framer application, a Photoshop document and click Run. After running you will be presented with a folder containing your project. The project folder contents consists of images, the framework, view data, an index.html and app.js file. Open the index.html file in your browser to see your project.
+
+The app.js file is where you start coding. By default it contains some example code that you can safely remove. Framer added an object called PSD that has references to all your views by name. So if your layer group is called iPhone, you can access it's views with PSD.iPhone or PSD["iPhone"]. The views are normal Framer views, so for example to animate an the view created from the layer group named iPhone you can do:
+
+<pre><code data-language="coffeescript">layer = new Layer width:100, height:100
+PSD.iPhone.on("click", function() {
+  PSD.iPhone.animate({
+    properties: {scale: 2.0}
+  })
+})</code></pre>
+
+From this point you can use Framer like you normally would to basically add behavior to your Photoshop mock. You can also safely run Framer again after a change in Photoshop, it will update the views but not touch your code. The rules for converting Photoshop files are:
+
+<ul>
+	<li>Every layer group will become an ImageView, backed by the pixel and/or shape layers in that layer group.</li>
+	<li>Views are accessible by name under the PSD object.</li>
+	<li>Framer respects the layer hierarchy, so a sub layer group will become a subview. This way you can define your view structure in Photoshop.</li>
+	<li>Layer groups with vector masks will become views with clipping enabled. You can optionally add "scroll" to the layer group name to make it a ScrollView.</li>
+	<li>Layer group names should be unique, if they're not Framer will silently rename them on export.</li>
+</ul>
+
+
+
+
+
+
+### <span id="sketch">Sketch</span>
+
+### <span id="faq">FAQ</span>
 
 
 
