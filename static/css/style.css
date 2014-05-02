@@ -235,6 +235,17 @@ ul#features li {
 	padding-left: 0;
 }
 
+ul#features li img {
+	float: left;
+	position: relative; top: -5px;
+	margin-right: 20px;
+	left: 0;
+}
+
+ul#features li:first-child img { top: -2px; }
+ul#features li:last-child img { top: -3px; }
+
+ul#features li+li { margin-top: 0; }
 ul#features li:before { display: none; }
 
 ul#features li:nth-child(even) {
