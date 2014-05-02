@@ -210,24 +210,16 @@ h4 {
 }
 
 #wrapper li {
-	list-style-type: none;
 	line-height: 1.7;
 	font-size: 15px;
 	color: #888;
 	padding-bottom: 10px;
+	list-style-position: inside;
+	list-style-type: circle;
 }
 
-/* Custom bullets */
 #wrapper li:before {
-	content: "";
-	margin-right: 20px;
-	height: 6px; width: 6px; display: inline-block;
-	box-shadow: inset 0 0 0 1px #999; border-radius: 50%;
-	background: #fff;
-	position: relative;
-	top: -2px;
-	opacity: .7;	
-
+	content: "\00a0\00a0\00a0";
 }
 
 /* ================= Content ================= */
@@ -266,8 +258,13 @@ hr {
 }
 
 table {
-	margin:40px 0;
+	margin:40px 0; 
 }
+
+table.last {
+	margin-bottom: 60px;
+}
+
 /* ==================================================== */
 /* ==================================================== */
 /* ==================================================== */
