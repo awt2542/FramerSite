@@ -145,6 +145,7 @@ table td,td {
 	border-style:solid;
 	padding:10px 15px;
 	border-width:1px 0 0 0;
+	overflow: hidden;
 }
 
 tr>td {
@@ -154,10 +155,20 @@ tr>td {
 thead th,th {
 	text-align:left;
 	padding:10px 15px;
-	font-size:13px; font-weight:500;
-	color:#333; cursor:default; white-space:nowrap;
+	font-size:13px; font-weight:400;
+	color:#999; cursor:default; white-space:nowrap;
+	background: #fcfcfc;
+	line-height: 1.2;
+	border-radius: 6px 6px 0 0 ;
 }
 
+td.group {
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 12px; padding-top: 14px;
+	color: #333;
+	letter-spacing: 1px;
+}
 /* ================= Typography ================= */
 
 img {
@@ -232,18 +243,15 @@ ul#features li {
 	float: left;
 	max-width: 260px;
 	list-style: none;
-	padding-left: 0;
+	padding-left: 40px;
 }
 
 ul#features li img {
 	float: left;
-	position: relative; top: -5px;
-	margin-right: 20px;
-	left: 0;
+	position: relative; top: -0;
+	margin-right:0px;
+	margin-left: -55px;
 }
-
-ul#features li:first-child img { top: -2px; }
-ul#features li:last-child img { top: -3px; }
 
 ul#features li+li { margin-top: 0; }
 ul#features li:before { display: none; }

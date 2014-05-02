@@ -4,13 +4,256 @@
 
 <!-- Layers -->
 ### Layers
-Content
+<table border="0" cellspacing="0" cellpadding="0" class="api">
+	<tbody><tr>
+		<th>Property</th>
+		<th>Description</th>
+	</tr>
+	
+	<tr>
+		<td colspan="2" class="group">Geometry</td>
+	</tr>
+	
+	<tr>
+		<td>x <span class="dim">minX, midX, maxX</span></td>
+		<td>x position</td>
+	</tr>
+	<tr>
+		<td>y <span class="dim">minY, midY, maxY</span></td>
+		<td>y position</td>
+	</tr>
+	<tr>
+		<td>width</td>
+		<td>width</td>
+	</tr>
+	<tr>
+		<td>height</td>
+		<td>height</td>
+	</tr>
+	<tr>
+		<td>frame</td>
+		<td>this frame x, y, width and height values</td>
+	</tr>
+	<tr>
+		<td>screenFrame</td>
+		<td>get this views absolute frame on the screen</td>
+	</tr>
+	<tr>
+		<td>contentFrame()</td>
+		<td>the frame for the total size of all subviews</td>
+	</tr>
+	<tr>
+		<td>centerFrame()</td>
+		<td>the centered frame in this views superView</td>
+	</tr>
+
+	<tr>
+		<td colspan="2" class="group">Visual</td>
+	</tr>
+
+	<tr>
+		<td>visible</td>
+		<td>toggles views visibility</td>
+	</tr>
+	<tr>
+		<td>opacity</td>
+		<td>opacity between 0 and 1</td>
+	</tr>
+	<tr>
+		<td>clip</td>
+		<td>toggles wether view should clip subviews</td>
+	</tr>
+	<tr>
+		<td>rotation <span class="dim">rotationX, rotationY, rotationZ</span></td>
+		<td>rotation in degrees</td>
+	</tr>
+	<tr>
+		<td>scale <span class="dim">scaleX, scaleY, scaleZ</span></td>
+		<td>scale between 0 and 1</td>
+	</tr>
+
+	<tr>
+		<td colspan="2" class="group">Hierarchy</td>
+	</tr>
+
+	<tr>
+		<td>superView</td>
+		<td>the view that contains this view</td>
+	</tr>
+	<tr>
+		<td>subViews</td>
+		<td>the views contained by this view</td>
+	</tr>
+	<tr>
+		<td>addSubView(view)</td>
+		<td>add a subview to this view</td>
+	</tr>
+	<tr>
+		<td>removeSubView(view)</td>
+		<td>remove a subview from this views subviews</td>
+	</tr>
+	<tr>
+		<td>siblingViews</td>
+		<td>the subviews of this views superview</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2" class="group">Ordering</td>
+	</tr>
+	
+	<tr>
+		<td>index</td>
+		<td>this views layering position index</td>
+	</tr>
+	<tr>
+		<td>placeBefore(view)</td>
+		<td>place this view on top of other view</td>
+	</tr>
+	<tr>
+		<td>placeBehind(view)</td>
+		<td>place this view behind another view</td>
+	</tr>
+	<tr>
+		<td>bringToFront()</td>
+		<td>place this view in front of all sibling views</td>
+	</tr>
+	<tr>
+		<td>sendToBack()</td>
+		<td>place this view behind all sibling views</td>
+	</tr>
+
+	<tr>
+		<td colspan="2" class="group">HTML</td>
+	</tr>
+
+	<tr>
+		<td>style</td>
+		<td>css properties for this layer</td>
+	</tr>
+	<tr>
+		<td>html</td>
+		<td>html contents for this layer</td>
+	</tr>
+	<tr>
+		<td>destroy()</td>
+		<td>destroy this view</td>
+	</tr>
+
+	<tr>
+		<td colspan="2" class="group" id="view.filters">Filters</td>
+	</tr>
+	
+	<tr>
+		<td>blur</td>
+		<td>gaussian blur in pixels</td>
+	</tr>
+	<tr>
+		<td>brightness</td>
+		<td>brightness in percent</td>
+	</tr>
+	<tr>
+		<td>saturate</td>
+		<td>saturation in percent</td>
+	</tr>
+	<tr>
+		<td>hueRotate</td>
+		<td>hue rotation in degrees</td>
+	</tr>
+	<tr>
+		<td>contrast</td>
+		<td>contrast in percent</td>
+	</tr>
+	<tr>
+		<td>invert</td>
+		<td>color inversion in percent</td>
+	</tr>
+	<tr>
+		<td>grayscale</td>
+		<td>grayscale in percent</td>
+	</tr>
+	<tr>
+		<td>sepia</td>
+		<td>sepia in percent</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2" class="group">Animation</td>
+	</tr>
+	
+	<tr>
+		<td>animate({...})</td>
+		<td>create and start an Animation on this view, returns the Animation object</td>
+	</tr>
+	<tr>
+		<td>animateStop()</td>
+		<td>stop all animations on this view</td>
+	</tr>
+	<tr>
+		<td>on(event, function)</td>
+		<td>
+			listen to events: click, mouseover, change:property, etc
+		</td>
+	</tr>
+</tbody></table>
 <hr>
 
 <!-- Animations -->
 <a name="animations"></a>
 ### Animations
-Content
+<table border="0" cellspacing="0" cellpadding="0" class="api">
+	<tbody><tr>
+		<th>Property</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>view</td>
+		<td>view that is animated</td>
+	</tr>
+	<tr>
+		<td>properties</td>
+		<td>properties being animated (x, y, width, height, opacity, scale, rotation, filters)</td>
+	</tr>
+	<tr>
+		<td>curve</td>
+		<td>
+			curve used for animation
+			<ul>
+				<li>linear, ease-in, ease-out</li>
+				<li>bezier-curve(a, b, c, d)</li>
+				<li>spring(tension, friction, velocity)<br>
+					Tension is the stiffness of the spring, friction the amount of effort it takes to move the object and velocity the initial velocity of the object.
+					</li>
+			
+		</ul></td>
+	</tr>
+	<tr>
+		<td>time</td>
+		<td>time to animate in milliseconds (ignored for springs)</td>
+	</tr>
+	<tr>
+		<td>origin</td>
+		<td>origin to transform from in percent "50% 50%"</td>
+	</tr>
+	<tr>
+		<td>start()</td>
+		<td>start the animation</td>
+	</tr>
+	<tr>
+		<td>stop()</td>
+		<td>stop the animation</td>
+	</tr>
+	<tr>
+		<td>reverse()</td>
+		<td>returns the opposite animation to this one</td>
+	</tr>
+	<tr>
+		<td>on(event, function)</td>
+		<td>
+			listen to events: end
+		</td>
+	</tr>
+
+</tbody></table>
 <hr>
 
 <!-- Utilities -->

@@ -4,37 +4,51 @@
 
 <!-- Layers -->
 ### Layers
-Content
+A view is just a square that draws stuff. It has a set of basic properties like x, y, width and height so it knows where to draw. Next to that it has more visual properties like opacity and scale. Views can display images or text, or a combination.
 <hr>
 
 <!-- Hierarchy -->
 <a name="hierarchy"></a>
 ### Hierarchy
-Content
+Views can contain other views. We call these subviews. The parent of a view is called a superview. Views influence their subviews. For example, if you change the opacity of a view all subviews will become opaque too.
+
+A views coordinates are based on it's superview. So with an x and y of zero, a view gets placed in the most top left corner of its superview.
 <hr>
 
 <!-- types -->
 <a name="types"></a>
 ### Types
-Content
+Everything is based on a view. But some views have a specific task like scrolling their contents or showing an image. We call these subclasses of a view, for example an ImageView or ScrollView.
+
+It is easy to create components consisting of multiple views that you can re-use across projects, for example a collection view.
 <hr>
 
 <!-- Animation -->
 <a name="animation"></a>
 ### Animation
-Content
+Most properties of a view can be animated: x, y, width, height, scale, opacity. You can animate multiple properties at the same time.
+
+Animations optionally take a curve that describes the type of animation. You can used pre defined curves like linear or ease-in, custom ones or spring animations.
+
+You can create an animation explicitly with <code class="inline">myAnimation = new Animation({..})</code> or with the shortcut on any view <code class="inline">myView.animate({..}).</code>
 <hr>
 
 <!-- Styling -->
 <a name="styling"></a>
 ### Styling
-Content
+Because Framer runs in the browser, you can simply use html and css to style any view. To set the html contents of a view use <code class="inline">someView.html = "hello".</code> You can set some text or html.
+
+To add css styling you can edit the properties of the style attribute. You can set one at the time like <code class="inline">view.style.backgroundColor = "red"</code> or update multiple properties at the same time as in the example. Please note that while most Framer properties take numeric values, the style attribute requires specific css values like <code class="inline">view.style.lineHeight = "16px"</code>. You can also set a css class on a view by doing <code class="inline">view.class = "myClass"</code>. This way you can use an external css file for styling.
 <hr>
 
 <!-- Events -->
 <a name="events"></a>
 ### Events
-Content
+Events are things that can happen to a view, for example a user click or mouse over, but also a scroll. You can listen to these events and respond to it to build complex interactions.
+
+There are many events you can listen to, but the most interesting are probably click, dblclick, mouseover, mouseout, and keydown. Mobile browsers have specific touch events: touchstart, touchmove and touchend.
+
+To listen to an event use <code class="inline">view.on(<event>, <function>).</code> To stop listening you can use <code class="inline">view.off(<event>, <function>).</code> You can listen to multiple events at the same time.
 <hr>
 
 <!-- State Machine -->
