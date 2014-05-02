@@ -166,19 +166,14 @@ img {
 
 .icon-and-headline {
 	margin-bottom: 60px;
-	width: 105%;
 }
 
 #icon {
 	float: left;
-	margin-right: 10px;
-	margin-top: 4px;
-	margin-left: -10px;
+	margin-right: 20px;
+	margin-top: -10px;
 }
 
-#icon img {
-	width: 80%;
-}
 /* Fonts to be smoothed */
 h1, h2 strong, h3, strong, .headline {
 	-webkit-font-smoothing:antialiased;
@@ -191,14 +186,14 @@ h1 {
 }
 
 h2 {
-	font-size: 22px; line-height: 1.7;
+	font-size: 22px; line-height: 1.6;
 	font-weight: 300;
 	color: #666;
 	margin-bottom: 60px;
 }
 
 h3 {
-	font-size: 26px; font-weight: 500;
+	font-size: 24px; font-weight: 500;
 	color: #222; margin-bottom: 30px;
 }
 
@@ -216,13 +211,11 @@ h4 {
 	list-style-type: circle; 
 	position: relative; left: 18px;
 	padding-left: 15px;
-
 }
 
 #wrapper li+li {
 	margin-top: 8px;
 }
-
 
 /* ================= Content ================= */
 
