@@ -134,18 +134,17 @@ a[name] {
 table {
 	width:100%;
 	border-collapse: separate;
-	font-size:13px;
+	font-size:15px;
 	line-height:1.4;
 	border: 1px solid #eee;
 	border-radius: 6px;
 }
 
-table td,td {
+table td, td {
 	border-spacing:none;
 	border-style:solid;
 	padding:10px 15px;
 	border-width:1px 0 0 0;
-	overflow: hidden;
 	color: #999;
 }
 
@@ -153,12 +152,12 @@ tr>td {
 	border-top:1px solid #eee;
 }
 
-thead th,th {
+thead th, th {
 	text-align:left;
 	padding:10px 15px;
-	font-size:13px; font-weight:400;
+	font-size:15px; font-weight:300;
 	color:#aaa; cursor:default; white-space:nowrap;
-	background: #fafafa;
+	background: #fcfcfc;
 	line-height: 1.2; 
 	border-radius: 6px 6px 0 0 ;
 }
@@ -168,7 +167,7 @@ table .dim {
 }
 
 table.api td:first-child {
-	color: #444;
+	color: #444; 
 }
 
 table.api td.group {
@@ -460,6 +459,23 @@ ul#features li {
 ul#features li {
 	max-width: 100%;
 	margin-bottom: 40px;
+}
+
+table {
+	border: none;
+}
+
+table td, td, th  {
+	padding: 10px 0;
+	background: transparent;	
+}
+
+table, thead th, th {
+	font-size: 13px;
+}
+
+table.api td.group {
+	font-size: 11px;
 }
 }
 
