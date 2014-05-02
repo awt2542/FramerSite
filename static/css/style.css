@@ -108,6 +108,10 @@ a:active {
 	margin: 0 auto;
 }
 
+a[name] {
+	position: relative; top: -30px;
+	display: block;
+}
 /* ================= Customs scrollbar ================= */
 
 ::-webkit-scrollbar {
