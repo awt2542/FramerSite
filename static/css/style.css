@@ -171,11 +171,14 @@ img {
 
 #icon {
 	float: left;
-	margin-right: 20px;
-	margin-top: -10px;
+	margin-right: 10px;
+	margin-top: 4px;
 	margin-left: -10px;
 }
 
+#icon img {
+	width: 80%;
+}
 /* Fonts to be smoothed */
 h1, h2 strong, h3, strong, .headline {
 	-webkit-font-smoothing:antialiased;
@@ -217,7 +220,7 @@ h4 {
 }
 
 #wrapper li+li {
-	margin-top: 10px;
+	margin-top: 8px;
 }
 
 
@@ -227,6 +230,7 @@ ul#features li {
 	float: left;
 	max-width: 260px;
 	list-style: none;
+	padding-left: 0;
 }
 
 ul#features li:before { display: none; }
@@ -252,7 +256,7 @@ ul#features li:nth-child(1), ul#features li:nth-child(2){
 
 hr {
 	border: none;  width: 100%;
-	border-bottom: 1px dashed #ddd;
+	border-bottom: 1px dotted #ddd;
 	display: block; margin: 60px auto;
 }
 
