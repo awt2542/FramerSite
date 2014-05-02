@@ -38,8 +38,8 @@ pre .constant {
     color: #839496; /* base0 */
 }
 
-pre .constant.numeric {
-	color: #FF608B;
+pre .constant.numeric { /* --- PINK --- */
+	color: #ff6c88;
 }
 pre .constant.language {
     color: #268bd2; /* blue */
@@ -54,7 +54,7 @@ pre .storage {
 }
 
 pre .string, pre .comment.docstring {
-    color: #85DB00; /* GREEN */
+    color: #acf351; /* --- GREEN --- */
 }
 
 pre .support.tag.script, pre .support.tag.style {
