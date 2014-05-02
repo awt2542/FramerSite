@@ -17,13 +17,8 @@ body {
 
 p {
 	line-height:1.75;
-	-webkit-font-smoothing: antialiased;
-}
-
-p {
 	margin-bottom: 20px;
 }
-
 
 strong {
 	font-weight: 500;
@@ -33,6 +28,7 @@ strong {
 a {
 	text-decoration:none;
 	color:#5badf0;
+	font-weight: 500;
 }
 
 a:hover {
@@ -51,13 +47,15 @@ a:active {
 	padding: 100px 40px;
 }
 
+/* ================= Sidebar ================= */
+
 #sidebar {
 	position: fixed;
 	top: 0; left: 0; bottom: 0; z-index: 20;
 	width: 260px; height: 100%;
 	background: #1E2229;
 	padding: 60px;
-	font-size: 15px;
+	overflow-y: scroll;
 }
 
 #sidebar ul {
@@ -65,16 +63,17 @@ a:active {
 }
 
 #sidebar ul+ul {
-	margin-top: 40px;
+	margin-top: 50px;
 }
 
 #sidebar ul li+li {
-	margin-top: 10px;
+	margin-top: 12px;
 }
 
 #sidebar ul li a {
 	color: #fff;
 	font-weight: 300;
+	font-size: 14px;
 }
 
 #sidebar ul li a:hover {
@@ -114,6 +113,44 @@ hr {
 	border-bottom: 1px dashed #ddd;
 	display: block; margin: 60px auto;
 }
+
+/* ================= Post elements ================= */
+
+table {
+	width:100%;
+	margin:40px 0;
+	border-collapse: separate;
+	font-size:14px;
+	line-height:1.5em;
+	border: 1px solid #eee;
+	border-radius: 6px;
+}
+
+th,td {
+	text-align:left;
+	padding-right:20px;
+	vertical-align:top;
+}
+
+table td,td {
+	border-spacing:none;
+	border-style:solid;
+	padding:10px 15px;
+	border-width:1px 0 0 0;
+}
+
+tr>td {
+	border-top:1px solid #eee;
+}
+
+thead th,th {
+	text-align:left;
+	padding:10px 15px;
+	font-size:13px; font-weight:500;
+	color:#333;
+	cursor:default; white-space:nowrap;
+}
+
 /* ================= Typography ================= */
 
 img {
@@ -133,31 +170,33 @@ img {
 }
 
 /* Fonts to be smoothed */
-h1, h2 strong, strong, .headline {
+h1, h2 strong, h3, strong, .headline {
 	-webkit-font-smoothing:antialiased;
 }
 
 h1 {
-	font-size: 36px; line-height: 1.3;
+	font-size: 42px; line-height: 1.3;
 	font-weight: 300;
 	color: #222;
 }
 
 h2 {
-	font-size: 20px; line-height: 1.6;
+	font-size: 22px; line-height: 1.7;
 	font-weight: 300;
-	color: #444;
+	color: #666;
 	margin-bottom: 60px;
 }
 
 h3 {
-	font-size: 22px;
+	font-size: 26px; font-weight: 500;
 	color: #222; margin-bottom: 30px;
 }
 
 h4 {
-	font-size: 20px;
+	font-size: 16px; font-weight: 500;
 	color: #222; margin-bottom: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 
@@ -249,7 +288,6 @@ hr {
 @media only screen and (max-width: 760px) {
 body {
 	padding-left: 0;
-	padding-top: 50px; /* Same as topbar height */
 }
 
 #sidebar {
@@ -279,7 +317,7 @@ body {
 #topbar {
 	display: block; height: 50px; width: 100%;
 	background: #14181d;
-	position: fixed; top: 0; z-index: 30; left: 0;
+	position: relative; top: 0; z-index: 30; left: 0;
 	padding: 18px;
 }
 
@@ -307,7 +345,6 @@ ul#features li {
 }
 
 @media only screen and (max-width: 580px) {
-
 ul#features li {
 	max-width: 100%;
 	margin-bottom: 40px;

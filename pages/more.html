@@ -55,10 +55,12 @@
 
 ### Organizing Code
 
-When your projects become larger then say a hundred lines of code it becomes more important to organize your code. This also makes it easier to collaborate with others or change things at later stage. How you organize code is more a Javascript problem in general and there are many approaches which all mostly come down to personal preference. Because of that I'll just introduce the standard tools you have for organization: files and namespaces.
+When your projects become larger then say a hundred lines of code it becomes more important to organize your code. This also makes it easier to collaborate with others or change things at later stage. How you organize code is more a Javascript problem in general and there are <a href="#">many approaches</a> which all mostly come down to personal preference. Because of that I'll just introduce the standard tools you have for organization: files and namespaces.
 
 
-It's easy to split up your projects in different files. You can just create a new file, add the code and include the script in the index.html page header like this: <script src="my-code.js"></script>. This will include and run the code. The ordering is important, so if a specific file depends on something else make sure you load the dependant first. You can add as many files as you'd like.
+It's easy to split up your projects in different files. You can just create a new file, add the code and include the script in the index.html page header like this: <code class="inline" data-language="javascript"><script src="my-code.js"></script></code>
+
+This will include and run the code. The ordering is important, so if a specific file depends on something else make sure you load the dependant first. You can add as many files as you'd like.
 
 
 Generally it's a bad idea to pollute your global namepace with random variables because it's hard to keep track of them. For example, if you define a variable i somewhere, and then you use the same variable in a loop in another file that then changes that value you can get really unexpected results that are hard to debug. So a simple sollution is to use objects as namespaces. Say you have a set of views that you'd like to reference by name then you could make a global views variable that holds all the views by name like this:
@@ -76,7 +78,26 @@ layer.states.add "third",  {y: 400, scale:0.8}
 Because Framer uses CSS keyframes you can easily re-use animations on any website. The easiest way is to run your project in Safari or Chrome and open the developer console (command-option-i). In there select the "Elements" tab and search in the tree for the "head" element. In there should be a list of "style" elements where the last one is the animation you last ran. Just select the one you want and copy it (command-c). Now you can paste it in any css file and you can use that animation on any website.
 	
 <hr>
-	
+
+### Pimp your framer
+
+There are a variety of ways where you can make your Framer workflow more efficient. These are the ones that I use most. Let me know if you like to see something added here.
+
+<table>
+		<tbody><tr>
+			<th>Thing</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td><a href="http://coffeescript.org/">Coffee&nbsp;Script</a></td>
+			<td>An alternative language that compiles to Javascript that is more concise</td>
+		</tr>
+		<tr>
+			<td><a href="http://cactusformac.com">Cactus</a></td>
+			<td>Basically I use it to auto reload my browser on file changes so I get immediate feedback.</td>
+		</tr>
+	</tbody></table>
+		
 {% endfilter %}	
 </section>
 
