@@ -8,7 +8,7 @@
  * @version 1.0.0
  */
 pre {
-    background: #1e2229; /* base03 */
+    background: #282C33; /* base03 */
     word-wrap: break-word;
     margin: 0px;
     padding: 20px;
@@ -96,3 +96,23 @@ pre .support.property {
 pre .variable.global, pre .variable.class, pre .variable.instance {
     color: #839496; /* base0 */
 }
+
+
+/*LINES*/
+.cm-s-framer .CodeMirror-linenumber {
+	font-size: 10px;
+	color: #939599;
+	padding-top:1px;
+	padding-right: 10px;
+}
+
+pre code.rainbow .line {
+	
+}
+pre code.rainbow .line:before {
+	font-size: 10px;
+	color: #939599;
+	padding-top:1px;
+	padding-right: 10px;
+}
+pre code.rainbow .line:after <-- the underline
