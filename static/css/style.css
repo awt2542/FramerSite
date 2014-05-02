@@ -134,8 +134,8 @@ a[name] {
 table {
 	width:100%;
 	border-collapse: separate;
-	font-size:14px;
-	line-height:1.5em;
+	font-size:13px;
+	line-height:1.4;
 	border: 1px solid #eee;
 	border-radius: 6px;
 }
@@ -146,6 +146,7 @@ table td,td {
 	padding:10px 15px;
 	border-width:1px 0 0 0;
 	overflow: hidden;
+	color: #999;
 }
 
 tr>td {
@@ -156,19 +157,38 @@ thead th,th {
 	text-align:left;
 	padding:10px 15px;
 	font-size:13px; font-weight:400;
-	color:#999; cursor:default; white-space:nowrap;
-	background: #fcfcfc;
-	line-height: 1.2;
+	color:#aaa; cursor:default; white-space:nowrap;
+	background: #fafafa;
+	line-height: 1.2; 
 	border-radius: 6px 6px 0 0 ;
 }
 
-td.group {
+table .dim {
+	color: #999;
+}
+
+table.api td:first-child {
+	color: #444;
+}
+
+table.api td.group {
 	font-weight: 500;
 	text-transform: uppercase;
 	font-size: 12px; padding-top: 14px;
-	color: #333;
+	color: #2;
 	letter-spacing: 1px;
+	line-height: 2;
+	background: #fff;
 }
+#wrapper table ul {
+	margin-top: 20px;
+}
+
+#wrapper table ul li {
+	font-size: 13px; line-height: 1.6;
+	padding-left: 10px;
+}
+
 /* ================= Typography ================= */
 
 img {
