@@ -164,13 +164,9 @@ img {
 	display: inline-block;
 }
 
-.icon-and-headline {
-	margin-bottom: 60px;
-}
-
 #icon {
 	float: left;
-	margin-right: 20px;
+	margin-right: 30px;
 	margin-top: -10px;
 }
 
@@ -182,7 +178,20 @@ h1, h2 strong, h3, strong, .headline {
 h1 {
 	font-size: 40px; line-height: 1.4;
 	font-weight: 300;
-	color: #222; letter-spacing: -1px;
+	color: #222;
+}
+
+h1.title {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #222;
+	margin-bottom: 40px;
+}
+
+h1.title span {
+	color: #51ccff;
+	font-weight:500;
 }
 
 h2 {
