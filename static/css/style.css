@@ -220,13 +220,14 @@ h4 {
 /* Custom bullets */
 #wrapper li:before {
 	content: "";
-	margin-right: 10px;
+	margin-right: 20px;
 	height: 6px; width: 6px; display: inline-block;
 	box-shadow: inset 0 0 0 1px #999; border-radius: 50%;
 	background: #fff;
 	position: relative;
 	top: -2px;
 	opacity: .7;	
+
 }
 
 /* ================= Content ================= */
@@ -238,8 +239,6 @@ ul#features li {
 }
 
 ul#features li:before { display: none; }
-ul#features li+li { border: none; padding-top: 0; }
-
 
 ul#features li:nth-child(even) {
 	float: right;
