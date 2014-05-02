@@ -210,14 +210,29 @@ h4 {
 }
 
 #wrapper li {
-	list-style-type: circle;
-	list-style-position: inside;
-	line-height: 2;
+	list-style-type: none;
+	line-height: 1.7;
 	font-size: 15px;
 	color: #888;
-
+	padding-bottom: 10px;
 }
 
+/* Custom bullets */
+#wrapper li:before {
+	content: "";
+	margin-right: 10px;
+	height: 6px; width: 6px; display: inline-block;
+	box-shadow: inset 0 0 0 1px #999; border-radius: 50%;
+	background: #fff;
+	position: relative;
+	top: -2px;
+	opacity: .7;	
+}
+
+#wrapper li+li {
+	border-top: 1px solid #eee;
+	padding-top: 10px;
+}
 /* ================= Content ================= */
 
 ul#features li {
@@ -234,7 +249,7 @@ ul#features li:nth-child(even) {
 /* ==================================================== */
 /* ================= Vertical SPACING ================= */
 
-p {
+p, iframe {
 	margin-bottom: 20px;
 }
 
