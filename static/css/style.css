@@ -17,7 +17,6 @@ body {
 
 p {
 	line-height:1.75;
-	margin-bottom: 20px;
 }
 
 strong {
@@ -109,12 +108,6 @@ a:active {
 	margin: 0 auto;
 }
 
-hr {
-	border: none;  width: 100%;
-	border-bottom: 1px dashed #ddd;
-	display: block; margin: 60px auto;
-}
-
 /* ================= Customs scrollbar ================= */
 
 ::-webkit-scrollbar {
@@ -136,7 +129,6 @@ hr {
 
 table {
 	width:100%;
-	margin:40px 0;
 	border-collapse: separate;
 	font-size:14px;
 	line-height:1.5em;
@@ -217,7 +209,14 @@ h4 {
 	letter-spacing: 1px;
 }
 
+#wrapper li {
+	list-style-type: circle;
+	list-style-position: inside;
+	line-height: 2;
+	font-size: 15px;
+	color: #888;
 
+}
 
 /* ================= Content ================= */
 
@@ -230,13 +229,39 @@ ul#features li {
 	max-width: 260px;
 }
 
-ul#features li:nth-child(1), ul#features li:nth-child(2){
-	margin-bottom: 40px;
-}
 
 ul#features li:nth-child(even) {
 	float: right;
 }
+
+/* ==================================================== */
+/* ================= Vertical SPACING ================= */
+
+p {
+	margin-bottom: 20px;
+}
+
+ul#features li:nth-child(1), ul#features li:nth-child(2){
+	margin-bottom: 40px;
+}
+
+#wrapper ul  {
+	margin-bottom: 40px;
+}
+
+hr {
+	border: none;  width: 100%;
+	border-bottom: 1px dashed #ddd;
+	display: block; margin: 60px auto;
+}
+
+table {
+	margin:40px 0;
+}
+/* ==================================================== */
+/* ==================================================== */
+/* ==================================================== */
+
 
 @media only screen and (min-width: 1400px) {
 body {
