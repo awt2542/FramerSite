@@ -54,7 +54,7 @@ pre .storage {
 }
 
 pre .string, pre .comment.docstring {
-    color: #2EDB00; /* cyan */
+    color: #85DB00; /* GREEN */
 }
 
 pre .support.tag.script, pre .support.tag.style {

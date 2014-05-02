@@ -91,9 +91,10 @@ a:active {
 	font-size: 14px;
 	margin-bottom: 15px;
 	position: relative; left: -12px;
+	font-style: italic;
 }
 
-#sidebar ul li.headline.green {
+#sidebar ul li.headline.green {x
 	color: #63e541;
 }
 
@@ -220,6 +221,16 @@ ul#features li:nth-child(even) {
 	float: right;
 }
 
+@media only screen and (min-width: 1400px) {
+body {
+	padding-left: 300px;
+}
+
+#sidebar {
+	width: 300px;
+	padding: 70px;
+}
+}
 
 @media only screen and (max-width: 1100px) {
 body {
