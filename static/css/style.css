@@ -229,10 +229,6 @@ h4 {
 	opacity: .7;	
 }
 
-#wrapper li+li {
-	border-top: 1px solid #eee;
-	padding-top: 10px;
-}
 /* ================= Content ================= */
 
 ul#features li {
@@ -240,6 +236,9 @@ ul#features li {
 	max-width: 260px;
 	list-style: none;
 }
+
+ul#features li:before { display: none; }
+ul#features li+li { border: none; padding-top: 0; }
 
 
 ul#features li:nth-child(even) {
@@ -258,7 +257,7 @@ ul#features li:nth-child(1), ul#features li:nth-child(2){
 }
 
 #wrapper ul  {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 hr {
