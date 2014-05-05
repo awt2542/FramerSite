@@ -43,7 +43,7 @@ a:active {
 	max-width: 680px;
 	position: relative;
 	margin:0 auto;
-	padding: 100px 40px;
+	padding: 60px 40px;
 }
 
 /* ================= Sidebar ================= */
@@ -237,7 +237,7 @@ h3 {
 }
 
 h4 {
-	font-size: 16px; font-weight: 500;
+	font-size: 15px; font-weight: 500;
 	color: #222; margin-bottom: 15px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -337,7 +337,7 @@ table.last {
 /* ==================================================== */
 
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
 body {
 	padding-left: 300px;
 }
@@ -345,6 +345,10 @@ body {
 #sidebar {
 	width: 300px;
 	padding: 70px;
+}
+
+#wrapper {
+	padding: 70px 40px;
 }
 }
 
@@ -355,27 +359,12 @@ body {
 
 #sidebar {
 	width: 240px;
-}
+	padding:60px;
+} 
 
 #wrapper {
-	max-width: 640px;
-}
-
-}
-
-@media only screen and (max-width: 1000px) {
-body {
-	padding-left: 220px;
-}
-
-#sidebar {
-	width: 220px;
-	padding: 60px;
-}
-
-#wrapper {
-	max-width: 620px;
-	padding: 80px 60px;
+	max-width: 600px;
+	padding:60px 40px;
 }
 
 ul#features li {
@@ -383,19 +372,19 @@ ul#features li {
 }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 900px) {
 body {
 	padding-left: 200px;
 }
 
 #sidebar {
 	width: 200px;
-	padding: 50px;
+	padding: 40px;
 }
 
 #wrapper {
-	padding: 80px 60px;
-	max-width: 600px;
+	padding: 40px;
+	max-width: 640px;
 }
 
 ul#features li {

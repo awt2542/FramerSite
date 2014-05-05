@@ -262,13 +262,113 @@
 <!-- Utilities -->
 <a name="utilities"></a>
 ### Utilities
-Content
+<table border="0" cellspacing="0" cellpadding="0" class="api">
+	<tbody><tr>
+		<th>Function</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>cycle([1, 2, ...])</td>
+		<td>Returns a function that returns the next value every time you call it.</td>
+	</tr>
+	<tr>
+		<td>randomColor(alpha)</td>
+		<td>Returns a random color string.</td>
+	</tr>
+
+	<tr>
+		<td>delay(time, function)</td>
+		<td>Executes the function after time in ms. Holding shift will slow this down 25x.</td>
+	</tr>
+	<tr>
+		<td>interval(time, function)</td>
+		<td>Executes the function every x ms.</td>
+	</tr>
+
+	<tr>
+		<td>throttle(time, function)</td>
+		<td>Call function at most once every x ms.</td>
+	</tr>
+	<tr>
+		<td>debounce(time, function)</td>
+		<td>Call function only when being stopped calling for x ms.</td>
+	</tr>
+
+	<tr>
+		<td>convertPoint(point, viewA, viewB)</td>
+		<td>Converts a point location from one views coordinate system to another.</td>
+	</tr>
+
+	<tr>
+		<td>max([..])</td>
+		<td>Returns the largest value in an array.</td>
+	</tr>
+	<tr>
+		<td>min([..])</td>
+		<td>Returns the smallest value in an array.</td>
+	</tr>
+	<tr>
+		<td>sum([..])</td>
+		<td>Returns the sum of an array.</td>
+	</tr>
+
+	<tr>
+		<td>uuid()</td>
+		<td>Returns a random hex uuid string.</td>
+	</tr>
+
+	<tr>
+		<td>round(number, decimals)</td>
+		<td>Rounds a number to x decimals.</td>
+	</tr>
+
+	<tr>
+		<td>isWebKit()</td>
+		<td>Returns wether this is a webkit browser.</td>
+	</tr>
+	<tr>
+		<td>isMobile()</td>
+		<td>Returns wether this is a mobile device.</td>
+	</tr>
+	<tr>
+		<td>isTouch()</td>
+		<td>Returns wether this is a touch device.</td>
+	</tr>
+
+</tbody></table>
 <hr>
 
 <!-- Defaults -->
 <a name="defaults"></a>
 ### Defaults
-Content
+<table border="0" cellspacing="0" cellpadding="0" class="api">
+	<tbody><tr>
+		<th>Property</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>timeSpeedFactor</td>
+		<td>Current speed of time. Used to slow down animations and timers. Default value is 1.</td>
+	</tr>
+	<tr>
+		<td>roundingDecimals</td>
+		<td>Rounding setting when generating css values. Default value is 5.</td>
+	</tr>
+
+	<tr>
+		<td>animationPrecision</td>
+		<td>Number of css keyframes per second to generate for animations. Default value is 60.</td>
+	</tr>
+	<tr>
+		<td>animationDebug</td>
+		<td>Global setting to debug all animations. Default value is false.</td>
+	</tr>
+
+	<tr>
+		<td>animationProfile</td>
+		<td>Global setting to profile all animations. Default value is false.</td>
+	</tr>
+</tbody></table>
 <hr>
 
 {% endfilter %}	
