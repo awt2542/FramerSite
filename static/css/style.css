@@ -26,7 +26,7 @@ strong {
 
 a {
 	text-decoration:none;
-	color:#5badf0;
+	color:#33b0f7;
 	font-weight: 500;
 }
 
@@ -109,7 +109,7 @@ a:active {
 }
 
 a[name] {
-	position: relative; top: -30px;
+	position: relative; top: -60px;
 	display: block;
 }
 /* ================= Customs scrollbar ================= */
@@ -279,6 +279,30 @@ ul#features li:nth-child(even) {
 	float: right;
 }
 
+#index-links p {
+	float: left;
+}
+
+#index-links a {
+	font-weight: 400;
+	padding: 10px 18px 8px 18px;
+	border-radius: 4px;
+	font-size: 15px;
+}
+
+#index-links a:first-child {
+	background: #33b0f7;
+	color: #fff; box-shadow: none;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 500;
+}
+
+
+#index-links p+p {
+	margin-left: 70px;
+}
+
+
 /* ==================================================== */
 /* ================= Vertical SPACING ================= */
 
@@ -339,18 +363,18 @@ body {
 
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1000px) {
 body {
 	padding-left: 220px;
 }
 
 #sidebar {
 	width: 220px;
-	padding: 50px;
+	padding: 60px;
 }
 
 #wrapper {
-	max-width: 600px;
+	max-width: 620px;
 	padding: 80px 60px;
 }
 
@@ -366,11 +390,12 @@ body {
 
 #sidebar {
 	width: 200px;
-	padding: 40px;
+	padding: 50px;
 }
 
 #wrapper {
 	padding: 80px 60px;
+	max-width: 600px;
 }
 
 ul#features li {
@@ -388,7 +413,7 @@ hr {
 }
 
 /* ================= Mobile (Navigation)  ================= */
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
 body {
 	padding-left: 0;
 }
@@ -441,12 +466,12 @@ body {
 
 #topbar h1 {
 	color: #fff;
-	font-size: 16px; font-weight: 500;
-	display: inline-block;
+	font-size: 16px; font-weight: 600;
+	display: inline-block; text-transform: uppercase;
 }
 
 #wrapper {
-	max-width: 580px;
+	max-width: 680px;
 	padding: 60px;
 }
 
