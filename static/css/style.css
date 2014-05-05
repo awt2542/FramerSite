@@ -81,17 +81,12 @@ a:active {
 }
 
 #sidebar ul li a:active {
-	color: #798089;
+	color: #fff;
 }
 
 /* Fade other nav items */
-
-#sidebar ul li a.inactive {
-	color: #798089;
-}
-
 #sidebar ul li a.active {
-	color: rgba(255,255,255,1);
+	color: #fff;
 }
 
 #sidebar ul li.headline {
