@@ -70,17 +70,28 @@ a:active {
 }
 
 #sidebar ul li a {
-	color: #fff;
+	color: #737a84;
 	font-weight: 300;
 	font-size: 14px;
+	-webkit-transition: color 0.3s ease;
 }
 
 #sidebar ul li a:hover {
-	color: rgba(255,255,255,0.5); opacity: 1;
+	color: rgba(255,255,255,1); opacity: 1;
 }
 
 #sidebar ul li a:active {
-	color: #fff;
+	color: #798089;
+}
+
+/* Fade other nav items */
+
+#sidebar ul li a.inactive {
+	color: #798089;
+}
+
+#sidebar ul li a.active {
+	color: rgba(255,255,255,1);
 }
 
 #sidebar ul li.headline {
@@ -206,26 +217,31 @@ h1, h2 strong, h3, strong, .headline {
 }
 
 h1 {
-	font-size: 40px; line-height: 1.4;
+	font-size: 30px; line-height: 1.4;
 	font-weight: 300;
 	color: #222;
+	white-space: nowrap;
 }
 
 h1.title {
-	font-size: 20px;
+	font-size: 17px;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 600;
 	color: #222;
 	margin-bottom: 40px;
+	float: left;
+	left: 0; letter-spacing: 0;
 }
 
 h1.title span {
-	color: #51ccff;
-	font-weight:500;
+	opacity: 0.5;	font-weight:400;
+	text-transform: none;
+	letter-spacing: -1px;
+	margin-left: 2px;
 }
 
 h2 {
-	font-size: 22px; line-height: 1.6;
+	font-size: 20px; line-height: 1.8;
 	font-weight: 300;
 	color: #666;
 	margin-bottom: 60px;
@@ -258,6 +274,20 @@ h4 {
 
 /* ================= Content ================= */
 
+nav#index {
+	float: right;
+	-webkit-font-smoothing: antialiased;
+}
+
+nav#index a {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+nav#index a+a {
+	margin-left: 20px;
+}
+
 ul#features li {
 	float: left;
 	max-width: 260px;
@@ -278,6 +308,33 @@ ul#features li:before { display: none; }
 ul#features li:nth-child(even) {
 	float: right;
 }
+
+
+/* Examples */
+
+#examples a:hover {
+	opacity: 1;
+}
+
+#phone {
+	width:368px; 
+	height:760px;
+	background-image:url('/static/images/examples/iphone.png');
+	box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 0 0 1px rgba(0,0,0,.075);
+	border-radius: 50px;
+	position: relative;
+}
+
+#screen {
+	width: 320px; 
+	height: 568px;
+	background-color: #000;
+	border: 1px solid #eaeaea;
+	position: absolute;
+	left: 24px;
+	top: 96px;
+}
+
 
 #index-links p {
 	float: left;
@@ -384,7 +441,7 @@ body {
 
 #wrapper {
 	padding: 40px;
-	max-width: 640px;
+	max-width: 580px;
 }
 
 ul#features li {
@@ -461,7 +518,7 @@ body {
 
 #wrapper {
 	max-width: 680px;
-	padding: 60px;
+	padding: 60px 40px;
 }
 
 ul#features li {

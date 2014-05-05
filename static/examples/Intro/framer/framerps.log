@@ -1,0 +1,24 @@
+{"docName":"Intro","path":"~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro","relativeImagePath":"images","imagePath":"~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro/images","framerPath":"~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro/framer","viewInfoPath":"~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro/framer/views.Intro.js","logPaths":["/tmp/framerps.log","~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro/framer/framerps.log"]}
+
+Running for ~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro
+IntroView: Exporting image
+OverviewButton: Exporting image
+PROGRESS: 50
+IntroButton: Exporting image
+PROGRESS: 62.5
+Logo: Exporting image
+PROGRESS: 75
+Gloss: Exporting image
+PROGRESS: 87.5
+Text: Exporting image
+PROGRESS: 100
+PROGRESS: 100
+PROGRESS: 100
+PROGRESS: 100
+8 views changed
+Skipping ~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro/index.html (exists)
+Skipping ~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro/app.js (exists)
+Skipping ~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro/framer/framer.js (exists)
+Skipping ~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro/framer/framerps.js (exists)
+
+SUCCESS: ~/Dropbox/Documents/Sites/FramerSite/static/examples/Intro

@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-	<h1 class="title">Framer</h1>
+
+	<header id="header" class="group">
+		<h1 class="title">Framer</h1>
+		
+		<nav id="index">
+		<a href="#">Download</a>
+		</nav>
+	</header>
+	
 	<h1>A prototyping tool for animation & interaction</h1>
 	
 	<hr>
@@ -35,10 +43,18 @@
 	</ul>
 	
 	<hr>
+		
+	<figure id="examples">
+	<div id="phone">
+		<iframe id="screen" src="/static/examples/GoogleNow/index.html"></iframe>
+	</div>
+	</figure>
+	
+	<hr>
 	
 	<section id="index-links">
-	<p><a href="#">Download</a></p>
-	<p>Version 3 <a href="#">Source on Github</a></p>
+		<p><a href="#">Download</a></p>
+		<p>Version 3 <a href="#">Source on Github</a></p>
 	</section>
 	
 	<hr>
