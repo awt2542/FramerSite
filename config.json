@@ -1,1 +1,6 @@
-{"port":8857}
+{
+    "aws-access-key": "AKIAIGCDN7OELHEQGXRQ",
+    "aws-bucket-name": "framerjs-v3",
+    "aws-bucket-website": "framerjs-v3.s3-website-us-east-1.amazonaws.com",
+    "port": 8857
+}
