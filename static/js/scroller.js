@@ -1,6 +1,7 @@
 (function() {
   $(document).ready(function() {
     var updateActive;
+    $("#sidebar a").addClass("inactive");
     updateActive = function() {
       var activeAnchor, className, fromTop, offset;
       offset = 60;
@@ -24,6 +25,7 @@
     $(window).load(updateActive);
     return $("#sidebar a").click(function() {
       $("#sidebar a").removeClass("active");
+      $("#sidebar a").addClass("inactive");
       return $(this).addClass("active");
     });
   });

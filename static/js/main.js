@@ -2,7 +2,6 @@ $('#topbar img').click( function(){
     $("#sidebar").toggleClass("appear");
 });
 
-
 // To make images retina, add a class "2x" to the img element
 // and add a <image-name>@2x.png image. Assumes jquery is loaded.
  

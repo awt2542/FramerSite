@@ -1,7 +1,6 @@
 $(document).ready ->
-	
+	$("#sidebar a").addClass "inactive"
 	updateActive = ->
-		
 		# offset = window.innerHeight / 4
 		offset = 60
 		
@@ -10,18 +9,13 @@ $(document).ready ->
 		activeAnchor = null
 		
 		$("a").map ->
-			
 			anchor = $(this)
 			
 			if anchor.offset().top < fromTop + offset
 				activeAnchor = anchor
-
 		
-		if activeAnchor
-			# console.log "ACTIVE", activeAnchor.attr "name"
-			
+		if activeAnchor			
 			className = activeAnchor.attr "name"
-			
 			$("#sidebar a").removeClass "active"
 			$("#sidebar a.#{className}").addClass "active"			
 			
@@ -31,5 +25,9 @@ $(document).ready ->
 	
 	$("#sidebar a").click ->
 		$("#sidebar a").removeClass "active"
-		$(this).addClass "active"	
+		$("#sidebar a").addClass "inactive"
+		$(this).addClass "active"
+
+
+
 		
