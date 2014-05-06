@@ -27,6 +27,7 @@ $(document).ready ->
 			
 	$(window).scroll updateActive
 	$(window).resize updateActive
+	$(window).load updateActive
 	
 	$("#sidebar a").click ->
 		$("#sidebar a").removeClass "active"

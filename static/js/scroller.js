@@ -21,6 +21,7 @@
     };
     $(window).scroll(updateActive);
     $(window).resize(updateActive);
+    $(window).load(updateActive);
     return $("#sidebar a").click(function() {
       $("#sidebar a").removeClass("active");
       return $(this).addClass("active");
