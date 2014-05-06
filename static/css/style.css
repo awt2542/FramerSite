@@ -286,10 +286,18 @@ h1.title span {
 }
 
 h2 {
+	font-size: 36px; line-height: 1.8;
+	font-weight: 300;
+	color: #222; margin-bottom: 20px;
+}
+
+/*Index page h2*/
+h2.headline {
 	font-size: 20px; line-height: 1.8;
 	font-weight: 300;
 	color: #666;
 	margin-bottom: 60px;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 h3 {
@@ -302,6 +310,11 @@ h4 {
 	color: #222; margin-bottom: 15px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+}
+
+h5 {
+	font-size: 20px; font-weight: 400;
+	color: #999; 
 }
 
 #wrapper li {
