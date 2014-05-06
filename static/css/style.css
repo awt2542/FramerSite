@@ -68,6 +68,7 @@ a:active {
 	background: -ms-linear-gradient(top,  #84f2ff 0%,#84bbff 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #84f2ff 0%,#84bbff 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84f2ff', endColorstr='#84bbff',GradientType=0 ); /* IE6-9 */
+	display: none;
 }
 
 #sidebar ul {
