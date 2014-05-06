@@ -119,12 +119,11 @@ sup {
 	color: #84D1FF;
 	margin-bottom: 15px;
 	position: relative; left: -15px;
-	font-style: italic;
 }
 
 #sidebar ul li.headline, #sidebar ul li.headline a {
 	color: #84D1FF;
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 14px;
 	margin-bottom: 15px;
 }
@@ -309,17 +308,6 @@ h4 {
 	color: #222; margin-bottom: 15px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-}
-
-h5, h5 strong {
-	font-size: 19px; font-weight: 300;
-	-webkit-font-smoothing: subpixel-antialiased;
-	margin-bottom: 30px;
-	margin-top: 0px;
-}
-
-h5 strong {
-	font-weight: 400;
 }
 
 #wrapper li {
