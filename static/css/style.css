@@ -316,7 +316,7 @@ h4 {
 	color: #888;
 	list-style-type: circle; 
 	position: relative; left: 18px;
-	padding-left: 15px;
+	padding-left: 8px;
 }
 
 #wrapper li+li {
@@ -325,7 +325,7 @@ h4 {
 
 #wrapper li ul li {
 	list-style-type: none;
-	padding: 0; line-height: 1.5;
+	padding: 0; left: 0; line-height: 1.4;
 	margin-top: 5px;
 }
 
