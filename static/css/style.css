@@ -55,6 +55,7 @@ a:active {
 	background: #1E2229;
 	padding: 60px;
 	overflow-y: auto;
+	box-shadow: inset 2px 0 0 rgba(255,255,255,.05);
 }
 
 #sidebar ul {
@@ -66,14 +67,14 @@ a:active {
 }
 
 #sidebar ul li+li {
-	margin-top: 12px;
+	margin-top: 8px;
 }
 
 #sidebar ul li a {
 	color: #737a84;
 	font-weight: 300;
 	font-size: 14px;
-	-webkit-transition: color 0.3s ease;
+	position: relative;
 }
 
 #sidebar ul li a:hover, #sidebar ul li a:active {
@@ -84,6 +85,14 @@ a:active {
 /* Fade other nav items */
 #sidebar ul li a.active, #sidebar ul li a.inactive.active  {
 	color: #fff;
+	-webkit-transition: color 0.3s ease;
+}
+
+#sidebar ul li a.active:before {
+	content: ""; display: inline-block;
+	height: 8px; width: 2px;
+	background: #fff;
+	position: absolute; left: -70px; top: 3px;
 }
 
 #sidebar ul li a.inactive {
@@ -92,16 +101,33 @@ a:active {
 
 #sidebar ul li.headline {
 	color: #84D1FF;
-	font-weight: 500;
-	text-transform: uppercase;
-	font-size: 14px;
+	font-weight: 400;
+	font-size: 13px;
 	margin-bottom: 15px;
-	position: relative; left: -12px;
+	position: relative; left: -14px;
 	font-style: italic;
+	letter-spacing: 0;
 }
 
-#sidebar ul li.headline.green {
-	color: #acf351;
+
+#sidebar ul li.headline.framer {
+	color: #84f2ff;
+}
+
+#sidebar ul li.headline.start {
+	color: #84e4ff;
+}
+
+#sidebar ul li.headline.learn {
+	color: #84D1FF;
+}
+
+#sidebar ul li.headline.docs {
+	color: #84c7ff;
+}
+
+#sidebar ul li.headline.more {
+	color: #84bbff;
 }
 
 #topbar {
@@ -392,11 +418,11 @@ table.last {
 
 @media only screen and (min-width: 1200px) {
 body {
-	padding-left: 300px;
+	padding-left: 280px;
 }
 
 #sidebar {
-	width: 300px;
+	width: 280px;
 	padding: 70px;
 }
 
