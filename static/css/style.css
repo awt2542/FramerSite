@@ -117,17 +117,15 @@ sup {
 
 #sidebar ul li.headline {
 	color: #84D1FF;
-	font-weight: 400;
-	font-size: 13px;
 	margin-bottom: 15px;
-	position: relative; left: -14px;
+	position: relative; left: -15px;
 	font-style: italic;
 }
 
 #sidebar ul li.headline, #sidebar ul li.headline a {
 	color: #84D1FF;
 	font-weight: 400;
-	font-size: 13px;
+	font-size: 14px;
 	margin-bottom: 15px;
 }
 
@@ -287,7 +285,7 @@ h1.title span {
 
 h2 {
 	font-size: 40px; line-height: 1.6;
-	font-weight: 300;
+	font-weight: 400; -webkit-font-smoothing: antialiased;
 	color: #222; margin-bottom: 20px;
 }
 
@@ -301,8 +299,9 @@ h2.headline {
 }
 
 h3 {
-	font-size: 24px; font-weight: 500;
+	font-size: 22px; font-weight: 500;
 	color: #222; margin-bottom: 30px;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 h4 {
@@ -313,10 +312,14 @@ h4 {
 }
 
 h5, h5 strong {
-	font-size: 20px; font-weight: 300;
-	color: #999; -webkit-font-smoothing: subpixel-antialiased;
+	font-size: 19px; font-weight: 300;
+	-webkit-font-smoothing: subpixel-antialiased;
 	margin-bottom: 30px;
 	margin-top: 0px;
+}
+
+h5 strong {
+	font-weight: 400;
 }
 
 #wrapper li {
