@@ -76,12 +76,8 @@ a:active {
 	-webkit-transition: color 0.3s ease;
 }
 
-#sidebar ul li a:hover {
-	color: rgba(255,255,255,1); opacity: 1;
-}
-
-#sidebar ul li a:active {
-	color: #fff;
+#sidebar ul li a:hover, #sidebar ul li a:active {
+	color: #fff; opacity: 1;
 }
 
 /* Fade other nav items */

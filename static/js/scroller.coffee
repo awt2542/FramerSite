@@ -23,13 +23,12 @@ $(document).ready ->
 			className = activeAnchor.attr "name"
 			
 			$("#sidebar a").removeClass "active"
-			$("#sidebar a.#{className}").addClass "active"
-			
+			$("#sidebar a.#{className}").addClass "active"			
 			
 	$(window).scroll updateActive
 	$(window).resize updateActive
 	
 	$("#sidebar a").click ->
 		$("#sidebar a").removeClass "active"
-		$(this).addClass "active"		
+		$(this).addClass "active"	
 		
