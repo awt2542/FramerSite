@@ -9,7 +9,7 @@
 
 The core of Framer is a Javascript <strong>Framework</strong> that enables you to define interaction and animation in a simple, readable way. It's a small .js file that makes creating realistic prototypes a breeze – complete with animations, spring physics and 3D effects.
 
-Framer <strong>Generator</strong> optimizes the flow of going from static mockups to an interactive prototype. It's a desktop application that extracts resources out of Sketch or Photoshop and renders them to a Framer project folder. You can now add interaction to the layers.
+Framer <strong>Generator</strong> optimizes the flow of going from static mockups to an interactive prototype. It's a desktop application that extracts the resources and layer hierarchy out of Sketch or Photoshop and renders them to a Framer project folder. You can now add interaction to the layers.
 
 <hr>
 
@@ -20,31 +20,34 @@ Framer <strong>Generator</strong> optimizes the flow of going from static mockup
 To get started, <a href="#">Download</a> Framer and unzip it. Here's what you get:
 
 <ul>
-	<li><strong>Project Folder</strong>
+	<li><strong>Project folder</strong>
 		<ul>
 			<li>app.js</li>
 			<li>index.html</li>
-			<li>Framer Folder</li>
-			<li>Images Folder </li>
+			<li>Framer folder</li>
+			<li>Images folder </li>
 		</ul>
 	</li>
 	<li><strong>Framer Generator.app</strong></li>
 </ul>
 
-You can immediatly start editing app.js to add interactions and animations. Additionally, you can run Framer Generator
-From there you use the Framer app to generate a new project from a Photoshop file. Or you can begin from scratch with the template:
+Open index.html and you'll see the logo bounce on a click. Start editing app.js to add interactions and animations. Try it out by switching the function that bounces the logo with this one:
 
+<pre><code data-language="coffeescript">// Bounce on a click
+logoView.on("click", function() {
+	logoView.scale = 0.2;
+	logoView.animate({
+		properties: {scale:1, rotationX:180},
+		curve: "spring(600,30,1000)"
+	});
+});</code></pre>
 
-<!-- <ul>
-	<li>Open index.html in Safari or Chrome</li>
-	<li>Start editing app.js</li>
-</ul> -->
-
-<a name="javascript"></a>
+Congratulations, you have made your first animation with Framer!
 
 <hr>
 
 <!-- Javascript -->
+
 <a name="javascript"></a>
 
 ### Javascript
@@ -66,11 +69,19 @@ If you don't know any Javascript or are just beginning, don't worry. There are m
 	</tbody>
 </table>
 
-<a name="resources"></a>
+<hr>
+
+<!-- Coffeescript -->
+
+<a name="coffeescript"></a>
+
+### Coffeescript
 
 <hr>
 
 <!-- Resources -->
+
+<a name="resources"></a>
 
 ### Resources
 Some text
