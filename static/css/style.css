@@ -122,7 +122,13 @@ sup {
 	margin-bottom: 15px;
 	position: relative; left: -14px;
 	font-style: italic;
-	letter-spacing: 0;
+}
+
+#sidebar ul li.headline, #sidebar ul li.headline a {
+	color: #84D1FF;
+	font-weight: 400;
+	font-size: 13px;
+	margin-bottom: 15px;
 }
 
 
