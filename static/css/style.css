@@ -93,11 +93,6 @@ a:active {
 	position: relative;
 }
 
-#sidebar ul li a:hover, #sidebar ul li a:active {
-	color: #fff; 
-	opacity: 1;
-}
-
 /* Fade other nav items */
 #sidebar ul li a.active, #sidebar ul li a.inactive.active  {
 	color: #fff;
@@ -106,6 +101,12 @@ a:active {
 
 #sidebar ul li a.inactive {
 	color: #737a84;
+}
+
+#sidebar ul li a:hover, #sidebar ul li a:active {
+	color: #fff; 
+	opacity: 1;
+	-webkit-transition: color 0.3s ease;
 }
 
 #sidebar ul li.headline {
