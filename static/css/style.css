@@ -323,6 +323,12 @@ h4 {
 	margin-top: 8px;
 }
 
+#wrapper li~li {
+	padding-left: 30px;
+	line-height: 1.4;
+	list-style-type: none;
+}
+
 /* ================= Content ================= */
 
 nav#index {
