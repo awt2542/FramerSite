@@ -46,6 +46,11 @@ a:active {
 	padding: 60px 40px;
 }
 
+sup {
+	/*position: relative; top: -4px; left: 1px;*/
+	/*opacity: 0.4;	*/
+}
+
 /* ================= Sidebar ================= */
 
 #sidebar {
