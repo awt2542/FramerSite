@@ -16,7 +16,9 @@
       if (activeAnchor) {
         className = activeAnchor.attr("name");
         $("#sidebar a").removeClass("active");
-        return $("#sidebar a." + className).addClass("active");
+        $("#sidebar a." + className).addClass("active");
+        $("#sidebar a." + className).parent().parent().addClass("appear");
+        return $("#sidebar").scrollTop($("#sidebar a." + className).scrollTop());
       }
     };
     $(window).scroll(updateActive);

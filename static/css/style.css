@@ -84,8 +84,12 @@ sup {
 	padding-bottom: 60px;
 }
 
-#sidebar ul+ul {
-	margin-top: 50px;
+#sidebar ul {
+	margin-bottom: 50px;
+}
+
+#sidebar ul:first-child {
+	margin-bottom: 35px;
 }
 
 #sidebar ul li+li {
@@ -99,7 +103,6 @@ sup {
 	position: relative;
 }
 
-
 /* Fade other nav items */
 #sidebar ul li a:hover {
 	opacity: 1;
@@ -108,32 +111,26 @@ sup {
 
 #sidebar ul li a.active {
 	color: #fff; 
-/*	-webkit-transition: color 0.5s ease;
-	-moz-transition: color 0.5s ease;
-	-ms-transition: color 0.5s ease;
-	-o-transition: color 0.5s ease;
-	transition: color 0.5s ease;*/
 }
 
 #sidebar ul li.headline {
 	color: #84D1FF;
 	margin-bottom: 15px;
-	position: relative; left: -15px;
 }
 
 #sidebar ul li.headline, #sidebar ul li.headline a {
 	color: #84D1FF;
-	font-weight: 500;
-	font-size: 14px;
+	font-weight: 500; 
+	font-size: 15px;
 	margin-bottom: 15px;
 }
 
-#sidebar ul:nth-child(2) {
-	margin: 0;
+#sidebar ul li.headline a:hover {
+	color: #fff;
 }
 
-#sidebar ul li.headline.framer a{
-	color: #a4f1ff;
+#sidebar ul li.headline a.active {
+	color: #fff;
 }
 
 #topbar {
@@ -151,6 +148,7 @@ a[name] {
 	position: relative; top: -60px;
 	display: block;
 }
+
 /* ================= Customs scrollbar ================= */
 
 ::-webkit-scrollbar {
@@ -178,18 +176,27 @@ table {
 	line-height:1.4;
 	border: 1px solid #eee;
 	border-radius: 6px;
+	overflow: hidden;
 }
 
 table td, td {
-	border-spacing:none;
-	border-style:solid;
-	padding:10px 15px;
-	border-width:1px 0 0 0;
-	color: #999;
+	border-spacing:none; border-style:solid;
+	padding:10px 15px; color: #999;
 }
 
 tr>td {
 	border-top:1px solid #eee;
+}
+
+td {
+	position: relative;
+}
+
+/*Not sure if this is cleanest possible solution..*/
+td:after {
+	content: ""; display: inline-block;
+	width: 140%; height: 1px; 
+	background: #eee; position: absolute; top: -1px; right: -200px;
 }
 
 thead th, th {
@@ -619,5 +626,96 @@ h1 {
 h2 {
 	font-size: 19px;
 }
+}
+
+/* HEIGHT QUERIES */
+
+.drop {
+	display: inline-block;
+	background: url("/static/images/dropdown.png");
+	height: 8px; width: 14px;
+	margin-left: 6px;
+	opacity: 0;
+}
+
+.red {
+	background: red !important;
+}
+@media only screen and (max-height: 960px) {
+#sidebar ul#more section {
+	max-height: 0; overflow: hidden; visibility: hidden; 
+}
+
+#sidebar ul#more section.appear {
+	visibility: visible; max-height: 300px; margin-bottom: 40px;
+}
+
+#sidebar ul#more .drop {
+	opacity: .5;
+	-webkit-transition: all .2s ease; -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease; -o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+#sidebar ul#more .drop.flip { -webkit-transform: rotate(180deg); }
+}
+
+@media only screen and (max-height: 840px) {
+#sidebar ul#docs section {
+	max-height: 0; overflow: hidden; visibility: hidden;
+}
+
+#sidebar ul#docs { margin-bottom: 20px; }
+
+#sidebar ul#docs section.appear {
+	visibility: visible; max-height: 300px;  margin-bottom: 40px;
+}
+#sidebar ul#docs .drop {
+	opacity: .5;
+	-webkit-transition: all .2s ease; -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease; -o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+#sidebar ul#docs .drop.flip { -webkit-transform: rotate(180deg); }
+}
+
+@media only screen and (max-height: 720px) {
+#sidebar ul#learn section {
+	max-height: 0; overflow: hidden; visibility: hidden;
+}
+
+#sidebar ul#learn { margin-bottom: 20px; }
+
+#sidebar ul#learn section.appear {
+	visibility: visible; max-height: 300px; margin-bottom: 40px;
+}
+#sidebar ul#learn .drop {
+	opacity: .5;
+	-webkit-transition: all .2s ease; -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease; -o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+#sidebar ul#learn .drop.flip { -webkit-transform: rotate(180deg); }
+}
+
+@media only screen and (max-height: 520px) {
+#sidebar ul#start section {
+	max-height: 0; overflow: hidden; visibility: hidden;
+}
+
+#sidebar ul#start { margin-bottom: 20px; }
+
+#sidebar ul#start section.appear {
+	visibility: visible; max-height: 300px; margin-bottom: 40px;
+}
+#sidebar ul#start .drop {
+	opacity: .5;
+	-webkit-transition: all .2s ease; -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease; -o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+#sidebar ul#start .drop.flip { -webkit-transform: rotate(180deg); }
 }
 

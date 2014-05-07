@@ -2,18 +2,27 @@
 {% block content %}
 {% filter markdown %}
 
-<!-- Organizing Code -->
+<!-- More -->
+<a name="more"></a>
+### More
+
+The core of Framer is a Javascript Framework that enables you to define interaction and animation in a simple, readable way. It's a small .js file that makes creating realistic prototypes a breeze – complete with animations, spring physics and 3D effects.
+
+---
 <a name="organizing"></a>
 
+<!-- Organizing Code -->
 ### Organizing Code
 
 When your projects become larger then say a hundred lines of code it becomes more important to organize your code. This also makes it easier to collaborate with others or change things at later stage. How you organize code is more a Javascript problem in general and there are <a href="#">many approaches</a> which all mostly come down to personal preference. Because of that I'll just introduce the standard tools you have for organization: files and namespaces.
 
+<a name="organizing"></a>
 
-It's easy to split up your projects in different files. You can just create a new file, add the code and include the script in the index.html page header like this: <code class="inline" data-language="javascript"><script src="my-code.js"></script></code>
+It's easy to split up your projects in different files. You can just create a new file, add the code and include the script in the index.html page header like this: <code class="inline"><script&nbsp;src="my-code.js"></script></code>
 
 This will include and run the code. The ordering is important, so if a specific file depends on something else make sure you load the dependant first. You can add as many files as you'd like.
 
+<a name="organizing"></a>
 
 Generally it's a bad idea to pollute your global namepace with random variables because it's hard to keep track of them. For example, if you define a variable i somewhere, and then you use the same variable in a loop in another file that then changes that value you can get really unexpected results that are hard to debug. So a simple sollution is to use objects as namespaces. Say you have a set of views that you'd like to reference by name then you could make a global views variable that holds all the views by name like this:
 

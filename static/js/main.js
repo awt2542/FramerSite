@@ -38,3 +38,87 @@ function retina() {
 };
  
 $(document).ready(retina);
+
+
+/* ========================= */
+
+collapseMore = (function() {
+	var queryMore = window.matchMedia( "(max-height: 960px)" );
+	if (queryMore.matches) {
+			$('#sidebar ul#more li.headline').click( function(event){
+				event.preventDefault();
+			    $("#sidebar ul#more section").toggleClass("appear");
+			    $("#sidebar ul#more .drop").toggleClass("flip");
+			    $("#sidebar").animate({"scrollTop": $("#sidebar").scrollTop() + 100});
+			});
+	}
+	
+	else {
+		$("#sidebar ul#more li.headline").unbind("click");
+		$("#sidebar ul#more section").removeClass("appear");
+	}
+})();
+
+/* ========================= */
+
+collapseDocs = (function() {
+	var queryDocs = window.matchMedia( "(max-height: 840px)" );
+	if (queryDocs.matches) {
+			$('#sidebar ul#docs li.headline').click( function(event){
+				$('#sidebar ul#docs li.headline a').attr("href", "#");
+			    $("#sidebar ul#docs section").toggleClass("appear");
+			    $("#sidebar ul#docs .drop").toggleClass("flip");
+			    $("#sidebar").animate({"scrollTop": $("#sidebar").scrollTop() + 100});
+			});
+	}
+	
+	else {
+		$("#sidebar ul#docs li.headline").unbind("click");
+		$("#sidebar ul#docs section").removeClass("appear");
+	}
+})();
+
+/* ========================= */
+
+collapseLearn = (function() {
+	var queryLearn = window.matchMedia( "(max-height: 720px)" );
+	
+	if (queryLearn.matches) {
+			$('#sidebar ul#learn li.headline').click( function(event){
+				event.preventDefault();
+			    $("#sidebar ul#learn section").toggleClass("appear");
+			    $("#sidebar ul#learn .drop").toggleClass("flip");
+			});
+	}
+	
+	else {
+		$("#sidebar ul#learn li.headline").unbind("click");
+		$("#sidebar ul#learn section").removeClass("appear");
+	}
+})();
+
+/* ========================= */
+
+collapseStart = (function() {
+	var queryStart = window.matchMedia( "(max-height: 520px)" );
+	
+	if (queryStart.matches) {
+			$('#sidebar ul#start li.headline').click( function(event){
+				event.preventDefault();
+			    $("#sidebar ul#start section").toggleClass("appear");
+			    $("#sidebar ul#start .drop").toggleClass("flip");
+			});
+	}
+	
+	else {
+		$("#sidebar ul#start li.headline").unbind("click");
+		$("#sidebar ul#start section").removeClass("appear");
+	}
+})();
+
+/* ========================= */
+
+$(window).resize(collapseMore);
+$(window).resize(collapseDocs);
+$(window).resize(collapseLearn);
+$(window).resize(collapseStart);

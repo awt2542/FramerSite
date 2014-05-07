@@ -17,6 +17,9 @@ $(document).ready ->
 			className = activeAnchor.attr "name"
 			$("#sidebar a").removeClass "active"
 			$("#sidebar a.#{className}").addClass "active"	
+			$("#sidebar a.#{className}").parent().parent().addClass "appear"
+			$("#sidebar").scrollTop($("#sidebar a.#{className}").scrollTop());
+			
 			
 	$(window).scroll updateActive
 	$(window).resize updateActive
