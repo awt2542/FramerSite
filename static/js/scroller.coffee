@@ -1,5 +1,4 @@
 $(document).ready ->
-	$("#sidebar a").addClass "inactive"
 	updateActive = ->
 		# offset = window.innerHeight / 4
 		offset = 60
@@ -17,7 +16,7 @@ $(document).ready ->
 		if activeAnchor			
 			className = activeAnchor.attr "name"
 			$("#sidebar a").removeClass "active"
-			$("#sidebar a.#{className}").addClass "active"			
+			$("#sidebar a.#{className}").addClass "active"	
 			
 	$(window).scroll updateActive
 	$(window).resize updateActive
@@ -25,7 +24,6 @@ $(document).ready ->
 	
 	$("#sidebar a").click ->
 		$("#sidebar a").removeClass "active"
-		$("#sidebar a").addClass "inactive"
 		$(this).addClass "active"
 
 

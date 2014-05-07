@@ -99,20 +99,20 @@ sup {
 	position: relative;
 }
 
+
 /* Fade other nav items */
-#sidebar ul li a.active, #sidebar ul li a.inactive.active  {
-	color: #fff;
-	-webkit-transition: color 0.3s ease;
-}
-
-#sidebar ul li a.inactive {
-	color: #737a84;
-}
-
-#sidebar ul li a:hover, #sidebar ul li a:active {
-	color: #fff; 
+#sidebar ul li a:hover {
 	opacity: 1;
-	-webkit-transition: color 0.3s ease;
+	color: #fff;
+}
+
+#sidebar ul li a.active {
+	color: #fff; 
+/*	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	-ms-transition: color 0.5s ease;
+	-o-transition: color 0.5s ease;
+	transition: color 0.5s ease;*/
 }
 
 #sidebar ul li.headline {
@@ -128,25 +128,12 @@ sup {
 	margin-bottom: 15px;
 }
 
-
-#sidebar ul li.headline.framer {
-	color: #84f2ff;
+#sidebar ul:nth-child(2) {
+	margin: 0;
 }
 
-#sidebar ul li.headline.start {
-	color: #84e4ff;
-}
-
-#sidebar ul li.headline.learn {
-	color: #84D1FF;
-}
-
-#sidebar ul li.headline.docs {
-	color: #84c7ff;
-}
-
-#sidebar ul li.headline.more {
-	color: #84bbff;
+#sidebar ul li.headline.framer a{
+	color: #a4f1ff;
 }
 
 #topbar {
@@ -300,7 +287,7 @@ h2.headline {
 h3 {
 	font-size: 22px; font-weight: 500;
 	color: #222; margin-bottom: 30px;
-	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-font-smoothing: antialiased-antialiased;
 }
 
 h4 {
