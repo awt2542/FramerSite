@@ -88,7 +88,7 @@ sup {
 	margin-bottom: 50px;
 }
 
-#sidebar ul:first-child {
+#sidebar ul:first-child, #sidebar ul:nth-child(2) {
 	margin-bottom: 35px;
 }
 
@@ -111,11 +111,6 @@ sup {
 
 #sidebar ul li a.active {
 	color: #fff; 
-}
-
-#sidebar ul li.headline {
-	color: #84D1FF;
-	margin-bottom: 15px;
 }
 
 #sidebar ul li.headline, #sidebar ul li.headline a {
@@ -207,6 +202,11 @@ thead th, th {
 	background: #fcfcfc;
 	line-height: 1.2; 
 	border-radius: 6px 6px 0 0 ;
+}
+
+table a {
+	text-align: right;
+	display: inline-block;
 }
 
 table .dim {
@@ -438,6 +438,11 @@ table {
 
 table.last {
 	margin-bottom: 60px;
+}
+th:last-child {
+	width: 20px; overflow: visible;
+	position: relative; right:40px;
+	display: inline-block;
 }
 
 /* ==================================================== */
