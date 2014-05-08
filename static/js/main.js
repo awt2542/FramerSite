@@ -43,7 +43,7 @@ $(document).ready(retina);
 /* ========================= */
 
 collapseMore = (function() {
-	var queryMore = window.matchMedia( "(max-height: 960px)" );
+	var queryMore = window.matchMedia( "(max-height: 1000px)" );
 	if (queryMore.matches) {
 			$('#sidebar ul#more li.headline').click( function(event){
 				event.preventDefault();
@@ -62,7 +62,7 @@ collapseMore = (function() {
 /* ========================= */
 
 collapseDocs = (function() {
-	var queryDocs = window.matchMedia( "(max-height: 840px)" );
+	var queryDocs = window.matchMedia( "(max-height: 880px)" );
 	if (queryDocs.matches) {
 			$('#sidebar ul#docs li.headline').click( function(event){
 				$('#sidebar ul#docs li.headline a').attr("href", "#");
@@ -81,7 +81,7 @@ collapseDocs = (function() {
 /* ========================= */
 
 collapseLearn = (function() {
-	var queryLearn = window.matchMedia( "(max-height: 720px) (min-width: 640px)" );
+	var queryLearn = window.matchMedia( "(max-height: 745px)" );
 	
 	if (queryLearn.matches) {
 			$('#sidebar ul#learn li.headline').click( function(event){
@@ -99,8 +99,27 @@ collapseLearn = (function() {
 
 /* ========================= */
 
+collapseExamples = (function() {
+	var queryExamples = window.matchMedia( "(max-height: 540px)" );
+	
+	if (queryExamples.matches) {
+			$('#sidebar ul#examples li.headline').click( function(event){
+				event.preventDefault();
+			    $("#sidebar ul#examples section").toggleClass("appear");
+			    $("#sidebar ul#examples svg").toggleClass("flip");
+			});
+	}
+	
+	else {
+		$("#sidebar ul#examples li.headline").unbind("click");
+		$("#sidebar ul#examples section").removeClass("appear");
+	}
+})();
+
+/* ========================= */
+
 collapseStart = (function() {
-	var queryStart = window.matchMedia( "(max-height: 520px)" );
+	var queryStart = window.matchMedia( "(max-height: 460px)" );
 	
 	if (queryStart.matches) {
 			$('#sidebar ul#start li.headline').click( function(event){

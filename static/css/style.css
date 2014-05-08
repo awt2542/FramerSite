@@ -628,6 +628,7 @@ nav#index li {
 
 #features li {
 	max-width: 240px;
+	min-height: auto;
 }
 
 h1 {
@@ -637,8 +638,8 @@ h1 {
 
 @media only screen and (max-width: 580px) {
 #features li {
-	max-width: 100%;
-	margin-bottom: 40px;
+	font-size: 13px;
+	max-width: 180px;
 }
 
 table {
@@ -695,6 +696,11 @@ nav#index {
 	margin-top: -10px;
 }
 
+#features li {
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
 }
 
 /* HEIGHT QUERIES */
@@ -704,7 +710,7 @@ opacity: 0;
 }
 
 
-@media only screen and (max-height: 960px) and (min-width: 640px) {
+@media only screen and (max-height: 1000px) and (min-width: 640px) {
 #sidebar ul#more section {
 	max-height: 0; overflow: hidden; visibility: hidden; 
 }
@@ -723,7 +729,7 @@ transform: rotate(180deg);}
 #sidebar ul#more.flip svg path { fill: #fff; }
 }
 
-@media only screen and (max-height: 840px) and (min-width: 640px) {
+@media only screen and (max-height: 880px) and (min-width: 640px) {
 #sidebar ul#docs section {
 	max-height: 0; overflow: hidden; visibility: hidden;
 }
@@ -744,7 +750,7 @@ transform: rotate(180deg);
 #sidebar ul#docs.flip svg path { fill: #fff; }
 }
 
-@media only screen and (max-height: 720px) and (min-width: 640px) {
+@media only screen and (max-height: 745px) and (min-width: 640px) {
 #sidebar ul#learn section {
 	max-height: 0; overflow: hidden; visibility: hidden;
 }
@@ -765,7 +771,28 @@ transform: rotate(180deg);
 #sidebar ul#learn.flip svg path { fill: #fff; }
 }
 
-@media only screen and (max-height: 520px) and (min-width: 640px) {
+@media only screen and (max-height: 540px) and (min-width: 640px) {
+#sidebar ul#examples section {
+	max-height: 0; overflow: hidden; visibility: hidden;
+}
+
+#sidebar ul#examples { margin-bottom: 20px; }
+
+#sidebar ul#examples section.appear {
+	visibility: visible; max-height: 300px; margin-bottom: 40px;
+}
+
+#sidebar ul#examples svg { opacity: 1; }
+#sidebar ul#examples.flip svg { -moz-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+#sidebar ul#examples.flip svg path { fill: #fff; }
+}
+
+@media only screen and (max-height: 460px) and (min-width: 640px) {
 #sidebar ul#start section {
 	max-height: 0; overflow: hidden; visibility: hidden;
 }
