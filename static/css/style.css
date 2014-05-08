@@ -383,11 +383,11 @@ nav#index li:last-child {
 #features li img {
 	float: left;
 	position: relative; 
-	margin-right:20px;
+	margin-right:15px;
 }
 
 #features li p {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 #features li+li { margin-top: 0; }
