@@ -103,6 +103,14 @@ sup {
 	position: relative;
 }
 
+#sidebar ul li svg {
+	display: inline-block;
+	margin-bottom: -4px;
+	margin-left: 6px;
+	/*To not move up any other nav items... */
+	position: relative; top: -1px;
+}
+
 /* Fade other nav items */
 #sidebar ul li a:hover {
 	opacity: 1;
@@ -132,6 +140,8 @@ sup {
 #sidebar ul li.headline a.active {
 	color: #fff;
 }
+
+#sidebar ul li.headline a.active svg path { fill: #fff; }
 
 #topbar {
 	display: none;
@@ -188,9 +198,6 @@ tr>td {
 	border-top:1px solid #eee;
 }
 
-td {
-	position: relative;
-}
 
 /*Not sure if this is cleanest possible solution..*/
 td:after {
@@ -634,18 +641,12 @@ h2 {
 }
 
 /* HEIGHT QUERIES */
-
-.drop {
-	display: inline-block;
-	background: url("/static/images/dropdown.png");
-	height: 8px; width: 14px;
-	margin-left: 6px;
-	opacity: 0;
+#sidebar ul svg { 
+opacity: 0;
+-webkit-transition: -webkit-transform .2s ease; -moz-transition: -moz-transform .2s ease; -ms-transition: -ms-transform .2s ease; -o-transition: -o-transform .2s ease; transition: transform .2s ease;
 }
 
-.red {
-	background: red !important;
-}
+
 @media only screen and (max-height: 960px) {
 #sidebar ul#more section {
 	max-height: 0; overflow: hidden; visibility: hidden; 
@@ -655,13 +656,14 @@ h2 {
 	visibility: visible; max-height: 300px; margin-bottom: 40px;
 }
 
-#sidebar ul#more .drop {
-	opacity: .5;
-	-webkit-transition: all .2s ease; -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease; -o-transition: all .2s ease;
-	transition: all .2s ease;
-}
-#sidebar ul#more .drop.flip { -webkit-transform: rotate(180deg); }
+#sidebar ul#more svg { opacity: 1; }
+#sidebar ul#more.flip svg { 
+-moz-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+transform: rotate(180deg);}
+#sidebar ul#more.flip svg path { fill: #fff; }
 }
 
 @media only screen and (max-height: 840px) {
@@ -674,14 +676,15 @@ h2 {
 #sidebar ul#docs section.appear {
 	visibility: visible; max-height: 300px;  margin-bottom: 40px;
 }
-#sidebar ul#docs .drop {
-	opacity: .5;
-	-webkit-transition: all .2s ease; -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease; -o-transition: all .2s ease;
-	transition: all .2s ease;
-}
 
-#sidebar ul#docs .drop.flip { -webkit-transform: rotate(180deg); }
+#sidebar ul#docs svg { opacity: 1; }
+#sidebar ul#docs.flip svg { -moz-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+#sidebar ul#docs.flip svg path { fill: #fff; }
 }
 
 @media only screen and (max-height: 720px) {
@@ -694,14 +697,15 @@ h2 {
 #sidebar ul#learn section.appear {
 	visibility: visible; max-height: 300px; margin-bottom: 40px;
 }
-#sidebar ul#learn .drop {
-	opacity: .5;
-	-webkit-transition: all .2s ease; -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease; -o-transition: all .2s ease;
-	transition: all .2s ease;
-}
 
-#sidebar ul#learn .drop.flip { -webkit-transform: rotate(180deg); }
+#sidebar ul#learn svg { opacity: 1; }
+#sidebar ul#learn.flip svg { -moz-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+#sidebar ul#learn.flip svg path { fill: #fff; }
 }
 
 @media only screen and (max-height: 520px) {
@@ -714,13 +718,14 @@ h2 {
 #sidebar ul#start section.appear {
 	visibility: visible; max-height: 300px; margin-bottom: 40px;
 }
-#sidebar ul#start .drop {
-	opacity: .5;
-	-webkit-transition: all .2s ease; -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease; -o-transition: all .2s ease;
-	transition: all .2s ease;
-}
 
-#sidebar ul#start .drop.flip { -webkit-transform: rotate(180deg); }
+#sidebar ul#start svg { opacity: 1; }
+#sidebar ul#start.flip svg { -moz-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+#sidebar ul#start.flip svg path { fill: #fff; }
 }
 

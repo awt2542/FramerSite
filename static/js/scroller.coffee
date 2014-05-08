@@ -16,10 +16,10 @@ updateActive = (doScroll=true) ->
 		$("#sidebar a.#{className}").parent().parent().addClass "appear"
 		$("#sidebar a.#{className}").parent().parent().parent().parent().parent().addClass "has-active"
 		
-		`offsetChangeThree = (function() {
-			var offsetThree = window.matchMedia( "(max-height: 900px)" );
+		`(function() {
+			var offsetOne = window.matchMedia( "(max-height: 900px)" );
 			
-			if (offsetThree.matches) {
+			if (offsetOne.matches) {
 				learnScroll = 0
 				docsScroll = 0
 				moreScroll = 60
@@ -27,18 +27,18 @@ updateActive = (doScroll=true) ->
 			
 		})();`
 		
-		`offsetChangeTwo = (function() {
-			var offsetThree = window.matchMedia( "(max-height: 840px)" );
+		`(function() {
+			var offsetTwo = window.matchMedia( "(max-height: 840px)" );
 			
-			if (offsetThree.matches) {
+			if (offsetTwo.matches) {
 				learnScroll = 0
 				docsScroll = 0
-				moreScroll = 20
+				moreScroll = 80
 			}
 			
 		})();`
 		
-		`offsetChangeTwo = (function() {
+		`(function() {
 			var offsetThree = window.matchMedia( "(max-height: 740px)" );
 			
 			if (offsetThree.matches) {
@@ -49,10 +49,10 @@ updateActive = (doScroll=true) ->
 			
 		})();`
 		
-		`offsetChange = (function() {
-			var offsetOne = window.matchMedia( "(max-height: 700px)" );
+		`(function() {
+			var offsetFour = window.matchMedia( "(max-height: 700px)" );
 			
-			if (offsetOne.matches) {
+			if (offsetFour.matches) {
 				learnScroll = 0
 				docsScroll = 0
 				moreScroll = 20
@@ -68,10 +68,11 @@ updateActive = (doScroll=true) ->
 		
 $(window).scroll -> updateActive false
 $(window).resize -> updateActive false
-updateActive true
+updateActive false
+$(window).load -> updateActive true
+
 
 
 $("#sidebar a").click ->
 	$("#sidebar a").removeClass "active"
-	$(this).addClass "active"
-	
+	$(this).addClass "active"	
