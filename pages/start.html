@@ -31,40 +31,35 @@ To get started, <a href="#">Download</a> Framer and unzip it. Here's what you ge
 	<li><strong>Framer Generator.app</strong></li>
 </ul>
 <a name="installation"></a>
-Open index.html and you'll see the logo bounce on a click. Start editing app.js to add interactions and animations. Try it out by switching the function that bounces the logo with this one:
 
-<pre><code data-language="coffeescript">// Bounce on a click
-logoView.on("click", function() {
-	logoView.scale = 0.2;
-	logoView.animate({
-		properties: {scale:1, rotationX:180},
-		curve: "spring(600,30,1000)"
-	});
-});</code></pre>
+Open index.html and you'll see the Framer logo bounce on a click. Start editing app.js (in your code-editor) to add interactions and animations. Try it out by adding a new state to imageLayer:
 
-Congratulations, you have made your first animation with Framer!
+<pre><code data-language="coffeescript">four: {y:200, scale:0.8, rotationZ:200, blur:2}</code></pre>
+
+The imageLayer will now move up, scale, rotate and blur on the fourth click. Framer works, congrats!
 
 <hr>
 
-<!-- Javascript -->
+<!-- JavaScript -->
 
 <a name="javascript"></a>
 
-### Javascript
-If you don't know any Javascript or are just beginning, don't worry. There are many great resources to get started and while it might seem hard at first you'll see that you'll get better quickly. It's also good to know that Javascript is worth learning even apart from Framer, as you can do web, application and backend development with it. Most people agree it's a language with a future. Some great Javascript resources:
+### JavaScript
+
+Framer makes it easier to prototype animations and interactions, but you will benefit from understanding a bit of JavaScript. If you don't know JavaScript or are just beginning, don't worry. There are many great resources to get started and while it might seem hard at first you'll see that you'll get better quickly. It's also good to know that JavaScript is worth learning apart from Framer, as you can do web, application and backend development with it.
 
 <table class="last">
 		<tbody><tr>
-			<th width="180px">Site</th>
+			<th>Site</th>
 			<th>Description</th>
 		</tr>
 		<tr>
-			<td><a href="http://coffeescript.org/">Code Academy</a></td>
-			<td>Free high quality online Javascript course. </td>
+			<td><a href="http://www.codecademy.com/tracks/javascript/">Code Academy</a></td>
+			<td>Free high quality online JavaScript course</td>
 		</tr>
 		<tr>
-			<td><a href="http://cactusformac.com">Mozilla Dev Center</a></td>
-			<td>Mozilla's resources to get started with Javascript.</td>
+			<td><a href="https://developer.mozilla.org/en-US/learn/javascript">Mozilla Dev Center</a></td>
+			<td>Mozilla's resources to get started with JavaScript</td>
 		</tr>
 	</tbody>
 </table>
@@ -76,6 +71,26 @@ If you don't know any Javascript or are just beginning, don't worry. There are m
 <a name="coffeescript"></a>
 
 ### Coffeescript
+
+Framer Studio works with CoffeeScript, a language that compiles into JavaScript. Framer Studio compiles CoffeeScript automatically, so you can try it out immediatly.
+
+<span style="color:red">Koen: add some benefits of CS over JS.</span>
+
+<table class="last">
+		<tbody><tr>
+			<th>Site</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td><a href="http://coffeescript.org/">CoffeeScript</a></td>
+			<td>A great overview and full documentation</td>
+		</tr>
+		<tr>
+			<td><a href="http://blog.teamtreehouse.com/the-absolute-beginners-guide-to-coffeescript">Treehouse</a></td>
+			<td>A beginners guide to CoffeeScript</td>
+		</tr>
+	</tbody>
+</table>
 
 <hr>
 
@@ -92,7 +107,7 @@ Some text
 		</tr>
 		<tr>
 			<td><a href="http://coffeescript.org/">Coffee&nbsp;Script</a></td>
-			<td>A more concise language that compiles to Javascript.</td>
+			<td>A more concise language that compiles to JavaScript.</td>
 		</tr>
 		<tr>
 			<td><a href="http://cactusformac.com">Cactus</a></td>
