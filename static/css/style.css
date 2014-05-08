@@ -371,6 +371,11 @@ nav#index li:last-child {
 	float: right;
 }
 
+#features {
+	/* Fix for list margin */
+	margin-bottom: -40px;
+}
+
 #features li {
 	float: left;
 	max-width: 260px;
@@ -394,16 +399,14 @@ nav#index li:last-child {
 	top: 1px;
 }
 
-
-
 #features li p {
+	margin-bottom: 0;
 	margin-top: 10px;
 }
 
 #features li:nth-child(even) {
 	float: right;
 }
-
 
 /* Examples */
 #examples a:hover {
@@ -436,7 +439,7 @@ p, iframe {
 	margin-bottom: 20px;
 }
 
-#features li:nth-child(1), #features li:nth-child(2){
+#features li{
 	margin-bottom: 40px;
 }
 
