@@ -286,9 +286,9 @@ h2 {
 
 /*Index page h2*/
 h2.headline {
-	font-size: 21px; line-height: 1.8;
+	font-size: 22px; line-height: 1.7;
 	font-weight: 300;
-	color: #999;
+	color: #444;
 	margin-bottom: 60px; text-align: center;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
