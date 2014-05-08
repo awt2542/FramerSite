@@ -32,7 +32,7 @@ To get started, <a href="#">Download</a> Framer and unzip it. Here's what you ge
 </ul>
 <a name="installation"></a>
 
-Open index.html and you'll see the logo bounce on a click. Framer runs best in WebKit, please use Safari. Chrome works too, but has been rocky since they switched to Blink. Start editing app.js (in your code-editor) to add interactions and animations. Try it out by adding a new state to imageLayer:
+Open index.html and you'll see the logo bounce on a click. Framer runs best in WebKit, so please use Safari. Chrome works too, but has been rocky since they switched to Blink. Start editing app.js (in your code-editor) to add interactions and animations. Try it by adding a state to imageLayer:
 
 <pre><code data-language="coffeescript">four: {y:200, scale:0.8, rotationZ:200, blur:2}</code></pre>
 
@@ -50,7 +50,7 @@ Framer makes it easier to prototype animations and interactions, but you will be
 
 <table class="last">
 		<tbody><tr>
-			<th width="180px">Site</th>
+			<th width="170px">Site</th>
 			<th>Description</th>
 		</tr>
 		<tr>
@@ -66,7 +66,7 @@ Framer makes it easier to prototype animations and interactions, but you will be
 
 <hr>
 
-<!-- Coffeescript -->
+<!-- Coffeescript 
 
 <a name="coffeescript"></a>
 
@@ -78,7 +78,7 @@ Framer Studio works with CoffeeScript, a language that compiles into JavaScript.
 
 <table class="last">
 		<tbody><tr>
-			<th width="180px">Site</th>
+			<th width="170px">Site</th>
 			<th>Description</th>
 		</tr>
 		<tr>
@@ -92,26 +92,31 @@ Framer Studio works with CoffeeScript, a language that compiles into JavaScript.
 	</tbody>
 </table>
 
-<hr>
+<hr> -->
 
 <!-- Resources -->
 
 <a name="resources"></a>
 
 ### Resources
-Some text
+Optimize your prototyping workflow with these tools.
+
 <table>
 		<tbody><tr>
-			<th>Thing</th>
+			<th width="170px">Product</th>
 			<th>Description</th>
 		</tr>
 		<tr>
-			<td><a href="http://cactusformac.com">Cactus</a></td>
-			<td>With auto-refresh, to get immediate feedback.</td>
+			<td><a href="http://cactusformac.com" target="_blank">Cactus for Mac</a></td>
+			<td>Auto-refreshes the browser on change. Get immediate feedback on your prototype.</td>
 		</tr>
 		<tr>
-			<td><a href="https://itunes.apple.com/us/app/clear-browser-full-screen/id536117231?mt=8">Clear Browser</a></td>
-			<td>A full screen mobile browser for iOS</td>
+			<td><a href="https://github.com/koenbok/CactusTemplatesExtras" target="_blank">Cactus Template</a></td>
+			<td>A Framer template to drop into Cactus.</td>
+		</tr>
+		<tr>
+			<td><a href="https://itunes.apple.com/us/app/clear-browser-full-screen/id536117231?mt=8" target="_blank">Clear Browser</a></td>
+			<td>A full screen mobile browser for iOS. Run your prototype with Cactus and load the local URL into this browser.</td>
 		</tr>
 </tbody></table>
 
@@ -149,7 +154,6 @@ From this point you can use Framer like you normally would to basically add beha
 	<li>Layer groups with vector masks will become views with clipping enabled. You can optionally add "scroll" to the layer group name to make it a ScrollView.</li>
 	<li>Layer group names should be unique, if they're not Framer will silently rename them on export.</li>
 </ul>
-<hr>
 
 {% endfilter %}	
 {% endblock content%}
