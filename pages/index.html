@@ -1,19 +1,6 @@
 {% extends "base.html" %}
 {% block framerclass %}is-active{% endblock %}
-
-{% block header %}
-	<a name="introduction"></a>
-	<header id="header" class="group">
-		<h1 class="title">Framer</h1>
-		
-		<h1>A prototyping tool for animation & interaction</h1>
-		
-		<a href="#">Download</a>
-		
-	<img src="/static/images/appicon.png">
-	</header>
-	
-{% endblock header %}	
+{% block indexheader %}{% include "header.html" %}{% endblock indexheader %}
 {% block content %}
 
 	<a name="introduction"></a>
@@ -34,22 +21,22 @@
 
 	<section id="features" class="group">
 		<li>
-			<img src="/static/images/icons/animation.png">
+			<img src="/static/images/icons/icon-animation.png">
 			<h4>Animation</h4>
 			<p>Animate any view in full 3D space with spring physics and bezier curves.</p>
 		</li>
 		<li>
-			<img src="/static/images/icons/gestures.png">
+			<img src="/static/images/icons/icon-gestures.png">
 			<h4>Gestures</h4>
 			<p>Define how your designs feel. Test your protoypes in the palm of your hand.</p>
 		</li>		
 		<li>
-			<img src="/static/images/icons/performance.png">
+			<img src="/static/images/icons/icon-speed.png">
 			<h4>Performance</h4>
 			<p>Hardware accelerated for high frame rates. Play multiple animations simultaneously.</p>
 		</li>
 		<li>
-			<img src="/static/images/icons/flexible.png">
+			<img src="/static/images/icons/icon-flexible.png">
 			<h4>Flexible</h4>
 			<p>Works great on desktop, mobile and tablets. Plays well with the rest of the browser.</p>
 		</li>
@@ -65,11 +52,5 @@
 	</figure>
 	
 	<hr>
-	
-	<section id="index-links">
-		<p><a href="#">Download</a></p>
-		<p>Version 3 <a href="#">Source on Github</a></p>
-	</section>
-	
-	<hr>
+
 {% endblock content %}

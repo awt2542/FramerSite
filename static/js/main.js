@@ -81,7 +81,7 @@ collapseDocs = (function() {
 /* ========================= */
 
 collapseLearn = (function() {
-	var queryLearn = window.matchMedia( "(max-height: 720px)" );
+	var queryLearn = window.matchMedia( "(max-height: 720px) (min-width: 640px)" );
 	
 	if (queryLearn.matches) {
 			$('#sidebar ul#learn li.headline').click( function(event){
