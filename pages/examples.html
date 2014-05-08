@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+{% filter markdown %}
+
+<a name="examples"></a>
+<!-- Examples -->
+### Examples
+<a name="start"></a>
+We're doing our best to list as many relevant and new prototypes here. Please tweet your work to <a href="http://twitter.com/framerjs">@framerjs</a>!
+
+<hr>
+
+<!-- CodePen -->
+<a name="codepen"></a>
+
+### CodePen
+You can find user examples, varying from small tests until larger ideas on CodePen under the framer tag.
+
+<table class="last">
+		<tbody><tr>
+			<th>Site</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td><a href="http://codepen.io/framerjs/">Framerjs</a></td>
+			<td>Official Framer CodePen</td>
+		</tr>
+		<tr>
+			<td><a href="http://codepen.io/tag/framer/">CodePen</a></td>
+			<td>All #framer tagged pen's</td>
+		</tr>
+
+	</tbody>
+</table>
+
+<hr>
+
+
+{% endfilter %}	
+{% endblock content%}
