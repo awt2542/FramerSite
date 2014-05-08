@@ -22,7 +22,7 @@
 <body>
 	{% block sidebar %}
 	<header id="topbar"> <img class="2x" src="/static/images/menu-icon.png"></header>
-	<div id="gradientbar"></div>
+	
 	<aside id="sidebar" class="{% block sidebarclass %}{% endblock %}">
 		<nav>
 			<ul><li class="headline {% block framerclass %}{% endblock %}"><a href="index.html" class="introduction">Framer</a></li></ul>
@@ -83,6 +83,8 @@
 		</nav>
 	</aside>
 	{% endblock sidebar %}
+	
+	{% block indexheader %}{% endblock indexheader %}
 	
 	<section id="wrapper">
 	{% block content %}

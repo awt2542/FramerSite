@@ -531,13 +531,13 @@ body {
 	padding: 40px;
 }
 
-#gradientbar {
-	left: 200px;
-}
-
 #wrapper {
 	padding: 40px;
 	max-width: 580px;
+}
+
+nav#index {
+	margin-top: -10px;
 }
 
 #features li {
@@ -603,21 +603,27 @@ body {
 
 #topbar {
 	display: block; height: 50px; width: 100%;
-	background: #14181d;
-	position: absolute; top: 0; z-index: 30; left: 0;
+	background: #262a31;
+	position: relative; top: 0; z-index: 30; left: 0;
 	padding: 14px;
 }
 
 #topbar img {
-	position: absolute; top: 10px; right: 10px;
+	position: absolute; top: 10px; left: 10px;
 	height: 32px; width: 32px;
 	cursor: hand; cursor: pointer;
 }
 
 #header {
-	margin-top: 50px;
-	padding: 40px;
+	padding: 60px 40px;
 	height: 260px;
+}
+
+#header img {
+	height: auto;
+	width: 256px;
+	right: -128px;
+	bottom: -128px;
 }
 
 #wrapper {
@@ -625,12 +631,29 @@ body {
 	padding: 60px 40px;
 }
 
+nav#index {
+	margin-top: -30px;
+}
+
+nav#index li {
+	font-size: 13px;
+}
+
 #features li {
 	max-width: 240px;
+}
+
+h1 {
+	font-size: 24px;
 }
 }
 
 @media only screen and (max-width: 580px) {
+
+h1 {
+	font-size: 20px;
+}
+
 #features li {
 	max-width: 100%;
 	margin-bottom: 40px;
@@ -652,6 +675,14 @@ table, thead th, th {
 table.api td.group {
 	font-size: 11px;
 }
+
+nav#index {
+	margin-top: -10px;
+}
+
+nav#index li a{
+	font-weight: 400; -webkit-font-smoothing: subpixel-antialiased;
+}
 }
 
 @media only screen and (max-width: 440px) {
@@ -660,8 +691,13 @@ table.api td.group {
 	padding-top: 40px;
 }
 
+#header {
+	padding: 40px;
+	height: 240px;
+}
+
 h1 {
-	font-size: 24px; line-height: 1.6;
+	line-height: 1.4;
 }
 
 h2 {
@@ -676,7 +712,7 @@ opacity: 0;
 }
 
 
-@media only screen and (max-height: 960px) {
+@media only screen and (max-height: 960px) and (min-width: 640px) {
 #sidebar ul#more section {
 	max-height: 0; overflow: hidden; visibility: hidden; 
 }
@@ -695,7 +731,7 @@ transform: rotate(180deg);}
 #sidebar ul#more.flip svg path { fill: #fff; }
 }
 
-@media only screen and (max-height: 840px) {
+@media only screen and (max-height: 840px) and (min-width: 640px) {
 #sidebar ul#docs section {
 	max-height: 0; overflow: hidden; visibility: hidden;
 }
@@ -716,7 +752,7 @@ transform: rotate(180deg);
 #sidebar ul#docs.flip svg path { fill: #fff; }
 }
 
-@media only screen and (max-height: 720px) {
+@media only screen and (max-height: 720px) and (min-width: 640px) {
 #sidebar ul#learn section {
 	max-height: 0; overflow: hidden; visibility: hidden;
 }
@@ -737,7 +773,7 @@ transform: rotate(180deg);
 #sidebar ul#learn.flip svg path { fill: #fff; }
 }
 
-@media only screen and (max-height: 520px) {
+@media only screen and (max-height: 520px) and (min-width: 640px) {
 #sidebar ul#start section {
 	max-height: 0; overflow: hidden; visibility: hidden;
 }
