@@ -216,11 +216,6 @@ thead th, th {
 	border-radius: 6px 6px 0 0 ;
 }
 
-table a {
-	text-align: right;
-	display: inline-block;
-}
-
 table .dim {
 	color: #999;
 }
@@ -260,32 +255,27 @@ img {
 }
 
 /* Fonts to be smoothed */
-h1, h2 strong, h3, strong, .headline {
+h2 strong, h3, strong, .headline {
 	-webkit-font-smoothing:antialiased;
 }
 
 h1 {
-	font-size: 30px; line-height: 1.4;
-	font-weight: 300;
-	color: #222;
-	white-space: nowrap;
+	font-size: 29px; line-height:1.6;
+	font-weight: 300; color: #fff;
+	-webkit-font-smoothing: subpixel-antialiased;
+	position: relative; z-index: 10;
+	max-width: 600px;
+	margin: 0 auto;
+	margin-bottom: 30px;
 }
 
 h1.title {
 	font-size: 17px;
 	text-transform: uppercase;
 	font-weight: 600;
-	color: #222;
-	margin-bottom: 40px;
-	float: left;
-	left: 0; letter-spacing: 0;
-}
-
-h1.title span {
-	opacity: 0.5;	font-weight:400;
-	text-transform: none;
-	letter-spacing: -1px;
-	margin-left: 2px;
+	margin-bottom: 20px;
+	display: inline-block;
+	-webkit-font-smoothing:antialiased;
 }
 
 h2 {
@@ -296,10 +286,10 @@ h2 {
 
 /*Index page h2*/
 h2.headline {
-	font-size: 20px; line-height: 1.8;
+	font-size: 21px; line-height: 1.8;
 	font-weight: 300;
-	color: #666;
-	margin-bottom: 60px;
+	color: #999;
+	margin-bottom: 60px; text-align: center;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -316,7 +306,7 @@ h4 {
 	letter-spacing: 1px;
 }
 
-#wrapper li {
+#wrapper ul li {
 	line-height: 1.8;
 	font-size: 15px;
 	color: #888;
@@ -325,7 +315,7 @@ h4 {
 	padding-left: 8px;
 }
 
-#wrapper li+li {
+#wrapper ul li+li {
 	margin-top: 8px;
 }
 
@@ -337,38 +327,73 @@ h4 {
 
 /* ================= Content ================= */
 
+#header {
+	background: #94CEE0;
+	text-align: center;
+	height: 300px;
+	padding: 70px 40px;
+	overflow: hidden;
+	position: relative;
+}
+
+#header img {
+	position: absolute; 
+	right: -260px;
+	bottom: -220px;
+	z-index: 0;
+}
+
+#header a {
+	font-size: 12px; text-transform: uppercase;
+	background: #fff; border-radius: 4px;
+	padding:8px 16px 6px 16px; letter-spacing: 1px;
+	color: #5DC2E1; position: relative; z-index: 10;
+}
+
 nav#index {
-	float: right;
-	-webkit-font-smoothing: antialiased;
+	margin-top: -20px;
 }
 
-nav#index a {
+nav#index li {
+	list-style: none;
 	font-size: 15px;
-	font-weight: 500;
 }
 
-nav#index a+a {
-	margin-left: 20px;
+nav#index li a {
+	font-weight: 400;
 }
 
-ul#features li {
+nav#index li:first-child {
+	float: left;
+}
+
+nav#index li:last-child {
+	float: right;
+}
+
+#features li {
 	float: left;
 	max-width: 260px;
 	list-style: none;
-	padding-left: 40px;
+	line-height: 1.8;
+	font-size: 15px;
+	color: #888;
 }
 
-ul#features li img {
+#features li img {
 	float: left;
-	position: relative; top: -0;
-	margin-right:0px;
-	margin-left: -55px;
+	position: relative; 
+	margin-right:20px;
 }
 
-ul#features li+li { margin-top: 0; }
-ul#features li:before { display: none; }
+#features li p {
+	margin-top: 20px;
+}
 
-ul#features li:nth-child(even) {
+#features li+li { margin-top: 0; }
+#features li:before { display: none; }
+
+#features li:nth-child(even) {
 	float: right;
 }
 
@@ -430,7 +455,7 @@ p, iframe {
 	margin-bottom: 20px;
 }
 
-ul#features li:nth-child(1), ul#features li:nth-child(2){
+#features li:nth-child(1), #features li:nth-child(2){
 	margin-bottom: 40px;
 }
 
@@ -491,7 +516,7 @@ body {
 	padding:60px 40px;
 }
 
-ul#features li {
+#features li {
 	max-width: 240px;
 }
 }
@@ -515,12 +540,16 @@ body {
 	max-width: 580px;
 }
 
-ul#features li {
+#features li {
 	max-width: 240px;
 }
 
 h1 {
-	font-size: 36px;
+	font-size: 26px;
+}
+
+#header a {
+	font-size: 11px;
 }
 
 /* Vertical Spacing */
@@ -575,8 +604,8 @@ body {
 #topbar {
 	display: block; height: 50px; width: 100%;
 	background: #14181d;
-	position: relative; top: 0; z-index: 30; left: 0;
-	padding: 18px;
+	position: absolute; top: 0; z-index: 30; left: 0;
+	padding: 14px;
 }
 
 #topbar img {
@@ -585,10 +614,10 @@ body {
 	cursor: hand; cursor: pointer;
 }
 
-#topbar h1 {
-	color: #fff;
-	font-size: 16px; font-weight: 600;
-	display: inline-block; text-transform: uppercase;
+#header {
+	margin-top: 50px;
+	padding: 40px;
+	height: 260px;
 }
 
 #wrapper {
@@ -596,13 +625,13 @@ body {
 	padding: 60px 40px;
 }
 
-ul#features li {
+#features li {
 	max-width: 240px;
 }
 }
 
 @media only screen and (max-width: 580px) {
-ul#features li {
+#features li {
 	max-width: 100%;
 	margin-bottom: 40px;
 }
@@ -632,7 +661,7 @@ table.api td.group {
 }
 
 h1 {
-	font-size: 26px; font-weight: 400;
+	font-size: 24px; line-height: 1.6;
 }
 
 h2 {
