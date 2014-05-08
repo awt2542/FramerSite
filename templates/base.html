@@ -23,10 +23,9 @@
 	{% block sidebar %}
 	<header id="topbar"> <a href="index.html"><h1>Framer</h1></a>  <img class="2x" src="/static/images/menu-icon.png"></header>
 	<div id="gradientbar"></div>
-	<aside id="sidebar">
+	<aside id="sidebar" class="{% block sidebarclass %}{% endblock %}">
 		<nav>
 			<ul><li class="headline framer"><a href="index.html" class="introduction">Framer</a></li></ul>
-			<ul><li class="headline studio"><a href="studio.html" class="macapp">Studio</a></li></ul>	
 				
 			<ul id="start">
 				<li class="headline start"><a href="start.html" class="start">Start <span class="drop"></span></a></li>
