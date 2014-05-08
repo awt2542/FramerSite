@@ -30,7 +30,6 @@ To get started, <a href="#">Download</a> Framer and unzip it. Here's what you ge
 	</li>
 	<li><strong>Framer Generator.app</strong></li>
 </ul>
-<a name="installation"></a>
 
 Open index.html and you'll see the logo bounce on a click. Framer runs best in WebKit, so please use Safari. Chrome works too, but has been rocky since they switched to Blink. Start editing app.js (in your code-editor) to add interactions and animations. Try it by adding a state to imageLayer:
 
@@ -94,6 +93,72 @@ Framer Studio works with CoffeeScript, a language that compiles into JavaScript.
 
 <hr> -->
 
+<!-- Generator -->
+<a name="generator"></a>
+### Generator
+
+<img src="/static/images/Framer Generator - Icon.png" style="float:left; padding:8px 20px 0px 0">
+
+The Framer Generator.app takes static mockups from <a href="http://bohemiancoding.com/sketch/" target="_blank">Sketch</a> or <a href="http://www.adobe.com/products/photoshop.html" target="_blank">Photoshop</a> and turns them into ready to go Framer projects. From these apps – it extracts resources and folder hierarchy so you can start adding interaction and animation immediatly.
+
+Open Framer Generator and a .sketch/.psd file and click Import. After running you will be presented with a folder containing your project. The project folder contents consists of images, the framework, view data, an index.html and app.js file. Open the index.html file in your browser to see your project.
+
+
+
+
+
+
+
+
+
+<ul style="padding-top:20px">
+	<li><strong>Open a Mockup</strong>
+		<ul>
+			<li>Put the objects that you want to make interactive into folders</li>
+			<li>Single layers are ignored, so make sure everything is into a folder</li>
+			<li>The folder structure determines the hierarchy in Framer</li>
+			<li>Do not use Artboards in Sketch</li>
+		</ul>
+	<li><strong>Open Framer Generator</strong>
+		<ul>
+			<li>app.js</li>
+
+		</ul>
+	</li>
+</ul>
+
+
+
+
+
+
+<!-- #### Photoshop
+This eliminates the need for slicing up your images and rebuilding your views in Framer.
+
+<iframe src="http://player.vimeo.com/video/66300587" width="100%" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+
+The app.js file is where you start coding. By default it contains some example code that you can safely remove. Framer added an object called PSD that has references to all your views by name. So if your layer group is called iPhone, you can access it's views with PSD.iPhone or PSD["iPhone"]. The views are normal Framer views, so for example to animate an the view created from the layer group named iPhone you can do:
+
+<pre><code data-language="coffeescript">layer = new Layer width:100, height:100
+PSD.iPhone.on("click", function() {
+  PSD.iPhone.animate({
+    properties: {scale: 2.0}
+  })
+})</code></pre>
+
+From this point you can use Framer like you normally would to basically add behavior to your Photoshop mock. You can also safely run Framer again after a change in Photoshop, it will update the views but not touch your code. The rules for converting Photoshop files are:
+<ul>
+	<li>Every layer group will become an ImageView, backed by the pixel and/or shape layers in that layer group.</li>
+	<li>Views are accessible by name under the PSD object.</li>
+	<li>Framer respects the layer hierarchy, so a sub layer group will become a subview. This way you can define your view structure in Photoshop.</li>
+	<li>Layer groups with vector masks will become views with clipping enabled. You can optionally add "scroll" to the layer group name to make it a ScrollView.</li>
+	<li>Layer group names should be unique, if they're not Framer will silently rename them on export.</li>
+</ul> -->
+
+<hr>
+
 <!-- Resources -->
 
 <a name="resources"></a>
@@ -108,52 +173,17 @@ Optimize your prototyping workflow with these tools.
 		</tr>
 		<tr>
 			<td><a href="http://cactusformac.com" target="_blank">Cactus for Mac</a></td>
-			<td>Auto-refreshes the browser on change. Get immediate feedback on your prototype.</td>
+			<td>Auto-refreshes the browser on change. Get immediate feedback on your prototype</td>
 		</tr>
 		<tr>
 			<td><a href="https://github.com/koenbok/CactusTemplatesExtras" target="_blank">Cactus Template</a></td>
-			<td>A Framer template to drop into Cactus.</td>
+			<td>A template to drop Framer into Cactus</td>
 		</tr>
 		<tr>
-			<td><a href="https://itunes.apple.com/us/app/clear-browser-full-screen/id536117231?mt=8" target="_blank">Clear Browser</a></td>
-			<td>A full screen mobile browser for iOS. Run your prototype with Cactus and load the local URL into this browser.</td>
+			<td><a href="https://itunes.apple.com/us/app/clear-browser-full-screen/id536117231?mt=8" target="_blank">Clear iOS Browser</a></td>
+			<td>Run your prototype with Cactus and load the local URL into this browser</td>
 		</tr>
 </tbody></table>
-
-<a name="integration"></a>
-
-<hr>
-
-<!-- Photoshop -->
-<a name="integration"></a>
-### Integration
-
-#### Sketch
-Content
-
-<hr>
-
-#### Photoshop
-Framer comes with an application to convert your Photoshop document into a Framer project. This eliminates the need for slicing up your images and rebuilding your views in Framer. To get a quick overview of how this works see this video.
-<iframe src="http://player.vimeo.com/video/66300587" width="100%" height="313" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-To begin, just open the Framer application, a Photoshop document and click Run. After running you will be presented with a folder containing your project. The project folder contents consists of images, the framework, view data, an index.html and app.js file. Open the index.html file in your browser to see your project.
-
-The app.js file is where you start coding. By default it contains some example code that you can safely remove. Framer added an object called PSD that has references to all your views by name. So if your layer group is called iPhone, you can access it's views with PSD.iPhone or PSD["iPhone"]. The views are normal Framer views, so for example to animate an the view created from the layer group named iPhone you can do:
-
-<pre><code data-language="coffeescript">layer = new Layer width:100, height:100
-PSD.iPhone.on("click", function() {
-  PSD.iPhone.animate({
-    properties: {scale: 2.0}
-  })
-})</code></pre>
-From this point you can use Framer like you normally would to basically add behavior to your Photoshop mock. You can also safely run Framer again after a change in Photoshop, it will update the views but not touch your code. The rules for converting Photoshop files are:
-<ul>
-	<li>Every layer group will become an ImageView, backed by the pixel and/or shape layers in that layer group.</li>
-	<li>Views are accessible by name under the PSD object.</li>
-	<li>Framer respects the layer hierarchy, so a sub layer group will become a subview. This way you can define your view structure in Photoshop.</li>
-	<li>Layer groups with vector masks will become views with clipping enabled. You can optionally add "scroll" to the layer group name to make it a ScrollView.</li>
-	<li>Layer group names should be unique, if they're not Framer will silently rename them on export.</li>
-</ul>
 
 {% endfilter %}	
 {% endblock content%}
