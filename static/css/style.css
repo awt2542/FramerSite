@@ -386,12 +386,19 @@ nav#index li:last-child {
 	margin-right:15px;
 }
 
+#features li:first-child img, #features li:last-child img {
+	top: 2px;
+}
+
+#features li:nth-child(3) img {
+	top: 1px;
+}
+
+
+
 #features li p {
 	margin-top: 10px;
 }
-
-#features li+li { margin-top: 0; }
-#features li:before { display: none; }
 
 #features li:nth-child(even) {
 	float: right;
