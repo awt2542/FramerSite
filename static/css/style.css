@@ -188,9 +188,6 @@ tr>td {
 	border-top:1px solid #eee;
 }
 
-td {
-	position: relative;
-}
 
 /*Not sure if this is cleanest possible solution..*/
 td:after {
