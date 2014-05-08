@@ -65,7 +65,7 @@ collapseDocs = (function() {
 	var queryDocs = window.matchMedia( "(max-height: 880px)" );
 	if (queryDocs.matches) {
 			$('#sidebar ul#docs li.headline').click( function(event){
-				$('#sidebar ul#docs li.headline a').attr("href", "#");
+				event.preventDefault();
 			    $("#sidebar ul#docs section").toggleClass("appear");
 			    $("#sidebar ul#docs svg").toggleClass("flip");
 			    $("#sidebar").animate({"scrollTop": $("#sidebar").scrollTop() + 100});

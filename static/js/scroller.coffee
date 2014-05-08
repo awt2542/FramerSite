@@ -44,7 +44,7 @@ updateActive = (doScroll=true) ->
 			if (offsetThree.matches) {
 				learnScroll = 0
 				docsScroll = 0
-				moreScroll = 80
+				moreScroll = 0
 			}
 			
 		})();`
