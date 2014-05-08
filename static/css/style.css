@@ -120,6 +120,10 @@ sup {
 	margin-bottom: 15px;
 }
 
+#sidebar ul li.headline.is-active a{
+	color: #fff;
+}
+
 #sidebar ul li.headline a:hover, #sidebar ul li.headline a:active {
 	color: #fff;
 	opacity: 1;
