@@ -383,6 +383,7 @@ nav#index li:last-child {
 	line-height: 1.8;
 	font-size: 15px;
 	color: #888;
+	min-height: 125px;
 }
 
 #features li img {
