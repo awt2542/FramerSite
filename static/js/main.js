@@ -48,7 +48,7 @@ collapseMore = (function() {
 			$('#sidebar ul#more li.headline').click( function(event){
 				event.preventDefault();
 			    $("#sidebar ul#more section").toggleClass("appear");
-			    $("#sidebar ul#more .drop").toggleClass("flip");
+			    $("#sidebar ul#more").toggleClass("flip");
 			    $("#sidebar").animate({"scrollTop": $("#sidebar").scrollTop() + 100});
 			});
 	}
@@ -67,7 +67,7 @@ collapseDocs = (function() {
 			$('#sidebar ul#docs li.headline').click( function(event){
 				$('#sidebar ul#docs li.headline a').attr("href", "#");
 			    $("#sidebar ul#docs section").toggleClass("appear");
-			    $("#sidebar ul#docs .drop").toggleClass("flip");
+			    $("#sidebar ul#docs svg").toggleClass("flip");
 			    $("#sidebar").animate({"scrollTop": $("#sidebar").scrollTop() + 100});
 			});
 	}
@@ -87,7 +87,7 @@ collapseLearn = (function() {
 			$('#sidebar ul#learn li.headline').click( function(event){
 				event.preventDefault();
 			    $("#sidebar ul#learn section").toggleClass("appear");
-			    $("#sidebar ul#learn .drop").toggleClass("flip");
+			    $("#sidebar ul#learn svg").toggleClass("flip");
 			});
 	}
 	
@@ -106,7 +106,7 @@ collapseStart = (function() {
 			$('#sidebar ul#start li.headline').click( function(event){
 				event.preventDefault();
 			    $("#sidebar ul#start section").toggleClass("appear");
-			    $("#sidebar ul#start .drop").toggleClass("flip");
+			    $("#sidebar ul#start svg").toggleClass("flip");
 			});
 	}
 	

@@ -22,27 +22,27 @@
       $("#sidebar a." + className).addClass("active");
       $("#sidebar a." + className).parent().parent().addClass("appear");
       $("#sidebar a." + className).parent().parent().parent().parent().parent().addClass("has-active");
-      offsetChangeThree = (function() {
-			var offsetThree = window.matchMedia( "(max-height: 900px)" );
+      (function() {
+			var offsetOne = window.matchMedia( "(max-height: 900px)" );
 			
-			if (offsetThree.matches) {
+			if (offsetOne.matches) {
 				learnScroll = 0
 				docsScroll = 0
 				moreScroll = 60
 			}
 			
 		})();;
-      offsetChangeTwo = (function() {
-			var offsetThree = window.matchMedia( "(max-height: 840px)" );
+      (function() {
+			var offsetTwo = window.matchMedia( "(max-height: 840px)" );
 			
-			if (offsetThree.matches) {
+			if (offsetTwo.matches) {
 				learnScroll = 0
 				docsScroll = 0
-				moreScroll = 20
+				moreScroll = 80
 			}
 			
 		})();;
-      offsetChangeTwo = (function() {
+      (function() {
 			var offsetThree = window.matchMedia( "(max-height: 740px)" );
 			
 			if (offsetThree.matches) {
@@ -52,10 +52,10 @@
 			}
 			
 		})();;
-      offsetChange = (function() {
-			var offsetOne = window.matchMedia( "(max-height: 700px)" );
+      (function() {
+			var offsetFour = window.matchMedia( "(max-height: 700px)" );
 			
-			if (offsetOne.matches) {
+			if (offsetFour.matches) {
 				learnScroll = 0
 				docsScroll = 0
 				moreScroll = 20
@@ -78,7 +78,11 @@
     return updateActive(false);
   });
 
-  updateActive(true);
+  updateActive(false);
+
+  $(window).load(function() {
+    return updateActive(true);
+  });
 
   $("#sidebar a").click(function() {
     $("#sidebar a").removeClass("active");
