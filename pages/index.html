@@ -1,21 +1,30 @@
 {% extends "base.html" %}
 {% block framerclass %}is-active{% endblock %}
 
-{% block content %}
-<a name="introduction"></a>
+{% block header %}
+	<a name="introduction"></a>
 	<header id="header" class="group">
 		<h1 class="title">Framer</h1>
 		
-		<nav id="index">
+		<h1>A prototyping tool for animation & interaction</h1>
+		
 		<a href="#">Download</a>
-		</nav>
+		
+	<img src="/static/images/appicon.png">
 	</header>
-	<a name="introduction"></a>
-	<h1>A prototyping tool for animation & interaction</h1>
-	<a name="introduction"></a>
-	<hr>
 	
-	<figure id="icon"><img class="center" src="/static/images/appicon.png"></figure>
+{% endblock header %}	
+{% block content %}
+
+	<a name="introduction"></a>
+	
+	<nav id="index">
+		<li><a href="#">Source on Github</a></li>
+		<li><a href="#">Join the Community</a></li>
+	</nav>
+	
+	<hr>
+		
 	<h2 class="headline">Create complex interactions and fluid animations. Make your static designs tactile, iterate rapidly and start experimenting.
 	</h2>
 	
@@ -23,7 +32,7 @@
 	
 	<hr>
 
-	<ul id="features" class="group">
+	<section id="features" class="group">
 		<li>
 			<img src="/static/images/icons/animation.png">
 			<h4>Animation</h4>
@@ -44,7 +53,7 @@
 			<h4>Flexible</h4>
 			<p>Works great on desktop, mobile and tablets. Plays well with the rest of the browser.</p>
 		</li>
-	</ul>
+	</section>
 	<a name="examples"></a>
 	
 	<hr>
@@ -63,4 +72,4 @@
 	</section>
 	
 	<hr>
-{% endblock content%}
+{% endblock content %}
