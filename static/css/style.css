@@ -399,7 +399,6 @@ nav#index li:last-child {
 
 
 /* Examples */
-
 #examples a:hover {
 	opacity: 1;
 }
@@ -422,31 +421,6 @@ nav#index li:last-child {
 	left: 24px;
 	top: 96px;
 }
-
-
-#index-links p {
-	float: left;
-}
-
-#index-links a {
-	font-weight: 400;
-	padding: 10px 18px 8px 18px;
-	border-radius: 4px;
-	font-size: 15px;
-}
-
-#index-links a:first-child {
-	background: #33b0f7;
-	color: #fff; box-shadow: none;
-	-webkit-font-smoothing: antialiased;
-	font-weight: 500;
-}
-
-
-#index-links p+p {
-	margin-left: 70px;
-}
-
 
 /* ==================================================== */
 /* ================= Vertical SPACING ================= */
@@ -507,10 +481,6 @@ body {
 	padding:60px;
 } 
 
-#gradientbar {
-	left: 240px;
-}
-
 #wrapper {
 	max-width: 600px;
 	padding:60px 40px;
@@ -544,10 +514,6 @@ nav#index {
 	max-width: 240px;
 }
 
-h1 {
-	font-size: 26px;
-}
-
 #header a {
 	font-size: 11px;
 }
@@ -556,6 +522,16 @@ h1 {
 hr {
 	margin: 40px auto;
 }
+h1 {
+
+	font-size: 26px;
+}
+
+h2.headline {
+	font-size: 19px; line-height: 1.6;
+	margin-bottom: 40px; 
+}
+
 }
 
 /* ================= Mobile (Navigation)  ================= */
@@ -649,11 +625,6 @@ h1 {
 }
 
 @media only screen and (max-width: 580px) {
-
-h1 {
-	font-size: 20px;
-}
-
 #features li {
 	max-width: 100%;
 	margin-bottom: 40px;
@@ -676,12 +647,17 @@ table.api td.group {
 	font-size: 11px;
 }
 
-nav#index {
-	margin-top: -10px;
-}
-
 nav#index li a{
 	font-weight: 400; -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+h2.headline {
+	font-size: 17px; line-height: 1.6; font-weight: 400;
+	margin-bottom: 40px; -webkit-font-smoothing: antialiased;
 }
 }
 
@@ -703,6 +679,11 @@ h1 {
 h2 {
 	font-size: 19px;
 }
+
+nav#index {
+	margin-top: -10px;
+}
+
 }
 
 /* HEIGHT QUERIES */
