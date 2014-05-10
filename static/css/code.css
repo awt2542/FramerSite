@@ -30,6 +30,11 @@ code.inline {
 	padding-bottom: 2px;
 }
 
+#code-block pre {
+	border-radius: 0 0 6px 6px;
+	font-size: 12px; line-height: 1.5;
+}
+
 pre .comment {
     color: #84D1FF; /* base01 */
 }
@@ -99,12 +104,6 @@ pre .variable.global, pre .variable.class, pre .variable.instance {
 
 
 /*LINES*/
-.cm-s-framer .CodeMirror-linenumber {
-	font-size: 10px;
-	color: #939599;
-	padding-top:1px;
-	padding-right: 10px;
-}
 
 pre code.rainbow .line {
 	
@@ -113,6 +112,5 @@ pre code.rainbow .line:before {
 	font-size: 10px;
 	color: #939599;
 	padding-top:1px;
-	padding-right: 10px;
+	margin-right: 15px;
 }
-pre code.rainbow .line:after <-- the underline

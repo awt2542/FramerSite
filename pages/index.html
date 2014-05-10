@@ -1,48 +1,68 @@
 {% extends "base.html" %}
 {% block framerclass %}is-active{% endblock %}
-{% block indexheader %}{% include "header.html" %}{% endblock indexheader %}
 {% block content %}
-
-	<a name="introduction"></a>
 	
-	<nav id="index">
-		<li><a href="#">Source on Github</a></li>
-		<li><a href="#">Join the Community</a></li>
-	</nav>
-	
-	<hr>
+	<header id="header" class="group">
+		<h1 class="title">Framer.js</h1>
 		
-	<h2 class="headline">Create complex interactions and fluid animations. <br> Make your static designs tactile and start experimenting.
-	</h2>
-	
-	<a name="introduction"></a> <!--Necessary to be placed twice within index -->
-	
-	<hr>
+		<h1>A prototyping toolkit</h1>
+		<h2 class="headline">Built for designers to make static mockups tactile with animation & interaction</h2>
+		
+		<a class="green" shref="#">Download</a>
+		<a href="#">Community</a>
+		<a href="#" class="small">Version 3 on GitHub</a>
+		
+	</header>
+			
+	<section id="example-block">
+		<img class="2x" src="/static/images/samples.png">
+	</section> <!--example-block-->
 
 	<section id="features" class="group">
 		<li>
-			<img src="/static/images/icons/icon-animation.png">
-			<h4>Animation</h4>
-			<p>Animate any view in full 3D space with spring physics and bezier curves.</p>
+			<img class="2x" src="/static/images/icons/icon-flexible.png">
+			<h4>Generator</h4>
+			<p>Generate assets out of Sketch and Photoshop to set up new projects.</p>
 		</li>
 		<li>
-			<img src="/static/images/icons/icon-gestures.png">
-			<h4>Gestures</h4>
-			<p>Define how your designs feel. Test your protoypes in the palm of your hand.</p>
+			<img class="2x" src="/static/images/icons/icon-animation.png">
+			<h4>Animation</h4>
+			<p>Animate any layer in 3D space with spring physics and bezier curves.</p>
 		</li>		
 		<li>
-			<img src="/static/images/icons/icon-speed.png">
+			<img class="2x" src="/static/images/icons/icon-speed.png">
 			<h4>Performance</h4>
-			<p>Hardware accelerated for high frame rates. Play multiple animations simultaneously.</p>
+			<p>Hardware accelerated for high frame rates, based on CSS transforms.</p>
 		</li>
 		<li>
-			<img src="/static/images/icons/icon-flexible.png">
+			<img class="2x" src="/static/images/icons/icon-gestures.png">
 			<h4>Flexible</h4>
-			<p>Works great on desktop, mobile and tablets. Plays well with the rest of the browser.</p>
+			<p>Works on desktop, mobile and tablets. Plays well with WebKit.</p>
 		</li>
 	</section>
-	<a name="examples"></a>
 	
-	<hr>
+	
+	<section id="code-block">
+	<div><iframe src="/static/examples/codeblock/index.html"></iframe></div>
+	<pre><code data-language="coffeescript"># Define the imageLayer
+imageLayer = new Layer({x:0, y:0, width:128, height:128 
+imageLayer.image = "images/icon.png"
+imageLayer.center()
+
+# Define a state
+imageLayer.states.add
+	bounce: {scale:0.9}
+
+# Set the animation options
+imageLayer.states.animationOptions = 
+	curve: "spring(500,20,100)"
+
+# On click, go to the next state
+imageLayer.on Events.Click, -> 
+	imageLayer.states.next()</code></pre>
+</section> <!--code-block-->
+	
+	
+	
 
 {% endblock content %}
