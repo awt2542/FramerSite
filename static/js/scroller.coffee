@@ -16,6 +16,7 @@ updateActive = (doScroll=true) ->
 		$("#sidebar a.#{className}").parent().parent().addClass "appear"
 		$("#sidebar a.#{className}").parent().parent().parent().parent().parent().addClass "has-active"
 		
+
 		`(function() {
 			var offsetOne = window.matchMedia( "(max-height: 900px)" );
 			
@@ -70,8 +71,6 @@ $(window).scroll -> updateActive false
 $(window).resize -> updateActive false
 updateActive false
 $(window).load -> updateActive true
-
-
 
 $("#sidebar a").click ->
 	$("#sidebar a").removeClass "active"

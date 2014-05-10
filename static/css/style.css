@@ -168,7 +168,7 @@ a[name] {
 table {
 	width:100%;
 	border-collapse: separate;
-	font-size:15px;
+	font-size:14px;
 	line-height:1.4;
 	border: 1px solid #eee;
 	border-radius: 6px;
@@ -207,7 +207,8 @@ table .dim {
 }
 
 table.api td:first-child {
-	color: #444; 
+	color: #444; font-size: 12px;
+	font-family: 'Menlo', 'Monaco', Courier, monospace;
 }
 
 table.api td.group {

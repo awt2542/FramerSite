@@ -45,19 +45,15 @@ $(document).ready(retina);
 collapseMore = (function() {
 	var queryMore = window.matchMedia( "(max-height: 1000px)" );
 	if (queryMore.matches) {
-			$('#sidebar ul#more li.headline').click( function(event){
-				event.preventDefault();
-			    $("#sidebar ul#more section").toggleClass("appear");
+			$('#sidebar ul#more li.headline').click( function(){
 			    $("#sidebar ul#more").toggleClass("flip");
-			    $("#sidebar").animate({"scrollTop": $("#sidebar").scrollTop() + 100});
 			});
 	}
-	
-	else {
-		$("#sidebar ul#more li.headline").unbind("click");
-		$("#sidebar ul#more section").removeClass("appear");
-	}
 })();
+
+ if ( $( "#sidebar" ).hasClass( "more" ) ) {
+	$("#sidebar ul#more section").addClass("appear");
+}
 
 /* ========================= */
 
