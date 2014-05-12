@@ -366,8 +366,8 @@ p + h4 {
 
 #header a.small, #footer a.small {
 	display: inline-block; font-weight: 400;
-	box-shadow: none; letter-spacing: 0;
-	color: #BEC5D0; text-transform: none; font-size: 13px;
+	box-shadow: none; letter-spacing: 1px; text-transform: uppercase;
+	color: #BEC5D0; font-size: 12px;
 	margin-top: 20px; width: auto;
 	padding: 0;
 }
@@ -407,6 +407,7 @@ nav#index li:last-child {
 
 #example-block {
 	background: #92CEE1;
+	/* maybe this? background: #8EDAF1; */
 	height: 560px;
 	width: 100%; 
 	margin: 70px 0;
