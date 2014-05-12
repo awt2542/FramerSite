@@ -43,6 +43,7 @@ $(document).ready(retina);
 
  if ( $( "#sidebar" ).hasClass( "more" ) ) {
 	$("#sidebar ul#more section").addClass("appear");
+	$("#sidebar ul#more li.headline a").addClass("active");
 	$("#sidebar ul#more svg").hide();
 }
 
