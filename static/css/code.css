@@ -17,10 +17,11 @@ pre {
     line-height: 1.4em;
     margin-bottom: 20px;
     border-radius: 6px;
+    font-weight: normal;
 }
 
 pre, code {
-    font-family: 'Menlo', 'Monaco', Courier, monospace;
+    font-family: 'Menlo', 'Monaco', Courier, monospace; 
 }
 
 code.inline {
