@@ -793,7 +793,7 @@ h2.headline {
 }
 
 #line-block section {
-	width: 160px;
+	max-width: 160px;
 }
 
 #line-block section.mid {
@@ -892,6 +892,14 @@ p.small {
 #line-block p {
 	font-size: 13px;
 }
+
+#line-block img.line-arrow.first {
+	left: 31%;
+}
+
+#line-block img.line-arrow.second {
+	right: 30%;
+}
 }
 
 @media only screen and (max-width: 640px) {
@@ -902,6 +910,7 @@ p.small {
 }
 
 @media only screen and (max-width: 580px) {
+
 #features li {
 	font-size: 13px;
 	max-width: 180px;
@@ -962,6 +971,28 @@ h2.headline {
 	display: none;
 }
 
+#line-block section {
+	position: relative;
+	display: inline-block;
+}
+
+#line-block section.right {
+	display: none;
+}
+
+#line-block section.mid {
+	margin: 0; left: 0;
+	float: right;
+}
+
+#line-block section {
+	max-width: 220px; 
+}
+
+#line-block p {
+	font-size: 15px;
+}
+
 #line-block img.line-arrow {
 	display: none;
 }
@@ -981,7 +1012,6 @@ h2.headline {
 #wrapper.index {
 	padding: 40px 0;
 }
-
 
 h1 {
 	font-size: 30px;
