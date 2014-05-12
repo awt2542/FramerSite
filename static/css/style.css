@@ -44,6 +44,7 @@ a:active {
 	position: relative;
 	margin:0 auto;
 	padding: 60px 40px;
+	overflow-x: hidden;
 }
 
 sup {
@@ -164,8 +165,8 @@ a[name] {
 table {
 	width:100%;
 	border-collapse: separate;
-	font-size:14px;
-	line-height:1.4;
+	font-size:13px;
+	line-height:1.6;
 	border: 1px solid #eee;
 	border-radius: 6px;
 	overflow: hidden;
@@ -192,10 +193,11 @@ td:after {
 thead th, th {
 	text-align:left;
 	padding:10px 15px;
-	font-size:15px; font-weight:300;
-	color:#aaa; cursor:default; white-space:nowrap;
+	font-size:13px; font-weight:400;
+	color:#ccc; cursor:default; white-space:nowrap;
 	line-height: 1.2; 
-	border-radius: 6px 6px 0 0 ;
+	border-radius: 6px 6px 0 0; 
+	background: #fcfcfc;
 }
 
 table .dim {
@@ -203,7 +205,7 @@ table .dim {
 }
 
 table.api td:first-child {
-	color: #444; font-size: 12px;
+	color: #666; font-size: 12px;
 	font-family: 'Monaco', Courier, monospace;
 }
 
@@ -213,8 +215,7 @@ table.api td.group {
 	font-size: 12px; padding-top: 14px;
 	color: #2;
 	letter-spacing: 1px;
-	line-height: 2;
-	background: #fafafa;
+	line-height: 2; color: #333;
 }
 
 th.examples {
@@ -258,24 +259,24 @@ h2 strong, h3, strong, .headline {
 }
 
 p.small {
-	font-size: 12px; text-transform: uppercase; font-weight: 500; letter-spacing: 1px;
+	font-size: 12px; text-transform: uppercase; font-weight: 400; letter-spacing: 1px;
 }
 
 h1 {
-	font-size: 52px; line-height:1.6;
+	font-size: 54px; line-height: 1;
 	font-weight: 300; color: #222;
 	-webkit-font-smoothing: antialiased;
 	position: relative; z-index: 10;
 	max-width: 600px;
 	margin: 0 auto;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 	letter-spacing: -1px;
 }
 
 h1.title {
 	font-size: 15px; color: #60C4FF;
 	text-transform: uppercase; letter-spacing: 0;
-	font-weight: 500; margin-bottom: 40px;
+	font-weight: 500; 
 	display: inline-block; -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -349,9 +350,9 @@ h4 {
 }
 
 #header a.small, #footer a.small {
-	display: block; font-weight: 400;
+	display: inline-block; font-weight: 400;
 	box-shadow: none; letter-spacing: 0;
-	color: #ccc; text-transform: none; font-size: 13px;
+	color: #BEC5D0; text-transform: none; font-size: 13px;
 	margin-top: 10px; width: auto;
 }
 
@@ -406,11 +407,11 @@ nav#index li:last-child {
 
 #example-block section {
 	position: absolute; 
-	top: 50px; left: 0; width: 100%; 
+	top: 45px; left: 0; width: 100%; 
 }
 
 #example-block h4 {
-	color: #fff; float: left; font-size: 12px; line-height: 1.4; letter-spacing: 1px;
+	color: #fff; float: left; font-size: 12px; line-height: 1.5; letter-spacing: 1px;
 }
 
 #example-block a {
@@ -443,10 +444,11 @@ nav#index li:last-child {
 }
 
 #used-by {
-	margin-bottom: 70px;
+	margin-bottom: 100px;
 	text-align: center;
 	color: #D3D8E1;
 	position: relative;
+	white-space: nowrap;
 }
 
 #used-by:after {
@@ -460,14 +462,23 @@ nav#index li:last-child {
 	padding: 0 20px;
 }
 
+#used-by section {
+	position: relative;
+	left: -2px;
+}
+
 #used-by img {
-	display: inline-block;
+	display: inline-block; position: relative;
 	vertical-align: middle;
 }
 
 #used-by img+img {
-	margin-left: 20px;
+	margin-left: 22px;
 }
+
+/* Tweaking vertical alignment */
+#used-by img.facebook, #used-by img.apple { top: -2px; }
+#used-by img.google, #used-by img.twitter { top: 2px; }
 
 #features {
 	/* Fix for list margin */
@@ -481,7 +492,8 @@ nav#index li:last-child {
 	line-height: 1.8;
 	font-size: 15px;
 	color: #888;
-	min-height: 125px;
+	min-height: 100px;
+	-webkit-font-smoothing: antialiased;
 }
 
 #features li img {
@@ -501,6 +513,7 @@ nav#index li:last-child {
 #features li p {
 	margin-bottom: 0;
 	margin-top: 10px;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 #features li:nth-child(even) {
@@ -519,9 +532,15 @@ nav#index li:last-child {
 }
 
 #code-block h3 {
-	text-align: center; font-size: 26px;
-	margin-bottom: 50px; font-weight: 400;
-	letter-spacing:-0.5px;
+	text-align: center; font-size: 17px; 
+	font-weight: 300; 
+	background: #1e2229; display: block;
+	padding: 20px; color: #fff;
+	color: rgba(255,255,255, .4);
+	margin: 0;
+	border-radius: 6px 6px 0 0;
+	border-bottom: 1px solid #343840;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 #code-block div {
@@ -540,9 +559,9 @@ nav#index li:last-child {
 #code-block div:after {
 	content: "Click to animate";
 	display: inline-block;
-	text-align: center; font-size: 15px;
+	text-align: center; font-size: 13px;
 	position: absolute; font-weight:500;
-	bottom: 40px; left: 0; width: 100%;
+	bottom: 42px; left: 0; width: 100%;
 	color: #fff;
 }
 
