@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block isindex %}class="index"{% endblock isindex %}
 {% block framerclass %}is-active{% endblock %}
 {% block content %}
 	
@@ -8,16 +9,22 @@
 		<h1>A prototyping toolkit</h1>
 		<h2 class="headline">Built for designers to make static mockups tactile with animation & interaction</h2>
 		
-		<a class="green" shref="#">Download</a>
-		<a href="#">Community</a>
-		<a href="#" class="small">Version 3 on GitHub</a>
+		<a class="green" href="#">Download</a>
+		<a href="https://www.facebook.com/groups/framerjs/">Community</a>
+		<a href="https://github.com/koenbok/Framer" class="small">Version 3 on GitHub</a>
 		
 	</header>
 			
 	<section id="example-block">
-		<img class="2x" src="/static/images/iphone-left.png">
-		<img class="2x" src="/static/images/iphone-mid.png">
-		<img class="2x" src="/static/images/iphone-right.png">
+		
+		<img class="left 2x" src="/static/images/iphone-left.png">
+		<img class="mid 2x" src="/static/images/iphone-mid.png">
+		<img class="right 2x" src="/static/images/iphone-right.png">
+		
+		<section>
+			<h4>Framer Examples</h4>
+			<a href="#">More</a>
+		</section>
 	</section> <!--example-block-->
 
 	<section id="features" class="group">
@@ -42,7 +49,9 @@
 			<p>Works on desktop, mobile and tablets. Plays well with WebKit.</p>
 		</li>
 	</section>
-		
+	
+	<hr>
+	
 	<section id="code-block">
 	<h3>How it works</h3>
 	<div><iframe id="iframe" src="/static/examples/codeblock/index.html"></iframe></div>
@@ -72,9 +81,9 @@ imageLayer.on Events.Click, ->
 
 <footer id="footer">
 	<h1>Start prototyping today</h1>
-	<a class="green" shref="#">Download</a>
-	<a href="#">Community</a>
-	<a href="#" class="small">Version 3 on GitHub</a>
+	<a class="green" href="#">Download</a>
+	<a href="https://www.facebook.com/groups/framerjs/">Community</a>
+	<a href="https://github.com/koenbok/Framer" class="small">Version 3 on GitHub</a>
 </footer>
 	
 	

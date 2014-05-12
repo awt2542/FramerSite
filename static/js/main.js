@@ -38,8 +38,7 @@ function retina() {
 };
  
 $(document).ready(retina);
-
-
+ 
 /* ========================= */
 
  if ( $( "#sidebar" ).hasClass( "more" ) ) {

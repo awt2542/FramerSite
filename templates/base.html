@@ -81,10 +81,8 @@
 		</nav>
 	</aside>
 	{% endblock sidebar %}
-	
-	{% block indexheader %}{% endblock indexheader %}
-	
-	<section id="wrapper">
+		
+	<section id="wrapper" {% block isindex %}{% endblock isindex %}>
 	{% block content %}
 	Main content
 	{% endblock content %}
