@@ -297,7 +297,7 @@ h2.headline {
 	font-size: 26px; line-height: 1.5;
 	font-weight: 300;
 	color: #888;
-	margin-bottom: 60px; text-align: center;
+	margin-bottom: 40px; text-align: center;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -579,7 +579,7 @@ nav#index li:last-child {
 }
 
 #footer h1 {
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
 /* ==================================================== */
