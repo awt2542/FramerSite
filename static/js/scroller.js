@@ -22,12 +22,22 @@
       $("#sidebar a." + className).addClass("active");
       $("#sidebar a." + className).parent().parent().addClass("appear");
       (function() {
-			var offsetOne = window.matchMedia( "(max-height: 900px)" );
+			var offsetOne = window.matchMedia( "(max-height: 820px)" );
 			
 			if (offsetOne.matches) {
 				learnScroll = 0
 				docsScroll = 0
-				moreScroll = 60
+				moreScroll = 0
+			}
+			
+		})();;
+      (function() {
+			var offsetOne = window.matchMedia( "(max-height: 860px)" );
+			
+			if (offsetOne.matches) {
+				learnScroll = 0
+				docsScroll = 0
+				moreScroll = 80
 			}
 			
 		})();;
@@ -37,12 +47,12 @@
 			if (offsetTwo.matches) {
 				learnScroll = 0
 				docsScroll = 0
-				moreScroll = 80
+				moreScroll = 60
 			}
 			
 		})();;
       (function() {
-			var offsetThree = window.matchMedia( "(max-height: 650px)" );
+			var offsetThree = window.matchMedia( "(max-height: 710px)" );
 			
 			if (offsetThree.matches) {
 				learnScroll = 0
@@ -52,12 +62,12 @@
 			
 		})();;
       (function() {
-			var offsetFour = window.matchMedia( "(max-height: 540px)" );
+			var offsetFour = window.matchMedia( "(max-height: 650px)" );
 			
 			if (offsetFour.matches) {
 				learnScroll = 0
-				docsScroll = 30
-				moreScroll = 120
+				docsScroll = 0
+				moreScroll = 0
 			}
 			
 		})();;
