@@ -368,7 +368,8 @@ p + h4 {
 	display: inline-block; font-weight: 400;
 	box-shadow: none; letter-spacing: 0;
 	color: #BEC5D0; text-transform: none; font-size: 13px;
-	margin-top: 10px; width: auto;
+	margin-top: 20px; width: auto;
+	padding: 0;
 }
 
 #header a:hover {
@@ -451,7 +452,7 @@ nav#index li:last-child {
 }
 
 #used-by {
-	margin-bottom: 100px;
+	margin-bottom: 70px;
 	text-align: center;
 	color: #D3D8E1;
 	position: relative;
@@ -468,11 +469,6 @@ nav#index li:last-child {
 	padding: 0 20px;
 }
 
-#used-by section {
-	position: relative;
-	left: -2px;
-}
-
 #used-by img {
 	display: inline-block; position: relative;
 	vertical-align: middle;
@@ -481,7 +477,7 @@ nav#index li:last-child {
 }
 
 #used-by img+img {
-	margin-left: 22px;
+	margin-left: 15px;
 }
 
 /* Tweaking vertical alignment */
@@ -587,7 +583,9 @@ nav#index li:last-child {
 }
 
 /* ==================================================== */
-/* ================= Vertical SPACING ================= */
+/* ================= Vertical SPACING (VSPACE) ================= */
+
+/*40px between items, 70px between sections*/
 
 p, iframe {
 	margin-bottom: 20px;
@@ -753,11 +751,6 @@ body {
 #sidebar.appear {
 	opacity: 1; visibility: visible;
 	max-height: 2000px; 
-	-webkit-transition: max-height 0.6s ease;
-	-moz-transition: max-height 0.6s ease;
-	-ms-transition: max-height 0.6s ease;
-	-o-transition: max-height 0.6s ease;
-	transition: max-height 0.6s ease;
 }
 
 #sidebar.appear nav {
@@ -784,7 +777,7 @@ body {
 
 .inner {
 	max-width: 680px;
-	padding: 0 20px;
+	padding: 0 40px;
 }
 
 nav#index {
@@ -809,6 +802,11 @@ nav#index li {
 
 #example-block {
 	display: none;
+}
+
+#used-by {
+	margin-bottom: 40px;
+	
 }
 
 #header {
@@ -842,8 +840,8 @@ nav#index li a{
 	font-weight: 400; -webkit-font-smoothing: subpixel-antialiased;
 }
 
-h1.title {
-	margin-bottom: 10px;
+h1, h1.title {
+	margin-bottom: 20px;
 }
 
 h1 {
@@ -875,11 +873,16 @@ h2.headline {
 }
 
 h1 {
-	line-height: 1.4;
+	font-size: 30px;
 }
 
 h2 {
 	font-size: 19px;
+}
+
+h2.headline {
+	font-size: 17px; line-height: 1.5; font-weight: 400;
+	margin-bottom: 40px; -webkit-font-smoothing: antialiased;
 }
 
 nav#index {
