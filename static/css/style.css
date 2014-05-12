@@ -372,15 +372,15 @@ p + h4 {
 	padding: 0;
 }
 
-#header a:hover {
+#header a:hover , #footer a:hover{
 	box-shadow: none; color: #fff; background: #60C4FF; opacity: 1;
 }
 
-#header a.green:hover {
+#header a.green:hover, #footer a.green:hover {
 	background: #7ED321; 
 }
 
-#header a.small:hover {
+#header a.small:hover, #footer a.small:hover {
 	background: none; color: #aaa;
 }
 
