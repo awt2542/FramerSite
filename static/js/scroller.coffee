@@ -1,5 +1,5 @@
 updateActive = (doScroll=true) ->
-	offset = 0
+	offset = 60
 	fromTop = $(window).scrollTop();
 	activeAnchor = null
 	
