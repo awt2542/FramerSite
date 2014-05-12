@@ -399,9 +399,25 @@ nav#index li:last-child {
 }
 
 #example-block section {
-	position: absolute;
-	top: 40px; left: 0; width: 100%;
+	position: absolute; 
+	top: 50px; left: 0; width: 100%; 
 }
+
+#example-block h4 {
+	color: #fff; float: left; font-size: 12px; line-height: 1.4; letter-spacing: 1px;
+}
+
+#example-block a {
+	color: #fff; float: right; font-size: 12px; padding: 10px 16px 8px 16px; border-radius: 5px;
+	box-shadow: inset 0 0 0 2px #fff; text-transform: uppercase; letter-spacing: 1px;
+}
+
+#example-block a:hover {
+	opacity: 1; background: #fff;
+	color: #92CEE1;
+}
+
+/* ------------- */
 
 #example-block img {
 	position: absolute; bottom: 0; width: 318px;
@@ -418,10 +434,6 @@ nav#index li:last-child {
 
 #example-block img.right {
 	right: -50px;
-}
-
-#example-block h4 {
-	color: #fff; float: left;
 }
 
 #features {
@@ -474,7 +486,7 @@ nav#index li:last-child {
 }
 
 #code-block h3 {
-	text-align: center; font-size: 30px;
+	text-align: center; font-size: 26px;
 	margin-bottom: 50px; font-weight: 400;
 	letter-spacing:-0.5px;
 }
