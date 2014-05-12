@@ -455,7 +455,6 @@ nav#index li:last-child {
 	text-align: center;
 	color: #D3D8E1;
 	position: relative;
-	white-space: nowrap;
 }
 
 #used-by:after {
@@ -478,6 +477,7 @@ nav#index li:last-child {
 	display: inline-block; position: relative;
 	vertical-align: middle;
 	height: auto;
+	margin-bottom: 20px;
 }
 
 #used-by img+img {
@@ -665,11 +665,13 @@ body {
 }
 }
 
-@media only screen and (max-width: 1000px) {
-#wrapper, .inner {
+@media only screen and (max-width: 1024px) {
+#wrapper {
 	max-width: 600px;
 }
-
+.inner {
+	max-width: 640px;
+}
 #example-block img.left { left: 0; }
 #example-block img.right { right: 0; }
 }
@@ -694,7 +696,7 @@ body {
 }
 
 #wrapper.index {
-	padding: 40px 0;
+	padding: 60px 0;
 }
 
 nav#index {
@@ -781,6 +783,7 @@ body {
 
 .inner {
 	max-width: 680px;
+	padding: 0 20px;
 }
 
 nav#index {
