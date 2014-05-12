@@ -269,12 +269,30 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	</tr>
 
 	<tr>
-		<td>scroll <span class="dim">scrollX, scrollY</span></td>
+		<td>scroll <span class="dim">scrollHorizontal, scrollVertical</span></td>
 		<td>enable scrolling</td>
 	</tr>
 	<tr>
+		<td>scrollX, scrollY</td>
+		<td>scroll positions</td>
+	</tr>
+<!-- 	<tr>
 		<td>scrollFrame</td>
 		<td>current scroll position for layer</td>
+	</tr> -->
+
+	<tr>
+		<td colspan="3" class="group">Draggable</td>
+	</tr>
+
+	<tr>
+		<td>draggable.enabled</td>
+		<td>toggle layer dragging</td>
+	</tr>
+
+	<tr>
+		<td>draggable.speedX, draggable.speedY</td>
+		<td>layer dragging speed</td>
 	</tr>
 
 	<tr>
@@ -312,19 +330,50 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	<tr>
 		<td>curve</td>
 		<td>
-			curve used for animation
+			curve used for animation:
+
 			<ul>
+				<li>"linear"</li>
+				<li>"bezier-curve"</li>
+				<li>"spring-rk4" Runge-Kutta spring</li>
+				<li>"spring-dho" Damping harmonic oscillator spring</li>
+				<li>"spring" same as "spring-rk4"</li>
+			</ul>
+
+
+			<!-- <ul>
 				<li>linear, ease-in, ease-out</li>
 				<li>bezier-curve(a, b, c, d)</li>
 				<li>spring(tension, friction, velocity)<br>
 					Tension is the stiffness of the spring, friction the amount of effort it takes to move the object and velocity the initial velocity of the object.
-					</li>
-			
-		</ul></td>
+				</li>
+			</ul> -->
+		</td>
 	</tr>
+	<tr>
+		<td>curveOptions</td>
+		<td>
+			options for used curve
+
+			<ul>
+				<li>bezier-curve: "ease-in", "ease-out", "ease-in-out", [0, 1, 0, 1]</li>
+				<li>spring-rk4: friction, tension, velocity, tolerance
+				<li>spring-dho: stiffness, damping, mass, velocity, tolerance</li>
+			</ul>
+		</td>
+	</tr>
+
 	<tr>
 		<td>time</td>
 		<td>time to animate in seconds (ignored for springs)</td>
+	</tr>
+	<tr>
+		<td>delay</td>
+		<td>amount of seconds to delay the animation with</td>
+	</tr>
+	<tr>
+		<td>repeat</td>
+		<td>number of times to repeat animation</td>
 	</tr>
 	<tr>
 		<td>start()</td>
@@ -341,12 +390,118 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	<tr>
 		<td>on(event, function)</td>
 		<td>
-			listen to events: end
+			listen to events: "start", "stop", "end"
 		</td>
 	</tr>
 
 </tbody></table>
 
+<hr>
+
+<!-- Events -->
+<a name="events"></a>
+
+### Events
+<table border="0" cellspacing="0" cellpadding="0" class="api">
+	<tbody><tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th class="examples">Examples</th>
+	</tr>
+
+	<tr>
+		<td colspan="3" class="group">Basic</td>
+	</tr>
+
+	<tr>
+		<td>Events.Click </td>
+		<td>Click or touch (no delay on mobile)</td>
+	</tr>
+	<tr>
+		<td>Events.TouchStart</td>
+		<td>Start a touch/click</td>
+	</tr>
+
+	<tr>
+		<td>Events.TouchMove</td>
+		<td>Touch move or mouse drag</td>
+	</tr>
+	<tr>
+		<td>Events.TouchEnd</td>
+		<td>End touch or click</td>
+	</tr>
+
+	<tr>
+		<td colspan="3" class="group">Mouse</td>
+	</tr>
+
+	<tr>
+		<td>Events.MouseOver</td>
+		<td>Hover mouse</td>
+	</tr>
+	<tr>
+		<td>Events.MouseOut</td>
+		<td>Unhover mouse</td>
+	</tr>
+
+	<tr>
+		<td colspan="3" class="group">Animation</td>
+	</tr>
+
+	<tr>
+		<td>Events.AnimationStart</td>
+		<td>Start animation</td>
+	</tr>
+	<tr>
+		<td>Events.AnimationStop</td>
+		<td>Stop animation</td>
+	</tr>
+	<tr>
+		<td>Events.AnimationEnd</td>
+		<td>End animation (reached end point)</td>
+	</tr>
+
+	<tr>
+		<td colspan="3" class="group">Dragging</td>
+	</tr>
+
+	<tr>
+		<td>Events.DragStart</td>
+		<td>Start drag</td>
+	</tr>
+	<tr>
+		<td>Events.DragMove</td>
+		<td>Move drag</td>
+	</tr>
+	<tr>
+		<td>Events.DragEnd</td>
+		<td>End drag</td>
+	</tr>
+
+	<tr>
+		<td colspan="3" class="group">Scroll</td>
+	</tr>
+
+	<tr>
+		<td>Events.Scroll</td>
+		<td>Did scroll, does not always work on mobile</td>
+	</tr>
+
+	<tr>
+		<td colspan="3" class="group">States</td>
+	</tr>
+
+	<tr>
+		<td>Events.StateWillSwitch</td>
+		<td>About to switch to a new state</td>
+	</tr>
+	<tr>
+		<td>Events.StateDidSwitch</td>
+		<td>Just switched to new state</td>
+	</tr>
+
+
+</tbody></table>
 <hr>
 
 <!-- Utilities -->
@@ -370,20 +525,20 @@ The core of Framer is a Javascript Framework that enables you to define interact
 
 	<tr>
 		<td>delay(time, function)</td>
-		<td>Executes the function after time in ms. Holding shift will slow this down 25x.</td>
+		<td>Executes the function after time in seconds</td>
 	</tr>
 	<tr>
 		<td>interval(time, function)</td>
-		<td>Executes the function every x ms.</td>
+		<td>Executes the function every x seconds</td>
 	</tr>
 
 	<tr>
 		<td>throttle(time, function)</td>
-		<td>Call function at most once every x ms.</td>
+		<td>Call function at most once every x seconds</td>
 	</tr>
 	<tr>
 		<td>debounce(time, function)</td>
-		<td>Call function only when being stopped calling for x ms.</td>
+		<td>Call function only when being stopped calling for x seconds</td>
 	</tr>
 
 	<tr>
@@ -392,16 +547,8 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	</tr>
 
 	<tr>
-		<td>max([..])</td>
-		<td>Returns the largest value in an array.</td>
-	</tr>
-	<tr>
-		<td>min([..])</td>
-		<td>Returns the smallest value in an array.</td>
-	</tr>
-	<tr>
-		<td>sum([..])</td>
-		<td>Returns the sum of an array.</td>
+		<td>labelLayer(layer, "text")</td>
+		<td>Add centered text label to a layer.</td>
 	</tr>
 
 	<tr>
@@ -430,7 +577,11 @@ The core of Framer is a Javascript Framework that enables you to define interact
 </tbody></table>
 <hr>
 
+
+
 <!-- Defaults -->
+
+<!-- 
 <a name="defaults"></a>
 
 ### Defaults
@@ -463,7 +614,7 @@ The core of Framer is a Javascript Framework that enables you to define interact
 		<td>Global setting to profile all animations. Default value is false.</td>
 	</tr>
 </tbody></table>
-<hr>
+<hr> -->
 
 {% endfilter %}	
 {% endblock content%}
