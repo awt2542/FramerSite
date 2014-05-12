@@ -255,6 +255,10 @@ h2 strong, h3, strong, .headline {
 	-webkit-font-smoothing:antialiased;
 }
 
+p.small {
+	font-size: 12px; text-transform: uppercase; font-weight: 500; letter-spacing: 1px;
+}
+
 h1 {
 	font-size: 52px; line-height:1.6;
 	font-weight: 300; color: #222;
@@ -434,6 +438,34 @@ nav#index li:last-child {
 
 #example-block img.right {
 	right: -50px;
+}
+
+#used-by {
+	margin-bottom: 70px;
+	text-align: center;
+	color: #D3D8E1;
+	position: relative;
+}
+
+#used-by:after {
+	content: ""; display: block;
+	position: absolute; width: 100%; height: 1px; background: #D3D8E1;
+	top: 8px; left: 0; z-index: 0; opacity: .5;
+}
+
+#used-by p {
+	background: #fff; position: relative; z-index: 10; display: inline-block; 
+	padding: 0 20px;
+}
+
+#used-by img {
+	display: inline-block;
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+#used-by img+img {
+	margin-left: 20px;
 }
 
 #features {
