@@ -3,7 +3,7 @@
 {% block framerclass %}is-active{% endblock %}
 {% block content %}
 	
-	<header id="header" class="clearfix">
+	<header id="header" class="inner clearfix">
 		<h1 class="title">Framer.js</h1>
 		
 		<h1>A prototyping toolkit</h1>
@@ -17,16 +17,21 @@
 	</header>
 			
 	<section id="example-block">
+		<div class="inner">
 		
-		<img class="left 2x" src="/static/images/iphone-left.png">
-		<img class="mid 2x" src="/static/images/iphone-mid.png">
-		<img class="right 2x" src="/static/images/iphone-right.png">
-		
-		<section>
-			<h4>Framer <br> prototypes</h4>
-			<a href="#">More</a>
-		</section>
+			<img class="left 2x" src="/static/images/iphone-left.png">
+			<img class="mid 2x" src="/static/images/iphone-mid.png">
+			<img class="right 2x" src="/static/images/iphone-right.png">
+			
+			<section>
+				<h4>Framer <br> prototypes</h4>
+				<a href="#">More</a>
+			</section>
+			
+		</div> <!--inner-->
 	</section> <!--example-block-->
+	
+	<div class="inner">
 	
 	<section id="used-by" class="clearfix">
 		<p class="small">These companies prototype with Framer</p>
@@ -100,6 +105,8 @@ imageLayer.on Events.Click, ->
 	<a href="https://github.com/koenbok/Framer" class="small">Version 3 on GitHub</a>
 	</section>
 </footer>
+
+</div> <!--inner-->
 	
 	
 

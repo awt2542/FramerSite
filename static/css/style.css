@@ -12,13 +12,13 @@ body {
 	text-rendering:optimizeLegibility;
 	height: 100%; color:#666;
 	overflow-x: hidden;
-	padding-left: 260px; 
+	padding-left: 240px; 
 }
 
 p {
 	line-height:1.75;
 }
-
+https://github.com/koenbok/Framer
 strong {
 	font-weight: 500;
 	color: #444;
@@ -44,12 +44,19 @@ a:active {
 	position: relative;
 	margin:0 auto;
 	padding: 60px 40px;
-	overflow-x: hidden;
 }
 
-sup {
-	/*position: relative; top: -4px; left: 1px;*/
-	/*opacity: 0.4;	*/
+.inner {
+	width: 100%; height: 100%;
+	max-width: 680px;
+	position: relative;
+	margin:0 auto;
+	padding: 0 40px;
+}
+
+#wrapper.index {
+	padding: 60px 0;
+	max-width: 100%;
 }
 
 /* ================= Sidebar ================= */
@@ -397,14 +404,6 @@ nav#index li:last-child {
 	margin: 70px 0;
 }
 
-#example-block:before {
-	width: 600%;
-	background: inherit;
-	content: ""; position: absolute;
-	left: -200%; top: 0; height: 100%;
-	z-index: -1;
-}
-
 #example-block section {
 	position: absolute; 
 	top: 45px; left: 0; width: 100%; 
@@ -642,7 +641,7 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-#wrapper {
+#wrapper, .inner {
 	max-width: 600px;
 }
 }
@@ -742,7 +741,6 @@ body {
 	cursor: hand; cursor: pointer;
 }
 
-
 #wrapper {
 	max-width: 680px;
 	padding: 60px 40px;
@@ -760,7 +758,6 @@ nav#index li {
 	max-width: 240px;
 	min-height: auto;
 }
-
 }
 
 @media only screen and (max-width: 580px) {
