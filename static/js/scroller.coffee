@@ -16,56 +16,23 @@ updateActive = (doScroll=true) ->
 		$("#sidebar a.#{className}").parent().parent().addClass "appear"
 		
 		`(function() {
-			var offsetOne = window.matchMedia( "(max-height: 820px)" );
-			
-			if (offsetOne.matches) {
-				learnScroll = 0
-				docsScroll = 0
-				moreScroll = 0
-			}
-			
-		})();`
-
-		`(function() {
-			var offsetOne = window.matchMedia( "(max-height: 860px)" );
-			
-			if (offsetOne.matches) {
-				learnScroll = 0
-				docsScroll = 0
-				moreScroll = 80
-			}
-			
-		})();`
-		
-		`(function() {
-			var offsetTwo = window.matchMedia( "(max-height: 770px)" );
-			
-			if (offsetTwo.matches) {
-				learnScroll = 0
-				docsScroll = 0
-				moreScroll = 60
-			}
-			
-		})();`
-		
-		`(function() {
-			var offsetThree = window.matchMedia( "(max-height: 710px)" );
+			var offsetThree = window.matchMedia( "(max-height: 700px)" );
 			
 			if (offsetThree.matches) {
 				learnScroll = 0
 				docsScroll = 0
-				moreScroll = 80
+				moreScroll = 30
 			}
 			
 		})();`
 		
 		`(function() {
-			var offsetFour = window.matchMedia( "(max-height: 650px)" );
+			var offsetFour = window.matchMedia( "(max-height: 650px) and (min-height: 620px)" );
 			
 			if (offsetFour.matches) {
 				learnScroll = 0
 				docsScroll = 0
-				moreScroll = 0
+				moreScroll = 60
 			}
 			
 		})();`

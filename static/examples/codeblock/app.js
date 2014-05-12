@@ -3,6 +3,13 @@ imageLayer = new Layer({x:0, y:0, width:115, height:121, image:"images/icon.png"
 imageLayer.center()
 imageLayer.y = 50
 
+window.onresize = function() {
+	imageLayer.center()
+	imageLayer.y = 50	
+	imageLayer.x = parseInt(imageLayer.x)
+	
+}
+
 // Define a set of states with names (the original state is 'default')
 imageLayer.states.add({
 	bounce: {scale: 0.8},
@@ -19,3 +26,5 @@ imageLayer.states.animationOptions = {
 imageLayer.on(Events.Click, function() {
 	imageLayer.states.next()
 })
+
+console.log(imageLayer.pixelAlign)

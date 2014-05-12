@@ -453,6 +453,7 @@ nav#index li:last-child {
 	border-radius: 6px 6px 0 0;
 }
 #code-block iframe {
+	display: block;
 	width: 100%; position: absolute;
 	height: 256px;  top: 0; left: 0;
 	border-radius: 6px 6px 0 0;
@@ -527,12 +528,17 @@ body {
 } 
 
 #wrapper {
-	max-width: 600px;
 	padding:60px 40px;
 }
 
 #features li {
 	max-width: 240px;
+}
+}
+
+@media only screen and (max-width: 1000px) {
+#wrapper {
+	max-width: 600px;
 }
 }
 
@@ -743,7 +749,7 @@ opacity: 0;
 }
 
 
-@media only screen and (max-height: 900px) and (min-width: 640px) {
+@media only screen and (max-height: 720px) and (min-width: 640px) {
 #sidebar ul#more section {
 	max-height: 0; overflow: hidden; visibility: hidden; 
 }
@@ -764,7 +770,7 @@ transform: rotate(180deg);
 #sidebar ul#more.flip svg path { fill: #fff; }
 }
 
-@media only screen and (max-height: 770px) and (min-width: 640px) {
+@media only screen and (max-height: 620px) and (min-width: 640px) {
 #sidebar ul#docs section {
 	max-height: 0; overflow: hidden; visibility: hidden;
 }
@@ -784,27 +790,6 @@ transform: rotate(180deg);
 }
 
 #sidebar ul#docs.flip svg path { fill: #fff; }
-}
-
-@media only screen and (max-height: 650px) and (min-width: 640px) {
-#sidebar ul#learn section {
-	max-height: 0; overflow: hidden; visibility: hidden;
-}
-
-#sidebar ul#learn { margin-bottom: 20px; }
-
-#sidebar ul#learn section.appear {
-	visibility: visible; max-height: 300px; margin-bottom: 35px;
-}
-
-#sidebar ul#learn svg { opacity: 1; }
-#sidebar ul#learn.flip svg { -moz-transform: rotate(180deg);
--webkit-transform: rotate(180deg);
--o-transform: rotate(180deg);
--ms-transform: rotate(180deg);
-transform: rotate(180deg);
-}
-#sidebar ul#learn.flip svg path { fill: #fff; }
 }
 
 @media only screen and (max-height: 540px) and (min-width: 640px) {
@@ -828,24 +813,5 @@ transform: rotate(180deg);
 #sidebar ul#examples.flip svg path { fill: #fff; }
 }
 
-@media only screen and (max-height: 460px) and (min-width: 640px) {
-#sidebar ul#start section {
-	max-height: 0; overflow: hidden; visibility: hidden;
-}
 
-#sidebar ul#start { margin-bottom: 20px; }
-
-#sidebar ul#start section.appear {
-	visibility: visible; max-height: 300px; margin-bottom: 35px;
-}
-
-#sidebar ul#start svg { opacity: 1; }
-#sidebar ul#start.flip svg { -moz-transform: rotate(180deg);
--webkit-transform: rotate(180deg);
--o-transform: rotate(180deg);
--ms-transform: rotate(180deg);
-transform: rotate(180deg);
-}
-#sidebar ul#start.flip svg path { fill: #fff; }
-}
 
