@@ -50,7 +50,7 @@ a:active {
 	width: 100%; height: 100%; position: relative;
 	max-width: 680px;
 	margin:0 auto;
-	padding: 0 60px;
+	padding: 0 40px;
 }
 
 #wrapper.index {
@@ -545,10 +545,12 @@ nav#index li:last-child {
 }
 
 #code-block h3 {
-	text-align: center; font-weight: 500; 
+	font-weight: 500; 
 	font-size: 15px; text-transform: uppercase; letter-spacing: 1px;
 	border-radius: 6px 6px 0 0;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+	line-height: 1;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 #code-block div {
@@ -574,6 +576,63 @@ nav#index li:last-child {
 	bottom: 42px; left: 0; width: 100%;
 	color: #fff; text-transform: uppercase; letter-spacing: 1px;
 }
+
+#line-block {
+	position: relative;
+	margin-top: 40px;
+	width: 100%;
+	height: 200px;
+	
+}
+
+#line-block h3 {
+	margin-bottom: 20px;
+}
+
+#line-block section {
+	max-width: 180px;
+	text-align: center;
+}
+
+#line-block section {
+	position: absolute; top: 0;
+}
+
+#line-block section.left {
+	left: 0;
+}
+
+#line-block section.mid {
+	left: 50%; margin-left: -90px;
+}
+
+#line-block section.right {
+	right: 0;
+}
+
+#line-block section img {
+	margin-bottom: 20px;
+}
+
+#line-block img.line-arrow {
+	position: absolute;
+	top: 50px;
+}
+
+#line-block img.line-arrow.first {
+	left: 190px;
+}
+
+#line-block img.line-arrow.second {
+	right: 190px;
+}
+
+
+#line-block p {
+	font-size: 15px; line-height: 1.6;
+	opacity: .8;
+}
+
 
 #footer {
 	text-align: center;
