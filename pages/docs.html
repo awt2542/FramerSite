@@ -296,9 +296,44 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	</tr>
 
 	<tr>
-		<td colspan="3" class="group">Events</td>
+		<td>draggable.calculateVelocity()</td>
+		<td>x and y velocity over the last 0.1 second</td>
 	</tr>
 
+	<tr>
+		<td colspan="3" class="group">States</td>
+	</tr>
+
+	<tr>
+		<td>states.animationOptions</td>
+		<td>set the default animation option, takes the same input as .animate()</td>
+	</tr>
+	<tr>
+		<td>states.add("name", {...})</td>
+		<td>add a state</td>
+	</tr>
+	<tr>
+		<td>states.remove("name")</td>
+		<td>remove a state</td>
+	</tr>
+	<tr>
+		<td>states.switch("name")</td>
+		<td>switch to a state with the default animation options</td>
+	</tr>
+	<tr>
+		<td>states.next("nameA", "nameB", "nameC")</td>
+		<td>switch to the next state in the list</td>
+	</tr>
+
+	<tr>
+		<td colspan="3" class="group">Events</td>
+	</tr>
+	<tr>
+		<td>ignoreEvents</td>
+		<td>
+			don't listen to user events, set to false once you add an event listener
+		</td>
+	</tr>
 	<tr>
 		<td>on(event, function)</td>
 		<td>
@@ -397,6 +432,8 @@ The core of Framer is a Javascript Framework that enables you to define interact
 </tbody></table>
 
 <hr>
+
+
 
 <!-- Events -->
 <a name="events"></a>
