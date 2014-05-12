@@ -559,6 +559,7 @@ nav#index li:last-child {
 	width: 100%;
 	height: 256px;
 	border-radius: 6px 6px 0 0;
+	background: black url('/static/examples/codeblock/images/background.png') repeat scroll top left;
 }
 
 #code-block iframe {
@@ -692,7 +693,7 @@ body {
 }
 
 .inner {
-	max-width: 580px;
+	max-width: 600px;
 }
 
 #wrapper.index {
@@ -704,7 +705,7 @@ nav#index {
 }
 
 #features li {
-	max-width: 240px;
+	max-width: 220px;
 }
 
 #header a {
@@ -795,7 +796,7 @@ nav#index li {
 }
 
 #features li {
-	max-width: 240px;
+	max-width: 260px;
 	min-height: auto;
 }
 }
@@ -888,6 +889,10 @@ nav#index {
 #features li {
 	max-width: 100%;
 	margin-bottom: 20px;
+}
+
+#features li:nth-child(even) {
+	float: none;
 }
 
 }
