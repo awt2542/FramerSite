@@ -51,6 +51,7 @@ $(document).ready(retina);
 
  if ( $( "#sidebar" ).hasClass( "docs" ) ) {
 	$("#sidebar ul#docs section").addClass("appear");
+	$("#sidebar ul#docs li.headline a").addClass("active");
 	$("#sidebar ul#docs svg").hide();
 }
 
@@ -58,6 +59,7 @@ $(document).ready(retina);
 
  if ( $( "#sidebar" ).hasClass( "learn" ) ) {
 	$("#sidebar ul#learn section").addClass("appear");
+	$("#sidebar ul#learn li.headline a").addClass("active");
 	$("#sidebar ul#learn svg").hide();
 }
 
@@ -65,6 +67,7 @@ $(document).ready(retina);
 
  if ( $( "#sidebar" ).hasClass( "examples" ) ) {
 	$("#sidebar ul#examples section").addClass("appear");
+	$("#sidebar ul#examples li.headline a").addClass("active");
 	$("#sidebar ul#examples svg").hide();
 }
 
@@ -72,6 +75,7 @@ $(document).ready(retina);
 
  if ( $( "#sidebar" ).hasClass( "start" ) ) {
 	$("#sidebar ul#start section").addClass("appear");
+	$("#sidebar ul#start li.headline a").addClass("active");
 	$("#sidebar ul#start svg").hide();
 }
 
