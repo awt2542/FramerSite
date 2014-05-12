@@ -527,10 +527,6 @@ table.last {
 	margin-bottom: 60px;
 }
 
-table .examples {
-	display: none;
-}
-
 /* ==================================================== */
 /* ==================================================== */
 /* ==================================================== */
@@ -723,6 +719,10 @@ table, thead th, th {
 
 table.api td.group {
 	font-size: 11px;
+}
+
+table .examples {
+	display: none;
 }
 
 nav#index li a{
