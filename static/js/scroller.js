@@ -6,7 +6,7 @@
     if (doScroll == null) {
       doScroll = true;
     }
-    offset = 60;
+    offset = 0;
     fromTop = $(window).scrollTop();
     activeAnchor = null;
     $("a").map(function() {

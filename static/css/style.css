@@ -302,16 +302,25 @@ h2.headline {
 }
 
 h3 {
-	font-size: 22px; font-weight: 500;
+	font-size: 24px; font-weight: 500;
 	color: #222; margin-bottom: 30px;
 	-webkit-font-smoothing: antialiased-antialiased;
 }
 
+
 h4 {
-	font-size: 15px; font-weight: 500;
+	font-size: 14px; font-weight: 500;
 	color: #222; margin-bottom: 15px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+}
+
+#wrapper.index h4 {
+	margin-bottom: 15px;
+}
+
+p + h4 {
+	margin-top: 30px;
 }
 
 #wrapper ul li {
@@ -586,6 +595,10 @@ hr {
 	border: none;  width: 100%;
 	border-bottom: 1px solid #eee;
 	display: block; margin: 60px auto;
+}
+
+hr.small {
+	margin: 40px auto; 
 }
 
 table {
