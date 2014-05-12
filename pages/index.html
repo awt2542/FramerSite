@@ -68,11 +68,14 @@
 			<p>Works on desktop, mobile and tablets. Plays well with WebKit.</p>
 		</li>
 	</section>
-		
-	<section id="code-block">
-	<div><iframe id="iframe" src="/static/examples/codeblock/index.html"></iframe></div>
+	</div><!--inner-->
 	
-	<pre><code data-language="coffeescript"># Define the imageLayer
+	<div class="inner code-block">
+	
+	<section id="code-block">
+		<div><iframe src="/static/examples/codeblock/index.html"></iframe></div>
+		
+<pre><code data-language="coffeescript"># Define the imageLayer
 imageLayer = new Layer({x:0, y:0, width:128, height:128 
 imageLayer.image = "images/icon.png"
 imageLayer.center()
@@ -90,7 +93,12 @@ imageLayer.states.animationOptions =
 # On click, go to the next state
 imageLayer.on Events.Click, -> 
 	imageLayer.states.next()</code></pre>
-
+			
+	</section>
+	</div> <!--inner-->
+	
+	<div class="inner">
+	<section id="code-section">
 	<h3>How it works</h3>
 	
 	<p>Framer is a <strong>JavaScript framework</strong> that makes creating realistic prototypes a breeze – complete with filters, spring physics and full 3D effects. Define interaction and create animations in a simple, readable and powerful way. </p>
@@ -122,18 +130,19 @@ imageLayer.on Events.Click, ->
 		
 	</figure>
 </section> <!--code-block-->
+</div> <!--inner-->
 
+<div class="inner">
 <hr>
 
-<footer id="footer">
-	<h1>Start prototyping today</h1>
-	<a class="green" href="#">Download</a>
-	<a href="https://www.facebook.com/groups/framerjs/">Community</a>
-	<section>
-	<a href="https://github.com/koenbok/Framer" class="small">Version 3 on GitHub</a>
-	</section>
-</footer>
-
+	<footer id="footer">
+		<h1>Start prototyping today</h1>
+		<a class="green" href="#">Download</a>
+		<a href="https://www.facebook.com/groups/framerjs/">Community</a>
+		<section>
+		<a href="https://github.com/koenbok/Framer" class="small">Version 3 on GitHub</a>
+		</section>
+	</footer>
 </div> <!--inner-->
 	
 	
