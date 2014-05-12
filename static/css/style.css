@@ -3,9 +3,9 @@ Reset
 =========================================== */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0} 
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.group:before,.group:before,.group:after { content: ""; display: table;} 
-.group:after { clear: both;}
-.group { zoom: 1;}
+.clearfix:before,.clearfix:before,.clearfix:after { content: ""; display: table;} 
+.clearfix:after { clear: both;}
+.clearfix { zoom: 1;}
 
 body {
 	font:17px/1 "colfax-web", "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -194,7 +194,6 @@ thead th, th {
 	padding:10px 15px;
 	font-size:15px; font-weight:300;
 	color:#aaa; cursor:default; white-space:nowrap;
-	background: #fcfcfc;
 	line-height: 1.2; 
 	border-radius: 6px 6px 0 0 ;
 }
@@ -215,18 +214,21 @@ table.api td.group {
 	color: #2;
 	letter-spacing: 1px;
 	line-height: 2;
-	background: #fff;
+	background: #fafafa;
 }
 
 th.examples {
-	width: 60px; display: block;
-	position: relative; right: 35px;
+	position: absolute; right: 42px; 
 }
 
 td.examples {
 	width: auto;
 	text-align: right;
 	white-space: nowrap;
+}
+
+td a+a:before {
+	content: "\b7"; display: inline-block; margin-right: 4px; font-weight: 500; opacity: .5;
 }
 
 #wrapper table ul {
@@ -460,7 +462,6 @@ nav#index li:last-child {
 
 #used-by img {
 	display: inline-block;
-	line-height: 40px;
 	vertical-align: middle;
 }
 
