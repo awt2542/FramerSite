@@ -620,11 +620,11 @@ nav#index li:last-child {
 }
 
 #line-block img.line-arrow.first {
-	left: 190px;
+	left: 32%;
 }
 
 #line-block img.line-arrow.second {
-	right: 190px;
+	right: 32%;
 }
 
 #line-block p {
@@ -875,6 +875,21 @@ nav#index li {
 p.small {
 	font-weight: 500;
 }
+
+#line-block img.line-arrow.first {
+	left: 33%;
+}
+
+#line-block img.line-arrow.second {
+	right: 30%;
+}
+}
+
+@media only screen and (max-width: 640px) {
+#features li {
+	font-size: 15px;
+	max-width: 240px;
+}
 }
 
 @media only screen and (max-width: 580px) {
@@ -955,9 +970,6 @@ h2.headline {
 	padding: 40px 0;
 }
 
-#code-block {
-	display: none;
-}
 
 h1 {
 	font-size: 30px;
