@@ -50,7 +50,7 @@ a:active {
 	width: 100%; height: 100%; position: relative;
 	max-width: 680px;
 	margin:0 auto;
-	padding: 0 60px;
+	padding: 0 40px;
 }
 
 #wrapper.index {
@@ -372,15 +372,15 @@ p + h4 {
 	padding: 0;
 }
 
-#header a:hover {
+#header a:hover , #footer a:hover{
 	box-shadow: none; color: #fff; background: #60C4FF; opacity: 1;
 }
 
-#header a.green:hover {
+#header a.green:hover, #footer a.green:hover {
 	background: #7ED321; 
 }
 
-#header a.small:hover {
+#header a.small:hover, #footer a.small:hover {
 	background: none; color: #aaa;
 }
 
@@ -545,10 +545,12 @@ nav#index li:last-child {
 }
 
 #code-block h3 {
-	text-align: center; font-weight: 500; 
+	font-weight: 500; 
 	font-size: 15px; text-transform: uppercase; letter-spacing: 1px;
 	border-radius: 6px 6px 0 0;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+	line-height: 1;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 #code-block div {
@@ -573,6 +575,61 @@ nav#index li:last-child {
 	position: absolute; font-weight:500;
 	bottom: 42px; left: 0; width: 100%;
 	color: #fff; text-transform: uppercase; letter-spacing: 1px;
+}
+
+#line-block {
+	position: relative;
+	margin-top: 70px;
+	width: 100%;
+	height: 200px;
+}
+
+#line-block h3 {
+	margin-bottom: 20px;
+}
+
+#line-block section {
+	max-width: 180px;
+	text-align: center;
+}
+
+#line-block section {
+	position: absolute; top: 0;
+}
+
+#line-block section.left {
+	left: 0;
+}
+
+#line-block section.mid {
+	left: 50%; margin-left: -90px;
+}
+
+#line-block section.right {
+	right: 0;
+}
+
+#line-block section img {
+	margin-bottom: 20px;
+}
+
+#line-block img.line-arrow {
+	position: absolute;
+	top: 50px;
+	opacity: .5;
+}
+
+#line-block img.line-arrow.first {
+	left: 32%;
+}
+
+#line-block img.line-arrow.second {
+	right: 32%;
+}
+
+#line-block p {
+	font-size: 15px; line-height: 1.6;
+	opacity: .8;
 }
 
 #footer {
@@ -725,6 +782,26 @@ h2.headline {
 	font-size: 24px;
 	margin-bottom: 40px; 
 }
+
+#line-block section {
+	width: 160px;
+}
+
+#line-block section.mid {
+	margin-left: -80px;
+}
+
+#line-block img.line-arrow.first {
+	left: 160px;
+}
+
+#line-block img.line-arrow.second {
+	right: 160px;
+}
+
+#line-block p {
+	font-size: 14px;
+}
 }
 
 /* ================= Mobile (Navigation)  ================= */
@@ -797,6 +874,21 @@ nav#index li {
 
 p.small {
 	font-weight: 500;
+}
+
+#line-block img.line-arrow.first {
+	left: 33%;
+}
+
+#line-block img.line-arrow.second {
+	right: 30%;
+}
+}
+
+@media only screen and (max-width: 640px) {
+#features li {
+	font-size: 15px;
+	max-width: 240px;
 }
 }
 
@@ -878,9 +970,6 @@ h2.headline {
 	padding: 40px 0;
 }
 
-#code-block {
-	display: none;
-}
 
 h1 {
 	font-size: 30px;
