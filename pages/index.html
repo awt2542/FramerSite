@@ -3,7 +3,7 @@
 {% block framerclass %}is-active{% endblock %}
 {% block content %}
 	
-	<header id="header" class="clearfix">
+	<header id="header" class="inner clearfix">
 		<h1 class="title">Framer.js</h1>
 		
 		<h1>A prototyping toolkit</h1>
@@ -11,32 +11,38 @@
 		
 		<a class="green" href="#">Download</a>
 		<a href="https://www.facebook.com/groups/framerjs/">Community</a>
+		<section>
 		<a href="https://github.com/koenbok/Framer" class="small">Version 3 on GitHub</a>
-		
+		</section>
 	</header>
 			
 	<section id="example-block">
+		<div class="inner">
 		
-		<img class="left 2x" src="/static/images/iphone-left.png">
-		<img class="mid 2x" src="/static/images/iphone-mid.png">
-		<img class="right 2x" src="/static/images/iphone-right.png">
-		
-		<section>
-			<h4>Framer <br> prototypes</h4>
-			<a href="#">More</a>
-		</section>
+			<img class="left 2x" src="/static/images/iphone-left.png">
+			<img class="mid 2x" src="/static/images/iphone-mid.png">
+			<img class="right 2x" src="/static/images/iphone-right.png">
+			
+			<section>
+				<h4>Framer <br> prototypes</h4>
+				<a href="#">More</a>
+			</section>
+			
+		</div> <!--inner-->
 	</section> <!--example-block-->
+	
+	<div class="inner">
 	
 	<section id="used-by" class="clearfix">
 		<p class="small">These companies prototype with Framer</p>
 		<section>
-		<img class="2x" src="/static/images/logos/logo-facebook.png">
-		<img class="2x" src="/static/images/logos/logo-dropbox.png">
-		<img class="2x" src="/static/images/logos/logo-google.png">
-		<img class="2x" src="/static/images/logos/logo-apple.png">
-		<img class="2x" src="/static/images/logos/logo-groupon.png">
-		<img class="2x" src="/static/images/logos/logo-twitter.png">
-		<img class="2x" src="/static/images/logos/logo-stripe.png">
+		<img class="2x facebook" src="/static/images/logos/logo-facebook.png">
+		<img class="2x dropbox" src="/static/images/logos/logo-dropbox.png">
+		<img class="2x google" src="/static/images/logos/logo-google.png">
+		<img class="2x apple" src="/static/images/logos/logo-apple.png">
+		<img class="2x groupon" src="/static/images/logos/logo-groupon.png">
+		<img class="2x twitter" src="/static/images/logos/logo-twitter.png">
+		<img class="2x stripe" src="/static/images/logos/logo-stripe.png">
 		</section>
 	</section> <!--used-by-->
 
@@ -62,12 +68,11 @@
 			<p>Works on desktop, mobile and tablets. Plays well with WebKit.</p>
 		</li>
 	</section>
-	
-	<hr>
-	
+		
 	<section id="code-block">
-	<h3>How Framer works</h3>
+	<h3>How it works</h3>
 	<div><iframe id="iframe" src="/static/examples/codeblock/index.html"></iframe></div>
+	
 	<pre><code data-language="coffeescript"># Define the imageLayer
 imageLayer = new Layer({x:0, y:0, width:128, height:128 
 imageLayer.image = "images/icon.png"
@@ -96,8 +101,12 @@ imageLayer.on Events.Click, ->
 	<h1>Start prototyping today</h1>
 	<a class="green" href="#">Download</a>
 	<a href="https://www.facebook.com/groups/framerjs/">Community</a>
+	<section>
 	<a href="https://github.com/koenbok/Framer" class="small">Version 3 on GitHub</a>
+	</section>
 </footer>
+
+</div> <!--inner-->
 	
 	
 
