@@ -333,13 +333,13 @@ p + h4 {
 }
 
 #wrapper ul li+li {
-	margin-top: 8px;
+	margin-top: 4px;
 }
 
 #wrapper li ul li {
 	list-style-type: none;
 	padding: 0; left: 0; line-height: 1.4;
-	margin-top: 5px;
+	margin-top: 4px;
 }
 
 /* ================= Content ================= */
@@ -580,6 +580,7 @@ nav#index li:last-child {
 
 #footer h1 {
 	margin-bottom: 40px;
+	font-size: 44px;
 }
 
 /* ==================================================== */
