@@ -347,6 +347,9 @@ The core of Framer is a Javascript Framework that enables you to define interact
 <a name="animations"></a>
 
 ### Animations
+
+Framer supports many different types of animations. 
+
 <table border="0" cellspacing="0" cellpadding="0" class="api">
 	<tbody>
 	<tr>
@@ -433,12 +436,13 @@ The core of Framer is a Javascript Framework that enables you to define interact
 
 <hr>
 
-
-
 <!-- Events -->
 <a name="events"></a>
 
 ### Events
+
+Events are things that happen to objects. They can originate from the user like a touch or mouse click, or from an animation that ends.
+
 <table border="0" cellspacing="0" cellpadding="0" class="api">
 	<tbody><tr>
 		<th>Name</th>
@@ -545,6 +549,11 @@ The core of Framer is a Javascript Framework that enables you to define interact
 <a name="utilities"></a>
 
 ### Utilities
+
+
+Utilities is a collection of functions that make things easier to do. Lots of handy stuff here.
+
+
 <table border="0" cellspacing="0" cellpadding="0" class="api">
 	<tbody><tr>
 		<th>Function</th>
@@ -618,10 +627,13 @@ The core of Framer is a Javascript Framework that enables you to define interact
 
 <!-- Defaults -->
 
-<!-- 
+
 <a name="defaults"></a>
 
 ### Defaults
+
+The Framer.Defaults object contains all defaults for Layers and Animations.
+
 <table border="0" cellspacing="0" cellpadding="0" class="api">
 	<tbody><tr>
 		<th>Property</th>
@@ -629,29 +641,19 @@ The core of Framer is a Javascript Framework that enables you to define interact
 		<th class="examples">Examples</th>
 	</tr>
 	<tr>
-		<td>timeSpeedFactor</td>
-		<td>Current speed of time. Used to slow down animations and timers. Default value is 1.</td>
+		<td>Framer.Defaults.Layer</td>
+		<td>Layer defaults</td>
 	</tr>
 	<tr>
-		<td>roundingDecimals</td>
-		<td>Rounding setting when generating css values. Default value is 5.</td>
-	</tr>
-
-	<tr>
-		<td>animationPrecision</td>
-		<td>Number of css keyframes per second to generate for animations. Default value is 60.</td>
+		<td>Framer.Defaults.Animation</td>
+		<td>Animation defaults</td>
 	</tr>
 	<tr>
-		<td>animationDebug</td>
-		<td>Global setting to debug all animations. Default value is false.</td>
+		<td>Framer.resetDefaults()</td>
+		<td>Reset to original defaults</td>
 	</tr>
-
-	<tr>
-		<td>animationProfile</td>
-		<td>Global setting to profile all animations. Default value is false.</td>
-	</tr>
-</tbody></table>
-<hr> -->
+	</tbody></table>
+<hr>
 
 {% endfilter %}	
 {% endblock content%}
