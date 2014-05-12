@@ -218,6 +218,17 @@ table.api td.group {
 	background: #fff;
 }
 
+th.examples {
+	width: 60px; display: block;
+	position: relative; right: 35px;
+}
+
+td.examples {
+	width: auto;
+	text-align: right;
+	white-space: nowrap;
+}
+
 #wrapper table ul {
 	margin-top: 20px;
 }
