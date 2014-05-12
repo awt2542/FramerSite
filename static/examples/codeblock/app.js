@@ -5,12 +5,14 @@ imageLayer.y = 50
 
 // Define a set of states with names (the original state is 'default')
 imageLayer.states.add({
-	bounce: {scale:0.85},
+	bounce: {scale: 0.8},
+	hue: {hueRotate: -20},
+	rotate: {rotationZ: 90},
 })
 
 // Set the default animation options
 imageLayer.states.animationOptions = {
-	curve: "spring(500,30,100)"
+	curve: "spring(600,18,0)"
 }
 
 // On a click, go to the next state

@@ -51,11 +51,13 @@ imageLayer.center()
 
 # Define a state
 imageLayer.states.add
-	bounce: {scale:0.9}
+	bounce: {scale: 0.8},
+	hue: {hueRotate: -20},
+	rotate: {rotationZ: 90}
 
 # Set the animation options
 imageLayer.states.animationOptions = 
-	curve: "spring(500,20,100)"
+	curve: "spring(600,18,0)"
 
 # On click, go to the next state
 imageLayer.on Events.Click, -> 
