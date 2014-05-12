@@ -368,17 +368,28 @@ nav#index li:last-child {
 }
 
 #example-block:before {
-	width: 200%;
+	width: 600%;
 	background: inherit;
 	content: ""; position: absolute;
-	left: -50%; top: 0; height: 100%;
+	left: -200%; top: 0; height: 100%;
 	z-index: -1;
 }
 
 #example-block img {
-	position: absolute; bottom: 0; left: 50%; margin-left: -339px;
-	height: 504px;
-	width: 678px;
+	position: absolute; bottom: 0;
+}
+
+#example-block img:first-child {
+	left: -50px;
+}
+
+#example-block img:nth-child(2) {
+	left: 140px;
+	z-index: 10;
+}
+
+#example-block img:last-child {
+	right: -50px;
 }
 
 #features {
