@@ -42,98 +42,37 @@ $(document).ready(retina);
 
 /* ========================= */
 
-collapseMore = (function() {
-	var queryMore = window.matchMedia( "(max-height: 1000px)" );
-	if (queryMore.matches) {
-			$('#sidebar ul#more li.headline').click( function(){
-			    $("#sidebar ul#more").toggleClass("flip");
-			});
-	}
-})();
-
  if ( $( "#sidebar" ).hasClass( "more" ) ) {
 	$("#sidebar ul#more section").addClass("appear");
+	$("#sidebar ul#more svg").hide();
 }
 
 /* ========================= */
 
-collapseDocs = (function() {
-	var queryDocs = window.matchMedia( "(max-height: 880px)" );
-	if (queryDocs.matches) {
-			$('#sidebar ul#docs li.headline').click( function(event){
-				event.preventDefault();
-			    $("#sidebar ul#docs section").toggleClass("appear");
-			    $("#sidebar ul#docs svg").toggleClass("flip");
-			    $("#sidebar").animate({"scrollTop": $("#sidebar").scrollTop() + 100});
-			});
-	}
-	
-	else {
-		$("#sidebar ul#docs li.headline").unbind("click");
-		$("#sidebar ul#docs section").removeClass("appear");
-	}
-})();
+ if ( $( "#sidebar" ).hasClass( "docs" ) ) {
+	$("#sidebar ul#docs section").addClass("appear");
+	$("#sidebar ul#docs svg").hide();
+}
 
 /* ========================= */
 
-collapseLearn = (function() {
-	var queryLearn = window.matchMedia( "(max-height: 745px)" );
-	
-	if (queryLearn.matches) {
-			$('#sidebar ul#learn li.headline').click( function(event){
-				event.preventDefault();
-			    $("#sidebar ul#learn section").toggleClass("appear");
-			    $("#sidebar ul#learn svg").toggleClass("flip");
-			});
-	}
-	
-	else {
-		$("#sidebar ul#learn li.headline").unbind("click");
-		$("#sidebar ul#learn section").removeClass("appear");
-	}
-})();
+ if ( $( "#sidebar" ).hasClass( "learn" ) ) {
+	$("#sidebar ul#learn section").addClass("appear");
+	$("#sidebar ul#learn svg").hide();
+}
 
 /* ========================= */
 
-collapseExamples = (function() {
-	var queryExamples = window.matchMedia( "(max-height: 540px)" );
-	
-	if (queryExamples.matches) {
-			$('#sidebar ul#examples li.headline').click( function(event){
-				event.preventDefault();
-			    $("#sidebar ul#examples section").toggleClass("appear");
-			    $("#sidebar ul#examples svg").toggleClass("flip");
-			});
-	}
-	
-	else {
-		$("#sidebar ul#examples li.headline").unbind("click");
-		$("#sidebar ul#examples section").removeClass("appear");
-	}
-})();
+ if ( $( "#sidebar" ).hasClass( "examples" ) ) {
+	$("#sidebar ul#examples section").addClass("appear");
+	$("#sidebar ul#examples svg").hide();
+}
 
 /* ========================= */
 
-collapseStart = (function() {
-	var queryStart = window.matchMedia( "(max-height: 460px)" );
-	
-	if (queryStart.matches) {
-			$('#sidebar ul#start li.headline').click( function(event){
-				event.preventDefault();
-			    $("#sidebar ul#start section").toggleClass("appear");
-			    $("#sidebar ul#start svg").toggleClass("flip");
-			});
-	}
-	
-	else {
-		$("#sidebar ul#start li.headline").unbind("click");
-		$("#sidebar ul#start section").removeClass("appear");
-	}
-})();
+ if ( $( "#sidebar" ).hasClass( "start" ) ) {
+	$("#sidebar ul#start section").addClass("appear");
+	$("#sidebar ul#start svg").hide();
+}
 
 /* ========================= */
-
-$(window).resize(collapseMore);
-$(window).resize(collapseDocs);
-$(window).resize(collapseLearn);
-$(window).resize(collapseStart);
