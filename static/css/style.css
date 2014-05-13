@@ -28,6 +28,11 @@ a {
 	text-decoration:none;
 	color:#33b0f7;
 	font-weight: 500;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 a:hover {
@@ -361,6 +366,11 @@ p + h4 {
 	padding:12px 16px 10px; letter-spacing: 1px;
 	color: #60C4FF; position: relative; z-index: 10; display: inline-block;
 	width: 120px;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-ms-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
 }
 
 
