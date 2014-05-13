@@ -28,10 +28,10 @@ Because Framer runs in the browser you can use all the <a href="https://develope
 			<td><strong>Escape</strong> (toggle)</td>
 			<td>Switch between normal &amp; debug view of all layers. Useful to inspect structure and positions.</td>
 		</tr>
-		<tr>
+<!-- 		<tr>
 			<td><strong>Shift</strong> (hold)</td>
 			<td>While shift is pressed, Framer will delay the time by 25x. This will slow down animations and timers like utils.delay and utils.interval. Useful to inspect animations carefully.</td>
-		</tr>
+		</tr> -->
 	</tbody>
 </table>
 
@@ -57,7 +57,7 @@ There is an active and helpful <a href="https://www.facebook.com/groups/framerjs
 	</li>
 	<li><strong>Why does performance on mobile seem worse?</strong>
 		<ul>
-			<li>Mobile browsers have a 500ms click delay build in, to distinguish a click event from a hover or right click. Use a "touchstart" or "touchend" event instead of a "click" event.</li>
+			<li>Mobile browsers have a 500ms click delay build in, to distinguish a click event from a hover or right click. Use "Events.Click" instead of a "click" event.</li>
 		</ul>
 	</li>
 </ul>
