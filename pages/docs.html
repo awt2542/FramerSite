@@ -8,7 +8,7 @@
 <a name="docs"></a>
 ### Docs
 
-The core of Framer is a Javascript Framework that enables you to define interaction and animation in a simple, readable way. It's a small .js file that makes creating realistic prototypes a breeze – complete with animations, spring physics and 3D effects.
+Below you'll find documentation for much of Framer. We've tried to be as complete as possible, but if you're looking for more you should always check the <a href="https://github.com/koenbok/Framer/tree/framer3" target="_blank">Framer source</a> on Github.
 
 ---
 
@@ -72,11 +72,11 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	</tr>
 	<tr>
 		<td>screenFrame()</td>
-		<td>get this layers absolute frame on the screen</td>
+		<td>get this layer's absolute frame on the screen</td>
 	</tr>
 	<tr>
 		<td>contentFrame()</td>
-		<td>the frame for the total size of all the sub layers combined</td>
+		<td>the frame for the total size of all the subLayers combined</td>
 		<td class="examples"><a href="#">1</a></td>
 	</tr>
 	<tr>
@@ -103,7 +103,7 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	</tr>
 	<tr>
 		<td>visible</td>
-		<td>toggles layers visibility</td>
+		<td>toggles layer's visibility</td>
 	</tr>
 	<tr>
 		<td>opacity</td>
@@ -111,7 +111,7 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	</tr>
 	<tr>
 		<td>clip</td>
-		<td>toggles wether layer should clip sub layers</td>
+		<td>toggles whether layer should clip subLayers</td>
 	</tr>
 	<tr>
 		<td>rotation <span class="dim">rotationX, rotationY, rotationZ</span></td>
@@ -152,19 +152,19 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	</tr>
 	<tr>
 		<td>subLayersByName("name")</td>
-		<td>returns array of sub layers by name</td>
+		<td>returns array of subLayers by name</td>
 	</tr>
 	<tr>
 		<td>addSubLayer(layer)</td>
-		<td>add a sub layer to this layer</td>
+		<td>add a subLayer to this layer</td>
 	</tr>
 	<tr>
 		<td>removeSubLayer(layer)</td>
-		<td>remove a sub layer from this layers sub layers</td>
+		<td>remove a sub layer from this layer's subLayers</td>
 	</tr>
 	<tr>
 		<td>siblingLayers</td>
-		<td>the sub layers of this layers superlayer</td>
+		<td>the subLayers of this layer's superLayer</td>
 	</tr>
 
 	
@@ -174,11 +174,11 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	
 	<tr>
 		<td>index</td>
-		<td>this layers layering position index</td>
+		<td>this layer's layering position index</td>
 	</tr>
 	<tr>
 		<td>placeBefore(layer)</td>
-		<td>place this layer on top of other layer</td>
+		<td>place this layer on top of another layer</td>
 	</tr>
 	<tr>
 		<td>placeBehind(layer)</td>
@@ -207,7 +207,7 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	</tr>
 	<tr>
 		<td>destroy()</td>
-		<td>destroy this layer</td>
+		<td>destroy this layer from the DOM</td>
 	</tr>
 
 	<tr>
@@ -253,7 +253,7 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	
 	<tr>
 		<td>animate({...})</td>
-		<td>create and start an Animation on this layer, returns the Animation object</td>
+		<td>create and start an animation on this layer, returns the animation object</td>
 	</tr>
 	<tr>
 		<td>animations()</td>
@@ -292,7 +292,7 @@ The core of Framer is a Javascript Framework that enables you to define interact
 
 	<tr>
 		<td>draggable.speedX, draggable.speedY</td>
-		<td>layer dragging speed</td>
+		<td>layer dragging speed (resistance)</td>
 	</tr>
 
 	<tr>
@@ -321,6 +321,10 @@ The core of Framer is a Javascript Framework that enables you to define interact
 		<td>switch to a state with the default animation options</td>
 	</tr>
 	<tr>
+		<td>states.switchInstant("name")</td>
+		<td>switch to a state instantly with no animation</td>
+	</tr>
+	<tr>
 		<td>states.next("nameA", "nameB", "nameC")</td>
 		<td>switch to the next state in the list</td>
 	</tr>
@@ -331,7 +335,7 @@ The core of Framer is a Javascript Framework that enables you to define interact
 	<tr>
 		<td>ignoreEvents</td>
 		<td>
-			don't listen to user events, set to false once you add an event listener
+			layer will ignore user events. Is set to false once you add an event listener
 		</td>
 	</tr>
 	<tr>
@@ -348,7 +352,7 @@ The core of Framer is a Javascript Framework that enables you to define interact
 
 ### Animations
 
-Framer supports many different types of animations. 
+Framer supports many different types of animations, including springs and bezier curves.
 
 <table border="0" cellspacing="0" cellpadding="0" class="api">
 	<tbody>
@@ -403,11 +407,11 @@ Framer supports many different types of animations.
 
 	<tr>
 		<td>time</td>
-		<td>time to animate in seconds (ignored for springs)</td>
+		<td>duration of the animation in seconds (ignored for springs)</td>
 	</tr>
 	<tr>
 		<td>delay</td>
-		<td>amount of seconds to delay the animation with</td>
+		<td>amount of seconds to delay the animation before start</td>
 	</tr>
 	<tr>
 		<td>repeat</td>
@@ -551,7 +555,7 @@ Events are things that happen to objects. They can originate from the user like 
 ### Utilities
 
 
-Utilities is a collection of functions that make things easier to do. Lots of handy stuff here.
+Utilities is a collection of functions that make things easier to do. Lots of handy stuff here. Be sure to <a href="https://github.com/koenbok/Framer/blob/framer3/framer/Utils.coffee" target="_blank">check the source</a> to see everything.
 
 
 <table border="0" cellspacing="0" cellpadding="0" class="api">
@@ -653,7 +657,6 @@ The Framer.Defaults object contains all defaults for Layers and Animations.
 		<td>Reset to original defaults</td>
 	</tr>
 	</tbody></table>
-<hr>
 
 {% endfilter %}	
 {% endblock content%}
