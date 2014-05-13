@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block isindex %}class="index"{% endblock isindex %}
+{% block hide %}hide{% endblock hide %}
 {% block framerclass %}is-active{% endblock %}
 {% block content %}
 	
@@ -139,7 +140,10 @@ Icon.on Events.Click, ->
 		<h1>Start prototyping today</h1>
 		<a class="green" href="#">Download</a>
 		<a href="https://www.facebook.com/groups/framerjs/">Community</a>
-
+	</footer>
+	
+	<footer class="global">
+	<p class="small">Framer is an <a href="https://github.com/koenbok/Framer">open source project</a> by Podium - Copyright &copy; 2014 Podium BV</p>
 	</footer>
 	
 </div> <!--inner-->
