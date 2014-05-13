@@ -464,6 +464,10 @@ nav#index li:last-child {
 	height: 444px;
 }
 
+#example-block img {
+	width: 318px;
+}
+
 #example-block a.iphone.mid {
 	height: 499px;
 }
@@ -490,7 +494,7 @@ nav#index li:last-child {
 	box-shadow: inset 0 0 0 2px #60C4FF; background: rgba(255,255,255,1);
 }
 
-#example-block a:hover {
+#example-block a.iphone:hover {
 	bottom: 0; opacity: 1;
 }
 
@@ -893,6 +897,14 @@ h2.headline {
 #line-block p {
 	font-size: 14px;
 }
+
+#example-block a.iphone {
+	bottom: -60px;
+}
+
+#example-block a.iphone:hover {
+	bottom: -40px;
+}
 }
 
 /* ================= Mobile (Navigation)  ================= */
@@ -981,6 +993,14 @@ p.small {
 
 #line-block img.line-arrow.second {
 	right: 31%;
+}
+
+#example-block a.iphone {
+	bottom: -15px;
+}
+
+#example-block a.iphone:hover {
+	bottom: 0;
 }
 }
 
@@ -1116,8 +1136,6 @@ h2.headline {
 #example-block a { bottom: -20px; }
 #example-block a.left { left:10px; }
 #example-block a.right { right: 10px; }
-
-
 }
 
 @media only screen and (max-width: 440px) {
