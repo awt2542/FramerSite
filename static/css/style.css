@@ -380,6 +380,10 @@ p + h4 {
 	margin-bottom: 20px
 }
 
+#footer a, #footer a.green {
+	margin-bottom: 0;
+}
+
 #header a.small, #footer a.small {
 	display: inline-block; font-weight: 400;
 	box-shadow: none; letter-spacing: 1px; text-transform: uppercase;
@@ -473,7 +477,7 @@ nav#index li:last-child {
 }
 
 #example-block a.iphone div {
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,0.9);
 	color: #60C4FF; 
 	width: 256px;
 	height: 455px;
