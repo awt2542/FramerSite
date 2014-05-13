@@ -34,7 +34,6 @@ pre .comment {
 pre .keyword, pre .selector {
     color: #7cd5ff; /* the "new" in new Layer */
 }
-
 pre .constant.numeric { /* --- Numbers, pinkish --- */
 	color: #ff6c88;
 }
