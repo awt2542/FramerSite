@@ -277,7 +277,7 @@ a.small {
 	font-size:14px; font-weight: 400;
 }
 a.small.right {
-	float:right;
+	float:right; font-size: 12px; font-weight:500; margin-top:2px;
 }
 h1 {
 	font-size: 54px; line-height: 1;
