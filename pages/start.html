@@ -7,9 +7,9 @@
 ### Start
 <strong>Framer</strong> consists of 2 parts – the Framework and Generator.
 
-The core of Framer is a Javascript <strong>Framework</strong> that enables you to define interaction and animation in a simple, readable way. It's a small .js file that makes creating realistic prototypes a breeze – complete with animations, spring physics and 3D effects.
+The core of Framer is a Javascript <strong>Framework</strong> that enables you to define interactions and animations in a simple, readable way. It's a small framer.js file that makes creating realistic prototypes a breeze – complete with animations, spring physics and 3D effects.
 
-Framer <strong>Generator</strong> optimizes the flow of going from static mockups to an interactive prototype. It's a desktop application that extracts the resources and layer hierarchy out of Sketch or Photoshop and renders them to a Framer project folder. You can now add interaction to the layers.
+Framer <strong>Generator</strong> optimizes the flow of going from static mockups to interactive prototypes. It's a desktop application that extracts the resources and layer hierarchy out of Sketch or Photoshop files and renders them to a Framer project folder, where you can easily add interaction and animation to the layers.
 
 <hr>
 
@@ -17,7 +17,7 @@ Framer <strong>Generator</strong> optimizes the flow of going from static mockup
 <a name="installation"></a>
 
 ### Installation
-To get started, <a href="#">Download</a> Framer and unzip it. Here's what you get:
+To get started, <a href="#">download</a> Framer and unzip it. Here's what you get:
 
 <a name="installation"></a>
 
@@ -35,11 +35,11 @@ To get started, <a href="#">Download</a> Framer and unzip it. Here's what you ge
 
 <hr class="small">
 
-Open index.html and you'll see the logo bounce on a click. Framer runs best in WebKit, so please use Safari. Chrome works too, but has been rocky since they switched to Blink. Start editing app.js (in your code-editor) to add interactions and animations. Try it by adding a state to imageLayer:
+Open index.html to view the default prototype and you'll see the logo bounce on a click. To add interactions and animations, start editing app.js (in your code-editor). Try it by adding a state to imageLayer:
 
 <pre><code data-language="coffeescript">four: { y:200, scale:0.8, rotationZ:200, blur:2 }</code></pre>
 
-The imageLayer will now move up, scale, rotate and blur on the fourth click. Framer works, congrats!
+The imageLayer will now move up, scale, rotate and blur on the fourth click. Framer works, congrats! Note: Framer runs best in WebKit, so please use Safari. Chrome works too, but has been rocky since they switched to Blink.
 
 <hr>
 
@@ -49,7 +49,7 @@ The imageLayer will now move up, scale, rotate and blur on the fourth click. Fra
 
 ### JavaScript
 
-Framer makes it easier to prototype animations and interactions, but you will benefit from understanding a bit of JavaScript. If you don't know JavaScript or are just beginning, don't worry. There are many great resources to get started and while it might seem hard at first you'll see that you'll get better quickly. It's also good to know that JavaScript is worth learning apart from Framer, as you can do web, application and backend development with it.
+Framer makes it easier to prototype animations and interactions, but you will benefit from understanding a bit of JavaScript. If you don't know JavaScript or are just beginning, don't worry. There are many great resources to get started and while it might seem hard at first you'll see that you'll get better quickly. It's also good to know that JavaScript is worth learning apart from Framer, as you can do web, application, and backend development with it.
 
 <table class="last">
 		<tbody><tr>
@@ -105,21 +105,22 @@ Framer Studio works with CoffeeScript, a language that compiles into JavaScript.
 
 <img src="/static/images/Framer Generator - Icon.png" style="float:left; padding:8px 20px 0px 0">
 
-The Framer Generator.app takes static mockups from <a href="http://bohemiancoding.com/sketch/" target="_blank">Sketch</a> or <a href="http://www.adobe.com/products/photoshop.html" target="_blank">Photoshop</a> and turns them into ready to go Framer projects. From these apps, it extracts resources and folder hierarchy so you can start adding interaction and animation immediatly.
+The Framer Generator.app takes static mockups from <a href="http://bohemiancoding.com/sketch/" target="_blank">Sketch</a> or <a href="http://www.adobe.com/products/photoshop.html" target="_blank">Photoshop</a> and turns them into ready-to-go Framer projects. From these apps, it extracts resources and folder hierarchy so you can start adding interactions and animations immediately.
 
-Open Framer Generator and a Sketch or Photoshop file and click <strong>Import</strong>. Only grouped layers are imported, single layers are ignored. The hierarchy of your groups determine the hierarchy in Framer. After importing you will be presented with a folder containing your Framer project.
+ 
+With a Sketch or Photoshop file active, open Framer Generator and click <strong>Import</strong>. Only layer groups are imported; single layers are ignored. The hierarchy of your groups determine the layer hierarchy in Framer. After importing you will be presented with a folder containing your Framer project.
 
-Open index.html and start editing app.js to add behavior. You can safely move things around in Sketch or Photoshop and import again. Framer Generator will render the images and hierarchy, but not touch your code.
+Open index.html to view the project, and start editing app.js to add behavior. You can safely move things around in Sketch or Photoshop and import again. Framer Generator will update the images and hierarchy, but leave your code safe.
 
-The rules for converting Sketch and Photoshop files:
+The basics for converting Sketch and Photoshop files:
 <ul>
-	<li>Every group will become a Framer Layer, backed by the layers in that group.</li>
-	<li>By default your layers are imported under myLayers.</li>
-	<li>Access any layer by it's group name: myLayer.GroupName or myLayer["Group Name"].</li>
-	<li>Framer respects the group hierarchy, so a group in a group will become a sub Layer.</li>
-	<li>Groups with vector masks will become layers with clip enabled.</li>
+	<li>Every layer group will become a Framer Layer, with an image of the layers in that group</li>
+	<li>By default your layers are imported under a myLayers object</li>
+	<li>Access any layer by it's group name: myLayers.GroupName or myLayers["Group Name"]. For example, if you had a layer group named 'avatar' in Photoshop, you would access it in Framer with myLayers.avatar</li>
+	<li>Framer respects the group hierarchy, so a group in a group will become a subLayer</li>
+	<li>Groups with vector masks will become layers with clip enabled</li>
 	<!-- Koen vector/scroll explanation please -->
-	<li>Group names should be unique. If they're not, Framer will rename them on export.</li>
+	<li>Group names should be unique. If they're not, Framer will rename them on export</li>
 </ul>
 
 {% endfilter %}	
