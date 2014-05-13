@@ -468,23 +468,6 @@ nav#index li:last-child {
 	height: 499px;
 }
 
-#example-block a.iphone.mid:after {
-	content: url("/static/images/screen-mid.png");
-	display: block; position: absolute; top: 97px; left: 31px;
-}
-
-#example-block a.iphone.left:after {
-	content: url("/static/images/screen-left.png");
-	display: block; position: absolute; top: 97px; left: 31px;
-}
-
-#example-block a.iphone.right:after {
-	content: url("/static/images/screen-right.png");
-	display: block; position: absolute; top: 97px; left: 31px;
-}
-
-#example-block a.iphone:hover:after { -webkit-filter: blur(10px);}
-
 #example-block a.iphone div {
 	background: rgba(255,255,255,0.8);
 	color: #60C4FF; 
