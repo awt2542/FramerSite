@@ -827,6 +827,11 @@ body {
 #example-block section {
 	padding: 0 20px;
 }
+
+#used-by img+img {
+	margin-left: 12px;
+}
+
 }
 
 @media only screen and (max-width: 900px) {

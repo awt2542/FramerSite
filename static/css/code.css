@@ -35,8 +35,8 @@ pre .keyword, pre .selector {
     color: #7cd5ff; /* the "new" in new Layer */
 }
 
-pre .constant.numeric { /* --- Numbers, ORANGE --- */
-	color: #ffc960;
+pre .constant.numeric { /* --- Numbers, pinkish --- */
+	color: #ff6c88;
 }
 pre .constant.language {
     color: #91fcf3; /* Javascript, so the ".on" in imageLayer.on */
@@ -45,6 +45,11 @@ pre .constant.language {
 pre .string, pre .comment.docstring {
     color: #b3fb58; /* --- Green, the "spring" and other things between hashes --- */
 }
+
+
+/*new*/
+
+
 
 
 /*LINES*/
