@@ -1009,11 +1009,20 @@ p.small {
 	top: 40px;
 }
 
-#example-block a.iphone, #example-block a img, 
-#example-block a.iphone div, #example-block a.iphone.mid {
-	bottom: 0;
+#example-block a.iphone, #example-block a img {
+	bottom: -20px;
 	width: 200px; height: auto;
 }
+
+#example-block a.iphone.mid {
+	height: auto;
+}
+
+
+#example-block a.iphone div {
+	display: none;
+}
+
 
 #example-block a.left { left: 50px; }
 #example-block a.right { right: 50px; }
@@ -1105,8 +1114,8 @@ h2.headline {
 
 @media only screen and (max-width: 490px) {
 #example-block a { bottom: -20px; }
-#example-block a.left { left: 20px; }
-#example-block a.right { right: 20px; }
+#example-block a.left { left:10px; }
+#example-block a.right { right: 10px; }
 
 
 }
