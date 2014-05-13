@@ -696,6 +696,7 @@ nav#index li:last-child {
 	position: absolute;
 	top: 50px;
 	opacity: .5;
+	width: 11px; height: 22px;
 }
 
 #line-block img.line-arrow.first {
