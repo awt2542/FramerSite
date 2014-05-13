@@ -961,6 +961,7 @@ body {
 	position: absolute; top: 6px; left: 6px;
 	height: 32px; width: 32px;
 	cursor: hand; cursor: pointer;
+	opacity: .4;
 }
 
 #wrapper {
@@ -1216,6 +1217,10 @@ nav#index {
 #code-block div, #code-block pre {
 	border-radius: 0 !important;
 	padding-left: 10px;
+}
+
+#code-block div:after {
+	content: "Tap to animate";
 }
 
 #line-block {
