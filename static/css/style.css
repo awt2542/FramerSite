@@ -46,7 +46,7 @@ a:active {
 	padding: 60px 40px;
 }
 
-.inner {
+.inner, #wrapper.index footer.global {
 	width: 100%; height: 100%; 
 	position: relative;
 	max-width: 680px;
@@ -666,6 +666,27 @@ nav#index li:last-child {
 	font-size: 44px;
 }
 
+footer.global {
+	margin: 0 auto;
+	text-align: center;
+	border-top: 1px solid #eee;
+	padding-top: 60px;
+	margin-top: 60px;
+}
+
+#wrapper.index footer.global {
+	padding-top: 60px;
+	margin-top: 60px;
+}
+
+footer.global p, footer.global a{
+	display: inline-block; font-weight: 400;
+	box-shadow: none; letter-spacing: 1px; text-transform: uppercase;
+	color: #BEC5D0; font-size: 12px;
+	margin: 0;
+}
+
+
 /* ==================================================== */
 /* ================= Vertical SPACING (VSPACE) ================= */
 
@@ -704,8 +725,6 @@ table.last {
 /* ==================================================== */
 /* ==================================================== */
 /* ==================================================== */
-
-
 @media only screen and (min-width: 1200px) {
 #sidebar {
 	padding: 70px;
@@ -716,7 +735,12 @@ table.last {
 }
 
 #wrapper.index {
-	padding: 70px 0;
+	padding-top: 70px;
+}
+#wrapper.index footer.global,
+footer.global {
+	padding-top: 70px;
+	margin-top: 70px;
 }
 }
 
@@ -749,7 +773,7 @@ body {
 #wrapper {
 	max-width: 600px;
 }
-.inner {
+.inner, #wrapper.index footer.global {
 	max-width: 640px;
 }
 #example-block img.left { left: 0; }
@@ -775,7 +799,7 @@ body {
 	max-width: 580px;
 }
 
-.inner {
+.inner, #wrapper.index footer.global {
 	max-width: 600px;
 }
 
@@ -880,7 +904,7 @@ body {
 	padding: 60px 40px;
 }
 
-.inner {
+.inner, #wrapper.index footer.global {
 	max-width: 680px;
 	padding: 0 40px;
 }
@@ -1049,7 +1073,7 @@ h2.headline {
 
 /* Vertical spacing = 40/20 */
 #wrapper { padding:20px; padding-top: 40px; }
-.inner { padding: 0 20px; }
+.inner, #wrapper.index footer.global { padding: 0 20px; }
 #wrapper.index { padding: 40px 0; }
 
 /* Switch from 70 to 60px vertically VSPACE */
