@@ -927,8 +927,26 @@ p.small {
 	max-width: 180px;
 }
 
-#example-block img.left, #example-block img.right  {
-	display: none;
+#example-block {
+	overflow: hidden;
+	height: 400px;
+	padding: 0;
+}
+
+#example-block section {
+	position: relative; 
+	top: 40px;
+}
+
+#example-block img {
+	bottom: 0;
+	width: 200px;
+}
+#example-block img.left { left: 50px; }
+#example-block img.right { right: 50px; }
+
+#example-block img.mid  {
+	margin-left:-100px;
 }
 
 #used-by {
@@ -1013,24 +1031,29 @@ h2.headline {
 
 }
 
+@media only screen and (max-width: 490px) {
+#example-block img { bottom: -20px; }
+#example-block img.left { left: 20px; }
+#example-block img.right { right: 20px; }
+
+
+}
+
 @media only screen and (max-width: 440px) {
 
 /* Vertical spacing = 40/20 */
-#wrapper {
-	padding:20px;
-	padding-top: 40px;
-}
+#wrapper { padding:20px; padding-top: 40px; }
+.inner { padding: 0 20px; }
+#wrapper.index { padding: 40px 0; }
 
-.inner {
-	padding: 0 20px;
-}
-
-#wrapper.index {
-	padding: 40px 0;
-}
+/* Switch from 70 to 60px vertically VSPACE */
+#example-block { margin: 40px 0; }
+#used-by { margin-bottom: 40px; }
+#code-block { margin-top: 40px; }
+#code-section { margin-bottom: 40px; }
 
 h1 {
-	font-size: 30px;
+	font-size: 30px; -webkit-font-smoothing: subpixel-antialiased;
 }
 
 #footer h1 {
@@ -1038,7 +1061,7 @@ h1 {
 }
 
 h2 {
-	font-size: 19px;
+	font-size: 19px; 
 }
 
 h2.headline {
@@ -1068,10 +1091,6 @@ nav#index {
 	font-size: 10px;
 }
 
-#code-block {
-	margin-bottom: 0px;
-}
-
 #code-block div, #code-block pre {
 	border-radius: 0 !important;
 }
@@ -1079,6 +1098,10 @@ nav#index {
 #line-block {
 	height: auto;
 	margin-top: 40px;
+}
+
+#line-block p {
+	margin: 0;
 }
 
 #line-block section, #line-block section.left, #line-block section.right, #line-block section.mid {
@@ -1102,6 +1125,11 @@ nav#index {
 
 .inner.code-block{
 	padding: 0;
+}
+
+/*Hide lines on index*/
+#wrapper pre code.rainbow .line:before {
+	display: none;
 }
 }
 
