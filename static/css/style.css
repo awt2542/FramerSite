@@ -534,7 +534,7 @@ nav#index li:last-child {
 }
 
 #used-by img {
-	display: inline-block; position: relative;
+	position: relative;
 	vertical-align: middle;
 	height: auto;
 	margin-bottom: 20px;
@@ -828,10 +828,9 @@ body {
 	padding: 0 20px;
 }
 
-#used-by img+img {
-	margin-left: 12px;
+#used-by img:nth-last-child(2) {
+	margin-left: 24px;
 }
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -1007,6 +1006,11 @@ p.small {
 #example-block a.iphone:hover {
 	bottom: 0;
 }
+
+#used-by img:nth-last-child(2) {
+	margin-left: 22px;
+}
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -1014,10 +1018,13 @@ p.small {
 	font-size: 15px;
 	max-width: 240px;
 }
+
+#used-by img:nth-last-child(2) {
+	clear: both;
+}
 }
 
 @media only screen and (max-width: 580px) {
-
 #features li {
 	font-size: 13px;
 	max-width: 180px;
