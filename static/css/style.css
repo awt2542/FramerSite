@@ -28,6 +28,11 @@ a {
 	text-decoration:none;
 	color:#33b0f7;
 	font-weight: 500;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 a:hover {
@@ -361,6 +366,11 @@ p + h4 {
 	padding:12px 16px 10px; letter-spacing: 1px;
 	color: #60C4FF; position: relative; z-index: 10; display: inline-block;
 	width: 120px;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-ms-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
 }
 
 
@@ -435,36 +445,68 @@ nav#index li:last-child {
 	box-shadow: inset 0 0 0 2px #fff; text-transform: uppercase; letter-spacing: 1px;
 }
 
-#example-block a:hover {
+#example-block a.more:hover {
 	opacity: 1; background: #fff;
 	color: #92CEE1;
 }
 
 /* ------------- */
 
-#example-block img {
+#example-block a.iphone {
 	position: absolute; bottom: -15px; width: 318px;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	-webkit-transition: bottom 0.2s ease;
+	-moz-transition: bottom 0.2s ease;
+	-ms-transition: bottom 0.2s ease;
+	-o-transition: bottom 0.2s ease;
+	transition: bottom 0.2s ease;
+	height: 444px;
 }
 
-#example-block img:hover {
-	bottom: 0;
+#example-block a.iphone.mid {
+	height: 499px;
 }
 
-#example-block img.left {
+#example-block a.iphone div {
+	background: rgba(0,0,0,.8);
+	color: #fff;
+	width: 256px;
+	height: 455px;
+	position: absolute; top: 96px; left: 31px;
+	z-index: 25; text-align: center; line-height: 455px;
+	font-size: 11px; font-weight: 500; text-transform: uppercase;
+	letter-spacing: 1px; display: inline-block;
+	opacity: 0; visibility: hidden;
+	-webkit-transition: opacity 0.2s ease;
+	-moz-transition: opacity 0.2s ease;
+	-ms-transition: opacity 0.2s ease;
+	-o-transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease;
+	
+}
+
+#example-block a.iphone div span {
+	padding: 10px 14px 8px 14px; border-radius: 4px;
+	box-shadow: inset 0 0 0 2px rgba(255,255,255,.3);
+}
+
+#example-block a:hover {
+	bottom: 0; opacity: 1;
+}
+
+#example-block a.iphone:hover div {
+	visibility: visible; opacity: 1;
+}
+
+#example-block a.left {
 	left: -50px;
 }
 
-#example-block img.mid {
+#example-block a.mid {
 	left: 50%; margin-left: -159px;
-	z-index: 10;
+	z-index: 50;
 }
 
-#example-block img.right {
+#example-block a.right {
 	right: -50px;
 }
 
@@ -774,8 +816,8 @@ body {
 .inner, #wrapper.index footer.global p {
 	max-width: 600px;
 }
-#example-block img.left { left: 0; }
-#example-block img.right { right: 0; }
+#example-block a.left { left: 0; }
+#example-block a.right { right: 0; }
 
 #example-block section {
 	padding: 0 20px;
@@ -970,10 +1012,10 @@ p.small {
 	bottom: 0;
 	width: 200px;
 }
-#example-block img.left { left: 50px; }
-#example-block img.right { right: 50px; }
+#example-block a.left { left: 50px; }
+#example-block a.right { right: 50px; }
 
-#example-block img.mid  {
+#example-block a.mid  {
 	margin-left:-100px;
 }
 
@@ -1059,9 +1101,9 @@ h2.headline {
 }
 
 @media only screen and (max-width: 490px) {
-#example-block img { bottom: -20px; }
-#example-block img.left { left: 20px; }
-#example-block img.right { right: 20px; }
+#example-block a { bottom: -20px; }
+#example-block a.left { left: 20px; }
+#example-block a.right { right: 20px; }
 
 
 }
