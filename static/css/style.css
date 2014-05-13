@@ -648,7 +648,10 @@ nav#index li:last-child {
 	position: relative;
 	margin-top: 70px;
 	width: 100%;
-	height: 160px;
+	min-height: 300px;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid #eee;
 }
 
 #line-block h3 {
