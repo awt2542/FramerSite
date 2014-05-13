@@ -42,7 +42,7 @@ pre .constant.language {
 }
 
 pre .string, pre .comment.docstring {
-    color: #b3fb58; /* --- Green, the "spring" and other things between hashes --- */
+    color: #3ACC14; /* --- Green, the "spring" and other things between hashes --- */
 }
 
 
