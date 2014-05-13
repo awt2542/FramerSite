@@ -520,12 +520,12 @@ nav#index li:last-child {
 	margin-right:15px;
 }
 
-#features li:first-child img, #features li:last-child img {
-	top: 2px;
+#features li img.icon-flexible {
+	top: 1px;
 }
 
-#features li:nth-child(3) img {
-	top: 1px;
+#features li img.icon-speed {
+	top: 0px;
 }
 
 #features li p {
@@ -696,12 +696,7 @@ table.last {
 
 
 @media only screen and (min-width: 1200px) {
-body {
-	padding-left: 260px;
-}
-
 #sidebar {
-	width: 260px;
 	padding: 70px;
 }
 
