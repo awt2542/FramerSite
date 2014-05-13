@@ -265,13 +265,14 @@ h2 strong, h3, strong, .headline {
 }
 
 p.small {
-	font-size: 12px; text-transform: uppercase; font-weight: 400; letter-spacing: 1px;
+	font-size: 12px; text-transform: uppercase; font-weight: 400; letter-spacing: 1px; 
 }
-
 a.small {
-	font-size:17px; font-weight: 400;
+	font-size:14px; font-weight: 400;
 }
-
+a.small.right {
+	float:right;
+}
 h1 {
 	font-size: 54px; line-height: 1;
 	font-weight: 300; color: #222;

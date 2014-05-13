@@ -13,24 +13,22 @@ The core of Framer is a Javascript <strong>Framework</strong> that enables you t
 ---
 
 <!-- Layers -->
-<a name="basics"></a>
+<a name="basics"></a> 
 
 ### Basics
 
-#### Layers
+#### Layers <a href="docs.html#layers" class="small right">Learn more</a>
 A layer is just a rectangle that draws stuff in the browser. It has a set of basic properties like x, y, width and height. It also has other properties like opacity, scale, and blur. Layers can display images, text, or both.
 
 <pre><code data-language="coffeescript"># This creates a new layer, and sets its x property to 100
 myLayer = new Layer x:0, y:0, width:128, height:128
 myLayer.x = 100</code></pre>
 
-<a href="docs.html#layers" class="small">Learn more</a>
-
-<hr class="small">
+<hr>
 
 <!-- Hierarchy -->
 <a name="basics"></a>
-#### Hierarchy
+#### Hierarchy <a href="docs.html#layers&amp;hierarchy" class="small right">Learn more</a>
 Layers can contain other layers. We call these subLayers. The parent of a layer is called a superLayer. Layers inherit from their superLayers. For example, if you change the opacity of a layer to 0.5, all subLayers will have opacity of 0.5.
 
 A layer's coordinates are based on it's superLayer. So with an x and y of zero, a layer gets placed in the top left corner of its superLayer.
@@ -39,9 +37,7 @@ You can manipulate the layer hierarchy as you need to.
 <pre><code data-language="coffeescript"># Adds a subLayer to a layer
 parentLayer.addSubLayer(childLayer)</code></pre>
 
-<a href="docs.html#layers&amp;hierarchy" class="small">Learn more</a>
-
-<hr class="small">
+<hr>
 
 <!-- types -->
 <!-- Koen, since there are no longer types do you want to update this? -->
@@ -51,11 +47,14 @@ Everything is based on a layer. But some layers have a specific task like scroll
 
 It is easy to create components consisting of multiple layers that you can re-use across projects, for example a collection layer.
 
-<hr class="small">
+<hr>
 
 <!-- Animation -->
 <a name="basics"></a>
-#### Animation
+
+#### Animation <a href="docs.html#animations" class="small right">Learn more</a>
+
+
 Most properties of a layer can be animated: x, y, width, height, scale, opacity, etc. You can animate multiple properties at the same time.
 
 Animations optionally take a curve that describes the type of animation. You can use pre-defined curves like 'linear' or 'ease-in', custom ones, or spring animations.
@@ -68,16 +67,13 @@ springUp = layer.animate({
 		y: layer.y + 100
 	}
 	curve: 'spring(100,10,0)'
-)}
-</code></pre>
+)}</code></pre>
 
-<a href="docs.html#animations" class="small">Learn more</a>
-
-<hr class="small">
+<hr>
 
 <!-- Styling -->
 <a name="basics"></a>
-#### Styling
+#### Styling <a href="docs.html#layers&amp;style" class="small right">Learn more</a>
 Because Framer runs in the browser, you can simply use html and css to style any layer. To set the html contents of a layer use <code class="inline">somelayer.html = "hello".</code> You can set either text or html.
 
 To add css styling, you edit the properties of the layer's style attribute. You can set these one at the time like <code class="inline">layer.style.backgroundColor = "red"</code> or <code class="inline">layer.style['background-color'] = "red"</code>, or also update multiple properties at the same time as in the example below. Please note that while most Framer properties take numeric values, the style attribute requires specific css values like <code class="inline">layer.style.lineHeight = "16px"</code>. You can also set a css class on a layer by doing <code class="inline">layer.classList.add("myClass");</code>. This way you, can use an external css file for styling.
@@ -92,13 +88,11 @@ layer.style = {
 
 Note: if you set a single style on a layer, don't forget to use the javascript syntax, e.g. 'font-size' would be layer.fontSize
 
-<a href="docs.html#layers&amp;style" class="small">Learn more</a>
-
-<hr class="small">
+<hr>
 
 <!-- Events -->
 <a name="basics"></a>
-#### Events
+#### Events <a href="docs.html#events" class="small right">Learn more</a>
 Events are things that can happen to a layer, for example a user click or mouse over, or also a scroll. You can listen to these events and respond to them to build simple (or complex) interactions.
 
 There are many events you can listen to, but the most interesting are probably click, dblclick, mouseover, mouseout, and keydown. Mobile browsers have specific touch events: touchstart, touchmove and touchend. 
@@ -120,7 +114,7 @@ layer.on(Events.TouchEnd, function() {
  console.log("The touch has ended :(")
 })</code></pre>
 
-<a href="docs.html#events" class="small">Learn more</a>
+
 <hr>
 
 <!-- State Machine -->
@@ -144,8 +138,8 @@ imageLayer.states.animationOptions =
 imageLayer.on Events.Click, ->
 	imageLayer.states.next()</code></pre>
 <a href="docs.html#layers&amp;state" class="small">Learn more</a>
-<hr>
 
+<hr>
 
 <!-- Resources -->
 
