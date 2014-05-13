@@ -444,11 +444,11 @@ nav#index li:last-child {
 
 #example-block img {
 	position: absolute; bottom: -15px; width: 318px;
-	-webkit-transition: all 0.15s ease;
-	-moz-transition: all 0.15s ease;
-	-ms-transition: all 0.15s ease;
-	-o-transition: all 0.15s ease;
-	transition: all 0.15s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 #example-block img:hover {
@@ -736,8 +736,6 @@ table.last {
 #wrapper.index {
 	padding-top: 70px;
 }
-
-#wrapper.index footer.global p,
 footer.global {
 	padding-top: 70px;
 	margin-top: 70px;
