@@ -37,7 +37,7 @@ pre .constant{
 }
 
 pre .constant.numeric { /* --- Numbers, pinkish --- */
-	color: #ff6c88;
+	color: #ff996c;
 }
 pre .constant.language {
     color: #fcfcfc; /* Javascript, so the ".on" in imageLayer.on */
