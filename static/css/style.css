@@ -1030,6 +1030,9 @@ p.small {
 #used-by img:nth-last-child(2) {
 	clear: both;
 }
+#code-block div:after {
+	content: "Tap to animate";
+}
 }
 
 @media only screen and (max-width: 580px) {
@@ -1217,10 +1220,6 @@ nav#index {
 #code-block div, #code-block pre {
 	border-radius: 0 !important;
 	padding-left: 10px;
-}
-
-#code-block div:after {
-	content: "Tap to animate";
 }
 
 #line-block {
