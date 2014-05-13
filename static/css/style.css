@@ -1057,7 +1057,7 @@ h1 {
 }
 
 #footer h1 {
-	font-size: 26px;
+	font-size: 28px;
 }
 
 h2 {
@@ -1074,13 +1074,13 @@ nav#index {
 }
 
 #features {
-	margin-bottom: -20px;
 }
 
 #features li {
 	max-width: 100%;
-	margin-bottom: 20px;
+	font-size: 15px;
 }
+
 
 #features li:nth-child(even) {
 	float: none;
@@ -1093,6 +1093,7 @@ nav#index {
 
 #code-block div, #code-block pre {
 	border-radius: 0 !important;
+	padding-left: 10px;
 }
 
 #line-block {
@@ -1104,19 +1105,30 @@ nav#index {
 	margin: 0;
 }
 
+#line-block h3 {
+	margin-bottom: 15px;
+}
+
 #line-block section, #line-block section.left, #line-block section.right, #line-block section.mid {
 	position: relative; left: 0; right: 0; margin: 0;
-	display: block; padding: 0;
-	width: 100%;
+	display: block; 
+	width: 100%; max-width: 50%;
 	margin: 0 auto; 
 	margin-bottom: 40px; float: none;
 }
 
-#line-block section.right {
-	margin-bottom: 0;
-}
 #line-block img.line-arrow {
 	display: none;
+}
+
+#line-block section {
+	padding-bottom: 40px;
+	border-bottom: 1px solid #eee;
+}
+
+#line-block section.right {
+	margin-bottom: 0;
+	padding: 0; border: none;
 }
 
 #code-section {
