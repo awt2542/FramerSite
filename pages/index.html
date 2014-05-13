@@ -79,24 +79,27 @@
 	<section id="code-block" class="clearfix">
 		<div><iframe src="/static/examples/codeblock/index.html"></iframe></div>
 		
-<pre><code data-language="coffeescript"># Define the imageLayer
+<pre><code data-language="javascript"># Define the imageLayer
 Icon = new Layer({x:0, y:0, width:128, height:128})
 Icon.image = "images/icon.png"
 Icon.center()
 
 # Define a state
-Icon.states.add
+Icon.states.add({
 	bounce: {scale: 0.8},
 	hue: {hueRotate: -20},
 	rotate: {rotationZ: 90}
+})
 
 # Set the animation options
-Icon.states.animationOptions = 
+Icon.states.animationOptions = {
 	curve: "spring(600,18,0)"
+}
 
 # On click, go to the next state
-Icon.on Events.Click, -> 
-	Icon.states.next()</code></pre>
+Icon.on(Events.Click, function(event) {
+	Icon.states.next()
+})</code></pre>
 			
 	</section>
 	</div> <!--inner-->
