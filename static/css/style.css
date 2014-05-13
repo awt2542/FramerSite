@@ -292,7 +292,7 @@ h1 {
 
 h1.title {
 	font-size: 15px; color: #60C4FF;
-	text-transform: uppercase; letter-spacing: 0;
+	text-transform: uppercase; letter-spacing: 1px;
 	font-weight: 500; 
 	display: inline-block; -webkit-font-smoothing: subpixel-antialiased;
 }
