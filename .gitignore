@@ -4,5 +4,4 @@ build
 *.pyc
 .deploy
 *.espressostorage
-
-*.espressostorage
+*.esproj
