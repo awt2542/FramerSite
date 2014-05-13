@@ -29,27 +29,23 @@ code.inline {
 }
 
 pre .comment {
-    color: #84D1FF; /* base01 */
+    color: #7cd5ff; /* BLUE BASE */
+}
+pre .keyword, pre .selector {
+    color: #7cd5ff; /* the "new" in new Layer */
 }
 
-pre .constant{
-    color: #839496; /* All numbers */  
-}
-
-pre .constant.numeric { /* --- Numbers, pinkish --- */
-	color: #ff996c;
+pre .constant.numeric { /* --- Numbers, ORANGE --- */
+	color: #ffc960;
 }
 pre .constant.language {
-    color: #fcfcfc; /* Javascript, so the ".on" in imageLayer.on */
+    color: #91fcf3; /* Javascript, so the ".on" in imageLayer.on */
 }
 
 pre .string, pre .comment.docstring {
-    color: #acf351; /* --- Green, the "spring" and other things between hashes --- */
+    color: #b3fb58; /* --- Green, the "spring" and other things between hashes --- */
 }
 
-pre .keyword, pre .selector {
-    color: #84D1FF; /* the "new" in new Layer */
-}
 
 /*LINES*/
 pre code.rainbow .line:before {
