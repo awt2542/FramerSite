@@ -28,6 +28,11 @@ a {
 	text-decoration:none;
 	color:#33b0f7;
 	font-weight: 500;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 a:hover {
@@ -361,13 +366,18 @@ p + h4 {
 	padding:12px 16px 10px; letter-spacing: 1px;
 	color: #60C4FF; position: relative; z-index: 10; display: inline-block;
 	width: 120px;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-ms-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
 }
-
 
 #header a.green, #footer a.green {
 	box-shadow: inset 0 0 0 2px #7ED321;
 	color: #7ED321;
 	margin-right: 10px;
+	margin-bottom: 20px
 }
 
 #header a.small, #footer a.small {
@@ -376,6 +386,8 @@ p + h4 {
 	color: #BEC5D0; font-size: 12px;
 	margin-top: 20px; width: auto;
 	padding: 0;
+	display: block;
+	line-height: 0;
 }
 
 #header a:hover , #footer a:hover{
@@ -457,11 +469,11 @@ nav#index li:last-child {
 }
 
 #example-block a.iphone div {
-	background: rgba(0,0,0,.8);
-	color: #fff;
+	background: rgba(255,255,255,0.8);
+	color: #60C4FF; 
 	width: 256px;
 	height: 455px;
-	position: absolute; top: 96px; left: 31px;
+	position: absolute; top: 97px; left: 31px;
 	z-index: 25; text-align: center; line-height: 455px;
 	font-size: 11px; font-weight: 500; text-transform: uppercase;
 	letter-spacing: 1px; display: inline-block;
@@ -471,12 +483,11 @@ nav#index li:last-child {
 	-ms-transition: opacity 0.2s ease;
 	-o-transition: opacity 0.2s ease;
 	transition: opacity 0.2s ease;
-	
 }
 
 #example-block a.iphone div span {
-	padding: 10px 14px 8px 14px; border-radius: 4px;
-	box-shadow: inset 0 0 0 2px rgba(255,255,255,.3);
+	padding: 10px 12px 8px 12px; border-radius: 4px;
+	box-shadow: inset 0 0 0 2px #60C4FF; background: rgba(255,255,255,1);
 }
 
 #example-block a:hover {
@@ -998,10 +1009,12 @@ p.small {
 	top: 40px;
 }
 
-#example-block img {
+#example-block a.iphone, #example-block a img, 
+#example-block a.iphone div, #example-block a.iphone.mid {
 	bottom: 0;
-	width: 200px;
+	width: 200px; height: auto;
 }
+
 #example-block a.left { left: 50px; }
 #example-block a.right { right: 50px; }
 
