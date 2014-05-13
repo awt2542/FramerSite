@@ -545,7 +545,7 @@ nav#index li:last-child {
 }
 
 #used-by img+img {
-	margin-left: 22px;
+	margin-left: 21px;
 }
 
 /* Tweaking vertical alignment */
@@ -1030,6 +1030,7 @@ p.small {
 #used-by img:nth-last-child(2) {
 	clear: both;
 }
+
 #code-block div:after {
 	content: "Tap to animate";
 }
