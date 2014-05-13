@@ -47,7 +47,8 @@ a:active {
 }
 
 .inner {
-	width: 100%; height: 100%; position: relative;
+	width: 100%; height: 100%; 
+	position: relative;
 	max-width: 680px;
 	margin:0 auto;
 	padding: 0 40px;
@@ -413,9 +414,10 @@ nav#index li:last-child {
 #example-block {
 	background: #92CEE1;
 	/* maybe this? background: #8EDAF1; */
-	height: 560px;
+	height: 540px;
 	width: 100%; 
 	margin: 70px 0;
+	overflow: hidden;
 	padding: 0 40px;
 }
 
@@ -428,7 +430,7 @@ nav#index li:last-child {
 	color: #fff; float: left; font-size: 12px; line-height: 1.5; letter-spacing: 1px;
 }
 
-#example-block a {
+#example-block a.more {
 	color: #fff; float: right; font-size: 12px; padding: 10px 16px 8px 16px; border-radius: 5px;
 	box-shadow: inset 0 0 0 2px #fff; text-transform: uppercase; letter-spacing: 1px;
 }
@@ -441,7 +443,16 @@ nav#index li:last-child {
 /* ------------- */
 
 #example-block img {
-	position: absolute; bottom: 0; width: 318px;
+	position: absolute; bottom: -15px; width: 318px;
+	-webkit-transition: all 0.15s ease;
+	-moz-transition: all 0.15s ease;
+	-ms-transition: all 0.15s ease;
+	-o-transition: all 0.15s ease;
+	transition: all 0.15s ease;
+}
+
+#example-block img:hover {
+	bottom: 0;
 }
 
 #example-block img.left {
@@ -660,7 +671,7 @@ nav#index li:last-child {
 
 /*40px between items, 70px between sections*/
 
-p, iframe {
+p, #wrapper iframe{
 	margin-bottom: 20px;
 }
 
