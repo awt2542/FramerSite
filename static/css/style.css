@@ -1059,15 +1059,17 @@ p.small {
 	width: 200px; height: auto;
 }
 
+#example-block a.iphone:hover {
+	bottom: -5px;
+}
+
 #example-block a.iphone.mid {
 	height: auto;
 }
 
-
 #example-block a.iphone div {
 	display: none;
 }
-
 
 #example-block a.left { left: 50px; }
 #example-block a.right { right: 50px; }
