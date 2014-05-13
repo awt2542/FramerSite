@@ -20,8 +20,8 @@ The core of Framer is a Javascript <strong>Framework</strong> that enables you t
 #### Layers <a href="docs.html#layers" class="small right">More</a>
 A layer is just a rectangle that draws stuff in the browser. It has a set of basic properties like x, y, width and height. It also has other properties like opacity, scale, and blur. Layers can display images, text, or both.
 
-<pre><code data-language="coffeescript"># This creates a new layer, and sets its x property to 100
-myLayer = new Layer x:0, y:0, width:128, height:128
+<pre><code data-language="javascript"># This creates a new layer, and sets its x property to 100
+myLayer = new Layer({x:0, y:0, width:128, height:128})
 myLayer.x = 100</code></pre>
 
 <hr>
@@ -34,18 +34,26 @@ Layers can contain other layers. We call these subLayers. The parent of a layer 
 A layer's coordinates are based on it's superLayer. So with an x and y of zero, a layer gets placed in the top left corner of its superLayer.
 
 You can manipulate the layer hierarchy as you need to.
-<pre><code data-language="coffeescript"># Adds a subLayer to a layer
+<pre><code data-language="javascript"># Adds a subLayer to a layer
 parentLayer.addSubLayer(childLayer)</code></pre>
 
 <hr>
 
 <!-- types -->
-<!-- Koen, since there are no longer types do you want to update this? -->
-<a name="basics"></a>
-#### Types
-Everything is based on a layer. But some layers have a specific task like scrolling their contents or showing an image. We call these subclasses of a layer, for example an Imagelayer or Scrolllayer.
 
-It is easy to create components consisting of multiple layers that you can re-use across projects, for example a collection layer.
+<a name="basics"></a>
+#### Images and Scrolling
+Most layers will just contain an image. They are pretty easy to set with the image property.
+<pre><code data-language="javascript"># Set an image
+layer = new Layer({width:100, height:100, image:"my-image.png"})</code></pre>
+
+Layers can also scroll their contents. You can enable scrolling with the scroll keyword.
+<pre><code data-language="javascript"># Make layer scrollable
+layer = new Layer({width:100, height:100})
+layer.scroll = true</code></pre>
+
+
+It is easy to create components consisting of multiple layers that you can re-use across projects. A component with a specific task containing different layers is called a View (other names are widgets or components). Some examples of Views on iOS are TableView, CollectionView etc.
 
 <hr>
 
@@ -61,11 +69,9 @@ Animations optionally take a curve that describes the type of animation. You can
 
 You can create an animation explicitly with <code class="inline">myAnimation = layer.animate({..})</code> or with the shortcut on any layer <code class="inline">layer.animate({..}).</code>
 
-<pre><code data-language="coffeescript"># Creates an animation using a spring
+<pre><code data-language="javascript"># Creates an animation using a spring
 springUp = layer.animate({
-	properties: {
-		y: layer.y + 100
-	}
+	properties: { y: layer.y + 100 }
 	curve: 'spring(100,10,0)'
 )}</code></pre>
 
@@ -78,7 +84,7 @@ Because Framer runs in the browser, you can simply use html and css to style any
 
 To add css styling, you edit the properties of the layer's style attribute. You can set these one at the time like <code class="inline">layer.style.backgroundColor = "red"</code> or <code class="inline">layer.style['background-color'] = "red"</code>, or also update multiple properties at the same time as in the example below. Please note that while most Framer properties take numeric values, the style attribute requires specific css values like <code class="inline">layer.style.lineHeight = "16px"</code>. You can also set a css class on a layer by doing <code class="inline">layer.classList.add("myClass");</code>. This way you, can use an external css file for styling.
 
-<pre><code data-language="coffeescript"># Set multiple layer styles at once
+<pre><code data-language="javascript"># Set multiple layer styles at once
 layer.style = {
 	"font-size":"18px",
 	"text-align":"center",
@@ -101,19 +107,20 @@ Framer has a helper method that maps the most common events nicely for you, for 
 
 To listen to an event use <code class="inline">layer.on(event, function(){}).</code> To stop listening you can use <code class="inline">layer.off(event, function(){}).</code> You can listen to multiple events at the same time.
 
-<pre><code data-language="coffeescript"># Listen to multiple events on a layer
-layer.on(Events.TouchStart, function() {
+<pre><code data-language="javascript"># Listen to multiple events on a layer
+layer.on(Events.TouchStart, function(event) {
  console.log("Touch/click start happened on layer")
 })
 
-layer.on(Events.TouchMove, function() {
+layer.on(Events.TouchMove, function(event) {
  console.log("Touch/click is moving!")
 })
 
-layer.on(Events.TouchEnd, function() {
+layer.on(Events.TouchEnd, function(event) {
  console.log("The touch has ended :(")
 })</code></pre>
 
+You'll notice the "event" in function. It's an object with additional information about the event that happened like it's position.
 
 <hr>
 
@@ -125,19 +132,22 @@ A new feature in Framer 3, the state machine is incredibly powerful and useful. 
 
 States are most useful when a layer has to be on the screen, but in multiple different positions/sizes, etc. For example, let's use the state machine to add three states to a layer, and then animate between them on a click.
 
-<pre><code data-language="coffeescript"># Add three states to the layer
-chair.states.add
-	tooSmall: {scale:0.8}
-	tooBig:  {scale:01.2}
-	justRight:	{scale:1.0}
+<pre><code data-language="javascript"># Add three states to the layer
+chair.states.add({
+	tooSmall:  {scale: 0.8}
+	tooBig:    {scale: 1.2}
+	justRight: {scale: 1.0}
+})
 
 # Set the default animation options for the layer
-imageLayer.states.animationOptions =
+imageLayer.states.animationOptions = {
 	curve: "spring(200,12,10)"
+}
 
 # On a click, go to the next state
-imageLayer.on Events.Click, ->
-	imageLayer.states.next()</code></pre>
+imageLayer.on(Events.Click, function(event) {
+	imageLayer.states.next()
+})</code></pre>
 
 <hr>
 
