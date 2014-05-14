@@ -1,0 +1,68 @@
+@-webkit-keyframes turn-right {
+50% { right: -100px; }
+100% { right: 1px; }
+}
+
+@-moz-keyframes turn-right {
+50% { right: -100px; }
+100% { right: 1px; }
+}
+
+@-o-keyframes turn-right {
+50% { right: -100px; }
+100% { right: 1px; }
+}
+@-ms-keyframes turn-right {
+50% { right: -100px; }
+100% { right: 1px; }
+}
+
+@keyframes turn-right {
+50% { right: -100px; }
+100% { right: 1px; }
+}
+
+.turn-right {
+-webkit-animation: turn-right 0.8s ease forwards;
+-moz-animation: turn-right 0.6s ease forwards;
+-ms-animation: turn-right 0.6s ease forwards;
+-o-animation: turn-right 0.6s ease forwards;
+animation: turn-right 0.6s ease forwards;
+}
+
+@-webkit-keyframes turn-left {
+50% { left: -100px; }
+80% { z-index: 1; }
+100% { left: 1px; z-index: 100; }
+}
+
+@-moz-keyframes turn-right {
+50% { left: -100px; }
+80% { z-index: 1; }
+100% { left: 1px; z-index: 100; }
+}
+
+@-o-keyframes turn-right {
+50% { left: -100px; }
+80% { z-index: 1; }
+100% { left: 1px; z-index: 100; }
+}
+@-ms-keyframes turn-right {
+50% { left: -100px; }
+80% { z-index: 1; }
+100% { left: 1px; z-index: 100; }
+}
+
+@keyframes turn-right {
+50% { left: -100px; }
+80% { z-index: 1; }
+100% { left: 1px; z-index: 100; }
+}
+
+.turn-left {
+-webkit-animation: turn-left 0.8s ease forwards;
+-moz-animation: turn-left 0.6s ease forwards;
+-ms-animation: turn-left 0.6s ease forwards;
+-o-animation: turn-left 0.6s ease forwards;
+animation: turn-left 0.6s ease forwards;
+}

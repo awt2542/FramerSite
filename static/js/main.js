@@ -38,3 +38,42 @@ function retina() {
 };
  
 $(document).ready(retina);
+ 
+/* ========================= */
+
+ if ( $( "#sidebar" ).hasClass( "more" ) ) {
+	$("#sidebar ul#more section").addClass("appear");
+	$("#sidebar ul#more svg").hide();
+}
+
+/* ========================= */
+
+ if ( $( "#sidebar" ).hasClass( "docs" ) ) {
+	$("#sidebar ul#docs section").addClass("appear");
+	$("#sidebar ul#docs svg").hide();
+}
+
+/* ========================= */
+
+ if ( $( "#sidebar" ).hasClass( "learn" ) ) {
+	$("#sidebar ul#learn section").addClass("appear");
+	$("#sidebar ul#learn svg").hide();
+}
+
+/* ========================= */
+
+ if ( $( "#sidebar" ).hasClass( "examples" ) ) {
+	$("#sidebar ul#examples section").addClass("appear");
+	$("#sidebar ul#examples svg").hide();
+}
+
+/* ========================= */
+
+ if ( $( "#sidebar" ).hasClass( "start" ) ) {
+	$("#sidebar ul#start section").addClass("appear");
+	$("#sidebar ul#start svg").hide();
+}
+
+/* ========================= */
+
+

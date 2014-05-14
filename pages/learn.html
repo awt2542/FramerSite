@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% block sidebarclass %}learn{% endblock %}
+
+{% block content %}
+{% filter markdown %}
+
+<!-- Learn -->
+<a name="learn"></a>
+### Learn
+
+This section covers the basic principles of Framer. It's a good overview of the core principles on which Framer was built.
+
+---
+
+<!-- Layers -->
+<a name="basics"></a> 
+
+### Basics
+
+#### Layers <a href="docs.html#layers" class="small right">More</a>
+A layer is just a rectangle that draws stuff in the browser. It has a set of basic properties like x, y, width and height. It also has other properties like opacity, scale, and blur. Layers can display images, text, or both.
+
+<pre><code data-language="javascript"># This creates a new layer, and sets its x property to 100
+myLayer = new Layer({x:0, y:0, width:128, height:128})
+myLayer.x = 100</code></pre>
+
+<hr>
+
+<!-- Hierarchy -->
+<a name="basics"></a>
+#### Hierarchy <a href="docs.html#layers&amp;hierarchy" class="small right">More</a>
+Layers can contain other layers. We call these subLayers. The parent of a layer is called a superLayer. Layers inherit from their superLayers. For example, if you change the opacity of a layer to 0.5, all subLayers will have opacity of 0.5.
+
+A layer's coordinates are based on it's superLayer. So with an x and y of zero, a layer gets placed in the top left corner of its superLayer.
+
+You can manipulate the layer hierarchy as you need to.
+<pre><code data-language="javascript"># Adds a subLayer to a layer
+parentLayer.addSubLayer(childLayer)</code></pre>
+
+<hr>
+
+<!-- types -->
+
+<a name="basics"></a>
+#### Images and Scrolling
+Most layers will just contain an image. They are pretty easy to set with the image property.
+<pre><code data-language="javascript"># Set an image
+layer = new Layer({width:100, height:100, image:"my-image.png"})</code></pre>
+
+Layers can also scroll their contents. You can enable scrolling with the scroll keyword.
+<pre><code data-language="javascript"># Make layer scrollable
+layer = new Layer({width:100, height:100})
+layer.scroll = true</code></pre>
+
+
+It is easy to create components consisting of multiple layers that you can re-use across projects. A component with a specific task containing different layers is called a View (other names are widgets or components). Some examples of Views on iOS are TableView, CollectionView etc.
+
+<hr>
+
+<!-- Animation -->
+<a name="basics"></a>
+
+#### Animation <a href="docs.html#animations" class="small right">More</a>
+
+
+Most properties of a layer can be animated: x, y, width, height, scale, opacity, etc. You can animate multiple properties at the same time.
+
+Animations optionally take a curve that describes the type of animation. You can use pre-defined curves like 'linear' or 'ease-in', custom ones, or spring animations.
+
+You can create an animation explicitly with <code class="inline">myAnimation = layer.animate({..})</code> or with the shortcut on any layer <code class="inline">layer.animate({..}).</code>
+
+<pre><code data-language="javascript"># Creates an animation using a spring
+springUp = layer.animate({
+	properties: { y: layer.y + 100 }
+	curve: 'spring(100,10,0)'
+)}</code></pre>
+
+<hr>
+
+<!-- Styling -->
+<a name="basics"></a>
+#### Styling <a href="docs.html#layers&amp;style" class="small right">More</a>
+Because Framer runs in the browser, you can simply use html and css to style any layer. To set the html contents of a layer use <code class="inline">somelayer.html = "hello".</code> You can set either text or html.
+
+To add css styling, you edit the properties of the layer's style attribute. You can set these one at the time like <code class="inline">layer.style.backgroundColor = "red"</code> or <code class="inline">layer.style['background-color'] = "red"</code>, or also update multiple properties at the same time as in the example below. Please note that while most Framer properties take numeric values, the style attribute requires specific css values like <code class="inline">layer.style.lineHeight = "16px"</code>. You can also set a css class on a layer by doing <code class="inline">layer.classList.add("myClass");</code>. This way you, can use an external css file for styling.
+
+<pre><code data-language="javascript"># Set multiple layer styles at once
+layer.style = {
+	"font-size":"18px",
+	"text-align":"center",
+	"line-height":"24px"
+	"color":"red"
+}</code></pre>
+
+Note: if you set a single style on a layer, don't forget to use the javascript syntax, e.g. 'font-size' would be layer.fontSize
+
+<hr>
+
+<!-- Events -->
+<a name="basics"></a>
+#### Events <a href="docs.html#events" class="small right">More</a>
+Events are things that can happen to a layer, for example a user click or mouse over, or also a scroll. You can listen to these events and respond to them to build simple (or complex) interactions.
+
+There are many events you can listen to, but the most interesting are probably click, dblclick, mouseover, mouseout, and keydown. Mobile browsers have specific touch events: touchstart, touchmove and touchend. 
+
+Framer has a helper method that maps the most common events nicely for you, for example 'Events.TouchStart' will be called on 'mousedown' for computers, or 'touchstart' for mobile devices.
+
+To listen to an event use <code class="inline">layer.on(event, function(){}).</code> To stop listening you can use <code class="inline">layer.off(event, function(){}).</code> You can listen to multiple events at the same time.
+
+<pre><code data-language="javascript"># Listen to multiple events on a layer
+layer.on(Events.TouchStart, function(event) {
+ console.log("Touch/click start happened on layer")
+})
+
+layer.on(Events.TouchMove, function(event) {
+ console.log("Touch/click is moving!")
+})
+
+layer.on(Events.TouchEnd, function(event) {
+ console.log("The touch has ended :(")
+})</code></pre>
+
+You'll notice the "event" in function. It's an object with additional information about the event that happened like it's position.
+
+<hr>
+
+<!-- State Machine -->
+<a name="basics"></a>
+#### State Machine <a href="docs.html#layers&amp;state" class="small right">More</a>
+
+A new feature in Framer 3, the state machine is incredibly powerful and useful. It allows you to add multiple states to a layer. Think of a state as a set of one or more properties for the layer. A layer can have multiple states, you can add and remove them, and switch or animate between states. All of the states for a layer can have the same animation properties as well, such as the animation curve. You can access any state for a layer at any time. Layers also have a 'default' state as well, which are the properties of the layer at time of creation.
+
+States are most useful when a layer has to be on the screen, but in multiple different positions/sizes, etc. For example, let's use the state machine to add three states to a layer, and then animate between them on a click.
+
+<pre><code data-language="javascript"># Add three states to the layer
+chair.states.add({
+	tooSmall:  {scale: 0.8},
+	tooBig:    {scale: 1.2},
+	justRight: {scale: 1.0}
+})
+
+# Set the default animation options for the layer
+imageLayer.states.animationOptions = {
+	curve: "spring(200,12,10)"
+}
+
+# On a click, go to the next state
+imageLayer.on(Events.Click, function(event) {
+	imageLayer.states.next()
+})</code></pre>
+
+<hr>
+
+<!-- Resources -->
+
+<a name="resources"></a>
+
+### Resources
+Optimize your prototyping workflow with these tools.
+
+<table>
+		<tbody><tr>
+			<th width="170px">Product</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td><a href="http://cactusformac.com" target="_blank">Cactus for Mac</a></td>
+			<td>Auto-refreshes the browser on change. Get immediate feedback on your prototype</td>
+		</tr>
+		<tr>
+			<td><a href="https://github.com/koenbok/CactusTemplatesExtras" target="_blank">Cactus Template</a></td>
+			<td>A template to drop Framer into Cactus</td>
+		</tr>
+		<tr>
+			<td><a href="https://itunes.apple.com/us/app/clear-browser-full-screen/id536117231?mt=8" target="_blank">Clear iOS Browser</a></td>
+			<td>Run your prototype with Cactus and load the local URL into this browser</td>
+		</tr>
+</tbody></table>
+
+
+{% endfilter %}	
+{% endblock content%}

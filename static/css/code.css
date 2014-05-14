@@ -1,90 +1,60 @@
-/**
- * Solarized Dark theme
- *
- * Adaptation of Solarized Dark from ethanschoonover.com/solarized
- *
- * @author Ethan Schoonover
- * @author David Litmark
- * @version 1.0.0
- */
 pre {
-    background: #1e2229; /* base03 */
+    background: #282C33; /* base03 */
     word-wrap: break-word;
     margin: 0px;
     padding: 20px;
     color: #fff; /* base0 */
-    font-size: 14px;
-    line-height: 1.3;
+    font-size: 13px;
+    line-height: 1.4em;
     margin-bottom: 20px;
     border-radius: 6px;
+    font-weight: normal;
 }
 
 pre, code {
-    font-family: 'Menlo', 'Monaco', courier, monospace;
+    font-family: 'Menlo', 'Monaco', Courier, monospace; 
+}
+
+code.inline {
+	font-size: 14px;
+	color: #333;font-family: 'Menlo', 'Monaco', Courier, monospace;
+	border-bottom: 1px dotted #ddd;
+	padding-bottom: 2px;
+}
+
+#code-block pre {
+	border-radius: 0 0 6px 6px;
+	font-size: 12px; line-height: 1.5;
+	margin-bottom: 40px;
 }
 
 pre .comment {
-    color: #586e75; /* base01 */
+    color: #7cd5ff; /* BLUE BASE */
 }
-
-pre .constant {
-    color: #839496; /* base0 */
+pre .keyword, pre .selector {
+    color: #7cd5ff; /* the "new" in new Layer */
 }
-
+pre .constant.numeric { /* --- Numbers, pinkish --- */
+	color: #ff6c88;
+}
 pre .constant.language {
-    color: #268bd2; /* blue */
-}
-
-pre .constant.regexp {
-    color: #2aa198; /* cyan */
-}
-
-pre .storage {
-    color: #268bd2; /* blue */
+    color: #91fcf3; /* Javascript, so the ".on" in imageLayer.on */
 }
 
 pre .string, pre .comment.docstring {
-    color: #2aa198; /* cyan */
-}
-
-pre .support.tag.script, pre .support.tag.style {
-    color: #2aa198; /* cyan */
-}
-
-pre .string.regexp {
-    color: #2aa198; /* cyan */
-}
-
-pre .string.regexp.open, pre .string.regexp.close {
-    color: #2aa198; /* cyan */
-}
-
-pre .keyword, pre .selector {
-    color: #859900; /* green */
-}
-
-pre .inherited-class {
-    font-style: italic;
-}
-
-pre .entity {
-    color: #b58900; /* yellow */
-}
-
-pre .support, *[data-language="c"] .function.call {
-    color: #859900; /* green */
-}
-
-pre .support.method {
-    color: #839496; /* base0 */
-}
-
-pre .support.property {
-    color: #839496; /* base0 */
-}
-
-pre .variable.global, pre .variable.class, pre .variable.instance {
-    color: #839496; /* base0 */
+    color: #3ACC14; /* --- Green, the "spring" and other things between hashes --- */
 }
 
 
+/*new*/
+
+
+
+
+/*LINES*/
+pre code.rainbow .line:before {
+	font-size: 10px;
+	color: #939599;
+	padding-top:1px;
+	margin-right: 15px;
+}

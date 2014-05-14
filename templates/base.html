@@ -5,31 +5,108 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+	{% include 'social.html' %}
+
 	<link rel="shortcut icon" href="{% static '/static/images/favicon.ico' %}">
 	<link rel="stylesheet" href="{% static '/static/css/style.css' %}">
+	<link rel="stylesheet" href="{% static '/static/css/animation.css' %}">
 	<link rel="stylesheet" href="{% static '/static/css/code.css' %}">
 	
 	<!-- Colfax Typeface -->
 	<script type="text/javascript" src="//use.typekit.net/ivi1pzu.js"></script>
 	<script type="text/javascript">Typekit.load();</script>
 	
-	{% block header %}
-	<title>{% block title %}Framer{% endblock %}</title>
-	{% endblock header %}
+	<title>{% block title %}Framer – A prototyping toolkit{% endblock %}</title>
 
 </head>
 <body>
+	{% block sidebar %}
+	<header id="topbar"> <img class="2x" src="/static/images/menu-icon.png"></header>
+	
+	<aside id="sidebar" class="{% block sidebarclass %}{% endblock %}">
+		<nav>
+			<ul><li class="headline {% block framerclass %}{% endblock %}"><a href="index.html" class="introduction">Framer</a></li></ul>
+				
+			<ul id="start">
+				<li class="headline"><a href="start.html" class="start">Start {% include "dropdown.html" %}</a></li>
+				<section>
+				<li><a href="start.html#installation" class="installation">Installation</a></li>
+				<li><a href="start.html#javascript" class="javascript">JavaScript</a></li>
+				<li><a href="start.html#generator" class="generator">Generator</a></li>
+				</section>
+			</ul>
+
+			<ul id="learn">
+				<li class="headline"><a href="learn.html" class="learn">Learn {% include "dropdown.html" %}</a></li>
+				<section>
+				<li><a href="learn.html#basics" class="basics">Basics</a></li>
+				<li><a href="learn.html#resources" class="resources">Resources</a></li>
+				</section>
+			</ul>
+
+			<ul id="examples">
+				<li class="headline"><a href="examples.html" class="examples">Examples {% include "dropdown.html" %}</a></li>
+				<section>
+				<li><a href="examples.html#prototypes" class="prototypes">Prototypes</a></li>
+				<li><a href="examples.html#codepen" class="codepen">CodePen</a></li>
+				</section>
+			</ul>
+
+
+
+			<ul id="docs">
+				<li class="headline"><a href="docs.html" class="docs">Docs {% include "dropdown.html" %}</a></li>
+				<section>
+				<li><a href="docs.html#layers" class="layers">Layers</a></li>
+				<li><a href="docs.html#animations" class="animations">Animations</a></li>
+				<li><a href="docs.html#events" class="events">Events</a></li>
+				<li><a href="docs.html#utilities" class="utilities">Utilities</a></li>
+				<li><a href="docs.html#defaults" class="defaults">Defaults</a></li>
+				</section>
+			</ul>
+			
+			<ul id="more">
+				<li class="headline"><a href="more.html" class="more">More {% include "dropdown.html" %}</a></li>
+				<section>
+				<li><a href="more.html#debugging" class="debugging">Debugging</a></li>
+				<li><a href="more.html#questions" class="questions">Questions</a></li>
+				<li><a href="more.html#credits" class="credits">Credits</a></li>
+				</section>
+			</ul>
+		
+		</nav>
+	</aside>
+	{% endblock sidebar %}
+		
+	<section id="wrapper" {% block isindex %}{% endblock isindex %}>
 	{% block content %}
 	Main content
 	{% endblock content %}
+	
+	<footer class="global {% block hide %}{% endblock hide %}">
+	<p class="small">Framer is an <a href="https://github.com/koenbok/Framer">open source project</a> - Copyright &copy; 2014 Podium BV</p>
+	</footer>
+	</section>
 
 	{% block scripts %}
 	<script src="//code.jquery.com/jquery.min.js"></script>
 	<script src="{% static '/js/main.js' %}"></script>
 	<script src="{% static '/js/rainbow.min.js' %}"></script>
+	<script src="{% static '/js/rainbow.linenumbers.min.js' %}"></script>
 	<script src="{% static '/js/language/javascript.js' %}"></script>
 	<script src="{% static '/js/language/coffeescript.js' %}"></script>
-	<script src="{% static '/js/language/python.js' %}"></script>
-	{% endblock scripts%}
+	<script src="{% static '/js/scroller.js' %}"></script>
+	{% endblock scripts %}
+	
+<script>
+	 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	 ga('create', 'UA-37076997-1', 'framerjs.com');
+	 ga('send', 'pageview');
+</script>
+	
 </body>
 </html>
