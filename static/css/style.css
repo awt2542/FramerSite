@@ -403,7 +403,7 @@ p + h4 {
 }
 
 #header a.small:hover, #footer a.small:hover {
-	background: none; color: #aaa;
+	background: none; color: red;
 }
 
 nav#index {
