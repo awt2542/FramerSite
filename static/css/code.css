@@ -45,12 +45,6 @@ pre .string, pre .comment.docstring {
     color: #3ACC14; /* --- Green, the "spring" and other things between hashes --- */
 }
 
-
-/*new*/
-
-
-
-
 /*LINES*/
 pre code.rainbow .line:before {
 	font-size: 10px;
