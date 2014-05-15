@@ -1,53 +1,65 @@
-updateActive = (doScroll=true) ->
-	offset = 60
-	fromTop = $(window).scrollTop();
-	activeAnchor = null
+
+_calculatedElements = []
+
+calculateElements = ->
+
+	# We calculate all items and positions here
+
+	_calculatedElements = []
 	
-	$("a").map ->
-		anchor = $(this)
-		
-		if anchor.offset().top < fromTop + offset
-			activeAnchor = anchor
-			
-	if activeAnchor			
-		className = activeAnchor.attr "name"
-		$("#sidebar a").removeClass "active"
-		$("#sidebar a.#{className}").addClass "active"	
-		$("#sidebar a.#{className}").parent().parent().addClass "appear"
-		
-		`(function() {
-			var offsetThree = window.matchMedia( "(max-height: 700px)" );
-			
-			if (offsetThree.matches) {
-				learnScroll = 0
-				docsScroll = 0
-				moreScroll = 30
-			}
-			
-		})();`
-		
-		`(function() {
-			var offsetFour = window.matchMedia( "(max-height: 650px) and (min-height: 620px)" );
-			
-			if (offsetFour.matches) {
-				learnScroll = 0
-				docsScroll = 0
-				moreScroll = 60
-			}
-			
-		})();`
+	$("#wrapper a[name]").map (index, anchor) ->
+		_calculatedElements.push
+			offset:  $(anchor).offset().top
+			name: $(anchor).attr("name")
 
-		
-		if doScroll
-			$("#sidebar.learn").scrollTop($("#sidebar").scrollTop() + learnScroll);	
-			$("#sidebar.docs").scrollTop($("#sidebar").scrollTop() + docsScroll);	
-			$("#sidebar.more").scrollTop($("#sidebar").scrollTop() + moreScroll);			
-		
-$(window).scroll -> updateActive false
-$(window).resize -> updateActive false
-updateActive false
-$(window).load -> updateActive true
+highlightNavigation = ->
 
-$("#sidebar a").click ->
+	fromTop = $(window).scrollTop()
+
+	itemsAboveViewPort = []
+	itemsInsideViewPort = []
+	itemsBelowViewPort = []
+
+	for item in _calculatedElements
+		
+		if item.offset - fromTop < 0
+			itemsAboveViewPort.push item
+		else if item.offset - fromTop > window.innerHeight
+			itemsBelowViewPort.push item
+		else
+			itemsInsideViewPort.push item
+
+
+	# Ideally we select the first visible item
+	if itemsInsideViewPort.length > 0
+		bestItem = itemsInsideViewPort[0]
+
+	# If there are no item visible we select the last visible one
+	else if itemsAboveViewPort.length > 0
+		bestItem = itemsAboveViewPort[itemsAboveViewPort.length-1]
+
+	# Otherwise the next visible one
+	else
+		bestItem = itemsBelowViewPort[0]
+
+	console.log "Best item #{bestItem?.name}"
+
+	className = bestItem.name
 	$("#sidebar a").removeClass "active"
-	$(this).addClass "active"	
+	$("#sidebar a.#{className}").addClass "active"	
+	$("#sidebar a.#{className}").parent().parent().addClass "appear"
+
+
+$(window).load ->
+	calculateElements()
+	$(window).scroll highlightNavigation
+
+$(window).scroll ->
+	calculateElements()
+	highlightNavigation()
+
+$(window).resize ->
+	calculateElements()
+	highlightNavigation()
+
+
