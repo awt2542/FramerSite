@@ -18,16 +18,19 @@ update:
 	cd build; mv "Framer Generator.app" "Framer/Framer Generator.app"
 
 	# Create the Framer zip
-	# cd build; zip -r Framer.zip Framer
-	cd build; tar -cvzf Framer.tar.gz Framer
+	cd build; zip -r --symlinks Framer.zip Framer
+	# cd build; tar -cvzf Framer.tar.gz Framer
 
 	# Test if the zipped app is still code signed
 	cd build; mv Framer Framer.bak
-	cd build; tar -zxvf Framer.tar.gz
+	# cd build; tar -zxvf Framer.tar.gz
+	cd build; unzip Framer.zip
 	cd build; spctl -a -vvvvvv "Framer/Framer Generator.app"
 
 	# Move it to the download dir
-	cp build/Framer.tar.gz static/downloads/Framer.tar.gz
+	# cp build/Framer.tar.gz static/downloads/Framer.tar.gz
+	cp build/Framer.zip static/downloads/Framer.zip
+
 
 
 upload:
