@@ -177,7 +177,7 @@ a[name] {
 table {
 	width:100%;
 	border-collapse: separate;
-	font-size:13px;
+	font-size:14px;
 	line-height:1.6;
 	border: 1px solid #eee;
 	border-radius: 6px;
@@ -206,10 +206,9 @@ thead th, th {
 	text-align:left;
 	padding:10px 15px;
 	font-size:13px; font-weight:400;
-	color:#ccc; cursor:default; white-space:nowrap;
+	color:#bbb; cursor:default; white-space:nowrap;
 	line-height: 1.2; 
 	border-radius: 6px 6px 0 0; 
-	background: #fcfcfc;
 }
 
 table .dim {
@@ -221,7 +220,11 @@ table.api td:first-child {
 	font-family: 'Monaco', Courier, monospace;
 }
 
-table.api td.group {
+table.compatibility td:first-child {
+	color: #666;
+}
+
+table.api td.group, table.compatibility td.group {
 	font-weight: 500; font-family: "Colfax";
 	text-transform: uppercase;
 	font-size: 12px; padding-top: 14px;
@@ -646,6 +649,13 @@ nav#index li:last-child {
 	position: absolute; font-weight:500;
 	bottom: 42px; left: 0; width: 100%;
 	color: #fff; text-transform: uppercase; letter-spacing: 1px;
+}
+
+/*Compatibility link*/
+a.compat {
+	font-size: 13px; font-weight: 500;
+	position: relative; top: 1px; 
+	float: right;
 }
 
 #line-block {
