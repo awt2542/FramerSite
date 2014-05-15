@@ -29,6 +29,7 @@ update:
 
 	# Move it to the download dir
 	# cp build/Framer.tar.gz static/downloads/Framer.tar.gz
+	# rm static/downloads/Framer.zip
 	cp build/Framer.zip static/downloads/Framer.zip
 
 
