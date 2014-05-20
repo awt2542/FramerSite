@@ -36,15 +36,15 @@
       item = _calculatedElements[_i];
       if (item.offset - fromTop < 0) {
         itemsAboveViewPort.push(item);
-      } else if (item.offset - fromTop > window.innerHeight - (window.innerHeight * 0.33)) {
+      } else if (item.offset - fromTop > window.innerHeight - (window.innerHeight * 0.1)) {
         itemsBelowViewPort.push(item);
       } else {
         itemsInsideViewPort.push(item);
       }
     }
-    if (fromTop < (window.innerHeight * 0.33)) {
+    if (fromTop < (window.innerHeight * 0.1)) {
       bestItem = _calculatedElements[0];
-    } else if (fromTop + window.innerHeight > document.height - (window.innerHeight * 0.33)) {
+    } else if (fromTop + window.innerHeight > document.height - (window.innerHeight * 0.1)) {
       bestItem = _calculatedElements[_calculatedElements.length - 1];
     } else {
       if (itemsInsideViewPort.length > 0) {
