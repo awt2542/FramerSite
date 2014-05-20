@@ -1,20 +1,33 @@
 (function() {
-  var calculateElements, highlightNavigation, _calculatedElements;
+  var calculateElements, highlightNavigation, selectItemNamed, _calculatedElements, _lastSelectedElementName, _startListeningForScroll;
 
   _calculatedElements = [];
+
+  _lastSelectedElementName = null;
+
+  _startListeningForScroll = false;
+
+  selectItemNamed = function(className) {
+    $("#sidebar a").removeClass("active");
+    $("#sidebar a." + className).addClass("active");
+    return $("#sidebar a." + className).parent().parent().addClass("appear");
+  };
 
   calculateElements = function() {
     _calculatedElements = [];
     return $("#wrapper a[name]").map(function(index, anchor) {
       return _calculatedElements.push({
-        offset: $(anchor).offset().top,
+        offset: $(anchor).offset().top + 60,
         name: $(anchor).attr("name")
       });
     });
   };
 
   highlightNavigation = function() {
-    var bestItem, className, fromTop, item, itemsAboveViewPort, itemsBelowViewPort, itemsInsideViewPort, _i, _len;
+    var bestItem, fromTop, item, itemsAboveViewPort, itemsBelowViewPort, itemsInsideViewPort, _i, _len;
+    if (_startListeningForScroll === false) {
+      return;
+    }
     fromTop = $(window).scrollTop();
     itemsAboveViewPort = [];
     itemsInsideViewPort = [];
@@ -23,29 +36,44 @@
       item = _calculatedElements[_i];
       if (item.offset - fromTop < 0) {
         itemsAboveViewPort.push(item);
-      } else if (item.offset - fromTop > window.innerHeight) {
+      } else if (item.offset - fromTop > window.innerHeight - (window.innerHeight * 0.33)) {
         itemsBelowViewPort.push(item);
       } else {
         itemsInsideViewPort.push(item);
       }
     }
-    if (itemsInsideViewPort.length > 0) {
-      bestItem = itemsInsideViewPort[0];
-    } else if (itemsAboveViewPort.length > 0) {
-      bestItem = itemsAboveViewPort[itemsAboveViewPort.length - 1];
+    if (fromTop < (window.innerHeight * 0.33)) {
+      bestItem = _calculatedElements[0];
+    } else if (fromTop + window.innerHeight > document.height - (window.innerHeight * 0.33)) {
+      bestItem = _calculatedElements[_calculatedElements.length - 1];
     } else {
-      bestItem = itemsBelowViewPort[0];
+      if (itemsInsideViewPort.length > 0) {
+        bestItem = itemsInsideViewPort[0];
+      } else if (itemsAboveViewPort.length > 0) {
+        bestItem = itemsAboveViewPort[itemsAboveViewPort.length - 1];
+      } else {
+        bestItem = itemsBelowViewPort[0];
+      }
     }
     console.log("Best item " + (bestItem != null ? bestItem.name : void 0));
-    className = bestItem.name;
-    $("#sidebar a").removeClass("active");
-    $("#sidebar a." + className).addClass("active");
-    return $("#sidebar a." + className).parent().parent().addClass("appear");
+    if (_lastSelectedElementName === (bestItem != null ? bestItem.name : void 0)) {
+      selectItemNamed(bestItem != null ? bestItem.name : void 0);
+    }
+    _lastSelectedElementName = bestItem != null ? bestItem.name : void 0;
+    return $.cookie("nav", _lastSelectedElementName);
   };
 
   $(window).load(function() {
     calculateElements();
-    return $(window).scroll(highlightNavigation);
+    _lastSelectedElementName = $.cookie("nav");
+    console.log("_lastSelectedElementName", _lastSelectedElementName);
+    $(window).scroll(highlightNavigation);
+    if (_lastSelectedElementName) {
+      selectItemNamed(_lastSelectedElementName);
+    } else {
+      highlightNavigation();
+    }
+    return _startListeningForScroll = true;
   });
 
   $(window).scroll(function() {
@@ -56,6 +84,11 @@
   $(window).resize(function() {
     calculateElements();
     return highlightNavigation();
+  });
+
+  $("#sidebar a").click(function() {
+    $.cookie("nav", $(this).attr("class"));
+    return selectItemNamed($(this).attr("class"));
   });
 
 }).call(this);
