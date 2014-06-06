@@ -1,16 +1,32 @@
 {% extends "base.html" %}
+{% block sidebarclass %}class="studio"{% endblock %}
 {% block content %}
-{% filter markdown %}
 
-<!-- Install -->
-<a name="macapp"></a>
+	<link rel="stylesheet" href="{% static '/static/css/style-dark.css' %}">
 
-### Mac App
-Information about the mac app
+	<header id="header">
+		<img class="2x" src="/static/images/fs/header.png">
+		<h1>The complete toolkit for building innovative prototypes</h1>
+		<a class="grey" href="/">Download</a>
+		<a href="/">Buy Now</a>
+		<section>
+			<a href="/" class="small" target="_blank">Available for $49.99</a>
+		</section>
+	</header>
 
-<a name="javascript"></a>
+	<section id="screenshot" class="clearfix">
+		<li>
+			<img class="2x" src="/static/images/fs/icon-smallcode.png">
+			<h3>Prototype Anything</h3>
+			<p>Create rich interactions and fluid animations with easy to learn code.</p>
+		</li>
+		<li>
+			<img class="2x icon-animation" src="/static/images/fs/icon-smallphone.png">
+			<h3>Preview Immediatly</h3>
+			<p>Everything you do is rendered in real time and ready to present.</p>
+		</li>		
+		<img class="2x screenshot" src="/static/images/fs/screenshot.png">
+	</section>
 
-<hr>
 
-{% endfilter %}	
 {% endblock content%}

@@ -70,7 +70,7 @@ a:active {
 	position: fixed;
 	top: 0; left: 0; bottom: 0; z-index: 20;
 	width: 240px; height: 100%;
-	background: #1E2229;
+	background: #101216;
 	padding: 60px;
 	overflow-y: auto;
 }
@@ -117,7 +117,7 @@ a:active {
 }
 
 #sidebar ul li.headline, #sidebar ul li.headline a {
-	color: #84D1FF;
+	color: #4DB4EC;
 	font-weight: 500; 
 	font-size: 15px;
 	margin-bottom: 10px;
@@ -979,7 +979,7 @@ body {
 
 #topbar {
 	display: block; height: 44px; width: 100%;
-	background: #262a31;
+	background: #101216;
 	position: relative; top: 0; z-index: 30; left: 0;
 	padding: 14px;
 }
