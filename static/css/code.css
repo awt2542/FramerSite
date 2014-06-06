@@ -1,5 +1,5 @@
 pre {
-    background: #282C33; /* base03 */
+    background: #1d2026; /* base03 */
     word-wrap: break-word;
     margin: 0px;
     padding: 20px;
@@ -29,20 +29,20 @@ code.inline {
 }
 
 pre .comment {
-    color: #7cd5ff; /* BLUE BASE */
+    color: #616D85; /* COMMENTS BASE */
 }
 pre .keyword, pre .selector {
-    color: #7cd5ff; /* the "new" in new Layer */
+    color: #FF9740; /* the "new" in new Layer */
 }
 pre .constant.numeric { /* --- Numbers, pinkish --- */
-	color: #ff6c88;
+	color: #4DB4EC;
 }
 pre .constant.language {
     color: #91fcf3; /* Javascript, so the ".on" in imageLayer.on */
 }
 
 pre .string, pre .comment.docstring {
-    color: #3ACC14; /* --- Green, the "spring" and other things between hashes --- */
+    color: #7DDC16; /* --- Green, the "spring" and other things between hashes --- */
 }
 
 
