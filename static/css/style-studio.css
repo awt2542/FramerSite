@@ -24,9 +24,9 @@ p.title {
 }
 
 h2 {
-	font-size: 29px; font-weight: 100;
-	margin-bottom: 20px;  -webkit-font-smoothing: subpixel-antialiased;
-	letter-spacing: 0;
+	font-size: 29px; font-weight: 300;
+	margin-bottom: 20px;  -webkit-font-smoothing: antialiased;
+	letter-spacing: -1px;
 }
 
 h2.center {
@@ -48,6 +48,8 @@ h5 {
 	font-size: 26px;
 	font-weight: 100;
 	line-height: 1.4;
+
+	font-size: 30px;
 }
 
 h5 span {
@@ -60,10 +62,15 @@ h5 span {
 #illustration {
 	height: 420px;
 	width: 100%;
-	background-image: -o-linear-gradient(-44deg, #89E1FF 0%, #1387C2 100%);
-	background-image: -moz-linear-gradient(-44deg, #89E1FF 0%, #1387C2 100%);
-	background-image: -ms-linear-gradient(-44deg, #89E1FF 0%, #1387C2 100%);
-	background-image: linear-gradient(-134deg, #89E1FF 0%, #1387C2 100%);
+	background: #89e1ff; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #89e1ff 0%, #1387c2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#89e1ff), color-stop(100%,#1387c2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #89e1ff 0%,#1387c2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #89e1ff 0%,#1387c2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #89e1ff 0%,#1387c2 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #89e1ff 0%,#1387c2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89e1ff', endColorstr='#1387c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
 	position: absolute; top: 0;
 }
 
@@ -72,7 +79,7 @@ h5 span {
 	line-height: 1.2;
 	font-weight: 100;
 	-webkit-font-smoothing: subpixel-antialiased;
-	margin: 20px 0 60px 0;
+	margin: 10px 0 60px 0;
 	color: #333;
 	letter-spacing: -1px;
 	
@@ -102,6 +109,7 @@ h5 span {
 	letter-spacing: 8px;
 	font-weight: 500;
 	margin-top: 50px;
+	margin-bottom: 0;
 }
 
 #header a.small {
@@ -132,13 +140,15 @@ h5 span {
 	background: url('/static/images/fs/bg-mavericks.png') no-repeat;
 	background-size: cover;
 	width: 100%;
-	margin: 60px 0 80px 0;
-	height: 580px;
+	margin: 40px 0 80px 0;
+	height: 100%;
+	max-height: 580px;
+	position: relative;
 }
 
 
 img.studio {
-margin-top: 40px;
+position: relative; margin: 40px 0 0px 0;
 }
 
 /* BODY SECTIONS -------------------------*/
