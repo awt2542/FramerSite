@@ -1,16 +1,20 @@
 {% extends "base.html" %}
 {% block isindex %}class="index"{% endblock isindex %}
+{% block studioheader %}
+<figure id="illustration">
+	<img class="blueprint 2x" src="/static/images/fs/illustration-blueprint.png">
+	<img class="app-icon 2x" src="/static/images/fs/icon-appicon.png">
+</figure>
+{% endblock studioheader %}
+
+
 {% block sidebarclass %}class="studio"{% endblock %}
 {% block content %}
 
 	<link rel="stylesheet" href="{% static '/static/css/style-studio.css' %}">
-	<figure id="illustration"></figure>
 	
 	<div class="inner">
 	<header id="header">
-		<img class="2x" src="/static/images/fs/illustration-blueprint.png">
-		
-		<img class="app-icon 2x" src="/static/images/fs/icon-appicon.png">
 		<p class="small">Framer Studio</p>
 		<h1>Innovative prototyping</h1>
 		<a class="green" href="/">Download</a>
@@ -23,7 +27,7 @@
 	<section id="screenshot-copy" class="clearfix">
 		<li>
 			<h3>Build</h3>
-			<p>Create rich interactions and fluid animations with easy to learn code.</p>
+			<p>Framer Studio is the best way to prototype with Framer.</p>
 		</li>
 		<li>
 			<h3>View</h3>
