@@ -1,34 +1,45 @@
 {% extends "base.html" %}
+{% block isindex %}class="index"{% endblock isindex %}
 {% block sidebarclass %}class="studio"{% endblock %}
 {% block content %}
 
-	<link rel="stylesheet" href="{% static '/static/css/style-dark.css' %}">
-
+	<link rel="stylesheet" href="{% static '/static/css/style-studio.css' %}">
+	<figure id="illustration"></figure>
+	
+	<div class="inner">
 	<header id="header">
-		<img class="2x" src="/static/images/fs/header.png">
-		<h1>The complete toolkit for building innovative prototypes</h1>
-		<a class="grey" href="/">Download</a>
+		<img class="2x" src="/static/images/fs/illustration-blueprint.png">
+		
+		<img class="app-icon 2x" src="/static/images/fs/icon-appicon.png">
+		<p class="small">Framer Studio</p>
+		<h1>Innovative prototyping</h1>
+		<a class="green" href="/">Download</a>
 		<a href="/">Buy Now</a>
 		<section>
-			<a href="/" class="small" target="_blank">Available for $49.99</a>
+			<a href="/" class="small" target="_blank">Available on Mac for $49.99</a>
 		</section>
 	</header>
-
-	<section id="screenshot" class="clearfix">
+	
+	<section id="screenshot-copy" class="clearfix">
 		<li>
-			<img class="2x" src="/static/images/fs/icon-smallcode.png">
-			<h3>Prototype Anything</h3>
+			<h3>Build</h3>
 			<p>Create rich interactions and fluid animations with easy to learn code.</p>
 		</li>
 		<li>
-			<img class="2x icon-animation" src="/static/images/fs/icon-smallphone.png">
-			<h3>Preview Immediatly</h3>
+			<h3>View</h3>
 			<p>Everything you do is rendered in real time and ready to present.</p>
 		</li>		
-		<img class="2x screenshot" src="/static/images/fs/screenshot.png">
 		
-		<h5>When building prototypes, you consider how your design looks <span>and</span> how it feels.</h5>
 	</section>
+	</div> <!--inner-->
+	
+	<section id="screenshot">
+	<img class="2x studio" src="/static/images/fs/ui-studio.png">
+	</section>
+	
+	<div class="inner">
+	
+	<h5>When building prototypes, you consider how your design looks <span>and</span> how it feels.</h5>
 	
 	<hr/>
 	
@@ -69,5 +80,6 @@
 		</section>
 	
 	</section>
+	</div> <!--inner-->
 
 {% endblock content%}
