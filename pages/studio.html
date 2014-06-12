@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block isindex %}class="index"{% endblock isindex %}
+{% block hide %}hide{% endblock hide %}
+
 {% block studioheader %}
 <figure id="illustration">
 	<img class="blueprint 2x" src="/static/images/fs/illustration-blueprint.png">
@@ -149,6 +151,11 @@
 		</section>
 	</footer>
 	
+	<footer class="global">
+		<p class="small">Site built with <a href="http://www.cactusformac.com" target="_blank">Cactus</a><br>Copyright &copy; 2014 Podium BV</p>
+		
+
+	</footer>
 	</div> <!--inner-->
 
 {% endblock content%}

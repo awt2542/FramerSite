@@ -96,7 +96,6 @@ h5 span {
 	background: linear-gradient(to right,  #89e1ff 0%,#1387c2 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89e1ff', endColorstr='#1387c2',GradientType=1 ); /* IE6-9 */
 	text-align: center; padding: 20px;
-	margin-bottom:20px;
 	position: relative;
 }
 
@@ -278,6 +277,7 @@ img.studio {
 
 #interaction section p.title {
 	color: #fff;
+	font-weight: 300;
 }
 
 /* INTERACTION & VIEWER SECTION ------------------------------ */
@@ -293,7 +293,7 @@ img.studio {
 .feature-block p.title {
 	font-size: 17px;
 	margin-bottom: 6px;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 #viewer {
@@ -316,13 +316,6 @@ img.studio {
 	top: 220px;
 }
 	
-
-/* HIDE GLOBOAL FOOTER ------------------------------ */
-
-footer.global {
-	display: none;
-}
-
 
 @media only screen and (max-width: 1024px) {
 #header h1 {
