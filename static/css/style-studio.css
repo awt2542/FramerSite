@@ -24,7 +24,7 @@ p.title {
 }
 
 h2 {
-	font-size: 22px; font-weight: 300;
+	font-size: 20px; font-weight: 300;
 	margin-bottom: 20px;  -webkit-font-smoothing: subpixel-antialiased;
 	letter-spacing: 0px;
 	color: #333;
@@ -73,12 +73,11 @@ h5 {
 	font-weight: 100;
 	line-height: 1.4;
 	font-size: 36px; letter-spacing: -1px;
-	color: #999;
+	color: #333;
 }
 
 h5 span {
-	font-style: italic;
-	opacity: .6;
+	color: #333;
 }
 
 
@@ -100,7 +99,7 @@ h5 span {
 }
 
 #header h1 {
-	font-size: 56px;
+	font-size: 60px;
 	line-height: 1.2;
 	font-weight: 100;
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -136,7 +135,6 @@ img.app-icon {
 	font-weight: 300; width: 120px;
 	border-radius: 50px; background: #fff;
 	box-shadow: 0 0 0 1px #4FB4EC; color:#4DB4EC;
-	
 	text-transform: none; letter-spacing: 0; font-size: 17px;
 }
 
@@ -189,7 +187,7 @@ img.app-icon {
 #screenshot-copy li:first-child:after {
 	content: url('/static/images/fs/ss-indicator.png');
 	margin-bottom: -85px; height: 85px;
-	bottom: -17px;
+	bottom: -19px;
 	display: block; position: relative;
 	z-index: 100;
 	
@@ -198,7 +196,7 @@ img.app-icon {
 #screenshot-copy li:last-child:after {
 	content: url('/static/images/fs/ss-indicator.png');
 	margin-bottom: -85px; height: 85px;
-	bottom: -17px;
+	bottom: -19px;
 	display: block; position: relative;
 	z-index: 100;
 	
@@ -244,7 +242,7 @@ img.studio {
 }
 
 #framer img {
-	position: relative; right: 30px;
+	position: relative; right: 35px;
 }
 
 #framer ul {
@@ -273,6 +271,7 @@ img.studio {
 
 #interaction {
 	background: #1A1D24;
+	background: #686f78;
 	padding: 100px 0;
 	margin: 80px 0 0 0;
 	position: relative;
@@ -280,6 +279,11 @@ img.studio {
 
 #interaction p {
 	font-weight: 100;
+	color: rgba(255,255,255,.6);
+}
+
+#interaction h4 {
+	color: #fff; color: rgba(255,255,255,.6);
 }
 
 #interaction section p {
