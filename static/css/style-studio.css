@@ -36,6 +36,7 @@ h2 {
 	font-weight: 100;
 	line-height: 1.4;
 	font-size: 40px; letter-spacing: -1px;	
+	font-size: 44px; 
 }
 
 #interaction h2 {
@@ -53,9 +54,9 @@ h3 {
 }
 
 h4 {
-	font-size: 20px;
-	color: #777;
-	line-height: 29px;
+	font-size: 22px;
+	color: #777; 
+	line-height: 1.5;
 	text-transform: none;
 	letter-spacing: 0; font-weight: 100;
 	text-align: center;
@@ -267,7 +268,9 @@ img.studio {
 
 #interaction {
 	background: #1A1D24;
-	background: #626a73;/* background: #262a31;*/
+	background: #626a73;
+	background: #707a84;
+
 	padding: 100px 0;
 	margin: 80px 0 0 0;
 	position: relative;
@@ -289,7 +292,7 @@ img.studio {
 #interaction .ss-half {
 	background: url('/static/images/fs/ss-code.png') no-repeat;
 	position: absolute; right: -360px; width: 658px; height: 748px;
-	top: 260px;
+	top: 280px;
 }
 
 #interaction section p.title {
@@ -329,8 +332,8 @@ img.studio {
 
 #viewer .ss-half {
 	background: url('/static/images/fs/ss-viewer.png') no-repeat;
-	position: absolute; left: -360px; width: 650px; height: 700px;
-	top: 220px;
+	position: absolute; left: -300px; width: 650px; height: 700px;
+	top: 280px;
 }
 	
 
