@@ -31,12 +31,14 @@ h2 {
 }
 
 /*Big h2*/
-
-#interaction h2 {
+.feature-block h2 {
 	text-align: center;
 	font-weight: 100;
 	line-height: 1.4;
-	font-size: 40px; letter-spacing: -1px;
+	font-size: 40px; letter-spacing: -1px;	
+}
+
+#interaction h2 {
 	color: #fff;
 }
 
@@ -59,13 +61,13 @@ h4 {
 	text-align: center;
 	display: block;
 }
-/*Interaction h4 / Headline */
-#wrapper.index #interaction h4 {
+/*Feature Blocks H4 / Headlines */
+#wrapper.index .feature-block h4 {
 	margin-bottom: 100px;
 }
 
-/* QUOTES -------------------------*/
 
+/* QUOTES -------------------------*/
 h5 {
 	text-align: center;
 	font-weight: 100;
@@ -261,7 +263,6 @@ img.studio {
 	padding: 100px 0;
 	margin: 80px 0;
 	position: relative;
-	width: 100%;
 }
 
 #interaction p {
@@ -272,28 +273,49 @@ img.studio {
 	font-size: 16px;
 }
 
-
 #interaction .ss-half {
 	background: url('/static/images/fs/ss-code.png') no-repeat;
 	position: absolute; right: -360px; width: 658px; height: 748px;
 	top: 260px;
 }
 
-#interaction section li {
+#interaction section p.title {
+	color: #fff;
+}
+
+/* INTERACTION & VIEWER SECTION ------------------------------ */
+.feature-block section li {
 	list-style: none;
 	font-size: 15px;
 }
 
-#interaction section li+li {
+.feature-block section li+li {
 	margin-top: 50px;
 }
 
-#interaction section p.title {
-	color: #fff;
+.feature-block p.title {
 	font-size: 17px;
 	margin-bottom: 6px;
 	font-weight: 300;
 }
+
+#viewer {
+	padding: 100px 0;
+	margin: 80px 0;
+	position: relative;
+}
+
+#viewer section p.title {
+	color: #333;
+	font-weight: 400;
+}
+
+#viewer .ss-half {
+	background: url('/static/images/fs/ss-viewer.png') no-repeat;
+	position: absolute; left: -360px; width: 650px; height: 700px;
+	top: 230px;
+}
+	
 
 /* FOOTER ------------------------------ */
 
