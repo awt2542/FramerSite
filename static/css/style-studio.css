@@ -127,30 +127,30 @@ img.blueprint {
 img.app-icon {
 	bottom: 0;
 	position: absolute; left: 50%; margin-left: -128px;
-	bottom: -60px;
+	bottom: -61px;
 }
 
 
 #header a, #footer a {
-	padding:0px 10px 10px; position: relative;
-	font-weight: 300; width: auto;
-	border-radius: 0px; background: #fff;
-	box-shadow: 0 1px 0 #4DB4EC; color:#4DB4EC;
+	padding:10px 10px 10px; position: relative;
+	font-weight: 300; width: 120px;
+	border-radius: 50px; background: #fff;
+	box-shadow: 0 0 0 1px #4FB4EC; color:#4DB4EC;
 	
-	text-transform: none; letter-spacing: 0; font-size: 19px;
+	text-transform: none; letter-spacing: 0; font-size: 17px;
 }
 
 #header a.green, #footer a.green {
-	box-shadow: 0 1px 0 #7DDC16; color:#7DDC16; background: #fff;
+	box-shadow: 0 0 0 1px #7DDC16; color:#7DDC16; background: #fff;
 	margin-bottom: 0;
-	margin-right: 40px;
+	margin-right: 20px;
 }
 
 #header a:after {
 	content: "$49.99"; left: 0; width: 100%;
-	position: absolute; top: 40px; text-align: center;
+	position: absolute; top: 50px; text-align: center;
 	font-size: 12px; text-transform: uppercase; letter-spacing: 2px;
-	opacity: 1; font-weight: 400;
+	opacity: .6; font-weight: 400;
 }
 
 #header a.green:after {
