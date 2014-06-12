@@ -120,37 +120,34 @@ img.blueprint {
 img.app-icon {
 	bottom: 0;
 	position: absolute; left: 50%; margin-left: -128px;
-	bottom: -87px;
+	bottom: -60px;
 }
 
-#header a.grey {
-	background-color: #101216;
-	box-shadow: inset 0 0 0 2px #28292D;
-}
-#header a {
+
+#header a, #footer a {
 	padding:10px 16px 10px; 
 	font-weight: 400;
 	border-radius: 50px; background-color: #fff;
 	box-shadow: 0 0 0 2px #4DB4EC; color:#4DB4EC;
 }
 
-#header a.green {
+#header a.green, #footer a.green {
 	box-shadow: 0 0 0 2px #7DDC16; color:#7DDC16;
+	margin-bottom: 0;
 }
 
-#header p.small {
+#header p.small, #footer p.small {
 	font-size: 11px;
 	color: #4DB4EC;
 	line-height: 13px;
 	letter-spacing: 8px;
 	font-weight: 400;
 	margin-top: 50px;
-	margin-bottom: 0;
 	
 }
 
-#header a.small {
-	margin-top: 5px;
+#header a.small, #footer a.small {
+	margin-top:30px;
 	letter-spacing: 2px;
 }
 
@@ -261,7 +258,7 @@ img.studio {
 #interaction {
 	background: #1A1D24;
 	padding: 100px 0;
-	margin: 80px 0;
+	margin: 80px 0 0 0;
 	position: relative;
 }
 
@@ -300,35 +297,31 @@ img.studio {
 }
 
 #viewer {
-	padding: 100px 0;
-	margin: 80px 0;
+	padding: 100px 0 20px 0;
 	position: relative;
 }
 
+#viewer h2 {
+	color: #222;
+}
+
 #viewer section p.title {
-	color: #333;
+	color: #222;
 	font-weight: 400;
 }
 
 #viewer .ss-half {
 	background: url('/static/images/fs/ss-viewer.png') no-repeat;
 	position: absolute; left: -360px; width: 650px; height: 700px;
-	top: 230px;
+	top: 220px;
 }
 	
 
-/* FOOTER ------------------------------ */
+/* HIDE GLOBOAL FOOTER ------------------------------ */
 
 footer.global {
-	border-top:1px solid #28292D;
+	display: none;
 }
-footer.global p, footer.global a {
-	color:#34373A;
-}
-footer.global a.coinbase-button {
-	border:1px solid #28292D;
-}
-
 
 
 @media only screen and (max-width: 1024px) {
