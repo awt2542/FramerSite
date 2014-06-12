@@ -24,13 +24,24 @@ p.title {
 }
 
 h2 {
-	font-size: 29px; font-weight: 300;
-	margin-bottom: 20px;  -webkit-font-smoothing: antialiased;
-	letter-spacing: -1px;
+	font-size: 22px; font-weight: 300;
+	margin-bottom: 20px;  -webkit-font-smoothing: subpixel-antialiased;
+	letter-spacing: 0px;
+	color: #333;
 }
 
-h2.center {
-	margin-bottom: 20px;
+/*Big h2*/
+
+#interaction h2 {
+	text-align: center;
+	font-weight: 100;
+	line-height: 1.4;
+	font-size: 40px; letter-spacing: -1px;
+	color: #fff;
+}
+
+h2+h2 {
+	margin-top: -30px;
 }
 
 h3 {
@@ -39,21 +50,33 @@ h3 {
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
+h4 {
+	font-size: 20px;
+	color: #777;
+	line-height: 29px;
+	text-transform: none;
+	letter-spacing: 0; font-weight: 100;
+	text-align: center;
+	display: block;
+}
 
+#wrapper.index #interaction h4 {
+	margin-bottom: 60px;
+}
 
 /* QUOTES -------------------------*/
 
 h5 {
 	text-align: center;
-	font-size: 26px;
 	font-weight: 100;
 	line-height: 1.4;
-
-	font-size: 30px;
+	font-size: 36px; letter-spacing: -1px;
+	color: #999;
 }
 
 h5 span {
 	font-style: italic;
+	opacity: .6;
 }
 
 
@@ -80,7 +103,7 @@ h5 span {
 	line-height: 1.1;
 	font-weight: 100;
 	-webkit-font-smoothing: subpixel-antialiased;
-	margin: 20px 0 30px 0;
+	margin: 10px 0 40px 0;
 	color: #333;
 	letter-spacing: -2px;	
 }
@@ -118,9 +141,10 @@ img.app-icon {
 	color: #4DB4EC;
 	line-height: 13px;
 	letter-spacing: 8px;
-	font-weight: 500;
+	font-weight: 400;
 	margin-top: 50px;
 	margin-bottom: 0;
+	
 }
 
 #header a.small {
@@ -132,15 +156,34 @@ img.app-icon {
 
 #screenshot-copy {
 	margin-top:120px;
+	text-align: center;
 }
 
 #screenshot-copy li {
-	width:280px;
+	max-width:280px;
 	list-style: none;
 	float:left;
 }
 
 #screenshot-copy li:first-child { margin-right: 40px }
+
+#screenshot-copy li:first-child:after {
+	content: url('/static/images/fs/ss-indicator.png');
+	margin-bottom: -85px; height: 85px;
+	bottom: -17px;
+	display: block; position: relative;
+	z-index: 100;
+	
+}
+
+#screenshot-copy li:last-child:after {
+	content: url('/static/images/fs/ss-indicator.png');
+	margin-bottom: -85px; height: 85px;
+	bottom: -17px;
+	display: block; position: relative;
+	z-index: 100;
+	
+}
 
 #screenshot {
 	text-align: center;
@@ -159,7 +202,7 @@ img.app-icon {
 }
 
 img.studio {
-position: relative; margin: 40px 0 0px 0;
+	position: relative; margin: 40px 0 0px 0;
 }
 
 /* BODY SECTIONS -------------------------*/
@@ -173,41 +216,86 @@ position: relative; margin: 40px 0 0px 0;
 	float: right;
 }
 
-#start .right img {
+#start {
+	margin-bottom: 60px;
+}
+
+#start img {
 	position: relative; top: 20px;
 }
 
-/* FEATURE LISTS -------------------------*/
+#framer img {
+	position: relative; right: 60px;
+}
 
-.features {
+#framer ul {
+	width: 100%;
+	margin-top: 20px;
 	float: left;
-	margin-top: 40px;
 }
 
-#start .features li {
-	list-style: none;
-	color: #fff;
-	float: left; position: static; padding: 0;
-	min-width: 280px;
+#framer ul section {
+	float: none;
+	max-width: 100%;
 }
 
-/*Align list items on the right to the grid*/
-#start .features li:nth-child(2), #start .features li:nth-child(4) {
-	margin-left: 40px;
+#framer ul section {
+	max-width: 280px;
+	width: 100%;
+	float: left;
 }
+/*
+#framer ul section+section {
+	float: left;
+}*/
 
-.features img {
-	position: relative; top: 2px;
-	margin-right: 10px;
-	display: inline-block;
+#framer ul section li {
+	color: #4DB4EC;
 }
 
 
 /* INTERACTION SECTION -------------------------*/
 
+#interaction {
+	background: #1A1D24;
+	padding: 100px 0;
+	margin: 80px 0;
+	position: relative;
+	width: 100%;
+}
+
+#interaction p {
+	font-weight: 100;
+}
+
+#interaction section p {
+	font-size: 16px;
+}
 
 #interaction h5 {
 	margin-bottom: 80px;
+}
+
+
+.ss-half {
+	position: absolute; right: 0;
+	top: 320px;
+}
+
+#interaction section li {
+	list-style: none;
+	font-size: 15px;
+}
+
+#interaction section li+li {
+	margin-top: 40px;
+}
+
+#interaction section p.title {
+	color: #fff;
+	font-size: 17px;
+	margin-bottom: 10px;
+	font-weight: 300;
 }
 
 /* FOOTER ------------------------------ */
@@ -228,11 +316,26 @@ footer.global a.coinbase-button {
 #header h1 {
 	font-size: 56px;
 }
+
+
+#screenshot-copy p {
+	font-size: 17px;
+}
+
+.inner {
+	max-width: 680px;
+}
+
 }
 
 @media only screen and (max-width: 900px) {
-#header h1 {
-	font-size: 54px;
+
+.inner {
+	max-width: 680px;
+}
+
+#screenshot-copy li {
+	max-width: 260px;
 }
 }
 
@@ -275,9 +378,9 @@ img.app-icon {
 @media only screen and (max-width:440px) {
 
 img.app-icon {
-	width: 128px;
-	margin-left: -64px;
-	bottom: -32px;
+	width: 140px;
+	margin-left: -70px;
+	bottom: -50px;
 }
 
 }

@@ -119,7 +119,7 @@ a:active {
 }
 
 #sidebar ul li.headline, #sidebar ul li.headline a {
-	color: #4DB4EC;
+	color: #84D1FF;
 	font-weight: 500; 
 	font-size: 15px;
 	margin-bottom: 10px;
@@ -285,14 +285,14 @@ a.small.right {
 	float:right; font-size: 12px; font-weight:500; margin-top:2px;
 }
 h1 {
-	font-size: 54px; line-height: 1;
-	font-weight: 300; color: #222;
-	-webkit-font-smoothing: antialiased;
+	font-size: 60px; line-height: 1;
+	font-weight: 100; color: #222;
+	-webkit-font-smoothing: subpixel-antialiased;
 	position: relative; z-index: 10;
 	max-width: 600px;
 	margin: 0 auto;
 	margin-bottom: 40px;
-	letter-spacing: -1px;
+	letter-spacing: -2px;
 }
 
 h1.title {
@@ -311,7 +311,7 @@ h2 {
 /*Index page h2*/
 h2.headline {
 	font-size: 26px; line-height: 1.5;
-	font-weight: 300;
+	font-weight: 100;
 	color: #888;
 	margin-bottom: 40px; text-align: center;
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -851,6 +851,15 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+body {
+	padding-left: 220px;
+}
+
+#sidebar {
+	width: 220px;
+	padding:60px;
+} 
+
 #wrapper {
 	max-width: 600px;
 }
@@ -871,11 +880,11 @@ body {
 
 @media only screen and (max-width: 900px) {
 body {
-	padding-left: 200px;
+	padding-left: 180px;
 }
 
 #sidebar {
-	width: 200px;
+	width: 180px;
 	padding: 40px;
 }
 
@@ -885,7 +894,7 @@ body {
 }
 
 .inner, #wrapper.index footer.global p {
-	max-width: 600px;
+	max-width: 620px;
 }
 
 #wrapper.index {
@@ -897,7 +906,7 @@ nav#index {
 }
 
 #features li {
-	max-width: 220px;
+	max-width: 240px;
 }
 
 #header a {
@@ -958,10 +967,6 @@ body {
 	padding: 0;
 	position: relative; opacity: 0;
 	max-height: 0; overflow: hidden;
-}
-
-#gradientbar {
-	display: none;
 }
 
 #sidebar nav {

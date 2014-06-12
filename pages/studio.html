@@ -24,6 +24,8 @@
 		</section>
 	</header>
 	
+	<hr>
+	
 	<section id="screenshot-copy" class="clearfix">
 		<li>
 			<h3>Build</h3>
@@ -43,47 +45,68 @@
 	
 	<div class="inner">
 	
-	<h5>When building prototypes, you consider how your design looks <span>and</span> how it feels.</h5>
+	<h5>When prototyping, you're considering how your design looks <span>and</span> how it feels.</h5>
 	
 	<hr/>
 	
 	<section id="start" class="half clearfix">
 		<section>
-			<h2>Start with Design</h2>
-			<p>Do your visual design work in the tools you love. When you’re ready to add interaction, exporting assets is a breeze. Open Framer Studio, click ‘Generate’ and you’re good to go.</p>
-		</section>
-		<section class="right">
 			<img class="2x" src="/static/images/fs/generate.png">
 		</section>
 		
-		<ul class="features clearfix">
-		<li><img src="/static/images/fs/icon-integrations.png"> Sketch & Photoshop</li>
-		<li><img src="/static/images/fs/icon-groups.png"> Export Groups to Images</li>
-		<li><img src="/static/images/fs/icon-regenerate.png"> Infinite Re-Generate</li>
-		<li><img src="/static/images/fs/icon-hierarchy.png"> Respects Layer Hierarchy</li>
-		</ul>	
+		<section class="right">
+			<h2>Integrated Workflow</h2>
+			<p>Framer Studio has Photoshop & Sketch integration, allowing you to import layers directly from your static designs and turn them into interactive prototypes.</p>
+		</section>
+		
 	</section>
 	
-	<hr/>
-	
-	<section id="interaction" class="half clearfix">
-	
-		<h2 class="center">Explore animations and discover interactions.</h2>
-		<h5>Framer Studio shortens the learning curve, and embraces code for its flexibility.</h5>
-		
+	<section id="framer" class="half clearfix">
 		<section>
-		<img src="/static/images/fs/thumb-code.png">
+			<h2>Built on Framer</h2>
+			<p>Framer Studio is built on FramerJS, an open source framework. It's based on WebKit, so prototypes work on desktop, mobile and tablets. </p>
 		</section>
 		
 		<section class="right">
-		<p class="title">Smart editor</p>
-		<p>Coding for the experienced and inexperienced alike. With snippets, inline-errors and auto-complete, it’s a powerful yet easy-to-use method of defining interactions.
-		</p>
-		
-		<p>It uses CoffeeScript, a much more legible and minimal way to write JavaScript. </p>
+		<img class="icon-gen 2x" src="/static/images/fs/icon-generator.png">
 		</section>
+		
+		<ul>	
+			<section>
+				<li>3D Animation with Spring Physics</li>
+				<li>Fluid, 60fps Framerates</li>
+			</section>
+		</ul>
+		
+	</section> <!---framer block --->
+	</div> <!--inner-->
+	
+	<section id="interaction" class="half clearfix">
+		<img class="ss-half 2x" src="/static/images/fs/ss-code.png">
+		<div class="inner">
+			<h2>Explore animations.</h2> <h2>Discover new interactions.</h2>
+			<h4>Framer Studio embraces code for its flexibility.  It has a smart editor that’s build to simplify coding.</h4>
+	
+		<section>
+			<li><p class="title">CoffeeScript</p>
+			<p>Framer Studio uses CoffeeScript, a much more legible and minimal way to write JavaScript.</p></li>
+			
+			<li><p class="title">Snippets</p>
+			<p>Framer Studio comes with a built-in snippet library. Add layers and interactions with  a single click.</p></li>
+			
+			<li><p class="title">Auto-Complete</p>
+			<p>Built around FramerJS. Remembers any variables & layer names that you've set. </p></li>
+			
+			<li><p class="title">Inline Errors</p>
+			<p>Better understand your code. A more forgiving way to write CoffeeScript.</p></li>
+		</section>
+		
+			
+		</div> <!--inner-->
+	</section>
 	
 	</section>
+	<div class="inner">
 	</div> <!--inner-->
 
 {% endblock content%}
