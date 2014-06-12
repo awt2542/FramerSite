@@ -100,13 +100,21 @@ h5 span {
 }
 
 #header h1 {
-	font-size: 60px;
-	line-height: 1.1;
+	font-size: 56px;
+	line-height: 1.2;
 	font-weight: 100;
 	-webkit-font-smoothing: subpixel-antialiased;
-	margin: 10px 0 40px 0;
-	color: #333;
-	letter-spacing: -2px;	
+	margin: 20px 0 20px 0;
+	color: #222;
+	letter-spacing: -3px;	
+}
+
+#header h2 {
+	font-weight: 100;
+	color: #999; line-height: 1.4;
+	font-size: 24px;
+	max-width: 500px; margin: 0 auto;
+	margin-bottom: 40px;
 }
 
 img.blueprint {
@@ -153,7 +161,6 @@ img.app-icon {
 /* SCREENSHOT -------------------------*/
 
 #screenshot-copy {
-	margin-top:120px;
 	text-align: center;
 }
 
