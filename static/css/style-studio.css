@@ -111,7 +111,7 @@ h5 span {
 
 #header h2 {
 	font-weight: 100;
-	color: #999; line-height: 1.4;
+	color: #888; line-height: 1.4;
 	font-size: 24px;
 	max-width: 500px; margin: 0 auto;
 	margin-bottom: 40px;
@@ -132,15 +132,29 @@ img.app-icon {
 
 
 #header a, #footer a {
-	padding:10px 16px 10px; 
-	font-weight: 400;
-	border-radius: 50px; background-color: #fff;
-	box-shadow: 0 0 0 2px #4DB4EC; color:#4DB4EC;
+	padding:0px 10px 10px; position: relative;
+	font-weight: 300; width: auto;
+	border-radius: 0px; background: #fff;
+	box-shadow: 0 1px 0 #4DB4EC; color:#4DB4EC;
+	
+	text-transform: none; letter-spacing: 0; font-size: 19px;
 }
 
 #header a.green, #footer a.green {
-	box-shadow: 0 0 0 2px #7DDC16; color:#7DDC16;
+	box-shadow: 0 1px 0 #7DDC16; color:#7DDC16; background: #fff;
 	margin-bottom: 0;
+	margin-right: 40px;
+}
+
+#header a:after {
+	content: "$49.99"; left: 0; width: 100%;
+	position: absolute; top: 40px; text-align: center;
+	font-size: 12px; text-transform: uppercase; letter-spacing: 2px;
+	opacity: 1; font-weight: 400;
+}
+
+#header a.green:after {
+	content: "Trial"; 
 }
 
 #header p.small, #footer p.small {
@@ -150,12 +164,12 @@ img.app-icon {
 	letter-spacing: 8px;
 	font-weight: 400;
 	margin-top: 50px;
-	
 }
 
 #header a.small, #footer a.small {
 	margin-top:30px;
 	letter-spacing: 2px;
+	display: none;
 }
 
 /* SCREENSHOT -------------------------*/
