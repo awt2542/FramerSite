@@ -59,9 +59,9 @@ h4 {
 	text-align: center;
 	display: block;
 }
-
+/*Interaction h4 / Headline */
 #wrapper.index #interaction h4 {
-	margin-bottom: 60px;
+	margin-bottom: 100px;
 }
 
 /* QUOTES -------------------------*/
@@ -272,14 +272,11 @@ img.studio {
 	font-size: 16px;
 }
 
-#interaction h5 {
-	margin-bottom: 80px;
-}
 
-
-.ss-half {
-	position: absolute; right: 0;
-	top: 320px;
+#interaction .ss-half {
+	background: url('/static/images/fs/ss-code.png') no-repeat;
+	position: absolute; right: -360px; width: 658px; height: 748px;
+	top: 260px;
 }
 
 #interaction section li {
@@ -288,13 +285,13 @@ img.studio {
 }
 
 #interaction section li+li {
-	margin-top: 40px;
+	margin-top: 50px;
 }
 
 #interaction section p.title {
 	color: #fff;
 	font-size: 17px;
-	margin-bottom: 10px;
+	margin-bottom: 6px;
 	font-weight: 300;
 }
 
