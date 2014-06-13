@@ -144,6 +144,14 @@ img.app-icon {
 	margin-right: 20px;
 }
 
+#header a.green:hover { color: #fff; box-shadow: none; }
+#header a:hover:after { color: #4DB4EC; }
+#header a.green:hover:after { color: #7DDC16; }
+
+#framer .right a:hover { 
+	background: #4DB4EC; color: #fff; box-shadow: none; opacity: 1;
+}
+
 #header a:after {
 	content: "$49.99"; left: 0; width: 100%;
 	position: absolute; top: 50px; text-align: center;
