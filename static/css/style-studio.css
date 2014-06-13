@@ -97,7 +97,7 @@ h5:before {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f5f6',GradientType=0 );
 		
 		z-index: -2;
-	box-shadow: 0 1px 0 rgba(0,0,0,.06);
+	box-shadow: 0 1px 0 rgba(0,0,0,.075);
 	opacity: .6;
 }
 
@@ -413,7 +413,7 @@ img.studio {
 }
 
 #viewer {
-	padding: 100px 0 20px 0;
+	padding: 100px 0 0px 0;
 	position: relative;
 }
 
