@@ -34,33 +34,32 @@ h2 {
 .feature-block h2 {
 	text-align: center;
 	font-weight: 100;
-	line-height: 1.4;
-	font-size: 40px; letter-spacing: -1px;	
-	font-size: 44px; 
+	line-height: 1.1;
+	font-size: 40px; letter-spacing: -2px;	
+	font-size: 50px; letter-spacing: -3px;
 }
+
 
 #interaction h2 {
 	color: #fff;
 }
 
-h2+h2 {
-	margin-top: -30px;
-}
-
 h3 {
 	font-size: 24px; font-weight: 300;
-	margin-bottom: 20px;
+	margin-bottom: 20px; 
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 h4 {
-	font-size: 22px;
-	color: #777; 
+	font-size: 20px;
+	color: #999; 
 	line-height: 1.5;
 	text-transform: none;
-	letter-spacing: 0; font-weight: 100;
+	letter-spacing: 0; font-weight: 300;
 	text-align: center;
 	display: block;
+	
+	font-size: 26px; font-weight: 100; line-height: 1.4; 
 }
 /*Feature Blocks H4 / Headlines */
 #wrapper.index .feature-block h4 {
@@ -72,10 +71,9 @@ h4 {
 h5 {
 	text-align: center;
 	font-weight: 100;
-	line-height: 1.4;
-	font-size: 30px; letter-spacing: -1px;
+	line-height: 1.2;
+	font-size: 40px; letter-spacing: -1px;
 	color: #999;
-	max-width: 500px; margin: 0 auto;
 }
 
 /* HEADER ------------------------------- */
@@ -96,20 +94,24 @@ h5 {
 }
 
 #header h1 {
-	font-size: 60px;
+	font-size: 72px; letter-spacing: -4px;
 	line-height: 1.2;
 	font-weight: 100;
 	-webkit-font-smoothing: subpixel-antialiased;
-	margin: 20px 0 20px 0;
-	color: #222;
-	letter-spacing: -3px;	
+	margin: 20px 0 10px 0;
+	color: #222;	
 }
 
-#header h2 {
+#footer h1 {
+	font-size: 60px;
+	margin-bottom: 10px;
+}
+
+#header h2, #footer h2 {
 	font-weight: 100;
 	color: #888; line-height: 1.4;
-	font-size: 24px;
-	max-width: 500px; margin: 0 auto;
+	font-size: 26px;
+	max-width: 600px; margin: 0 auto;
 	margin-bottom: 40px;
 }
 
@@ -133,6 +135,7 @@ img.app-icon {
 	border-radius: 50px; background: #fff;
 	box-shadow: 0 0 0 1px #4FB4EC; color:#4DB4EC;
 	text-transform: none; letter-spacing: 0; font-size: 17px;
+	margin-bottom: 20px;
 }
 
 #header a.green, #footer a.green {
@@ -239,7 +242,7 @@ img.studio {
 }
 
 #framer img {
-	position: relative; right: 35px;
+	position: relative; right: 10px;
 }
 
 #framer ul {
@@ -269,8 +272,8 @@ img.studio {
 #interaction {
 	background: #1A1D24;
 	background: #626a73;
-	background: #707a84;
-
+	background: #1D2026;
+	box-shadow: inset 1px 0 0 rgba(255,2555,255,.1);
 	padding: 100px 0;
 	margin: 80px 0 0 0;
 	position: relative;
@@ -291,8 +294,8 @@ img.studio {
 
 #interaction .ss-half {
 	background: url('/static/images/fs/ss-code.png') no-repeat;
-	position: absolute; right: -360px; width: 658px; height: 748px;
-	top: 280px;
+	position: absolute; right: -400px; width: 658px; height: 748px;
+	top: -10px;
 }
 
 #interaction section p.title {
@@ -316,6 +319,11 @@ img.studio {
 	font-weight: 400;
 }
 
+
+.feature-list {
+	position: relative;
+}
+
 #viewer {
 	padding: 100px 0 20px 0;
 	position: relative;
@@ -332,8 +340,8 @@ img.studio {
 
 #viewer .ss-half {
 	background: url('/static/images/fs/ss-viewer.png') no-repeat;
-	position: absolute; left: -300px; width: 650px; height: 700px;
-	top: 280px;
+	position: absolute; left: -360px; width: 650px; height: 700px;
+	top: -20px;
 }
 	
 
