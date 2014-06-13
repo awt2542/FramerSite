@@ -232,6 +232,7 @@ img.studio {
 
 /* BODY SECTIONS -------------------------*/
 
+/* Two Columns */
 .half section {
 	max-width: 280px;
 	float: left;
@@ -241,16 +242,21 @@ img.studio {
 	float: right;
 }
 
+/* Three Columns */
+.one-third section {
+	max-width: 180px; float: left;  width: 100%;
+}
+
+.one-third section+section {
+	margin-left: 30px;
+}
+
 #start {
 	margin-bottom: 60px;
 }
 
 #start img {
 	position: relative; top: 20px;
-}
-
-#framer img {
-	
 }
 
 #framer ul {
@@ -388,21 +394,16 @@ img.studio {
 
 /* FOOTER FEATURE LISTS ------------------------------ */
 
-#footer-features section{
-	text-align: center;
-	max-width: 280px; width: 100%;
-	
-}
 
 #footer-features section ul li{
 	padding-left: 0; left: 0;
 	list-style: none;
-	color: #4DB4EC;
 }
 
 #footer-features h2{
 	text-align: center;
 	margin-bottom: 60px;
+	font-size: 17px; text-transform: uppercase; letter-spacing: 4px; font-weight: 400;
 	
 }
 
