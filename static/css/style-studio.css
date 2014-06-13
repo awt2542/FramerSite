@@ -102,17 +102,16 @@ h5 {
 	color: #222;	
 }
 
-#footer h1 {
-	font-size: 60px;
-	margin-bottom: 10px;
-}
-
 #header h2, #footer h2 {
 	font-weight: 100;
 	color: #888; line-height: 1.4;
 	font-size: 26px;
 	max-width: 600px; margin: 0 auto;
 	margin-bottom: 40px;
+}
+
+#footer h2 span {
+	color: #333;
 }
 
 img.blueprint {
@@ -394,7 +393,6 @@ img.studio {
 
 /* FOOTER FEATURE LISTS ------------------------------ */
 
-
 #footer-features section ul li{
 	padding-left: 0; left: 0;
 	list-style: none;
@@ -407,6 +405,27 @@ img.studio {
 	
 }
 
+/* FOOTER  ------------------------------ */
+
+#footer h2 {
+	text-align: left;
+	float: left;
+	margin: 0;
+	color: #333;
+	font-size: 26px;
+}
+
+#footer section {
+	float: right;
+}
+
+#footer a {
+	margin-bottom: 0;
+}
+
+#footer a.green {
+	margin-right: 10px;
+}
 
 @media only screen and (max-width: 1024px) {
 #header h1 {
