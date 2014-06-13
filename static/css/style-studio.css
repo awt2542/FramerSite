@@ -71,7 +71,7 @@ h4 {
 h5 {
 	text-align: center;
 	font-weight: 100;
-	line-height: 1.2;
+	line-height: 1.3;
 	font-size: 40px; letter-spacing: -1px;
 	color: #999;
 }
@@ -242,7 +242,7 @@ img.studio {
 }
 
 #framer img {
-	position: relative; right: 10px;
+	
 }
 
 #framer ul {
@@ -262,8 +262,8 @@ img.studio {
 }
 
 #framer ul section li {
-	color: #4DB4EC; padding: 0;
-	list-style: none; left: 0; line-height: 1.7;
+	color: #4DB4EC; line-height: 1.7;
+	padding-left: 5px;
 }
 
 
@@ -330,7 +330,7 @@ img.studio {
 
 .feature-block section li img {
 	float: left; position: relative; top: 4px;
-	margin-right: 15px;
+	margin-right: 12px;
 }
 
 
