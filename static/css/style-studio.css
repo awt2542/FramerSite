@@ -30,7 +30,7 @@ h2 {
 }
 
 h3 {
-	font-size: 20px; font-weight: 300;
+	font-size: 22px; font-weight: 300;
 	margin-bottom: 20px;  -webkit-font-smoothing: subpixel-antialiased;
 	letter-spacing: 0px;
 	color: #333;
@@ -353,8 +353,14 @@ img.studio {
 
 .feature-block section li img {
 	float: left; position: relative; top: 4px;
-	margin-right: 12px;
+	margin-right: 14px;
 }
+
+#interaction section li:nth-child(1) img { top: 5px; }
+#interaction section li:nth-child(2) img { top: 6px; }
+#interaction section li:nth-child(3) img { top: 3px; }
+#viewer section li:nth-child(3) img { top: 3px; }
+#viewer section li:nth-child(4) img { top: 2px; }
 
 
 .feature-list {
@@ -372,7 +378,6 @@ img.studio {
 
 #viewer section p.title {
 	color: #222;
-	font-weight: 400;
 }
 
 #viewer .ss-half {
