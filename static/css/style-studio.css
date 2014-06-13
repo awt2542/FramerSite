@@ -36,7 +36,7 @@ h2 {
 	font-weight: 100;
 	line-height: 1.1;
 	font-size: 40px; letter-spacing: -2px;	
-	font-size: 50px; letter-spacing: -3px;
+	font-size: 50px; letter-spacing: -2px;
 }
 
 
@@ -273,6 +273,15 @@ img.studio {
 	background: #1A1D24;
 	background: #626a73;
 	background: #1D2026;
+	background: #1d2026; /* Old browsers */
+	background: -moz-linear-gradient(left,  #1d2026 0%, #2f3541 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1d2026), color-stop(100%,#2f3541)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #1d2026 0%,#2f3541 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #1d2026 0%,#2f3541 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #1d2026 0%,#2f3541 100%); /* IE10+ */
+	background: linear-gradient(to right,  #1d2026 0%,#2f3541 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d2026', endColorstr='#2f3541',GradientType=1 ); /* IE6-9 */
+	
 	box-shadow: inset 1px 0 0 rgba(255,2555,255,.1);
 	padding: 100px 0;
 	margin: 80px 0 0 0;
@@ -317,6 +326,11 @@ img.studio {
 	font-size: 17px;
 	margin-bottom: 6px;
 	font-weight: 400;
+}
+
+.feature-block section li img {
+	float: left; position: relative; top: 4px;
+	margin-right: 15px;
 }
 
 
