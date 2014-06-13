@@ -11,11 +11,6 @@ hr {
 	margin: 80px auto;
 }
 
-#footer hr {
-	margin: 60px auto;
-}
-
-
 /* TYPOGRAPHY ------------------------------- */
 p {
 	font-size: 17px; font-weight: 300;
@@ -441,13 +436,13 @@ img.studio {
 #footer-features h2{
 	text-align: center;
 	margin-bottom: 60px;
-	font-size: 17px; text-transform: uppercase; letter-spacing: 4px; font-weight: 400;
+	font-size: 15px; text-transform: uppercase; letter-spacing: 4px; font-weight: 400;
 	
 }
 
 /* FOOTER  ------------------------------ */
-#wrapper ul {
-	margin-bottom: 0;
+#footer-features ul {
+	margin-bottom: 80px;
 }
 
 #footer h2 {
@@ -457,14 +452,7 @@ img.studio {
 	color: #333;
 	font-size: 28px;
 	line-height: 1.1;
-}
-
-#footer {
-	margin-bottom: -20px;
-}
-
-#footer section {
-	float: right;
+	display: none;
 }
 
 #footer a {
