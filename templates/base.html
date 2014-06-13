@@ -24,8 +24,14 @@
 	
 	<aside id="sidebar" class="{% block sidebarclass %}{% endblock %}">
 		<nav>
-			<ul><li class="headline {% block framerclass %}{% endblock %}"><a href="index.html" class="introduction">Framer</a></li></ul>
-				
+			<ul>
+				<li class="headline {% block framerclass %}{% endblock %}"><a href="../" class="introduction">Framer</a></li>
+			</ul>
+			
+			<ul id="studio">
+				<li class="headline"><a href="/studio/index.html" class="studio">Studio {% include "dropdown.html" %}</a></li>
+			</ul>
+
 			<ul id="start">
 				<li class="headline"><a href="start.html" class="start">Start {% include "dropdown.html" %}</a></li>
 				<section>
@@ -78,7 +84,8 @@
 		</nav>
 	</aside>
 	{% endblock sidebar %}
-		
+	
+	{% block studioheader %}{% endblock studioheader %}
 	<section id="wrapper" {% block isindex %}{% endblock isindex %}>
 	{% block content %}
 	Main content
