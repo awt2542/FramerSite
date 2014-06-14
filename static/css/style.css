@@ -992,10 +992,9 @@ body {
 }
 
 #topbar img {
-	position: absolute; top: 6px; left: 6px;
+	position: absolute; top: 6px; right: 6px;
 	height: 32px; width: 32px;
 	cursor: hand; cursor: pointer;
-	opacity: .4;
 }
 
 #wrapper {

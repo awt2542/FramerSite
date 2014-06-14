@@ -244,10 +244,9 @@ img.app-icon {
 	text-align: center;
 	background: url('/static/images/fs/bg-mavericks.png') no-repeat;
 	background-size: cover;
-	width: 100%;
+	width: 100%; max-height: 580px;
 	margin: 40px 0 80px 0;
 	height: 100%;
-	max-height: 580px;
 	position: relative;
 }
 
@@ -257,7 +256,7 @@ img.app-icon {
 }
 
 img.studio {
-	position: relative; margin: 40px 0 0px 0; max-width: 688px;
+	position: relative; margin: 40px 0 0px 0; max-width: 688px; width: 100%;
 }
 
 /* BODY SECTIONS -------------------------*/
@@ -526,11 +525,26 @@ img.studio {
 	font-size: 50px;
 }
 
+h5 {
+	font-size: 30px;
+	max-width: 500px;
+}
+
 img.app-icon {
 	width: 200px;
 	margin-left: -100px;
 	bottom: -87px;
 }
+
+#screenshot-copy li {
+	max-width: 46%;
+}
+
+#screenshot-copy li p {
+	font-size: 15px;
+}
+
+#screenshot-copy li:first-child { margin-right: 4%; }
 }
 
 @media only screen and (max-width: 580px) {
@@ -549,6 +563,10 @@ img.app-icon {
 
 .half .right {
 	float: none;
+}
+
+.feature-block, #start, #framer, h5, #footer-features, hr.block {
+	display: none;
 }
 
 
