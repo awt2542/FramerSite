@@ -25,15 +25,15 @@
 	<aside id="sidebar" class="{% block sidebarclass %}{% endblock %}">
 		<nav>
 			<ul>
-				<li class="headline {% block framerclass %}{% endblock %}"><a href="../" class="introduction">Framer</a></li>
+				<li class="headline {% block framerclass %}{% endblock %}"><a href="../">Framer</a></li>
 			</ul>
 			
 			<ul id="studio">
-				<li class="headline"><a href="/studio/index.html" class="studio">Studio {% include "dropdown.html" %}</a></li>
+				<li class="headline {% block studioclass %}{% endblock %}"><a href="/studio/index.html">Studio {% include "dropdown.html" %}</a></li>
 			</ul>
 			
 			<ul id="examples">
-				<li class="headline"><a href="http://examples.framerjs.com" class="studio">Examples {% include "dropdown.html" %}</a></li>
+				<li class="headline"><a href="http://examples.framerjs.com" class="examples">Examples {% include "dropdown.html" %}</a></li>
 			</ul>
 
 			<ul id="start">
