@@ -150,12 +150,12 @@ h5 {
   margin: 20px 0 10px 0;
   color: #222; }
 
-#header h2, #footer h2 {
+#header h2 {
   font-weight: 100;
   color: #888;
   line-height: 1.4;
   font-size: 26px;
-  max-width: 600px;
+  max-width: 440px;
   margin: 0 auto;
   margin-bottom: 40px; }
 
@@ -238,7 +238,7 @@ img.app-icon {
   list-style: none;
   float: left; }
 
-#screenshot-copy section.mobile {
+section.mobile {
   display: none; }
 
 #screenshot-copy li:first-child {
@@ -530,17 +530,9 @@ img.studio {
   p {
     font-size: 15px; }
 
-  #header h1 {
-    font-size: 50px;
-    letter-spacing: -2px; }
-
   h5 {
     font-size: 30px;
     max-width: 500px; }
-
-  img.app-icon {
-    width: 200px;
-    margin-left: -100px; }
 
   #screenshot-copy li {
     max-width: 48%; }
@@ -595,13 +587,27 @@ img.studio {
     font-size: 15px; } }
 @media only screen and (max-width: 440px) {
   #header h1 {
-    margin-top: 20px;
-    font-size: 24px;
+    margin-top: 40px;
+    font-size: 20px;
     font-weight: 300;
-    letter-spacing: -1px; }
+    letter-spacing: 0;
+    margin-bottom: 10px; }
+
+  #illustration {
+    max-height: 215px;
+    padding: 10px; }
+
+  img.blueprint {
+    margin-top: 0; }
+
+  p {
+    line-height: 1.5; }
+
+  hr {
+    display: none; }
 
   #header h2 {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 300; }
 
   img.app-icon {
@@ -613,8 +619,10 @@ img.studio {
     display: none; }
 
   /*Flip the screenshot texts */
-  #screenshot-copy li {
+  #screenshot-copy {
     display: none; }
 
-  #screenshot-copy section.mobile {
-    display: block; } }
+  section.mobile {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px; } }
