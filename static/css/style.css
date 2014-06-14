@@ -984,6 +984,19 @@ body {
 	opacity: 1;
 }
 
+/*Create a much smaller mobile navigation*/
+#sidebar ul li:not(.headline) a {
+	display: none;
+}
+
+#sidebar ul {
+	margin-bottom: 20px;
+}
+
+#sidebar ul:last-of-type {
+	margin: 0;
+}
+
 #topbar {
 	display: block; height: 44px; width: 100%;
 	background: #101216;
@@ -1198,6 +1211,12 @@ h2.headline {
 }
 
 @media only screen and (max-width: 440px) {
+
+#sidebar nav {
+	padding: 20px;
+	position: relative;
+	opacity: 0;
+}
 
 /* Vertical spacing = 40/20 */
 #wrapper { padding:20px; padding-top: 40px; }

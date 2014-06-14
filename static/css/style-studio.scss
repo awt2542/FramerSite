@@ -499,7 +499,7 @@ img.studio {
 
 @media only screen and (max-width: 1024px) {
 #header h1 {
-	font-size: 56px;
+	font-size: 62px;
 }
 
 
@@ -528,6 +528,7 @@ img.studio {
 @media only screen and (max-width: 768px) {
 #header h1 {
 	font-size: 50px;
+	letter-spacing: -2px;
 }
 
 h5 {
@@ -538,18 +539,13 @@ h5 {
 img.app-icon {
 	width: 200px;
 	margin-left: -100px;
-	bottom: -87px;
 }
 
 #screenshot-copy li {
-	max-width: 46%;
+	max-width: 48%;
 }
 
-#screenshot-copy li p {
-	font-size: 15px;
-}
-
-#screenshot-copy li:first-child { margin-right: 4%; }
+#screenshot-copy li:first-child { margin-right: 2%; }
 }
 
 @media only screen and (max-width: 580px) {
@@ -558,6 +554,10 @@ img.app-icon {
 	width: 180px;
 	margin-left: -90px;
 	bottom: -68px;
+}
+
+#header h2 {
+	font-size: 22px;
 }
 
 .half section {
@@ -574,6 +574,9 @@ img.app-icon {
 	display: none;
 }
 
+#screenshot-copy li p {
+	font-size: 15px;
+}
 
 }
 
