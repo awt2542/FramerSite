@@ -62,6 +62,13 @@ h4 {
   margin-bottom: 100px; }
 
 /* QUOTES -------------------------*/
+.quote {
+  position: relative;
+  max-width: 540px;
+  margin: 0 auto;
+  display: block;
+  z-index: 10; }
+
 h5 {
   text-align: center;
   font-weight: 100;
@@ -74,12 +81,10 @@ h5 {
   position: relative;
   z-index: 200; }
 
-h5:before {
+.quote:before {
   content: "";
   width: 150%;
-  display: inline-block;
   height: 100%;
-  background: red;
   position: absolute;
   top: 80px;
   left: -25%;
@@ -95,12 +100,10 @@ h5:before {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
   opacity: .65; }
 
-h5:after {
+.quote:after {
   content: "";
   width: 150%;
-  display: inline-block;
   height: 100%;
-  background: red;
   position: absolute;
   top: 81px;
   left: -25%;

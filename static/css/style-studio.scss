@@ -65,6 +65,13 @@ h4 {
 
 
 /* QUOTES -------------------------*/
+.quote {
+	position: relative;
+	max-width: 540px; margin: 0 auto;
+	display: block;
+	z-index: 10;
+}
+
 h5 {
 	text-align: center;
 	font-weight: 100;
@@ -75,11 +82,10 @@ h5 {
 	position: relative; z-index: 200;
 }
 
-h5:before {
-	content: ""; width: 150%; display: inline-block;
-	height: 100%; background: red;
-	position: absolute; top: 80px;
-	left: -25%;
+.quote:before {
+	content: ""; width: 150%; 
+	height: 100%;
+	position: absolute; top: 80px; left: -25%;
 	background: rgb(255,255,255);
 	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 60%, rgba(243,244,246,1) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,rgba(255,255,255,1)), color-stop(100%,rgba(243,244,246,1)));
@@ -93,11 +99,10 @@ h5:before {
 	opacity: .65;
 }
 
-h5:after {
-	content: ""; width: 150%; display: inline-block;
-	height: 100%; background: red;
-	position: absolute; top: 81px;
-	left: -25%;
+.quote:after {
+	content: ""; width: 150%;
+	height: 100%;
+	position: absolute; top: 81px; left: -25%;
 	background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
 	background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%);
