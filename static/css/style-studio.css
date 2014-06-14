@@ -47,9 +47,7 @@ h3 {
   color: #fff; }
 
 h4 {
-  font-size: 20px;
   color: #999;
-  line-height: 1.5;
   text-transform: none;
   letter-spacing: 0;
   font-weight: 300;
@@ -57,7 +55,7 @@ h4 {
   display: block;
   font-size: 26px;
   font-weight: 100;
-  line-height: 1.4; }
+  line-height: 1.35; }
 
 /*Feature Blocks H4 / Headlines */
 #wrapper.index .feature-block h4 {
@@ -67,8 +65,8 @@ h4 {
 h5 {
   text-align: center;
   font-weight: 100;
-  line-height: 1.3;
-  font-size: 36px;
+  line-height: 1.34;
+  font-size: 34px;
   letter-spacing: -1px;
   color: #999;
   max-width: 540px;
@@ -358,35 +356,27 @@ img.studio {
 
 /* INTERACTION SECTION -------------------------*/
 #interaction {
-  background: #1A1D24;
-  background: #626a73;
-  background: #1D2026;
   background: #1d2026;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #1d2026 0%, #2f3541 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #1d2026), color-stop(100%, #2f3541));
-  background: -webkit-linear-gradient(left, #1d2026 0%, #2f3541 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #1d2026 0%, #2f3541 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #1d2026 0%, #2f3541 100%);
-  /* IE10+ */
-  background: linear-gradient(to right, #1d2026 0%, #2f3541 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1d2026', endColorstr='#2f3541',GradientType=1 );
+  background: -moz-linear-gradient(left, #1d2026 10%, #2c333d 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #1d2026), color-stop(100%, #2c333d));
+  background: -webkit-linear-gradient(left, #1d2026 10%, #2c333d 100%);
+  background: -o-linear-gradient(left, #1d2026 10%, #2c333d 100%);
+  background: -ms-linear-gradient(left, #1d2026 10%, #2c333d 100%);
+  background: linear-gradient(to right, #1d2026 10%, #2c333d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1d2026', endColorstr='#2c333d',GradientType=1 );
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.1);
   padding: 100px 0;
   margin: 80px 0 0 0;
   position: relative; }
 
 #interaction p {
-  font-weight: 100;
-  color: rgba(255, 255, 255, 0.6); }
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  color: #727989; }
 
 #interaction h4 {
   color: #fff;
-  color: rgba(255, 255, 255, 0.6); }
+  color: #9095A1; }
 
 #interaction .ss-half {
   background: url("/static/images/fs/ss-code.png") no-repeat;
@@ -409,11 +399,12 @@ img.studio {
   margin-top: 50px; }
 
 .feature-block p {
-  font-size: 16px; }
+  font-size: 15px;
+  line-height: 1.6; }
 
 .feature-block p.title {
   font-size: 17px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   font-weight: 400; }
 
 .feature-block section li img {
