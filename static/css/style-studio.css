@@ -228,19 +228,6 @@ img.app-icon {
 #header a.green:after {
   content: "Trial"; }
 
-#header p.small, #footer p.small {
-  font-size: 11px;
-  color: #4DB4EC;
-  line-height: 13px;
-  letter-spacing: 8px;
-  font-weight: 400;
-  margin-top: 50px; }
-
-#header a.small, #footer a.small {
-  margin-top: 30px;
-  letter-spacing: 2px;
-  display: none; }
-
 /* SCREENSHOT -------------------------*/
 #screenshot-copy {
   text-align: center; }
@@ -342,7 +329,7 @@ img.studio {
 
 #framer ul section li {
   color: #4DB4EC;
-  line-height: 1.7;
+  line-height: 1.8;
   padding-left: 5px; }
 
 #framer section.right {
@@ -358,6 +345,16 @@ img.studio {
   background: #fff;
   box-shadow: 0 0 0 1px #4FB4EC;
   color: #4DB4EC; }
+
+#framer section.logos img + img {
+  margin-left: 20px; }
+
+#framer section.logos {
+  margin-top: 20px; }
+
+#framer p.small {
+  color: #BEC5D0;
+  margin-bottom: 15px; }
 
 /* INTERACTION SECTION -------------------------*/
 #interaction {
