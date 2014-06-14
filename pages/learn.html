@@ -31,7 +31,7 @@ myLayer.x = 100</code></pre>
 #### Hierarchy <a href="docs.html#layers&amp;hierarchy" class="small right">More</a>
 Layers can contain other layers. We call these subLayers. The parent of a layer is called a superLayer. Layers inherit from their superLayers. For example, if you change the opacity of a layer to 0.5, all subLayers will have opacity of 0.5.
 
-A layer's coordinates are based on it's superLayer. So with an x and y of zero, a layer gets placed in the top left corner of its superLayer.
+A layer's coordinates are based on its superLayer. So with an x and y of zero, a layer gets placed in the top left corner of its superLayer.
 
 You can manipulate the layer hierarchy as you need to.
 <pre><code data-language="javascript"># Adds a subLayer to a layer
@@ -120,7 +120,7 @@ layer.on(Events.TouchEnd, function(event) {
  console.log("The touch has ended :(")
 })</code></pre>
 
-You'll notice the "event" in function. It's an object with additional information about the event that happened like it's position.
+You'll notice the "event" in function. It's an object with additional information about the event that happened like its position.
 
 <hr>
 

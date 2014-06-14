@@ -1,3 +1,7 @@
+/*Colors*/
+$blue: #4DB4EC;
+$green: #7DDC16;
+
 
 #topbar{
 	border-bottom:1px solid #28292D;
@@ -167,13 +171,13 @@ img.app-icon {
 	padding:10px 10px 10px; position: relative;
 	font-weight: 300; width: 120px;
 	border-radius: 50px; background: #fff;
-	box-shadow: 0 0 0 1px #4FB4EC; color:#4DB4EC;
+	box-shadow: 0 0 0 1px $blue; color:$blue;
 	text-transform: none; letter-spacing: 0; font-size: 17px;
 	margin-bottom: 20px;
 }
 
 #header a.green, #footer a.green {
-	box-shadow: 0 0 0 1px #7DDC16; color:#7DDC16; background: #fff;
+	box-shadow: 0 0 0 1px $green; color:$green; background: #fff;
 	margin-bottom: 0;
 	margin-right: 20px;
 }
@@ -227,16 +231,21 @@ img.app-icon {
 #screenshot-copy li:first-child { margin-right: 40px }
 
 #screenshot-copy li:first-child:after {
-	content: url('/static/images/fs/ss-indicator.png');
-	margin-bottom: -85px; height: 85px;
+	content: "";
+	background: url('/static/images/fs/ss-indicator.png');
+	background-size: cover;
+	width: 7px; margin: 0 auto;
+	margin-bottom: -85px; height: 85px; 
 	bottom: -19px;
 	display: block; position: relative;
 	z-index: 100;
-	
 }
 
 #screenshot-copy li:last-child:after {
-	content: url('/static/images/fs/ss-indicator.png');
+	content: ""; 
+	background: url('/static/images/fs/ss-indicator.png');
+	width: 7px; margin: 0 auto;
+	background-size: cover;
 	margin-bottom: -85px; height: 85px;
 	bottom: -19px;
 	display: block; position: relative;
@@ -244,6 +253,12 @@ img.app-icon {
 	
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	#screenshot-copy li:first-child:after, #screenshot-copy li:last-child:after {
+		background: url('/static/images/fs/ss-indicator@2x.png') no-repeat;
+		background-size: cover;
+	}
+}
 #screenshot {
 	text-align: center;
 	background: url('/static/images/fs/bg-mavericks.png') no-repeat;

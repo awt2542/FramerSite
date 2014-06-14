@@ -1,3 +1,4 @@
+/*Colors*/
 #topbar {
   border-bottom: 1px solid #28292D; }
 
@@ -182,16 +183,16 @@ img.app-icon {
   width: 120px;
   border-radius: 50px;
   background: #fff;
-  box-shadow: 0 0 0 1px #4FB4EC;
-  color: #4DB4EC;
+  box-shadow: 0 0 0 1px #4db4ec;
+  color: #4db4ec;
   text-transform: none;
   letter-spacing: 0;
   font-size: 17px;
   margin-bottom: 20px; }
 
 #header a.green, #footer a.green {
-  box-shadow: 0 0 0 1px #7DDC16;
-  color: #7DDC16;
+  box-shadow: 0 0 0 1px #7ddc16;
+  color: #7ddc16;
   background: #fff;
   margin-bottom: 0;
   margin-right: 20px; }
@@ -253,7 +254,11 @@ img.app-icon {
   margin-right: 40px; }
 
 #screenshot-copy li:first-child:after {
-  content: url("/static/images/fs/ss-indicator.png");
+  content: "";
+  background: url("/static/images/fs/ss-indicator.png");
+  background-size: cover;
+  width: 7px;
+  margin: 0 auto;
   margin-bottom: -85px;
   height: 85px;
   bottom: -19px;
@@ -262,7 +267,11 @@ img.app-icon {
   z-index: 100; }
 
 #screenshot-copy li:last-child:after {
-  content: url("/static/images/fs/ss-indicator.png");
+  content: "";
+  background: url("/static/images/fs/ss-indicator.png");
+  width: 7px;
+  margin: 0 auto;
+  background-size: cover;
   margin-bottom: -85px;
   height: 85px;
   bottom: -19px;
@@ -270,6 +279,10 @@ img.app-icon {
   position: relative;
   z-index: 100; }
 
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  #screenshot-copy li:first-child:after, #screenshot-copy li:last-child:after {
+    background: url("/static/images/fs/ss-indicator@2x.png") no-repeat;
+    background-size: cover; } }
 #screenshot {
   text-align: center;
   background: url("/static/images/fs/bg-mavericks.png") no-repeat;
