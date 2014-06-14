@@ -238,6 +238,9 @@ img.app-icon {
   list-style: none;
   float: left; }
 
+#screenshot-copy section.mobile {
+  display: none; }
+
 #screenshot-copy li:first-child {
   margin-right: 40px; }
 
@@ -296,6 +299,7 @@ img.studio {
 /* Two Columns */
 .half section {
   max-width: 280px;
+  width: 100%;
   float: left; }
 
 .half .right {
@@ -504,15 +508,15 @@ img.studio {
   box-shadow: none; }
 
 @media only screen and (max-width: 1024px) {
-  #header h1 {
-    font-size: 62px; }
-
   #screenshot-copy p {
     font-size: 17px; }
 
   .inner {
     max-width: 680px; } }
 @media only screen and (max-width: 900px) {
+  #header h1 {
+    font-size: 64px; }
+
   .inner {
     max-width: 680px; }
 
@@ -520,6 +524,12 @@ img.studio {
     max-width: 260px; } }
 /* MOBILE NAVIGATION ------------------- */
 @media only screen and (max-width: 768px) {
+  .half section {
+    width: 48%; }
+
+  p {
+    font-size: 15px; }
+
   #header h1 {
     font-size: 50px;
     letter-spacing: -2px; }
@@ -538,10 +548,16 @@ img.studio {
   #screenshot-copy li:first-child {
     margin-right: 2%; } }
 @media only screen and (max-width: 580px) {
+  #wrapper.index {
+    padding: 40px 0; }
+
   img.app-icon {
     width: 180px;
     margin-left: -90px;
     bottom: -68px; }
+
+  #header h1 {
+    margin-top: 40px; }
 
   #header h2 {
     font-size: 22px; }
@@ -554,13 +570,51 @@ img.studio {
   .half .right {
     float: none; }
 
+  hr {
+    margin: 40px auto; }
+
+  #screenshot {
+    margin-bottom: 40px; }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px; }
+
+  p {
+    margin-bottom: 0; }
+
   .feature-block, #start, #framer, h5, #footer-features, hr.block {
     display: none; }
+
+  footer.global {
+    padding-top: 40px;
+    margin-top: 40px;
+    margin-bottom: 0px; }
 
   #screenshot-copy li p {
     font-size: 15px; } }
 @media only screen and (max-width: 440px) {
+  #header h1 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: -1px; }
+
+  #header h2 {
+    font-size: 15px;
+    font-weight: 300; }
+
   img.app-icon {
     width: 140px;
     margin-left: -70px;
-    bottom: -50px; } }
+    bottom: -50px; }
+
+  #screenshot-copy li:first-child:after, #screenshot-copy li:last-child:after {
+    display: none; }
+
+  /*Flip the screenshot texts */
+  #screenshot-copy li {
+    display: none; }
+
+  #screenshot-copy section.mobile {
+    display: block; } }
