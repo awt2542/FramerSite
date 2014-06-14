@@ -68,7 +68,7 @@ h5 {
   line-height: 1.34;
   font-size: 34px;
   letter-spacing: -1px;
-  color: #999;
+  color: #A1A7AC;
   max-width: 540px;
   margin: 0 auto;
   position: relative;
@@ -264,6 +264,7 @@ img.app-icon {
   position: relative;
   z-index: 100; }
 
+/*Retina*/
 @media (-webkit-min-device-pixel-ratio: 1.5) {
   #screenshot-copy li:first-child:after, #screenshot-copy li:last-child:after {
     background: url("/static/images/fs/ss-indicator@2x.png") no-repeat;
@@ -381,11 +382,16 @@ img.studio {
 #interaction .ss-half {
   background: url("/static/images/fs/ss-code.png") no-repeat;
   position: absolute;
-  right: -400px;
-  width: 658px;
-  height: 748px;
+  right: -380px;
+  width: 620px;
+  height: 649px;
   top: -10px; }
 
+/*Retina*/
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  #interaction .ss-half {
+    background: url("/static/images/fs/ss-code@2x.png") no-repeat;
+    background-size: cover; } }
 #interaction section p.title {
   color: #fff;
   font-weight: 300; }
@@ -400,12 +406,11 @@ img.studio {
 
 .feature-block p {
   font-size: 15px;
-  line-height: 1.6; }
+  font-weight: 400; }
 
 .feature-block p.title {
   font-size: 17px;
-  margin-bottom: 10px;
-  font-weight: 400; }
+  margin-bottom: 10px; }
 
 .feature-block section li img {
   float: left;
@@ -441,14 +446,22 @@ img.studio {
 #viewer section p.title {
   color: #222; }
 
+#viewer section p {
+  color: #999; }
+
 #viewer .ss-half {
   background: url("/static/images/fs/ss-viewer.png") no-repeat;
   position: absolute;
-  left: -360px;
-  width: 650px;
-  height: 700px;
-  top: -20px; }
+  left: -380px;
+  width: 617px;
+  height: 687px;
+  top: -25px; }
 
+/*Retina*/
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  #viewer .ss-half {
+    background: url("/static/images/fs/ss-viewer@2x.png") no-repeat;
+    background-size: cover; } }
 /* FOOTER FEATURE LISTS ------------------------------ */
 #footer-features section ul li {
   padding-left: 0;

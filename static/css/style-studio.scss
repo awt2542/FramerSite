@@ -70,7 +70,7 @@ h5 {
 	font-weight: 100;
 	line-height: 1.34;
 	font-size: 34px; letter-spacing: -1px;
-	color: #999;
+	color: #A1A7AC;
 	max-width: 540px; margin: 0 auto;
 	position: relative; z-index: 200;
 }
@@ -88,8 +88,7 @@ h5:before {
 	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 60%,rgba(243,244,246,1) 100%);
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 60%,rgba(243,244,246,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f4f6',GradientType=0 );
-			
-		z-index: -2;
+	z-index: -2;
 	box-shadow: 0 1px 0 rgba(0,0,0,.07);
 	opacity: .65;
 }
@@ -233,12 +232,14 @@ img.app-icon {
 	
 }
 
+/*Retina*/
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	#screenshot-copy li:first-child:after, #screenshot-copy li:last-child:after {
 		background: url('/static/images/fs/ss-indicator@2x.png') no-repeat;
 		background-size: cover;
 	}
 }
+
 #screenshot {
 	text-align: center;
 	background: url('/static/images/fs/bg-mavericks.png') no-repeat;
@@ -366,8 +367,16 @@ img.studio {
 
 #interaction .ss-half {
 	background: url('/static/images/fs/ss-code.png') no-repeat;
-	position: absolute; right: -400px; width: 658px; height: 748px;
+	position: absolute; right: -380px; width: 620px; height: 649px;
 	top: -10px;
+}
+
+/*Retina*/
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	#interaction .ss-half {
+		background: url('/static/images/fs/ss-code@2x.png') no-repeat;
+		background-size: cover;
+	}
 }
 
 #interaction section p.title {
@@ -387,14 +396,12 @@ img.studio {
 
 .feature-block p {
 	font-size: 15px;
-	line-height: 1.6;
+	font-weight: 400;
 }
 
 .feature-block p.title {
 	font-size: 17px;
 	margin-bottom: 10px;
-	font-weight: 400;
-
 }
 
 .feature-block section li img {
@@ -426,10 +433,23 @@ img.studio {
 	color: #222;
 }
 
+#viewer section p {
+	color: #999;
+}
+
+
 #viewer .ss-half {
 	background: url('/static/images/fs/ss-viewer.png') no-repeat;
-	position: absolute; left: -360px; width: 650px; height: 700px;
-	top: -20px;
+	position: absolute; left: -380px; width: 617px; height: 687px;
+	top: -25px;
+}
+
+/*Retina*/
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	#viewer .ss-half {
+		background: url('/static/images/fs/ss-viewer@2x.png') no-repeat;
+		background-size: cover;
+	}
 }
 
 /* FOOTER FEATURE LISTS ------------------------------ */
