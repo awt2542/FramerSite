@@ -317,9 +317,9 @@ h2.headline {
 }
 
 h3 {
-	font-size: 24px; font-weight: 500;
+	font-size: 32px; letter-spacing: 0px;
 	color: #222; margin-bottom: 30px;
-	-webkit-font-smoothing: antialiased-antialiased;
+	font-family: "Fakt Blond", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 
@@ -818,23 +818,6 @@ footer.global a.coinbase-button {
 /* ==================================================== */
 /* ==================================================== */
 /* ==================================================== */
-@media only screen and (min-width: 1200px) {
-#sidebar {
-	padding: 70px;
-}
-
-#wrapper {
-	padding: 70px 40px;
-}
-
-#wrapper.index {
-	padding-top: 70px;
-}
-footer.global {
-	padding-top: 70px;
-	margin-top: 70px;
-}
-}
 
 @media only screen and (max-width: 1200px) {
 body {
