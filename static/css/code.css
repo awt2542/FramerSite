@@ -13,6 +13,7 @@ pre {
 
 pre, code {
     font-family: 'Menlo', 'Monaco', Courier, monospace; 
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 code.inline {
