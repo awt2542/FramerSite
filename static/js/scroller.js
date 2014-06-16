@@ -9,8 +9,7 @@
 
   selectItemNamed = function(className) {
     $("#sidebar a").removeClass("active");
-    $("#sidebar a." + className).addClass("active");
-    return $("#sidebar a." + className).parent().parent().addClass("appear");
+    return $("#sidebar a." + className).addClass("active");
   };
 
   calculateElements = function() {

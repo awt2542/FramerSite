@@ -10,7 +10,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .clearfix { zoom: 1;}
 
 body {
-	font:18px/1 "Fakt Blond", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font:18px/1 "Fakt", "Helvetica Neue",Helvetica,Arial,sans-serif;
 	text-rendering:optimizeLegibility;
 	height: 100%; color:#666;
 	overflow-x: hidden;
@@ -18,11 +18,12 @@ body {
 }
 
 p {
-	line-height:1.75;
+	line-height:1.7;
+	font-weight: 300;
 }
 
 strong {
-	font-weight: 500;
+	font-weight: 600;
 	color: #444;
 }
 
@@ -76,7 +77,6 @@ a:active {
 	background: #15181d;
 	padding: 60px;
 	overflow-y: auto;
-	font-family: "Fakt Normal", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #sidebar ul {
@@ -99,7 +99,7 @@ a:active {
 	color: #7C838D; color: #686f78;
 	color: #636d80;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 16px;
 	position: relative;
 }
 
@@ -186,6 +186,7 @@ table {
 	border: 1px solid #eee;
 	border-radius: 6px;
 	overflow: hidden;
+	font-weight: 500;
 }
 
 table td, td {
@@ -208,8 +209,8 @@ td:after {
 
 thead th, th {
 	text-align:left;
-	padding:10px 15px;
-	font-size:13px; font-weight:400;
+	padding:12px 15px 9px;
+	font-size:14px; font-weight:400;
 	color:#bbb; cursor:default; white-space:nowrap;
 	line-height: 1.2; 
 	border-radius: 6px 6px 0 0; 
@@ -220,8 +221,8 @@ table .dim {
 }
 
 table.api td:first-child {
-	color: #666; font-size: 12px;
-	font-family: 'Monaco', Courier, monospace;
+	color: #666; font-size: 13px;
+	font-family: 'Menlo', 'Monaco', Courier, monospace;
 }
 
 table.compatibility td:first-child {
@@ -229,7 +230,7 @@ table.compatibility td:first-child {
 }
 
 table.api td.group, table.compatibility td.group {
-	font-weight: 500; font-family: "Colfax";
+	font-weight: normal; font-weight: 500;
 	text-transform: uppercase;
 	font-size: 12px; padding-top: 14px;
 	color: #2;
@@ -274,7 +275,7 @@ img {
 
 p.small {
 	font-size: 12px; text-transform: uppercase; letter-spacing: 1px; 
-	font-family: "Fakt Medium", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 500;
 }
 a.small {
 	font-size:14px; font-weight: 400;
@@ -289,19 +290,19 @@ h1 {
 	margin: 0 auto;
 	margin-bottom: 40px;
 	letter-spacing: -2px;
-	font-family: "Fakt Thin", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 100;
 }
 
 h1.title {
 	font-size: 14px; color: #60C4FF;
 	text-transform: uppercase; letter-spacing: 1px;
 	display: inline-block; 
-	font-family: "Fakt Medium", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 500;
 }
 
 h2 {
 	font-size: 40px; line-height: 1.5;
-	font-family: "Fakt Light", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 200;
 	color: #222; margin-bottom: 20px;
 	letter-spacing: -1px;
 	
@@ -310,7 +311,7 @@ h2 {
 /*Index page h2*/
 h2.headline {
 	font-size: 26px; line-height: 1.4;
-	font-weight: 100;
+	font-weight: 200;
 	color: #888; letter-spacing: 0;
 	margin-bottom: 40px; text-align: center;
 		
@@ -319,7 +320,7 @@ h2.headline {
 h3 {
 	font-size: 32px; letter-spacing: 0px;
 	color: #222; margin-bottom: 30px;
-	font-family: "Fakt Blond", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
 }
 
 
@@ -328,7 +329,7 @@ h4 {
 	color: #222; margin-bottom: 25px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-family: "Fakt Medium", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 500;
 }
 
 #wrapper.index h4 {
@@ -370,7 +371,7 @@ p + h4 {
 	box-shadow: inset 0 0 0 1px #60C4FF; border-radius: 45px;
 	padding:12px 16px 9px; letter-spacing: 1px;
 	color: #60C4FF; position: relative; z-index: 10; display: inline-block;
-	font-family: "Fakt Medium", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 500;
 	width: 120px;
 	-webkit-transition: all 0.1s ease;
 	-moz-transition: all 0.1s ease;
@@ -455,7 +456,7 @@ nav#index li:last-child {
 #example-block a.more {
 	color: #fff; float: right; font-size: 12px; padding: 10px 16px 8px 16px; border-radius: 5px;
 	box-shadow: inset 0 0 0 2px #fff; text-transform: uppercase; letter-spacing: 1px;
-	font-family: "Fakt SemiBold", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 600;
 }
 
 #example-block a.more:hover {
@@ -581,7 +582,7 @@ nav#index li:last-child {
 	color: #888;
 	min-height: 100px;
 	-webkit-font-smoothing: antialiased;
-	font-family: "Fakt Blond", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
 }
 
 #features li img {
@@ -630,7 +631,7 @@ nav#index li:last-child {
 	margin-bottom: 30px;
 	line-height: 1;
 	-webkit-font-smoothing: subpixel-antialiased;
-	font-family: "Fakt Medium", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 500;
 	color: #333;
 }
 
@@ -653,19 +654,20 @@ nav#index li:last-child {
 	content: "Click to animate";
 	display: inline-block;
 	text-align: center; font-size: 13px;
-	position: absolute; font-family: "Fakt Normal", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	position: absolute; font-weight: 400;
 	bottom: 42px; left: 0; width: 100%;
 	color: #fff; text-transform: uppercase; letter-spacing: 1px;
 }
 
 p.intro {
-	font: normal 22px/1.6 "Fakt Light", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 22px; line-height: 1.6;
+	font-weight: 200;
 }
 
 
 /*Compatibility link*/
 a.compat {
-	font-size: 13px; font-family: "Fakt Medium", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 13px; font-weight: 500;
 	position: relative; top: 10px; text-transform: uppercase; letter-spacing: 1px;
 	float: right; box-shadow: 0 0 0 1px #4DB4EC; border-radius: 55px; padding: 10px 20px 7px;
 }
@@ -993,9 +995,10 @@ body {
 
 #topbar {
 	display: block; height: 44px; width: 100%;
-	background: #101216;
+	background: #15181d;
 	position: relative; top: 0; z-index: 30; left: 0;
 	padding: 14px;
+	border-bottom:1px solid #28292D;
 }
 
 #topbar img {
@@ -1123,6 +1126,10 @@ p.small {
 	border-bottom: 1px solid #eee;
 }
 
+#used-by img {
+	margin-bottom: 10px;
+}
+
 table {
 	border: none;
 }
@@ -1229,7 +1236,7 @@ footer.global {
 }
 
 h1 {
-	font-size: 30px; -webkit-font-smoothing: subpixel-antialiased;
+	font-size: 35px; letter-spacing: -1px;
 }
 
 #footer h1 {
@@ -1241,8 +1248,8 @@ h2 {
 }
 
 h2.headline {
-	font-size: 17px; line-height: 1.5; font-weight: 400;
-	margin-bottom: 40px; -webkit-font-smoothing: antialiased;
+	font-size: 17px; line-height: 1.5; font-weight: 300;
+	margin-bottom: 40px; 
 }
 
 nav#index {

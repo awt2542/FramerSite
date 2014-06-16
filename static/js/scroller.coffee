@@ -7,7 +7,6 @@ _startListeningForScroll = false
 selectItemNamed = (className) ->
 	$("#sidebar a").removeClass "active"
 	$("#sidebar a.#{className}").addClass "active"	
-	$("#sidebar a.#{className}").parent().parent().addClass "appear"
 	
 
 calculateElements = ->
