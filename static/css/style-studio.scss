@@ -58,7 +58,7 @@ h4 {
 }
 /*Feature Blocks H4 / Headlines */
 #wrapper.index .feature-block h4 {
-	margin-bottom: 60px;
+	margin-bottom: 0;
 }
 
 
@@ -74,14 +74,14 @@ h5 {
 	text-align: center;
 	font-weight:200;
 	line-height: 1.4;
-	font-size: 24px; 
-	max-width: 380px; margin: 0 auto;
+	font-size: 26px; 
+	max-width: 600px; margin: 0 auto;
 	color: #979da2; opacity: .9;
 }
 
 .quote.bottom {
 	margin: 60px 0; box-shadow: none;
-	background: #f5f7f9; box-shadow: inset 0 1px 0 rgba(0,0,0,0.06), inset 0 -1px 0 rgba(0,0,0,0.06);	
+	background: #f7f9fa; box-shadow: inset 0 1px 0 rgba(0,0,0,0.06), inset 0 -1px 0 rgba(0,0,0,0.06);	
 	padding: 60px 0;
 }
 
@@ -352,6 +352,11 @@ img.studio {
 	padding: 60px 0;
 	margin: 60px 0 0 0;
 	position: relative;
+	
+}
+
+#interaction hr {
+	opacity: .1;
 }
 
 #interaction p {
@@ -461,10 +466,10 @@ img.studio {
 }
 
 #footer-features h2{
+	letter-spacing: 0;
 	text-align: center;
+	font-size: 30px;
 	margin-bottom: 60px;
-	font-size: 14px; text-transform: uppercase; letter-spacing: 4px;
-	font-weight: 400;	
 }
 
 /* FOOTER  ------------------------------ */
