@@ -30,6 +30,16 @@
 
 @font-face {
 	font-family: 'Fakt';
+	src: url('fonts/FaktPro-ThinItalic.eot');
+	src: url('fonts/FaktPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/FaktPro-ThinItalic.woff') format('woff'),
+	     url('fonts/FaktPro-ThinItalic.ttf') format('truetype');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Fakt';
 	src: url('fonts/FaktPro-Light.eot');
 	src: url('fonts/FaktPro-Light.eot?#iefix') format('embedded-opentype'),
 	     url('fonts/FaktPro-Light.woff') format('woff'),
