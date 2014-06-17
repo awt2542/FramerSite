@@ -93,7 +93,7 @@ p.author {
 
 /* HEADER ------------------------------- */
 #illustration {
-  max-height: 360px;
+  max-height: 300px;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -101,10 +101,10 @@ p.author {
   position: relative;
   /* Rectangle 294: */
   background: #A1E9FF;
-  background-image: -o-linear-gradient(89deg, white 3%, #76d1e8 98%);
-  background-image: -moz-linear-gradient(89deg, white 3%, #76d1e8 98%);
-  background-image: -ms-linear-gradient(89deg, white 3%, #76d1e8 98%);
-  background-image: linear-gradient(-1deg, white 3%, #76d1e8 98%);
+  background-image: -o-linear-gradient(0deg, white 0%, #7fd1e6 100%);
+  background-image: -moz-linear-gradient(0deg, white 0%, #7fd1e6 100%);
+  background-image: -ms-linear-gradient(0deg, white 0%, #7fd1e6 100%);
+  background-image: linear-gradient(0deg, white 0%, #7fd1e6 100%);
   z-index: 2; }
 
 #illustration:after {
@@ -122,8 +122,7 @@ p.author {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
   z-index: -1;
   left: 0;
-  bottom: -160px;
-  opacity: .5; }
+  bottom: -120px; }
 
 img.blueprint {
   display: block;
@@ -172,7 +171,7 @@ img.app-icon {
   color: #333; }
 
 #header a, #footer a {
-  padding: 12px 10px 9px;
+  padding: 13px 10px 10px;
   position: relative;
   width: 120px;
   border-radius: 50px;
@@ -189,9 +188,10 @@ img.app-icon {
 
 #header a.green, #footer a.green {
   color: #fff;
-  background: #76d10b;
+  background: #697e92;
   margin-bottom: 0;
-  margin-right: 10px; }
+  margin-right: 10px;
+  box-shadow: none; }
 
 #header a.green:hover {
   color: #fff;
@@ -213,10 +213,12 @@ img.app-icon {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #4db4ec; }
 
 #header a.green:after {
-  content: "Trial"; }
+  content: "Trial";
+  color: #697e92; }
 
 /* SCREENSHOT -------------------------*/
 #screenshot-copy {
@@ -224,7 +226,7 @@ img.app-icon {
 
 #screenshot-copy h2 {
   font-weight: 200;
-  font-size: 36px;
+  font-size: 40px;
   margin: 0; }
 
 #screenshot-copy li p {
@@ -232,9 +234,10 @@ img.app-icon {
   color: #999;
   margin-top: 20px;
   margin-bottom: 0;
-  font-size: 21px;
+  font-size: 23px;
   line-height: 1.5;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  font-weight: 200; }
 
 #screenshot-copy li {
   max-width: 280px;

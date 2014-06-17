@@ -2,7 +2,7 @@
 
 /*Colors*/
 $blue: #4DB4EC;
-$green: #76d10b;
+$green: #697e92;
 
 img {
 	max-width: 100%;
@@ -99,16 +99,16 @@ p.author {
 /* HEADER ------------------------------- */
 
 #illustration {
-	max-height: 360px; 
+	max-height: 300px; 
 	width: 100%; height: 100%;
 	text-align: center; padding: 20px;
 	position: relative;
 	/* Rectangle 294: */
 	background: #A1E9FF;
-	background-image: -o-linear-gradient(89deg, #FFFFFF 3%, #76D1E8 98%);
-	background-image: -moz-linear-gradient(89deg, #FFFFFF 3%, #76D1E8 98%);
-	background-image: -ms-linear-gradient(89deg, #FFFFFF 3%, #76D1E8 98%);
-	background-image: linear-gradient(-1deg, #FFFFFF 3%, #76D1E8 98%);
+	background-image: -o-linear-gradient(0deg, #FFFFFF 0%, #7FD1E6 100%);
+	background-image: -moz-linear-gradient(0deg, #FFFFFF 0%, #7FD1E6 100%);
+	background-image: -ms-linear-gradient(0deg, #FFFFFF 0%, #7FD1E6 100%);
+	background-image: linear-gradient(0deg, #FFFFFF 0%, #7FD1E6 100%);
 	z-index: 2;
 	
 }
@@ -123,8 +123,7 @@ p.author {
 	background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 70%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
 	z-index: -1; left: 0;
-	bottom: -160px;
-	opacity: .5;
+	bottom: -120px;
 	
 }
 
@@ -172,7 +171,7 @@ img.app-icon {
 }
 
 #header a, #footer a {
-	padding:12px 10px 9px; position: relative; width: 120px;
+	padding:13px 10px 10px; position: relative; width: 120px;
 	border-radius: 50px; background: #fff; box-shadow: none;
 	color: #fff; background:$blue;
 	text-transform: none; letter-spacing: 0; 
@@ -185,6 +184,7 @@ img.app-icon {
 	color: #fff; background:$green; 
 	margin-bottom: 0;
 	margin-right: 10px;
+	box-shadow: none;
 }
 
 #header a.green:hover { color: #fff; box-shadow: none; }
@@ -197,10 +197,12 @@ img.app-icon {
 	position: absolute; top: 50px; text-align: center;
 	font-size: 12px; text-transform: uppercase; letter-spacing: 2px;
 	font-weight: 400;
+	color: $blue;
 }
 
 #header a.green:after {
 	content: "Trial"; 
+	color: $green;
 }
 
 
@@ -212,15 +214,15 @@ img.app-icon {
 
 #screenshot-copy h2 {
 	font-weight: 200;
-	font-size: 36px;
+	font-size: 40px;
 	margin: 0;
 }
 
 #screenshot-copy li p {
 	display: block; color: #999;
 	margin-top: 20px; margin-bottom: 0;
-	font-size: 21px; line-height: 1.5;
-	letter-spacing: 0;
+	font-size: 23px; line-height: 1.5;
+	letter-spacing: 0; font-weight: 200;
 }
 
 
