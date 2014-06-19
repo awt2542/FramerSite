@@ -304,17 +304,16 @@ img.studio {
 
 #framer .screen {
   position: absolute;
-  top: 74px;
-  left: 22px;
+  top: 73px;
+  left: 20px;
   max-width: 280px;
-  padding-right: 83px;
+  padding-right: 82px;
   overflow: hidden; }
 
 #framer video {
   width: 100%;
   border: none;
-  background: #fff;
-  box-shadow: 0 5px 0 #fff; }
+  background: #fff; }
 
 #framer p a {
   color: #333;
