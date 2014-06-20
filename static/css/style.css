@@ -129,6 +129,7 @@ a:active {
 	color: #84D1FF; 
 	font-size: 16px;
 	margin-bottom: 10px;
+	font-weight: 500;
 }
 
 #sidebar ul li.headline.is-active a{
