@@ -353,8 +353,8 @@ section.mobile {
 /* INTERACTION SECTION -------------------------*/
 #interaction {
   background: #282D36;
-  padding: 80px 0;
-  margin: 80px 0 0 0;
+  padding: 100px 0;
+  margin: 100px 0 0 0;
   position: relative; }
 
 #interaction p {
@@ -370,8 +370,8 @@ section.mobile {
   position: absolute;
   right: -840px;
   width: 1077px;
-  height: 738px;
-  top: -64px; }
+  height: 613px;
+  top: 0; }
 
 /*Retina*/
 @media (-webkit-min-device-pixel-ratio: 1.5) {
@@ -437,7 +437,7 @@ section.mobile {
   margin-top: 80px; }
 
 #viewer {
-  padding: 80px 0 0 0;
+  padding: 100px 0 0 0;
   position: relative;
   overflow: visible; }
 
@@ -475,8 +475,16 @@ section.mobile {
   padding-left: 0;
   left: 0;
   list-style: none;
-  font-size: 16px;
-  font-weight: 400; }
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(97, 109, 133, 0.6); }
+
+#footer-features section ul li:before {
+  content: url("/static/images/fs/icon-check.png");
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 1px; }
 
 #footer-features h2 {
   letter-spacing: 0;
