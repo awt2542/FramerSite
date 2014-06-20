@@ -156,7 +156,7 @@ img.app-icon {
 }
 
 #header h1, #footer h1 {
-	letter-spacing: -2px;
+	letter-spacing: -1px;
 	font-weight: 200;
 	margin: 40px 0 4px 0;
 	font-size: 60px; line-height: 1;
@@ -433,7 +433,7 @@ section.mobile {
 
 /* INTERACTION & VIEWER SECTION ------------------------------ */
 .feature-block {
-	overflow: hidden !important;
+	overflow: hidden;
 }
 
 .feature-block section li {
@@ -596,9 +596,21 @@ p {
 	font-size: 16px;
 }
 
+#header h1, #footer h1 {
+	font-size: 52px;
+}
+
 h5 {
 	font-size: 30px;
 	max-width: 500px;
+}
+
+#illustration {
+	max-height: 320px;
+}
+
+img.blueprint {
+	margin-top: 0px;
 }
 
 #screenshot-copy li {
@@ -630,10 +642,10 @@ img.app-icon {
 	bottom: -68px;
 }
 
-#header h1 {
+#header h1, #footer h1 {
 	margin-top: 40px;
 }
-#header h2 {
+#header h2, #footer h2 {
 	font-size: 22px;
 }
 
@@ -659,6 +671,7 @@ hr {
 	padding: 40px;
 	margin-bottom: 0;
 }
+
 
 h2 {
 	font-size: 20px;
@@ -712,9 +725,9 @@ p {
 }
 
 #interaction .ss-half {
-	position: relative; left: -20px; 
+	position: relative; left: 0px; 
 	top: 0; height: 400px; margin-bottom: 40px;
-	margin-top: -20px;
+	margin-top: 40px;
 }
 
 #interaction .ss-half:after {
@@ -729,9 +742,9 @@ p {
 }
 
 #viewer .ss-half {
-	position: relative; left: -320px; 
+	position: relative; left: -820px; 
 	top: 0; height: 400px; margin-bottom: 40px;
-	margin-top: -20px;
+	margin-top: 40px;
 }
 
 #viewer .ss-half:after {
@@ -745,6 +758,19 @@ p {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
 }
 
+.feature-list .right li {
+	max-width: 47%; float: left;
+	margin-top: 40px;
+}
+
+.feature-list .right li:nth-child(even) {
+	float: right;
+}
+
+
+.feature-block section li+li {
+	margin-top: 0;
+}
 
 .feature-block p {
 	font-size: 16px;
@@ -766,6 +792,14 @@ footer.global {
 	display: none;
 }
 
+#manifesto * {
+	text-align: left;
+}
+
+#manifesto section+section {
+	margin-top: 20px;
+}
+
 }
 
 
@@ -777,13 +811,13 @@ footer.global {
 	margin-top: 40px;
 }
 
-#header h1, h2 {
+#header h1, h2, #footer h1 {
 	margin-top: 0px; 
 	font-size: 28px; font-weight: 300; letter-spacing: 0;
 	margin-bottom: 15px;
 }
 
-#header h2 {
+#header h2, #footer h2 {
 	font-size: 20px; font-weight: 300;
 }
 
