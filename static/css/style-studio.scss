@@ -234,10 +234,11 @@ img.app-icon {
 /* SCREENSHOT -------------------------*/
 #screenshot {
 	background:  url('/static/images/fs/ss-bg.png') no-repeat;
-	background-size: 764px 460px; background-position: 50% 0%;
+	background-position: 50% 0%;
+	max-width: 764px; margin: 0 auto;
 	text-align: center;
 	width: 100%; 
-	height: 100%;
+	height: 100%; 
 	margin-top: 80px;
 	padding-top: 80px;
 	margin-bottom: 40px;
@@ -385,9 +386,7 @@ section.mobile {
 	padding: 80px 0;
 	margin: 80px 0 0 0;
 	position: relative;
-	
 }
-
 
 #interaction p {
 	font-weight: 300;
@@ -604,6 +603,11 @@ h5 {
 	display: none;
 }
 
+#screenshot {
+	background-size: contain;
+	padding: 60px;
+}
+
 }
 
 @media only screen and (max-width: 580px) {
@@ -627,12 +631,15 @@ img.app-icon {
 
 .half section {
 	max-width: 100%;
+	width: 100%;
 	float: none;
 	text-align: center;
 }
 
 .half .right {
 	float: none;
+	max-width: 100%;
+	width: 100%;
 }
 
 hr {
@@ -640,7 +647,9 @@ hr {
 }
 
 #screenshot {
-	margin-bottom: 40px;
+	background-size: contain;
+	padding: 40px;
+	margin-bottom: 0;
 }
 
 h2 {
@@ -648,12 +657,93 @@ h2 {
 	margin-bottom: 10px;
 }
 
+.feature-block h2 {
+	font-size: 28px; letter-spacing: 0;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 19px;
+	margin: 0;
+}
+
 p {
 	margin-bottom: 0;
 }
 
-.feature-block, #start, #framer, h5, #footer-features, hr.block {
+/*#framer * {
+	text-align: left;
+}*/
+
+#framer ul li {
+	text-align: left;
+}
+
+#framer section.iphone-bg {
 	display: none;
+}
+
+.feature-block p{
+	text-align: left;
+}
+
+#start img {
+	margin-bottom: 40px;
+}
+
+#interaction {
+	padding: 60px 0;
+	margin: 60px 0 0 0;
+}
+
+#viewer {
+	padding: 60px 0 0 0;
+}
+
+#interaction .ss-half {
+	position: relative; left: -20px; 
+	top: 0; height: 400px; margin-bottom: 40px;
+	margin-top: -20px;
+}
+
+#interaction .ss-half:after {
+	content: ""; display: block; position: absolute; bottom: 0; width: 100%; left: 0; height: 40%;
+	background: -moz-linear-gradient(top,  rgba(40,45,54,0) 0%, rgba(40,45,54,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(40,45,54,0)), color-stop(100%,rgba(40,45,54,1)));
+	background: -webkit-linear-gradient(top,  rgba(40,45,54,0) 0%,rgba(40,45,54,1) 100%);
+	background: -o-linear-gradient(top,  rgba(40,45,54,0) 0%,rgba(40,45,54,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(40,45,54,0) 0%,rgba(40,45,54,1) 100%);
+	background: linear-gradient(to bottom,  rgba(40,45,54,0) 0%,rgba(40,45,54,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00282d36', endColorstr='#282d36',GradientType=0 );
+}
+
+#viewer .ss-half {
+	position: relative; left: -320px; 
+	top: 0; height: 400px; margin-bottom: 40px;
+	margin-top: -20px;
+}
+
+#viewer .ss-half:after {
+	content: ""; display: block; position: absolute; bottom: 0; width: 100%; left: 0; height: 40%;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+
+.feature-block p {
+	font-size: 16px;
+}
+
+.feature-list {
+	margin-top: 0;
 }
 
 footer.global {
@@ -664,15 +754,29 @@ footer.global {
 	font-size: 15px;
 }
 
+#footer-features {
+	display: none;
+}
+
 }
 
 
 
 @media only screen and (max-width:440px) {
+
+#header h1.title {
+	letter-spacing: 3px;
+	margin-top: 40px;
+}
+
 #header h1, h2 {
-	margin-top: 40px; 
-	font-size: 30px; font-weight: 200; letter-spacing: -1px;
+	margin-top: 0px; 
+	font-size: 28px; font-weight: 300; letter-spacing: 0;
 	margin-bottom: 15px;
+}
+
+#header h2 {
+	font-size: 20px; font-weight: 300;
 }
 
 #illustration {
@@ -684,26 +788,18 @@ img.blueprint {
 	margin-top: 0;
 }
 
+.feature-block p.title {
+	font-size: 20px;	
+}
+
 p {
 	line-height: 1.5;
-}
-
-hr {
-	display: none;
-}
-
-#header h2 {
-	font-size: 17px; font-weight: 300;
 }
 
 img.app-icon {
 	width: 140px;
 	margin-left: -70px;
 	bottom: -50px;
-}
-
-#screenshot-copy li:first-child:after, #screenshot-copy li:last-child:after  {
-	display: none;
 }
 
 /*Flip the screenshot texts */
@@ -714,7 +810,6 @@ img.app-icon {
 section.mobile {
 	display: block;
 	text-align: center;
-	margin-bottom: 40px;
 }
 
 }
