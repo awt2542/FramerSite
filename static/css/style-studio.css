@@ -352,6 +352,9 @@ section.mobile {
   font-size: 16px;
   display: inline-block; }
 
+#framer ul section li:last-child {
+  white-space: pre-wrap; }
+
 /* INTERACTION SECTION -------------------------*/
 #interaction {
   background: #282D36;

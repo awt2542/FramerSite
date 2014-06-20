@@ -379,6 +379,10 @@ section.mobile {
 	display: inline-block;
 }
 
+#framer ul section li:last-child {
+	white-space: pre-wrap;
+}
+
 
 
 /* INTERACTION SECTION -------------------------*/
