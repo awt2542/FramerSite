@@ -429,8 +429,6 @@ section.mobile {
 	color: #818B9E;
 }
 
-
-
 /* INTERACTION & VIEWER SECTION ------------------------------ */
 .feature-block {
 	overflow: hidden;
@@ -474,7 +472,7 @@ section.mobile {
 }
 
 #viewer {
-	padding: 80px 0;
+	padding: 80px 0 0 0;
 	position: relative;
 	overflow: visible;
 }
@@ -484,9 +482,26 @@ section.mobile {
 }
 
 #viewer section p.title {
-	color: #222;
+	color: #7DDC16;
 	font-weight: 400;
 }
+
+#viewer section li:nth-child(2) p.title{
+	color: $blue;
+}
+
+#viewer section li:nth-child(3) p.title{
+	color: #917BDF;
+}
+
+
+#viewer section li:last-child p.title{
+	color: $graphite;
+}
+
+
+
+
 
 
 #viewer .ss-half {

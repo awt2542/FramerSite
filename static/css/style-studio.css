@@ -437,7 +437,7 @@ section.mobile {
   margin-top: 80px; }
 
 #viewer {
-  padding: 80px 0;
+  padding: 80px 0 0 0;
   position: relative;
   overflow: visible; }
 
@@ -445,8 +445,17 @@ section.mobile {
   color: #111; }
 
 #viewer section p.title {
-  color: #222;
+  color: #7DDC16;
   font-weight: 400; }
+
+#viewer section li:nth-child(2) p.title {
+  color: #4db4ec; }
+
+#viewer section li:nth-child(3) p.title {
+  color: #917BDF; }
+
+#viewer section li:last-child p.title {
+  color: #616d85; }
 
 #viewer .ss-half {
   background: url("/static/images/fs/ss-viewer.png") no-repeat;
