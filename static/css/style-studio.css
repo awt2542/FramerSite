@@ -66,7 +66,7 @@ h5 {
   line-height: 1.4;
   font-size: 30px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: -20px auto;
   color: rgba(97, 109, 133, 0.8);
   -moz-font-feature-settings: "salt" 1, "ss01" 1;
   -moz-font-feature-settings: "salt=1, ss01=1";
@@ -375,10 +375,10 @@ img.studio {
 #interaction .ss-half {
   background: url("/static/images/fs/ss-code.png") no-repeat;
   position: absolute;
-  right: -360px;
-  width: 620px;
-  height: 649px;
-  top: -10px; }
+  right: -840px;
+  width: 1077px;
+  height: 738px;
+  top: -64px; }
 
 /*Retina*/
 @media (-webkit-min-device-pixel-ratio: 1.5) {
@@ -386,8 +386,17 @@ img.studio {
     background: url("/static/images/fs/ss-code@2x.png") no-repeat;
     background-size: cover; } }
 #interaction section p.title {
-  color: #4db4ec;
-  font-weight: 300; }
+  color: #9FDD5D;
+  font-weight: 400; }
+
+#interaction section li:nth-child(2) p.title {
+  color: #61C7FF; }
+
+#interaction section li:nth-child(3) p.title {
+  color: #B8A5FF; }
+
+#interaction section li:last-child p.title {
+  color: #818B9E; }
 
 /* INTERACTION & VIEWER SECTION ------------------------------ */
 .feature-block {
@@ -405,14 +414,15 @@ img.studio {
   line-height: 1.6; }
 
 .feature-block p.title {
-  font-size: 20px;
-  margin-bottom: 5px; }
+  font-size: 22px;
+  margin-bottom: 5px;
+  line-height: 1.2; }
 
 .feature-block section li img {
   float: left;
   position: relative;
   top: 3px;
-  margin-right: 14px; }
+  margin-right: 12px; }
 
 #interaction section li:nth-child(1) img {
   top: 3px; }
