@@ -66,7 +66,7 @@ h5 {
   line-height: 1.4;
   font-size: 30px;
   max-width: 600px;
-  margin: -20px auto;
+  margin: 0 auto;
   color: rgba(97, 109, 133, 0.8);
   -moz-font-feature-settings: "salt" 1, "ss01" 1;
   -moz-font-feature-settings: "salt=1, ss01=1";
@@ -125,7 +125,7 @@ img.app-icon {
 #header h1 {
   letter-spacing: -2px;
   font-weight: 200;
-  margin: 40px 0 10px 0;
+  margin: 40px 0 4px 0;
   font-size: 60px;
   line-height: 1;
   color: #333; }
@@ -259,11 +259,16 @@ section.mobile {
   font-size: 19px;
   color: #999; }
 
+#screenshot figure {
+  position: relative;
+  max-width: 608px;
+  margin: 0 auto; }
+
 #screenshot video {
   position: absolute;
   max-width: 112px;
-  top: 223px;
-  right: 325px;
+  top: 143px;
+  right: 98px;
   z-index: 100; }
 
 img.studio {
@@ -521,7 +526,10 @@ img.studio {
     max-width: 48%; }
 
   #screenshot-copy li:first-child {
-    margin-right: 2%; } }
+    margin-right: 2%; }
+
+  #carousel, #carousel-inapp {
+    display: none; } }
 @media only screen and (max-width: 580px) {
   #wrapper.index {
     padding: 40px 0; }
