@@ -98,10 +98,10 @@ p.author {
   height: 100%;
   width: 100%;
   position: absolute;
-  background-image: -o-linear-gradient(89deg, #4db4ec 0%, rgba(77, 180, 236, 0) 100%);
-  background-image: -moz-linear-gradient(89deg, #4db4ec 0%, rgba(77, 180, 236, 0) 100%);
-  background-image: -ms-linear-gradient(89deg, #4db4ec 0%, rgba(77, 180, 236, 0) 100%);
-  background-image: linear-gradient(0deg, #4db4ec 0%, rgba(77, 180, 236, 0) 100%);
+  background-image: -o-linear-gradient(89deg, #4db4ec 0%, rgba(77, 180, 236, 0) 60%);
+  background-image: -moz-linear-gradient(89deg, #4db4ec 0%, rgba(77, 180, 236, 0) 60%);
+  background-image: -ms-linear-gradient(89deg, #4db4ec 0%, rgba(77, 180, 236, 0) 60%);
+  background-image: linear-gradient(0deg, #4db4ec 0%, rgba(77, 180, 236, 0) 60%);
   z-index: 1;
   left: 0;
   bottom: 0; }
@@ -252,11 +252,19 @@ section.mobile {
   position: relative;
   padding-top: 80px;
   margin-top: 80px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  position: relative; }
 
 #screenshot-copy p {
   font-size: 19px;
   color: #999; }
+
+#screenshot video {
+  position: absolute;
+  max-width: 112px;
+  top: 223px;
+  right: 325px;
+  z-index: 100; }
 
 img.studio {
   position: relative;
@@ -308,12 +316,14 @@ img.studio {
   left: 20px;
   max-width: 280px;
   padding-right: 82px;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 100; }
 
 #framer video {
   width: 100%;
   border: none;
-  background: #fff; }
+  background: #fff;
+  cursor: pointer; }
 
 #framer p a {
   color: #333;

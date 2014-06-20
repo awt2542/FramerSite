@@ -130,19 +130,15 @@ p.author {
 	
 }
 
-
-
 #illustration:after {
 	content: ""; display: block; height: 100%; width: 100%; position: absolute;
-	background-image: -o-linear-gradient(89deg, #4DB4EC 0%, rgba(77,180,236,0.00) 100%);
-	background-image: -moz-linear-gradient(89deg, #4DB4EC 0%, rgba(77,180,236,0.00) 100%);
-	background-image: -ms-linear-gradient(89deg, #4DB4EC 0%, rgba(77,180,236,0.00) 100%);
-	background-image: linear-gradient(0deg, #4DB4EC 0%, rgba(77,180,236,0.00) 100%);
+	background-image: -o-linear-gradient(89deg, #4DB4EC 0%, rgba(77,180,236,0.00) 60%);
+	background-image: -moz-linear-gradient(89deg, #4DB4EC 0%, rgba(77,180,236,0.00) 60%);
+	background-image: -ms-linear-gradient(89deg, #4DB4EC 0%, rgba(77,180,236,0.00) 60%);
+	background-image: linear-gradient(0deg, #4DB4EC 0%, rgba(77,180,236,0.00) 60%);
 	z-index: 1; left: 0;
 	bottom: 0;
-	
 }
-
 
 img.blueprint {
 	display: block;
@@ -284,6 +280,7 @@ section.mobile {
 	padding-top: 80px;
 	margin-top: 80px;
 	margin-bottom: 60px;
+	position: relative;
 }
 
 #screenshot-copy p {
@@ -291,6 +288,11 @@ section.mobile {
 	color: #999;
 }
 
+
+#screenshot video {
+	position: absolute; max-width: 112px;
+	top: 223px; right: 325px; z-index: 100;
+}
 img.studio {
 	position: relative;max-width: 608px; width: 100%;
 }
@@ -343,15 +345,14 @@ img.studio {
 	max-width: 280px;
 	padding-right: 82px;
 	overflow: hidden;
+	z-index: 100;
 }
 
 #framer video {
 	width: 100%;
 	border: none;
-	background: #fff;
-
-	
-	
+	background: #fff;	
+	cursor: pointer;
 }
 
 #framer p a {
