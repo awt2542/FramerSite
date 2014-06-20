@@ -433,7 +433,7 @@ section.mobile {
 
 /* INTERACTION & VIEWER SECTION ------------------------------ */
 .feature-block {
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 .feature-block section li {
@@ -474,7 +474,8 @@ section.mobile {
 }
 
 #viewer {
-	padding: 100px 0 0 0;
+	padding: 100px 0 20px 0; /* The extra 20 is to fix the overflow bug */
+	margin-bottom: -20px;
 	position: relative;
 	overflow: visible;
 }
