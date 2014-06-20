@@ -142,11 +142,23 @@ p.author {
 	bottom: 0;
 }
 
-img.blueprint {
+#illustration svg {
 	display: block;
 	margin: 0 auto;
 	margin-top: 40px;
 	max-width: 600px; width: 100%;
+}
+
+#illustration svg rect {
+	 stroke-dasharray: 2200;
+	 stroke-dashoffset: 2200;
+	 -webkit-animation: dash 10s ease;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 img.app-icon {
@@ -245,6 +257,10 @@ img.app-icon {
 	padding-top: 80px;
 	margin-bottom: 40px;
 	position: relative;
+}
+
+#screenshot img.studio {
+	max-width: 624px; width: 100%;
 }
 
 #screenshot-copy p {
@@ -379,8 +395,9 @@ section.mobile {
 	display: inline-block;
 }
 
-#framer ul section li:last-child {
-	white-space: pre-wrap;
+#framer ul section li span {
+	width: 25px; background: red;
+	display: inline-block;
 }
 
 
@@ -507,8 +524,8 @@ section.mobile {
 }
 
 #viewer .ss-half {
-	background: url('/static/images/fs/ss-viewer.png') no-repeat;
-	position: absolute; left: -1080px; width: 1318px; height: 6813px;
+	background: url('/static/images/fs/ss-viewer.png') no-repeat; 
+	position: absolute; left: -1080px; width: 1318px; height: 613px;
 	top: 0;
 }
 
