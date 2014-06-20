@@ -460,10 +460,10 @@ section.mobile {
 #viewer .ss-half {
   background: url("/static/images/fs/ss-viewer.png") no-repeat;
   position: absolute;
-  left: -360px;
-  width: 617px;
-  height: 687px;
-  top: -25px; }
+  left: -1080px;
+  width: 1318px;
+  height: 6813px;
+  top: 0; }
 
 /*Retina*/
 @media (-webkit-min-device-pixel-ratio: 1.5) {
