@@ -175,7 +175,7 @@ img.app-icon {
 
 #header a, #footer a {
   border: none;
-  padding: 14px 10px 11px;
+  padding: 14px 20px 11px;
   position: relative;
   border-radius: 50px;
   color: #4db4ec;
@@ -597,7 +597,8 @@ section.mobile {
     bottom: -68px; }
 
   #header h1, #footer h1 {
-    margin-top: 40px; }
+    margin-top: 40px;
+    font-size: 40px; }
 
   #header h2, #footer h2 {
     font-size: 22px; }
@@ -619,7 +620,20 @@ section.mobile {
   #screenshot {
     background-size: contain;
     padding: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    margin-top: 40px; }
+
+  #screenshot-copy li {
     margin-bottom: 0; }
+
+  #screenshot-copy h2 {
+    font-size: 32px;
+    font-weight: 200; }
+
+  #screenshot-copy li p {
+    font-size: 16px;
+    font-weight: 300; }
 
   h2 {
     font-size: 20px;
@@ -633,15 +647,18 @@ section.mobile {
     font-size: 20px; }
 
   h5 {
-    font-size: 19px;
+    font-size: 24px;
     margin: 0; }
 
   p {
     margin-bottom: 0; }
 
-  /*#framer * {
-  	text-align: left;
-  }*/
+  #framer * {
+    text-align: left; }
+
+  #framer section ul {
+    max-width: 100%; }
+
   #framer ul li {
     text-align: left; }
 
@@ -738,9 +755,6 @@ section.mobile {
     margin-bottom: 0px;
     border: none; }
 
-  #screenshot-copy li p {
-    font-size: 15px; }
-
   #footer-features {
     display: none; }
 
@@ -759,7 +773,10 @@ section.mobile {
     font-size: 28px;
     font-weight: 300;
     letter-spacing: 0;
-    margin-bottom: 15px; }
+    margin-bottom: 10px; }
+
+  #header h1 {
+    margin-top: 20px; }
 
   #header h2, #footer h2 {
     font-size: 20px;
@@ -777,6 +794,9 @@ section.mobile {
 
   p {
     line-height: 1.5; }
+
+  h5 {
+    font-size: 20px; }
 
   img.app-icon {
     width: 140px;
@@ -810,4 +830,15 @@ section.mobile {
     font-size: 16px; }
 
   .feature-list {
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  #header a, #footer a {
+    padding: 12px 18px 9px;
+    width: 110px; }
+
+  #header a.green, #footer a.green {
+    box-shadow: inset 0 0 0 1px #7ddc16; }
+
+  #header form input[type="submit"], #footer form input[type="submit"] {
+    padding: 12px 18px 9px;
+    box-shadow: inset 0 0 0 1px #4db4ec; } }
