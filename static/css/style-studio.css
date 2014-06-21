@@ -204,6 +204,11 @@ img.app-icon {
   box-shadow: inset 0 0 0 2px #4db4ec;
   border-radius: 50px; }
 
+#header form input[type="submit"]:hover, #footer form input[type="submit"]:hover {
+  background: #4db4ec;
+  color: #fff;
+  box-shadow: none; }
+
 #header a.green, #footer a.green {
   color: #7ddc16;
   background: #fff;
@@ -245,6 +250,10 @@ img.blueprint {
 #screenshot-copy p {
   font-size: 19px;
   color: #999; }
+
+#framer section.iphone-bg {
+  position: relative;
+  z-index: 0; }
 
 #screenshot .video-wrapper {
   width: 50%;
@@ -335,8 +344,7 @@ section.mobile {
   left: 20px;
   max-width: 280px;
   padding-right: 82px;
-  overflow: hidden;
-  z-index: 100; }
+  z-index: 400; }
 
 #framer video {
   width: 100%;
@@ -394,7 +402,7 @@ section.mobile {
 #interaction .ss-half {
   background: url("/static/images/fs/ss-code.png") no-repeat;
   position: absolute;
-  right: -1040px;
+  right: -1080px;
   width: 1318px;
   height: 613px;
   top: 0; }

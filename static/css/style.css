@@ -35,11 +35,6 @@ a {
 	text-decoration:none;
 	color:#33b0f7;
 	font-weight: 500;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
 }
 
 a:hover {
