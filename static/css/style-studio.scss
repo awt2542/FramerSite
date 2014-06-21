@@ -773,7 +773,7 @@ p {
 }
 
 #viewer .ss-half {
-	position: relative; left: -820px; 
+	position: relative; left: -1300px; margin-left: 95%;
 	top: 0; height: 400px; margin-bottom: 40px;
 	margin-top: 40px;
 }
@@ -789,18 +789,23 @@ p {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
 }
 
-.feature-list .right li {
-	max-width: 47%; float: left;
+/* --------- 4 Feature Blocks --------- */
+.feature-list .right li, #interaction .feature-list li {
+	max-width: 46%; float: left;
 	margin-top: 40px;
 }
 
-.feature-list .right li:nth-child(even) {
+.feature-list .right li:nth-child(even), #interaction .feature-list li:nth-child(even) {
 	float: right;
 }
 
 
 .feature-block section li+li {
 	margin-top: 0;
+}
+
+.feature-block p.title {
+	font-size: 20px;
 }
 
 .feature-block p {
@@ -811,8 +816,11 @@ p {
 	margin-top: 0;
 }
 
+/*------------------------------------------*/
+
 footer.global {
-	padding-top: 40px; margin-top: 40px; margin-bottom: 0px;
+	padding-top: 0; margin-top: 0; margin-bottom: 0px;
+	border: none;
 }
 
 #screenshot-copy li p {
@@ -883,6 +891,32 @@ img.app-icon {
 section.mobile {
 	display: block;
 	text-align: center;
+}
+
+/* --------- Full-width feature blocks --------- */
+.feature-list .right li, #interaction .feature-list li {
+	max-width: 100%; float: none;
+	margin-top: 40px;
+}
+
+.feature-list .right li:nth-child(even), #interaction .feature-list li:nth-child(even) {
+	float: none;
+}
+
+.feature-block section li+li {
+	margin-top: 0;
+}
+
+.feature-block p.title {
+	font-size: 20px;
+}
+
+.feature-block p {
+	font-size: 16px;
+}
+
+.feature-list {
+	margin-top: 0;
 }
 
 }
