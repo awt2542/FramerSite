@@ -332,13 +332,9 @@ section.mobile {
 	position: relative;
 }
 
-#framer ul {
-	margin-top: 0px;
-	float: left;
-}
 
 #framer ul {
-	margin: 38px 0;
+	margin: 40px 0 0 20px;
 	float: left; max-width: 280px; width: 100%;
 }
 
@@ -357,6 +353,7 @@ section.mobile {
 #framer p a {
 	color: #333;
 	font-weight: 400;
+	border-bottom: 1px solid #eee;
 }
 
 #framer ul section li {
@@ -385,6 +382,13 @@ section.mobile {
 	display: inline-block;
 }
 
+
+/* USED BY SECTION */
+
+#used-by p {
+	background: #fff; position: relative; z-index: 10; display: inline-block; 
+	padding: 0 20px; color: $graphite40;
+}
 
 
 /* INTERACTION SECTION -------------------------*/
