@@ -1,5 +1,5 @@
 $('#topbar img').click( function(){
-    $("#sidebar").toggleClass("appear");
+		$("#sidebar").toggleClass("appear");
 });
 
 // To make images retina, add a class "2x" to the img element
@@ -7,9 +7,9 @@ $('#topbar img').click( function(){
  
 function isRetina() {
 	var mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
-					  (min--moz-device-pixel-ratio: 1.5),\
-					  (-o-min-device-pixel-ratio: 3/2),\
-					  (min-resolution: 1.5dppx)";
+						(min--moz-device-pixel-ratio: 1.5),\
+						(-o-min-device-pixel-ratio: 3/2),\
+						(min-resolution: 1.5dppx)";
  
 	if (window.devicePixelRatio > 1)
 		return true;
@@ -75,19 +75,24 @@ $(document).ready(retina);
 }
 
 /* ========================= */
-   
-  $(document).ready(function(){
-  	document.getElementById('carousel-inapp').play();
-      $(window).scroll(function(){
-          if ($(window).scrollTop() > 1400){
-             document.getElementById('carousel').play();
-          }
-         
-      });
-      
-      $('.screen').click(function() {
-      	document.getElementById('carousel').play();
-      });
-  });
-  
-  
+	 
+	$(document).ready(function() {
+	
+	setTimeout(function() {
+		document.getElementById('carousel-inapp').play();
+	}, 1000);
+
+	$(window).scroll(function() {
+			if ($(window).scrollTop() > 1400){
+				 document.getElementById('carousel').play();
+			}	 
+	});
+	
+	$('.screen').click(function() {
+		document.getElementById('carousel').play();
+	});
+			
+			
+	});
+	
+	

@@ -8,16 +8,13 @@ img {
   max-width: 100%; }
 
 hr {
+  margin: 80px auto; }
+
+hr.big {
   margin: 120px auto; }
 
 .hr {
   margin: 100px auto; }
-
-.hr-line {
-  margin: 100px 0 80px 0;
-  height: 1px;
-  background: #eee;
-  max-width: 600px; }
 
 /* TYPOGRAPHY ------------------------------- */
 p {
@@ -201,85 +198,10 @@ p.author {
   max-width: 708px;
   margin: 0 auto; }
 
-.code-draw {
-  position: absolute;
-  bottom: 102px;
-  left: 40px;
-  height: 20px;
-  width: 300px;
-  -webkit-animation: write-code 3s 1s linear forwards;
-  -moz-animation: write-code 3s 1s linear forwards;
-  -ms-animation: write-code 3s 1s linear forwards;
-  -o-animation: write-code 3s 1s linear forwards;
-  animation: write-code 3s 1s linear forwards;
-  background: #1D2026; }
-
-.code-draw-two {
-  position: absolute;
-  bottom: 82px;
-  left: 40px;
-  height: 20px;
-  width: 300px;
-  -webkit-animation: write-code 2s 4s linear forwards;
-  -moz-animation: write-code 2s 4s linear forwards;
-  -ms-animation: write-code 2s 4s linear forwards;
-  -o-animation: write-code 2s 4s linear forwards;
-  animation: write-code 2s 4s linear forwards;
-  background: #1D2026; }
-
-@-webkit-keyframes write-code {
-  0% {
-    left: 40px; }
-
-  20% {
-    left: 60px; }
-
-  30% {
-    left: 70px; }
-
-  50% {
-    left: 100px; }
-
-  60% {
-    left: 120px; }
-
-  70% {
-    left: 140px; }
-
-  80% {
-    left: 160px; }
-
-  90% {
-    left: 200px; }
-
-  100% {
-    left: 240px;
-    width: 60px; } }
-
-/*@-moz-keyframes write-code {
-0% {  left: 40px;}
-100% { left: 400px; }
-}
-
-@-o-keyframes write-code {
-0% {  left: 40px;}
-100% { left: 400px; }
-}
-@-ms-keyframes write-code {
-0% {  left: 40px;}
-100% { left: 400px; }
-}
-
-@keyframes write-code {
-0% {  left: 40px;}
-100% { left: 400px; }
-}*/
-.write-code {
-  -webkit-animation: write-code 2s linear forwards;
-  -moz-animation: write-code 2s linear forwards;
-  -ms-animation: write-code 2s linear forwards;
-  -o-animation: write-code 2s linear forwards;
-  animation: write-code 2s linear forwards; }
+.studio-ss-600 {
+  position: relative;
+  max-width: 628px;
+  margin: 0 auto; }
 
 #bg {
   position: absolute;
@@ -586,6 +508,324 @@ section.mobile {
   color: #fff;
   box-shadow: none; }
 
+/* CODE DRAW  ------------------------------ */
+.code-draw {
+  position: absolute;
+  bottom: 104px;
+  left: 40px;
+  height: 16px;
+  width: 300px;
+  -webkit-animation: write-code 3s 2s linear forwards;
+  -moz-animation: write-code 3s 2s linear forwards;
+  -ms-animation: write-code 3s 2s linear forwards;
+  -o-animation: write-code 3s 2s linear forwards;
+  animation: write-code 3s 2s linear forwards;
+  background: #1D2026; }
+
+.code-draw-two {
+  position: absolute;
+  bottom: 90px;
+  left: 70px;
+  height: 16px;
+  width: 240px;
+  -webkit-animation: write-code-two 2s 6s linear forwards;
+  -moz-animation: write-code-two 2s 6s linear forwards;
+  -ms-animation: write-code-two 2s 6s linear forwards;
+  -o-animation: write-code-two 2s 6s linear forwards;
+  animation: write-code-two 2s 6s linear forwards;
+  background: #1D2026; }
+
+@-webkit-keyframes write-code {
+  20% {
+    left: 90px; }
+
+  30% {
+    left: 90px; }
+
+  40% {
+    left: 95px; }
+
+  50% {
+    left: 100px; }
+
+  60% {
+    left: 120px; }
+
+  70% {
+    left: 160px; }
+
+  80% {
+    left: 165px; }
+
+  90% {
+    left: 200px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+@-moz-keyframes write-code {
+  20% {
+    left: 90px; }
+
+  30% {
+    left: 90px; }
+
+  40% {
+    left: 95px; }
+
+  50% {
+    left: 100px; }
+
+  60% {
+    left: 120px; }
+
+  70% {
+    left: 160px; }
+
+  80% {
+    left: 165px; }
+
+  90% {
+    left: 200px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+@-o-keyframes write-code {
+  20% {
+    left: 90px; }
+
+  30% {
+    left: 90px; }
+
+  40% {
+    left: 95px; }
+
+  50% {
+    left: 100px; }
+
+  60% {
+    left: 120px; }
+
+  70% {
+    left: 160px; }
+
+  80% {
+    left: 165px; }
+
+  90% {
+    left: 200px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+@-ms-keyframes write-code {
+  20% {
+    left: 90px; }
+
+  30% {
+    left: 90px; }
+
+  40% {
+    left: 95px; }
+
+  50% {
+    left: 100px; }
+
+  60% {
+    left: 120px; }
+
+  70% {
+    left: 160px; }
+
+  80% {
+    left: 165px; }
+
+  90% {
+    left: 200px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+@keyframes write-code {
+  20% {
+    left: 90px; }
+
+  30% {
+    left: 90px; }
+
+  40% {
+    left: 95px; }
+
+  50% {
+    left: 100px; }
+
+  60% {
+    left: 120px; }
+
+  70% {
+    left: 160px; }
+
+  80% {
+    left: 165px; }
+
+  90% {
+    left: 200px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+/*-----------------*/
+@-webkit-keyframes write-code-two {
+  20% {
+    left: 117px; }
+
+  30% {
+    left: 117px; }
+
+  40% {
+    left: 120px; }
+
+  60% {
+    left: 170px; }
+
+  70% {
+    left: 170px; }
+
+  80% {
+    left: 180px; }
+
+  90% {
+    left: 220px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+@-moz-keyframes write-code-two {
+  20% {
+    left: 90px; }
+
+  30% {
+    left: 90px; }
+
+  40% {
+    left: 95px; }
+
+  50% {
+    left: 100px; }
+
+  60% {
+    left: 120px; }
+
+  70% {
+    left: 160px; }
+
+  80% {
+    left: 165px; }
+
+  90% {
+    left: 200px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+@-o-keyframes write-code-two {
+  20% {
+    left: 90px; }
+
+  30% {
+    left: 90px; }
+
+  40% {
+    left: 95px; }
+
+  50% {
+    left: 100px; }
+
+  60% {
+    left: 120px; }
+
+  70% {
+    left: 160px; }
+
+  80% {
+    left: 165px; }
+
+  90% {
+    left: 200px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+@-ms-keyframes write-code-two {
+  20% {
+    left: 90px; }
+
+  30% {
+    left: 90px; }
+
+  40% {
+    left: 95px; }
+
+  50% {
+    left: 100px; }
+
+  60% {
+    left: 120px; }
+
+  70% {
+    left: 160px; }
+
+  80% {
+    left: 165px; }
+
+  90% {
+    left: 200px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+@keyframes write-code-two {
+  20% {
+    left: 90px; }
+
+  30% {
+    left: 90px; }
+
+  40% {
+    left: 95px; }
+
+  50% {
+    left: 100px; }
+
+  60% {
+    left: 120px; }
+
+  70% {
+    left: 160px; }
+
+  80% {
+    left: 165px; }
+
+  90% {
+    left: 200px; }
+
+  100% {
+    left: 240px;
+    width: 60px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .studio-ss {
+    max-width: 628px; } }
 @media only screen and (max-width: 1024px) {
   #screenshot img.studio {
     display: none; }
