@@ -608,74 +608,10 @@ nav#index li:last-child {
 #examples a:hover {
   opacity: 1; }
 
-#code-block {
-  max-width: 100%;
-  margin-top: 70px;
-  margin-bottom: 5px;
-  position: relative; }
-
-#code-section {
-  margin-bottom: 70px; }
-
-#code-section h3 {
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 6px 6px 0 0;
-  margin-bottom: 30px;
-  line-height: 1;
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-weight: 500;
-  color: #333; }
-
-#code-block div {
-  position: relative;
-  width: 100%;
-  height: 256px;
-  border-radius: 6px 6px 0 0;
-  background: black url("/static/examples/codeblock/images/background.png") repeat scroll top left; }
-
-#code-block div iframe {
-  display: block;
-  width: 100%;
-  position: absolute;
-  height: 256px;
-  top: 0;
-  left: 0;
-  border-radius: 6px 6px 0 0; }
-
-#code-block div:after {
-  content: "Click to animate";
-  display: inline-block;
-  text-align: center;
-  font-size: 13px;
-  position: absolute;
-  font-weight: 400;
-  bottom: 42px;
-  left: 0;
-  width: 100%;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
-
 p.intro {
   font-size: 22px;
   line-height: 1.6;
   font-weight: 200; }
-
-/*Compatibility link*/
-a.compat {
-  font-size: 13px;
-  font-weight: 500;
-  position: relative;
-  top: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  float: right;
-  box-shadow: 0 0 0 1px #4DB4EC;
-  border-radius: 55px;
-  padding: 10px 20px 7px; }
 
 #line-block {
   position: relative;
@@ -912,10 +848,7 @@ footer.global a.coinbase-button {
     font-size: 14px; }
 
   #example-block a.iphone {
-    bottom: -60px; }
-
-  #example-block a.iphone:hover {
-    bottom: -40px; } }
+    bottom: -60px; } }
 /* ================= Mobile (Navigation)  ================= */
 @media only screen and (max-width: 820px) {
   body {

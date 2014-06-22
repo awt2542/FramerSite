@@ -550,7 +550,6 @@ nav#index li:last-child {
 /* Tweaking vertical alignment */
 #used-by img.facebook, #used-by img.apple { top: -2px; }
 #used-by img.google, #used-by img.twitter { top: 2px; }
-
 #used-by img.facebook { width: 99px; }
 #used-by img.dropbox { width: 32px; }
 #used-by img.google { width: 88px; }
@@ -604,62 +603,9 @@ nav#index li:last-child {
 	opacity: 1;
 }
 
-#code-block {
-	max-width: 100%;
-	margin-top: 70px; margin-bottom: 5px;
-	position: relative;
-}
-
-#code-section {
-	margin-bottom: 70px;
-}
-
-#code-section h3 {
-	font-weight: 500; 
-	font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
-	border-radius: 6px 6px 0 0;
-	margin-bottom: 30px;
-	line-height: 1;
-	-webkit-font-smoothing: subpixel-antialiased;
-	font-weight: 500;
-	color: #333;
-}
-
-#code-block div {
-	position: relative;
-	width: 100%;
-	height: 256px;
-	border-radius: 6px 6px 0 0;
-	background: black url('/static/examples/codeblock/images/background.png') repeat scroll top left;
-}
-
-#code-block div iframe {
-	display: block;
-	width: 100%; position: absolute;
-	height: 256px;  top: 0; left: 0;
-	border-radius: 6px 6px 0 0;
-}
-
-#code-block div:after {
-	content: "Click to animate";
-	display: inline-block;
-	text-align: center; font-size: 13px;
-	position: absolute; font-weight: 400;
-	bottom: 42px; left: 0; width: 100%;
-	color: #fff; text-transform: uppercase; letter-spacing: 1px;
-}
-
 p.intro {
 	font-size: 22px; line-height: 1.6;
 	font-weight: 200;
-}
-
-
-/*Compatibility link*/
-a.compat {
-	font-size: 13px; font-weight: 500;
-	position: relative; top: 10px; text-transform: uppercase; letter-spacing: 1px;
-	float: right; box-shadow: 0 0 0 1px #4DB4EC; border-radius: 55px; padding: 10px 20px 7px;
 }
 
 #line-block {
@@ -937,9 +883,6 @@ h2.headline {
 	bottom: -60px;
 }
 
-#example-block a.iphone:hover {
-	bottom: -40px;
-}
 }
 
 /* ================= Mobile (Navigation)  ================= */
