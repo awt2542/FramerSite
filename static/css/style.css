@@ -421,8 +421,7 @@ pre + h5 {
   padding: 0;
   line-height: 0;
   position: relative;
-  background: #fff;
-  text-shadow: 0 1px 5px #fff; }
+  background: #fff; }
 
 #header a:hover, #footer a:hover {
   box-shadow: none;
