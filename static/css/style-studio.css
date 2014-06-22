@@ -70,7 +70,7 @@ h5 {
   font-size: 30px;
   max-width: 600px;
   margin: -20px auto;
-  color: rgba(97, 109, 133, 0.8);
+  color: rgba(97, 109, 133, 0.6);
   -moz-font-feature-settings: "salt" 1, "ss01" 1;
   -moz-font-feature-settings: "salt=1, ss01=1";
   -ms-font-feature-settings: "salt" 1, "ss01" 1;
@@ -91,7 +91,7 @@ p.author {
 #header h1, #footer h1 {
   letter-spacing: -1px;
   font-weight: 100;
-  margin: 60px 0 4px 0;
+  margin: 80px 0 4px 0;
   font-size: 66px;
   line-height: 1;
   color: #222; }
@@ -100,7 +100,7 @@ p.author {
   font-size: 14px;
   color: #4db4ec;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 8px;
   display: inline-block;
   font-weight: 600;
   margin: 0; }
@@ -179,7 +179,7 @@ p.author {
 /* SCREENSHOT -------------------------*/
 #screenshot {
   text-align: center;
-  margin: 60px 0 30px 0;
+  margin: 80px 0 30px 0;
   overflow: visible;
   position: relative; }
 
@@ -540,7 +540,8 @@ section.mobile {
 
   #header h1, #footer h1 {
     margin-top: 40px;
-    font-size: 40px; }
+    font-size: 40px;
+    font-weight: 200; }
 
   #header h2, #footer h2 {
     font-size: 22px; }
