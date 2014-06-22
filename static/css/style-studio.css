@@ -319,7 +319,7 @@ section.mobile {
   position: relative;
   top: 1px; }
 
-#framer section.right a {
+#framer section a.examples {
   box-shadow: inset 0 0 0 2px #4db4ec;
   padding: 12px 20px 10px;
   border-radius: 50px;
