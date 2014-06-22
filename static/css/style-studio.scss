@@ -125,10 +125,10 @@ p.author {
 
 #header h1, #footer h1 {
 	letter-spacing: -1px;
-	font-weight: 200;
+	font-weight: 100;
 	margin: 60px 0 4px 0;
-	font-size: 60px; line-height: 1;
-	color: #333;
+	font-size: 66px; line-height: 1;
+	color: #222;
 }
 
 #header h1.title {
@@ -207,9 +207,7 @@ p.author {
 /* SCREENSHOT -------------------------*/
 #screenshot {
 	text-align: center;
-	margin-top: 80px;
-	padding-top: 80px;
-	margin-bottom: 40px;
+	margin: 60px 0;
 	overflow: visible;
 	position: relative;
 	
@@ -219,7 +217,7 @@ p.author {
 	position: absolute; top: 0; left: 0;
 	background: url('/static/images/fs/bg-icon.jpg') no-repeat 50%;	
 	background-size: contain; 
-	top: 40px;
+	top: -40px;
 	width: 1240px; height: 1380px;
 	z-index: 0;	left: 50%; margin-left: -620px;
 	
