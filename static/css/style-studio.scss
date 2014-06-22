@@ -575,6 +575,11 @@ section.mobile {
 	width: 100%;
 }
 
+#bg {
+	background-size: 75%;
+	top: -90px;
+}
+
 p {
 	font-size: 16px;
 }
@@ -599,10 +604,6 @@ h5 {
 	display: none;
 }
 
-#screenshot {
-	background-size: contain;
-	padding: 60px;
-}
 
 }
 
