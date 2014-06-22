@@ -77,17 +77,15 @@ $(document).ready(retina);
 /* ========================= */
 
   
-  
+   document.getElementById('carousel-inapp').play();
+   
   $(document).ready(function(){
   	
       $(window).scroll(function(){
           if ($(window).scrollTop() > 1400){
              document.getElementById('carousel').play();
           }
-          
-          if ($(window).scrollTop() > 200){
-             document.getElementById('carousel-inapp').play();
-          }
+         
       });
       
       $('.screen').click(function() {

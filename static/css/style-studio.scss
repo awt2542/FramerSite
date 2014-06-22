@@ -217,7 +217,7 @@ p.author {
 	position: absolute; top: 0; left: 0;
 	background: url('/static/images/fs/bg-icon.jpg') no-repeat 50%;	
 	background-size: contain; 
-	top: -40px;
+	top: 0px;
 	width: 1240px; height: 1380px;
 	z-index: 0;	left: 50%; margin-left: -620px;
 	
@@ -852,11 +852,7 @@ img.app-icon {
 	bottom: -50px;
 }
 #screenshot {
-	padding: 20px 10px;
-	background-image: -o-linear-gradient(89deg, #FFFFFF 0%, #C8E6F0 100%);
-	background-image: -moz-linear-gradient(89deg, #FFFFFF 0%, #C8E6F0 100%);
-	background-image: -ms-linear-gradient(89deg, #FFFFFF 0%, #C8E6F0 100%);
-	background-image: linear-gradient(-1deg, #FFFFFF 0%, #C8E6F0 100%);
+	padding: 0;
 }
 
 /*Flip the screenshot texts */
