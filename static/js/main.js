@@ -75,12 +75,9 @@ $(document).ready(retina);
 }
 
 /* ========================= */
-
-  
-   document.getElementById('carousel-inapp').play();
    
   $(document).ready(function(){
-  	
+  	document.getElementById('carousel-inapp').play();
       $(window).scroll(function(){
           if ($(window).scrollTop() > 1400){
              document.getElementById('carousel').play();
