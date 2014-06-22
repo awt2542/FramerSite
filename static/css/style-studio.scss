@@ -43,7 +43,16 @@ img {
 }
 
 hr {
-	margin: 80px auto;
+	margin: 120px auto;
+}
+
+.hr {
+	margin: 100px auto;
+}
+
+.hr-line {
+	margin: 100px 0 80px 0;
+	height: 1px; background: #eee; max-width: 600px;
 }
 
 /* TYPOGRAPHY ------------------------------- */
@@ -103,7 +112,7 @@ h5 {
 	font-weight:200; 
 	line-height: 1.4;
 	font-size: 30px; 
-	max-width: 600px; margin: -20px auto;
+	max-width: 600px; margin: -60px auto;
 	color: $graphite60; 
 	-moz-font-feature-settings:"salt" 1, "ss01" 1; 
 	-moz-font-feature-settings:"salt=1, ss01=1"; 
@@ -228,6 +237,9 @@ p.author {
 	max-width: 708px; width: 100%;
 }
 
+#screenshot img.studio-600 {
+	display: none;
+}
 
 #framer section.iphone-bg {
 	position: relative; z-index: 0;
@@ -537,6 +549,19 @@ section.mobile {
 
 
 @media only screen and (max-width: 1024px) {
+#screenshot img.studio {
+	display: none;
+}
+
+#screenshot img.studio-600 {
+	display: inline-block;
+	max-width: 628px; width: 100%;
+}
+
+#screenshot video {
+	position: absolute; max-width: 112px;
+	top: 157px; left: 104px;
+}
 
 #screenshot-copy p {
 	font-size: 17px;
