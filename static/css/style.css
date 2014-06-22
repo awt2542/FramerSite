@@ -456,13 +456,17 @@ nav#index li:last-child {
   background: rgba(77, 180, 236, 0.6);
   height: 540px;
   width: 100%;
-  margin: 70px 0;
-  overflow: hidden;
+  margin: 70px 0 180px 0;
   padding: 0 40px; }
+
+#example-block .inner {
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto; }
 
 #example-block section {
   position: absolute;
-  top: 45px;
+  top: 60px;
   left: 0;
   width: 100%; }
 
@@ -471,7 +475,10 @@ nav#index li:last-child {
   float: left;
   font-size: 12px;
   line-height: 1.5;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left; }
 
 #example-block a.more {
   color: #fff;
@@ -492,55 +499,25 @@ nav#index li:last-child {
 /* ------------- */
 #example-block a.iphone {
   position: absolute;
-  bottom: -15px;
-  width: 318px;
-  -webkit-transition: bottom 0.2s ease;
-  -moz-transition: bottom 0.2s ease;
-  -ms-transition: bottom 0.2s ease;
-  -o-transition: bottom 0.2s ease;
-  transition: bottom 0.2s ease;
-  height: 444px; }
+  bottom: -70px; }
 
 #example-block img {
-  width: 318px; }
+  width: 218px; }
 
-#example-block a.iphone.mid {
-  height: 499px; }
-
-#example-block a.iphone div {
-  background: rgba(255, 255, 255, 0.9);
-  color: #60C4FF;
-  width: 256px;
-  height: 455px;
-  position: absolute;
-  top: 97px;
-  left: 31px;
-  z-index: 25;
-  text-align: center;
-  line-height: 455px;
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: inline-block;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.2s ease;
-  -moz-transition: opacity 0.2s ease;
-  -ms-transition: opacity 0.2s ease;
-  -o-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease; }
+#example-block a.mid img {
+  width: 247px; }
 
 #example-block a.left {
-  left: -50px; }
+  left: 0px; }
 
 #example-block a.mid {
   left: 50%;
-  margin-left: -159px;
-  z-index: 50; }
+  margin-left: -123px;
+  z-index: 50;
+  bottom: -100px; }
 
 #example-block a.right {
-  right: -50px; }
+  right: 0px; }
 
 #used-by {
   margin-top: 80px;
