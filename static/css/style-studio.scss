@@ -145,8 +145,8 @@ p.author {
 }
 
 #header h2, #footer h2 {
-	font-weight: 200;
-	color: #818B9E; line-height: 1.4;
+	font-weight: 300;
+	color: $graphite80; line-height: 1.4;
 	font-size: 28px; letter-spacing: -0px;
 	margin-bottom: 60px; 
 }
@@ -157,13 +157,13 @@ p.author {
 
 #header a, #footer a {
 	border: none;
-	padding:14px 20px 11px; position: relative; 
+	padding:12px 20px 9px; position: relative; 
 	border-radius: 50px; 
 	background: $blue; color: #fff;
 	text-transform: none; letter-spacing: 0; 
 	margin-bottom: 20px;
 	font-size: 16px; line-height: 1;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 #header form, #footer form  {
@@ -173,14 +173,22 @@ p.author {
 
 #header form input[type="submit"], #footer form input[type="submit"] {
 	font:16px/1 "Fakt", "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-weight:500;
+	font-weight:600;
 	border: none; background: $blue;  color:#fff;
 	cursor: pointer; cursor: hand;
 	padding: 0; 
 	-webkit-font-smoothing: antialiased;
-	padding:14px 20px 11px; 
+	padding:12px 30px 9px 20px; 
 	border-radius: 50px;
+	width: 120px;
 }
+
+#header form:after, #footer form input[type="submit"]:after{
+	content: "99"; display: inline-block; position: relative;
+	font-size: 12px; font-weight: 500; color: #fff;
+	left: -34px; top: -3px;
+}
+
 
 #header form input[type="submit"]:hover, #footer form input[type="submit"]:hover {
 	background: $blue; color: #fff; box-shadow: none;
