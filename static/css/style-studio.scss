@@ -131,7 +131,7 @@ p.author {
 #header h1, #footer h1 {
 	letter-spacing: -1px;
 	font-weight: 100;
-	margin: 80px 0 4px 0;
+	margin: 80px 0 8px 0;
 	font-size: 66px; line-height: 1;
 	color: #222;
 }
@@ -184,12 +184,11 @@ p.author {
 	-webkit-appearance: none;
 }
 
-#header form:after, #footer form input[type="submit"]:after{
+#header form:after, #footer form:after{
 	content: "99"; display: inline-block; position: relative;
 	font-size: 12px; font-weight: 500; color: #fff;
 	left: -34px; top: -3px;
 }
-
 
 #header form input[type="submit"]:hover, #footer form input[type="submit"]:hover {
 	background: $blue; color: #fff; box-shadow: none;
@@ -205,8 +204,6 @@ p.author {
 #header a.green:hover { color: #fff; box-shadow: none; }
 #header a:hover:after { color: #4DB4EC; }
 #header a.green:hover:after { color: #7DDC16; }
-
-
 
 
 /* SCREENSHOT -------------------------*/
@@ -807,12 +804,12 @@ footer.global {
 
 #bg {
 	background-size: 40%;
-	top: -240px;
+	top: -320px;
 }
 
 #header h1.title {
 	letter-spacing: 3px;
-	margin-top: 20px;
+	margin-top: 0px;
 }
 
 #header h1, h2, #footer h1 {
@@ -827,6 +824,7 @@ footer.global {
 
 #header h2, #footer h2 {
 	font-size: 20px; font-weight: 300;
+	margin-bottom: 20px;
 }
 
 #illustration {
@@ -847,7 +845,8 @@ p {
 }
 
 h5 {
-	font-size: 20px;
+	font-size: 19px;
+	font-weight: 300;
 }
 img.app-icon {
 	width: 140px;
@@ -856,6 +855,7 @@ img.app-icon {
 }
 #screenshot {
 	padding: 0;
+	margin-bottom: 20px;
 }
 
 /*Flip the screenshot texts */
@@ -904,8 +904,12 @@ section.mobile {
 }
 
 #header form input[type="submit"], #footer form input[type="submit"] {
-	padding:12px 18px 9px; 
+	padding:12px 28px 9px 18px; 
 	box-shadow:inset 0 0 0 1px $blue;
+}
+
+#header form:after, #footer form:after{
+	left: -34px; top: -3px;
 }
 
 }
