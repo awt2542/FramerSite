@@ -41,13 +41,14 @@ h3 {
   letter-spacing: 0px;
   color: #4db4ec; }
 
-/*Big h2*/
+/*Big h1*/
 .feature-block h1 {
   text-align: center;
   letter-spacing: -1px;
   line-height: 1.1;
   font-weight: 100;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-align: center; }
 
 #interaction h1 {
   color: #fff; }
@@ -456,7 +457,7 @@ section.mobile {
   position: relative;
   overflow: visible; }
 
-#viewer h2 {
+#viewer h1 {
   color: #111; }
 
 #viewer p.title {
