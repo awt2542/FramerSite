@@ -98,9 +98,16 @@ $(document).ready(function() {
 
 	}
 
-	$("pre").each(function(i, node) {
+	$("code").each(function(i, node) {
 
-		console.log(node)
+		// Set the default language to coffee script
+		if (!node.getAttribute("data-language")) {
+			node.setAttribute("data-language", "coffeescript");
+		}
+
+		// Strip empty lines at the beginning and end
+		node.innerHTML = node.innerHTML.replace(/^\s+|\s+$/g, '');
+
 	})
 
 

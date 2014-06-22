@@ -8,7 +8,7 @@
 <a name="learn"></a>
 ### Learn
 
-This section covers the basic principles of Framer. It's a good overview of the core principles on which Framer was built.
+This section covers the basic principles of Framer. It's a good overview of the core principles on which Framer was built. These examples are in CoffeeScript, but most of them will work in JavaScript too.
 
 ---
 
@@ -20,9 +20,9 @@ This section covers the basic principles of Framer. It's a good overview of the 
 #### Layers <a href="docs.html#layers" class="small right">More</a>
 A layer is just a rectangle that draws stuff in the browser. It has a set of basic properties like x, y, width and height. It also has other properties like opacity, scale, and blur. Layers can display images, text, or both.
 
-<pre><code data-language="javascript"># This creates a new layer, and sets its x property to 100
-myLayer = new Layer({x:0, y:0, width:128, height:128})
-myLayer.x = 100</code></pre>
+	# This creates a new layer, and sets its x property to 100
+	myLayer = new Layer({x:0, y:0, width:128, height:128})
+	myLayer.x = 100
 
 <hr>
 
@@ -34,23 +34,28 @@ Layers can contain other layers. We call these subLayers. The parent of a layer 
 A layer's coordinates are based on its superLayer. So with an x and y of zero, a layer gets placed in the top left corner of its superLayer.
 
 You can manipulate the layer hierarchy as you need to.
-<pre><code data-language="javascript"># Adds a subLayer to a layer
-parentLayer.addSubLayer(childLayer)</code></pre>
+
+	# Adds a subLayer to a layer
+	parentLayer.addSubLayer(childLayer)
 
 <hr>
 
 <!-- types -->
 
 <a name="basics"></a>
+
 #### Images and Scrolling
+
 Most layers will just contain an image. They are pretty easy to set with the image property.
-<pre><code data-language="javascript"># Set an image
-layer = new Layer({width:100, height:100, image:"my-image.png"})</code></pre>
+
+	# Set an image
+	layer = new Layer({width:100, height:100, image:"my-image.png"})
 
 Layers can also scroll their contents. You can enable scrolling with the scroll keyword.
-<pre><code data-language="javascript"># Make layer scrollable
-layer = new Layer({width:100, height:100})
-layer.scroll = true</code></pre>
+	
+	# Make layer scrollable
+	layer = new Layer({width:100, height:100})
+	layer.scroll = true
 
 
 It is easy to create components consisting of multiple layers that you can re-use across projects. A component with a specific task containing different layers is called a View (other names are widgets or components). Some examples of Views on iOS are TableView, CollectionView etc.
@@ -69,11 +74,11 @@ Animations optionally take a curve that describes the type of animation. You can
 
 You can create an animation explicitly with <code class="inline">myAnimation = layer.animate({..})</code> or with the shortcut on any layer <code class="inline">layer.animate({..}).</code>
 
-<pre><code data-language="javascript"># Creates an animation using a spring
-springUp = layer.animate({
-	properties: { y: layer.y + 100 }
-	curve: 'spring(100,10,0)'
-)}</code></pre>
+	# Creates an animation using a spring
+	springUp = layer.animate({
+		properties: {y: layer.y + 100},
+		curve: "spring(100,10,0)",
+	})
 
 <hr>
 
@@ -84,13 +89,13 @@ Because Framer runs in the browser, you can simply use html and css to style any
 
 To add css styling, you edit the properties of the layer's style attribute. You can set these one at the time like <code class="inline">layer.style.backgroundColor = "red"</code> or <code class="inline">layer.style['background-color'] = "red"</code>, or also update multiple properties at the same time as in the example below. Please note that while most Framer properties take numeric values, the style attribute requires specific css values like <code class="inline">layer.style.lineHeight = "16px"</code>. You can also set a css class on a layer by doing <code class="inline">layer.classList.add("myClass");</code>. This way you, can use an external css file for styling.
 
-<pre><code data-language="javascript"># Set multiple layer styles at once
-layer.style = {
-	"font-size":"18px",
-	"text-align":"center",
-	"line-height":"24px"
-	"color":"red"
-}</code></pre>
+	# Set multiple layer styles at once
+	layer.style = {
+		"font-size": "18px",
+		"text-align": "center",
+		"line-height": "24px",
+		"color": "red"
+	}
 
 Note: if you set a single style on a layer, don't forget to use the javascript syntax, e.g. 'font-size' would be layer.fontSize
 
@@ -105,20 +110,17 @@ There are many events you can listen to, but the most interesting are probably c
 
 Framer has a helper method that maps the most common events nicely for you, for example 'Events.TouchStart' will be called on 'mousedown' for computers, or 'touchstart' for mobile devices.
 
-To listen to an event use <code class="inline">layer.on(event, function(){}).</code> To stop listening you can use <code class="inline">layer.off(event, function(){}).</code> You can listen to multiple events at the same time.
+To listen to an event use <code class="inline">layer.on event, -> ... </code> To stop listening you can use <code class="inline">layer.off event, -> ... </code>. You can listen to multiple events at the same time.
 
-<pre><code data-language="javascript"># Listen to multiple events on a layer
-layer.on(Events.TouchStart, function(event) {
- console.log("Touch/click start happened on layer")
-})
+	# Listen to multiple events on a layer
+	layer.on Events.TouchStart, (event) ->
+		console.log "Touch/click start happened on layer"
 
-layer.on(Events.TouchMove, function(event) {
- console.log("Touch/click is moving!")
-})
+	layer.on Events.TouchMove, (event) ->
+		console.log "Touch/click is moving!"
 
-layer.on(Events.TouchEnd, function(event) {
- console.log("The touch has ended :(")
-})</code></pre>
+	layer.on Events.TouchEnd, (event) ->
+		console.log "The touch has ended :("
 
 You'll notice the "event" in function. It's an object with additional information about the event that happened like its position.
 
@@ -132,31 +134,28 @@ A new feature in Framer 3, the state machine is incredibly powerful and useful. 
 
 States are most useful when a layer has to be on the screen, but in multiple different positions/sizes, etc. For example, let's use the state machine to add three states to a layer, and then animate between them on a click.
 
-<pre><code data-language="javascript"># Add three states to the layer
-chair.states.add({
-	tooSmall:  {scale: 0.8},
-	tooBig:    {scale: 1.2},
-	justRight: {scale: 1.0}
-})
+	# Add three states to the layer
+	chair.states.add
+		tooSmall:  {scale: 0.8}
+		tooBig:	   {scale: 1.2}
+		justRight: {scale: 1.0}
 
-# Set the default animation options for the layer
-imageLayer.states.animationOptions = {
-	curve: "spring(200,12,10)"
-}
+	# Set the default animation options for the layer
+	imageLayer.states.animationOptions =
+		curve: "spring(200,12,10)"
 
-# On a click, go to the next state
-imageLayer.on(Events.Click, function(event) {
-	imageLayer.states.next()
-})</code></pre>
+	# On a click, go to the next state
+	imageLayer.on Events.Click, (event) ->
+		imageLayer.states.next()
 
 <hr>
 
 
 <!-- CoffeeScript -->
+<a name="coffeescript"></a>
+### CoffeeScript Primer 
 
-##### CoffeeScript Primer 
-
-This should help you to learn the basics in an afternoon. Or use it as a cheat sheet. It is mostly meant for designers wanting to work with [Framer](http://framerjs.com/), but it should be useful for anyone learning CoffeeScript.
+This should help you to learn the basics in an afternoon. Or use it as a cheat sheet. It is mostly meant for designers wanting to work with [Framer Studio](http://framerjs.com/), but it should be useful for anyone learning CoffeeScript.
 
 CoffeeScript is worth learning because: 
 
@@ -170,7 +169,7 @@ CoffeeScript is worth learning because:
 
 ##### Comments
 
-Comments is text that is not code. You use them to explain what happens in the code around it if it's not self evident from the code. Comments are prefixed with #.
+Comments is text that is not code. You use them to explain what happens in the code around it if it's not self evident from the code. Comments are prefixed with **#**.
 
 	# I am a comment
 	5 + 6 # I am a comment too
@@ -184,10 +183,10 @@ Whenever you want to display a value to inspect you can print it to the log like
 
 ##### Tabs
 
-CoffeeScript uses *significant whitespace*. That means that tabs are used to define the structure of the language, instead of *{* and* }* like in Javascript.* So if your tabs are not correct, your script will fail.
+CoffeeScript uses *significant whitespace*. That means that tabs are used to define the structure of the language, instead of **{** and **}** like in Javascript. So if your tabs are not correct, your script will fail.
 
 	if 1 + 1 == 2
-	  console.log "hello" # This will work
+		console.log "hello" # This will work
 
 	if 1 + 1 == 2
 	console.log "hello" # This will fail (missing tab)
@@ -212,7 +211,7 @@ Variables can store different types of data, see below.
 
 ##### Boolean
 
-A boolean can only have two values: *false* or *true*:
+A boolean can only have two values: **false** or **true**:
 
 	myBoolA = true
 	myBoolB = false
@@ -225,205 +224,178 @@ Numbers can be small, big, rounded, positive or negative:
 	myNumberB = 20.0
 	myNumberC = -223894
 
-
 You can calculate with numbers like this (*operators*):
 
-	myNumberA + myNumberB   # Add, output: 22.0
-	myNumberA / myNumberB   # Divide, output: 0.10
-	myNumberA * myNumberB   # Product, output: 40.0
-	myNumberA ** myNumberB  # Power, output: 400.0
+	myNumberA + myNumberB  # Add, output: 22.0
+	myNumberA / myNumberB  # Divide, output: 0.10
+	myNumberA * myNumberB  # Product, output: 40.0
+	myNumberA ** myNumberB # Power, output: 400.0
 
 ##### String
 
 A string is a set of characters like words or complete sentences:
 
-
-myStringA = "Hello there"
-
+	myStringA = "Hello there"
 
 You can combine strings like this:
 
+	myStringB = "#{myStringA}, I am the dude"
+	# Output: "Hello there, I am the dude"
 
-myStringB = "#{myStringA}, I am the dude"
- Output: "Hello there, I am the dude"
+But strings can also hold complex values you cannot describe in just numbers:
 
-But strings can also hold complex values you cannot describe in pure numbers:
-
-
-myStringC = "rgba(255,0,0,0.1)"
-myStringD = "1px solid #FFFFFF"
+	myStringC = "rgba(255,0,0,0.1)"
+	myStringD = "1px solid #FFFFFF"
 
 
-##### ARRAY
+##### Array
 
 Arrays contain an ordered set of values. The values can be any type. They can even be nested (for example an array with arrays).
 
-
-myListA = [1, 2, 3, 4, 5]  Just numbers
-*myListB = [1, "test", 22, [1, 2, 3]]  Mixed
+	myListA = [1, 2, 3, 4, 5] # Just numbers
+	myListB = [1, "test", 22, [1, 2, 3]] # Mixed
 
 You can access any item in an array by it's number (it's called an index) which starts at 0:
 
-
-myListA[0]  Output: 1myListA[4]  Output: 5
+	myListA[0] # Output: 1
+	myListA[4] # Output: 5
 
 You can also count the items in an array:
 
-
-myListB.length  Output: 4
+	myListB.length # Output: 4
 
 Or grab a range from the array:
 
+	myListB[0..2] # Output: [1, 2, 3]
 
-myListB[0..2]  Output: [1, 2, 3]
+##### Object
 
-##### OBJECT
+Objects are a bit like lists, but instead of by number, you can access them by a string (word). Much like a dictionary from a phone book (look up a person by last name). We call the 'lookup string' a key.
 
-This is an *object*. Objects are a bit like lists, but instead of by number, you can access them by a string (word). Much like a dictionary from a phone book (look up a person by last name). We call the 'lookup string' a key.
-
-
-myObjectA = {name:"Framer", age:12}
-
+	myObjectA = {name:"Framer", age:12}
 
 You can also write objects like this, it's the exact same thing as above:
 
-
-myObjectB =
-    name: "Framer"
-    age: 12
+	myObjectA =
+		name: "Framer"
+		age: 12
 
 
 To find a value in an object you use the key:
 
-
-myObjectB["name"]  Output: "Framer"
+	myObjectB["name"] # Output: "Framer"
 
 If you use a key that does not exist, you get the special undefined value:
 
-
-myObjectB["skdjslkdj"]  Output: undefined
+	myObjectB["nothere"] # Output: undefined
 
 Once you have made an object, you can add more stuff in it like this:
 
-
-myObjectB["platform"] = "Mac"
-
+	myObjectB["platform"] = "Mac"
 
 Or remove something like this:
 
+	delete myObjectB["platform"]
+	myObjectB["platform"] # Output: undefined
 
-delete myObjectB["platform"]
-myObjectB["platform"]  Output: undefined
+#### Functions
 
-
-
-## Functions
-
-Functions are bits of executable code. It's pretty much the same thing as a function in mathematics. They take input and generate output. The part in between is just a description how to get from one to the other. When you run a function for a specific set of inputs, programmers say you *call* the function, and the input(s) are *arguments*.
+Functions are bits of executable code. It's pretty much the same thing as a function in mathematics. They take input and generate output. The part in between is just a description how to get from one to the other. When you run a function for a specific set of inputs, programmers say you *call* the function, and the input(s) are *arguments**.
 
 Common examples of what you use functions for are:
 
 * Describe to do something, but use it later (when it gets *called*)
 * Wrap something you do multiple multiple times in a function so you can reuse it easily
 
-
 This is how you define a function, note it follows the standard way of defining variables. The *return* keyword passes back a value to the caller (by default, CoffeeScript returns the latest used variable).
 
+	myFunction = (input) -> 
+		output = input * 2
+		return output
 
-myFunction = (input) -> 
-    output = input * 2
-    return output
+To now use (or, **call**) the function with the number 42 (**argument**) you do this:
 
-
-To now use (or, *call*) the function with the number 42 (*argument*) you do this:
-
-
-myFunction(42)  Output: 84
+	myFunction(42) # Output: 84
 
 You can assign the output of a function directly to a new variable:
 
-
-myCalculatedNumber = myFunction(42)
-myCalculatedNumber  Output: 84
+	myCalculatedNumber = myFunction(42)
+	myCalculatedNumber # Output: 84
 
 A function can be defined with as many arguments as you like and they can be any type:
 
+	myFunction = (argumentA, argumentB, argumentC) ->
+		return argumentA + argumentB + argumentC
 
-myFunction = (argumentA, argumentB, argumentC) ->
-    return argumentA + argumentB + argumentC
-
-
-## Comparators
+#### Comparators
 
 Comparators compare things. The most common are equality and greater/smaller than.
 
-
-4 is 4  Output: true
-*4 isnt 4  Output: false
-*4 < 5  Output true
-*4 > 5  Output false
+	4 is 4 # Output: true
+	4 isnt 4 # Output: false
+	4 < 5 # Output true
+	4 > 5 # Output false
 
 You can combine multiple comparators with and and or:
 
+	4 is 4 and 5 < 4 # Output false
+	4 is 4 or 5 < 4 # Output true
 
-4 is 4 and 5 < 4  Output false
-*4 is 4 or 5 < 4  Output true
+---
 
+#### Conditionals
 
+Conditionals define your logic. You use them together with comparators to make decisions. They are all based around the **if**, **else if** and **else** keywords.
 
-## Conditionals
-
-Conditionals define your logic. You use them together with comparators to make decisions. They are all based around the *if*, *else if* and *else* keywords.
-
-
-if age > 21
-  console.log "Over 21!"
-
+	if age > 21
+		console.log "Over 21!"
 
 A little more complicated example that checks for multiple things:
 
+	if age < 21
+		console.log "Young"
+	else if age < 65
+		console.log "Adult"
+	else
+		console.log "Senior"
 
-if age < 21
-  console.log "Young"else if age < 65
-  console.log "Adult"else console.log "Senior"
+---
 
+#### Loops
 
-
-
-## Loops
-
-Loops are used to iterate over collections, as in do something for each item. Collections can be anArray or Object. They use the for keyword.
+Loops are used to iterate over collections, as in do something for each item. Collections can be an Array or Object. They use the **for** keyword.
 
 To loop over an Array you can do this:
 
+	myArray = [1, 2, 3, 4, 5]
 
-myArray = [1, 2, 3, 4, 5]
+	for number in myArray
+		number + 1
+	
+	# Output: 2, 3, 4, 5, 6
 
-for number in myArray
-  number + 1
- Output: 2, 3, 4, 5, 6
+An Object has a key and value (for example name=Koen) and you'll likely want to use both in your loop. For that, you can use **of** instead of **in** when you loop:
 
-An Object has a key and value (for example name=Koen) and you'll likely want to use both in your loop. For that, you can use of instead of in when you loop:
+	myObject =
+		name: "Koen"
+		city: "Amsterdam"
+		age: 31
 
+	for key, value of myObject
+		key, "=", value 
+	
+	# Output: name=Koen, city=Amsterdam, age=31
 
-myObject =
-  name: "Koen"
-  city: "Amsterdam"
-  age: 31
+---
 
-for key, value of myObject
-  key, "=", value 
- Output: name=Koen, city=Amsterdam, age=31
+#### Common Errors
 
+* **SyntaxError ... unexpected ...**: the interpreter encountered code that it doesn't know what to do with. You likely made a typo.
+* **ReferenceError ... Can't find variable**: ...: you are using a variable that the interpreter doesn't know about. You likely forgot to declare it (at the right time).
 
+---
 
-## Common Errors
-
-* *SyntaxError ... unexpected ...*: the interpreter encountered code that it doesn't know what to do with. You likely made a typo.
-* *ReferenceError ... Can't find variable*: ...: you are using a variable that the interpreter doesn't know about. You likely forgot to declare it (at the right time).
-
-
-## More resources
+#### More CoffeeScript resources
 
 If you made it this far you should know enough to start playing around. Some good next steps would be:
 
