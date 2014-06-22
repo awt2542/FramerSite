@@ -301,11 +301,7 @@ section.mobile {
   position: relative; }
 
 #framer ul {
-  margin-top: 0px;
-  float: left; }
-
-#framer ul {
-  margin: 38px 0;
+  margin: 40px 0 0 20px;
   float: left;
   max-width: 280px;
   width: 100%; }
@@ -324,7 +320,8 @@ section.mobile {
 
 #framer p a {
   color: #333;
-  font-weight: 400; }
+  font-weight: 400;
+  border-bottom: 1px solid #eee; }
 
 #framer ul section li {
   color: rgba(97, 109, 133, 0.8);
@@ -353,6 +350,15 @@ section.mobile {
   width: 25px;
   background: red;
   display: inline-block; }
+
+/* USED BY SECTION */
+#used-by p {
+  background: #fff;
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  padding: 0 20px;
+  color: rgba(97, 109, 133, 0.4); }
 
 /* INTERACTION SECTION -------------------------*/
 #interaction {
