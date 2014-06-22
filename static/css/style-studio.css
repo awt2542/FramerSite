@@ -8,10 +8,10 @@ img {
   max-width: 100%; }
 
 hr {
-  margin: 80px auto; }
+  margin: 60px auto; }
 
 hr.big {
-  margin: 100px auto; }
+  margin: 80px auto; }
 
 /* TYPOGRAPHY ------------------------------- */
 p {
@@ -72,7 +72,7 @@ h5 {
   line-height: 1.4;
   font-size: 30px;
   max-width: 600px;
-  margin: -20px auto;
+  margin: 0 auto;
   color: rgba(97, 109, 133, 0.6);
   -moz-font-feature-settings: "salt" 1, "ss01" 1;
   -moz-font-feature-settings: "salt=1, ss01=1";
