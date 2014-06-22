@@ -33,6 +33,10 @@ $orange: #F68426;
 	$orange20: rgba( $orange, 0.2 );	
 	
 
+#wrapper {
+	overflow: hidden;
+}
+
 /* TYPOGRAPHY ------------------------------- */
 img {
 	max-width: 100%;
@@ -43,6 +47,7 @@ hr {
 }
 
 /* TYPOGRAPHY ------------------------------- */
+
 p {
 	font-size: 18px; 
 	line-height: 1.7; color:$grey80;
@@ -241,8 +246,7 @@ p.author {
 
 #screenshot video {
 	position: absolute; max-width: 112px;
-	top: 157px;  z-index: 100; left: 104px;
-	background: #fff;
+	top: 157px; left: 104px;
 }
 
 #screenshot-copy {
@@ -644,8 +648,6 @@ hr {
 }
 
 #screenshot {
-	background-size: contain;
-	padding: 40px;
 	padding-bottom: 20px;
 	margin-bottom: 0;
 	margin-top: 40px;
@@ -803,6 +805,11 @@ footer.global {
 
 
 @media only screen and (max-width:440px) {
+
+#bg {
+	background-size: 40%;
+	top: -240px;
+}
 
 #header h1.title {
 	letter-spacing: 3px;

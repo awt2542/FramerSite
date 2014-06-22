@@ -1,5 +1,8 @@
 @import url(fonts.css);
 /* COLOR SCHEME ------------------------------ */
+#wrapper {
+  overflow: hidden; }
+
 /* TYPOGRAPHY ------------------------------- */
 img {
   max-width: 100%; }
@@ -212,9 +215,7 @@ p.author {
   position: absolute;
   max-width: 112px;
   top: 157px;
-  z-index: 100;
-  left: 104px;
-  background: #fff; }
+  left: 104px; }
 
 #screenshot-copy {
   text-align: center; }
@@ -559,8 +560,6 @@ section.mobile {
     margin: 40px auto; }
 
   #screenshot {
-    background-size: contain;
-    padding: 40px;
     padding-bottom: 20px;
     margin-bottom: 0;
     margin-top: 40px; }
@@ -705,6 +704,10 @@ section.mobile {
   #manifesto section + section {
     margin-top: 20px; } }
 @media only screen and (max-width: 440px) {
+  #bg {
+    background-size: 40%;
+    top: -240px; }
+
   #header h1.title {
     letter-spacing: 3px;
     margin-top: 40px; }
