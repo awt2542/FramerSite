@@ -507,6 +507,10 @@ section.mobile {
   .half section section {
     width: 100%; }
 
+  #bg {
+    background-size: 75%;
+    top: -90px; }
+
   p {
     font-size: 16px; }
 
@@ -524,11 +528,7 @@ section.mobile {
     margin-right: 2%; }
 
   #carousel, #carousel-inapp {
-    display: none; }
-
-  #screenshot {
-    background-size: contain;
-    padding: 60px; } }
+    display: none; } }
 @media only screen and (max-width: 580px) {
   #wrapper.index {
     padding: 40px 0; }
