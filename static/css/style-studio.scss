@@ -82,15 +82,15 @@ h3 {
 }
 
 /*Big h2*/
-.feature-block h2 {
+.feature-block h1 {
 	text-align: center; letter-spacing: -1px;
-	font-size: 50px; line-height: 1.1;
-	font-weight: 200;
+	line-height: 1.1;
+	font-weight: 100;
 	margin-bottom: 10px;
 }
 
 
-#interaction h2 {
+#interaction h1 {
 	color: #fff;
 }
 
@@ -112,7 +112,7 @@ h5 {
 	font-weight:200; 
 	line-height: 1.4;
 	font-size: 30px; 
-	max-width: 600px; margin: -60px auto;
+	max-width: 600px; margin: -20px auto;
 	color: $graphite60; 
 	-moz-font-feature-settings:"salt" 1, "ss01" 1; 
 	-moz-font-feature-settings:"salt=1, ss01=1"; 
@@ -136,12 +136,11 @@ p.author {
 
 /* HEADER ------------------------------- */
 
-
 #header h1, #footer h1 {
 	letter-spacing: -1px;
-	font-weight: 100;
+	font-weight: 200;
 	margin: 80px 0 8px 0;
-	font-size: 66px; line-height: 1;
+	font-size: 60px; line-height: 1;
 	color: #222;
 }
 
@@ -390,10 +389,11 @@ section.mobile {
 /* INTERACTION SECTION -------------------------*/
 
 #interaction {
-	background: #282D36;
-	padding: 100px 0;
+	background: #191C22;
+	padding: 100px 0 0 0;
 	margin: 100px 0 0 0;
 	position: relative;
+
 }
 
 #interaction p {
@@ -407,8 +407,8 @@ section.mobile {
 
 #interaction .ss-half {
 	background: url('/static/images/fs/ss-code.png') no-repeat;
-	position: absolute; right: -1080px; width: 1318px; height: 613px;
-	top: 0;
+	width: 665px; height: 474px;
+	top: 0; position: relative; left: -10px;
 }
 
 /*Retina*/
@@ -419,21 +419,20 @@ section.mobile {
 	}
 }
 
-
-#interaction section p.title {
-	color: #9FDD5D;
+#interaction p.title {
+	color: $green;
 	font-weight: 400;
 }
 
-#interaction section li:nth-child(2) p.title{
-	color: #61C7FF;
+#interaction li:nth-child(2) p.title{
+	color: $blue;
 }
 
-#interaction section li:nth-child(3) p.title{
-	color: #B8A5FF;
+#interaction li:nth-child(3) p.title{
+	color: #917BDF;
 }
 
-#interaction section li:last-child p.title{
+#interaction li:last-child p.title{
 	color: #818B9E;
 }
 
@@ -448,7 +447,7 @@ section.mobile {
 }
 
 .feature-block section li+li {
-	margin-top: 40px;
+	margin-top: 0;
 }
 
 .feature-block p {
@@ -462,22 +461,36 @@ section.mobile {
 	line-height: 1.2;
 }
 
-.feature-block section li img {
+.feature-block li img {
 	float: left; position: relative; top: 3px;
 	margin-right: 12px;
 }
 
-#interaction section li:nth-child(1) img { top: 3px; }
-#interaction section li:nth-child(2) img { top: 5px; }
-#interaction section li:nth-child(3) img { top: 2px; }
-#viewer section li:nth-child(3) img { top: 2px; }
-#viewer section li:nth-child(4) img { top: 1px; }
-
+/*Feature lists*/
 
 .feature-list {
 	position: relative;
-	margin-top: 80px;
+	margin:  40px 0 60px 0;
 }
+
+
+.feature-list .right li, #interaction .feature-list li {
+	max-width: 280px; float: left;
+	margin-top: 40px; list-style: none;
+}
+
+.feature-list .right li:nth-child(even), #interaction .feature-list li:nth-child(even) {
+	float: right;
+}
+
+
+#interaction li:nth-child(1) img { top: 3px; }
+#interaction li:nth-child(2) img { top: 5px; }
+#interaction li:nth-child(3) img { top: 2px; }
+#viewer li:nth-child(3) img { top: 2px; }
+#viewer li:nth-child(4) img { top: 1px; }
+
+
 
 #viewer {
 	padding: 100px 0 20px 0; /* The extra 20 is to fix the overflow bug */
@@ -490,21 +503,21 @@ section.mobile {
 	color: #111;
 }
 
-#viewer section p.title {
+#viewer p.title {
 	color: #7DDC16;
 	font-weight: 400;
 }
 
-#viewer section li:nth-child(2) p.title{
+#viewer li:nth-child(2) p.title{
 	color: $blue;
 }
 
-#viewer section li:nth-child(3) p.title{
+#viewer li:nth-child(3) p.title{
 	color: #917BDF;
 }
 
 
-#viewer section li:last-child p.title{
+#viewer li:last-child p.title{
 	color: $graphite;
 }
 
