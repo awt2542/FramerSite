@@ -85,62 +85,10 @@ p.author {
   margin-bottom: 0; }
 
 /* HEADER ------------------------------- */
-#illustration {
-  max-height: 380px;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  background: #4DB4EC;
-  z-index: 2; }
-
-#illustration:after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-image: -o-linear-gradient(89deg, #4db4ec 0%, rgba(77, 180, 236, 0) 60%);
-  background-image: -moz-linear-gradient(89deg, #4db4ec 0%, rgba(77, 180, 236, 0) 60%);
-  background-image: -ms-linear-gradient(89deg, #4db4ec 0%, rgba(77, 180, 236, 0) 60%);
-  background-image: linear-gradient(0deg, #4db4ec 0%, rgba(77, 180, 236, 0) 60%);
-  z-index: 1;
-  left: 0;
-  bottom: 0; }
-
-#illustration svg {
-  display: block;
-  margin: 0 auto;
-  margin-top: 40px;
-  max-width: 602px;
-  width: 100%; }
-
-#illustration svg rect {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  -webkit-animation: dash 4s linear; }
-
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 900; }
-
-  to {
-    stroke-dashoffset: 0; } }
-
-img.app-icon {
-  bottom: 0;
-  max-width: 256px;
-  position: absolute;
-  left: 50%;
-  margin-left: -128px;
-  bottom: -80px;
-  z-index: 300; }
-
 #header h1, #footer h1 {
   letter-spacing: -1px;
   font-weight: 200;
-  margin: 40px 0 4px 0;
+  margin: 60px 0 4px 0;
   font-size: 60px;
   line-height: 1;
   color: #333; }
@@ -152,7 +100,7 @@ img.app-icon {
   letter-spacing: 6px;
   display: inline-block;
   font-weight: 600;
-  margin-top: 60px; }
+  margin: 0; }
 
 #header h1 span {
   -moz-font-feature-settings: "salt" 1, "ss01" 1;
@@ -168,7 +116,7 @@ img.app-icon {
   line-height: 1.4;
   font-size: 28px;
   letter-spacing: -0px;
-  margin-bottom: 40px; }
+  margin-bottom: 60px; }
 
 #footer h2 span {
   color: #333; }
@@ -178,8 +126,8 @@ img.app-icon {
   padding: 14px 20px 11px;
   position: relative;
   border-radius: 50px;
-  color: #4db4ec;
-  box-shadow: inset 0 0 0 2px #4db4ec;
+  background: #4db4ec;
+  color: #fff;
   text-transform: none;
   letter-spacing: 0;
   margin-bottom: 20px;
@@ -194,14 +142,13 @@ img.app-icon {
   font: 16px/1 "Fakt", "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 500;
   border: none;
-  background: transparent;
-  color: #4db4ec;
+  background: #4db4ec;
+  color: #fff;
   cursor: pointer;
   cursor: hand;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   padding: 14px 20px 11px;
-  box-shadow: inset 0 0 0 2px #4db4ec;
   border-radius: 50px; }
 
 #header form input[type="submit"]:hover, #footer form input[type="submit"]:hover {
@@ -210,8 +157,8 @@ img.app-icon {
   box-shadow: none; }
 
 #header a.green, #footer a.green {
-  color: #7ddc16;
-  background: #fff;
+  background: #7ddc16;
+  color: #fff;
   margin-bottom: 0;
   margin-right: 10px;
   box-shadow: inset 0 0 0 2px #7ddc16; }
@@ -228,24 +175,29 @@ img.app-icon {
 
 /* SCREENSHOT -------------------------*/
 #screenshot {
-  background: url("/static/images/fs/ss-bg.png") no-repeat;
-  background-position: 50% 0%;
-  max-width: 764px;
-  margin: 0 auto;
   text-align: center;
-  width: 100%;
-  height: 100%;
   margin-top: 80px;
   padding-top: 80px;
   margin-bottom: 40px;
+  overflow: visible;
   position: relative; }
 
-#screenshot img.studio {
-  max-width: 624px;
-  width: 100%; }
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("/static/images/fs/bg-icon.jpg") no-repeat 50%;
+  background-size: contain;
+  top: 40px;
+  width: 1240px;
+  height: 1380px;
+  z-index: 0;
+  left: 50%;
+  margin-left: -620px; }
 
-img.blueprint {
-  margin-top: 40px; }
+#screenshot img.studio {
+  max-width: 628px;
+  width: 100%; }
 
 #screenshot-copy p {
   font-size: 19px;
@@ -569,12 +521,6 @@ section.mobile {
     font-size: 30px;
     max-width: 500px; }
 
-  #illustration {
-    max-height: 320px; }
-
-  img.blueprint {
-    margin-top: 0px; }
-
   #screenshot-copy li {
     max-width: 48%; }
 
@@ -802,6 +748,13 @@ section.mobile {
     width: 140px;
     margin-left: -70px;
     bottom: -50px; }
+
+  #screenshot {
+    padding: 20px 10px;
+    background-image: -o-linear-gradient(89deg, white 0%, #c8e6f0 100%);
+    background-image: -moz-linear-gradient(89deg, white 0%, #c8e6f0 100%);
+    background-image: -ms-linear-gradient(89deg, white 0%, #c8e6f0 100%);
+    background-image: linear-gradient(-1deg, white 0%, #c8e6f0 100%); }
 
   /*Flip the screenshot texts */
   #screenshot-copy {

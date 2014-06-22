@@ -122,59 +122,11 @@ p.author {
 
 /* HEADER ------------------------------- */
 
-#illustration {
-	max-height: 380px; 
-	width: 100%; height: 100%;
-	text-align: center; padding: 20px;
-	position: relative;
-	background: #4DB4EC;
-	z-index: 2;
-	
-}
-
-#illustration:after {
-	content: ""; display: block; height: 100%; width: 100%; position: absolute;
-	background-image: -o-linear-gradient(89deg, #4DB4EC 0%, rgba(77,180,236,0.00) 60%);
-	background-image: -moz-linear-gradient(89deg, #4DB4EC 0%, rgba(77,180,236,0.00) 60%);
-	background-image: -ms-linear-gradient(89deg, #4DB4EC 0%, rgba(77,180,236,0.00) 60%);
-	background-image: linear-gradient(0deg, #4DB4EC 0%, rgba(77,180,236,0.00) 60%);
-	z-index: 1; left: 0;
-	bottom: 0;
-}
-
-#illustration svg {
-	display: block;
-	margin: 0 auto;
-	margin-top: 40px;
-	max-width: 602px; width: 100%;
-}
-
-#illustration svg rect {
-	 stroke-dasharray: 900;
-	 stroke-dashoffset: 900;
-	 -webkit-animation: dash 4s linear;
-}
-
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 900;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-
-img.app-icon {
-	bottom: 0; max-width: 256px;
-	position: absolute; left: 50%; margin-left: -128px;
-	bottom: -80px; z-index: 300;
-}
 
 #header h1, #footer h1 {
 	letter-spacing: -1px;
 	font-weight: 200;
-	margin: 40px 0 4px 0;
+	margin: 60px 0 4px 0;
 	font-size: 60px; line-height: 1;
 	color: #333;
 }
@@ -184,7 +136,7 @@ img.app-icon {
 	text-transform: uppercase; letter-spacing: 6px;
 	display: inline-block; 
 	font-weight: 600;
-	margin-top: 60px;
+	margin: 0;
 }
 
 #header h1 span {
@@ -200,7 +152,7 @@ img.app-icon {
 	font-weight: 200;
 	color: #818B9E; line-height: 1.4;
 	font-size: 28px; letter-spacing: -0px;
-	margin-bottom: 40px; 
+	margin-bottom: 60px; 
 }
 
 #footer h2 span {
@@ -211,7 +163,7 @@ img.app-icon {
 	border: none;
 	padding:14px 20px 11px; position: relative; 
 	border-radius: 50px; 
-	color: $blue; box-shadow:inset 0 0 0 2px $blue;
+	background: $blue; color: #fff;
 	text-transform: none; letter-spacing: 0; 
 	margin-bottom: 20px;
 	font-size: 16px; line-height: 1;
@@ -226,11 +178,11 @@ img.app-icon {
 #header form input[type="submit"], #footer form input[type="submit"] {
 	font:16px/1 "Fakt", "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight:500;
-	border: none; background: transparent; color: $blue;
+	border: none; background: $blue;  color:#fff;
 	cursor: pointer; cursor: hand;
 	padding: 0; 
 	-webkit-font-smoothing: antialiased;
-	padding:14px 20px 11px; box-shadow: inset 0 0 0 2px $blue;
+	padding:14px 20px 11px; 
 	border-radius: 50px;
 }
 
@@ -239,7 +191,7 @@ img.app-icon {
 }
 
 #header a.green, #footer a.green {
-	color: $green; background:#fff; 
+	background: $green; color:#fff; 
 	margin-bottom: 0;
 	margin-right: 10px;
 	box-shadow: inset 0 0 0 2px $green;
@@ -254,24 +206,27 @@ img.app-icon {
 
 /* SCREENSHOT -------------------------*/
 #screenshot {
-	background:  url('/static/images/fs/ss-bg.png') no-repeat;
-	background-position: 50% 0%;
-	max-width: 764px; margin: 0 auto;
 	text-align: center;
-	width: 100%; 
-	height: 100%; 
 	margin-top: 80px;
 	padding-top: 80px;
 	margin-bottom: 40px;
+	overflow: visible;
 	position: relative;
+	
+}
+
+#bg {
+	position: absolute; top: 0; left: 0;
+	background: url('/static/images/fs/bg-icon.jpg') no-repeat 50%;	
+	background-size: contain; 
+	top: 40px;
+	width: 1240px; height: 1380px;
+	z-index: 0;	left: 50%; margin-left: -620px;
+	
 }
 
 #screenshot img.studio {
-	max-width: 624px; width: 100%;
-}
-
-img.blueprint {
-	margin-top: 40px;
+	max-width: 628px; width: 100%;
 }
 
 
@@ -584,6 +539,8 @@ section.mobile {
 	color: #fff; box-shadow: none;
 }
 
+
+
 @media only screen and (max-width: 1024px) {
 
 #screenshot-copy p {
@@ -636,13 +593,6 @@ h5 {
 	max-width: 500px;
 }
 
-#illustration {
-	max-height: 320px;
-}
-
-img.blueprint {
-	margin-top: 0px;
-}
 
 #screenshot-copy li {
 	max-width: 48%;
@@ -902,6 +852,13 @@ img.app-icon {
 	width: 140px;
 	margin-left: -70px;
 	bottom: -50px;
+}
+#screenshot {
+	padding: 20px 10px;
+	background-image: -o-linear-gradient(89deg, #FFFFFF 0%, #C8E6F0 100%);
+	background-image: -moz-linear-gradient(89deg, #FFFFFF 0%, #C8E6F0 100%);
+	background-image: -ms-linear-gradient(89deg, #FFFFFF 0%, #C8E6F0 100%);
+	background-image: linear-gradient(-1deg, #FFFFFF 0%, #C8E6F0 100%);
 }
 
 /*Flip the screenshot texts */
