@@ -76,23 +76,36 @@ $(document).ready(retina);
 
 /* ========================= */
 	 
-	$(document).ready(function() {
+$(document).ready(function() {
 	
-	setTimeout(function() {
-		document.getElementById('carousel-inapp').play();
-	}, 1000);
+	var carouselNode = document.getElementById('carousel');
 
-	$(window).scroll(function() {
+	if (carouselNode) {
+
+		setTimeout(function() {
+			document.getElementById('carousel-inapp').play();
+		}, 1000);
+
+		$(window).scroll(function() {
 			if ($(window).scrollTop() > 1400){
 				 document.getElementById('carousel').play();
 			}	 
-	});
-	
-	$('.screen').click(function() {
-		document.getElementById('carousel').play();
-	});
+		});
+		
+		$('.screen').click(function() {
+			document.getElementById('carousel').play();
+		});
+
+	}
+
+	$("pre").each(function(i, node) {
+
+		console.log(node)
+	})
+
+
 			
 			
-	});
+});
 	
 	

@@ -151,6 +151,291 @@ imageLayer.on(Events.Click, function(event) {
 
 <hr>
 
+
+<!-- CoffeeScript -->
+
+##### CoffeeScript Primer 
+
+This should help you to learn the basics in an afternoon. Or use it as a cheat sheet. It is mostly meant for designers wanting to work with [Framer](http://framerjs.com/), but it should be useful for anyone learning CoffeeScript.
+
+CoffeeScript is worth learning because: 
+
+* It has a cleaner and more readable syntax, so it's easier to learn
+* It helps you avoid the bad parts of Javascript
+* It helps you works quicker with smart shortcuts
+
+---
+
+#### The Language
+
+##### Comments
+
+Comments is text that is not code. You use them to explain what happens in the code around it if it's not self evident from the code. Comments are prefixed with #.
+
+	# I am a comment
+	5 + 6 # I am a comment too
+
+##### Printing Output
+
+Whenever you want to display a value to inspect you can print it to the log like
+
+	console.log "Hello" # Output: Hello
+	console.log "Hello", "World" # Output: Hello World
+
+##### Tabs
+
+CoffeeScript uses *significant whitespace*. That means that tabs are used to define the structure of the language, instead of *{* and* }* like in Javascript.* So if your tabs are not correct, your script will fail.
+
+	if 1 + 1 == 2
+	  console.log "hello" # This will work
+
+	if 1 + 1 == 2
+	console.log "hello" # This will fail (missing tab)
+
+##### Variables
+
+A variable is a way to store something under a name. It's pretty simple:
+
+	myVariable = 1
+
+From this point on the variable myVariable contains 1. You can change this at any point just by assigning a new value.
+
+If you ask the value of a variable before it has one (defined) it returns a special value 'undefined'. If you get an error with undefined there is a big chance you are trying to use a variable that doesn't exist (yet).
+
+	myUnexistingVariable # Output "undefined"
+
+Variables can store different types of data, see below.
+
+---
+
+#### Data types
+
+##### Boolean
+
+A boolean can only have two values: *false* or *true*:
+
+	myBoolA = true
+	myBoolB = false
+
+##### Number
+
+Numbers can be small, big, rounded, positive or negative:
+
+	myNumberA = 2
+	myNumberB = 20.0
+	myNumberC = -223894
+
+
+You can calculate with numbers like this (*operators*):
+
+	myNumberA + myNumberB   # Add, output: 22.0
+	myNumberA / myNumberB   # Divide, output: 0.10
+	myNumberA * myNumberB   # Product, output: 40.0
+	myNumberA ** myNumberB  # Power, output: 400.0
+
+##### String
+
+A string is a set of characters like words or complete sentences:
+
+
+myStringA = "Hello there"
+
+
+You can combine strings like this:
+
+
+myStringB = "#{myStringA}, I am the dude"
+ Output: "Hello there, I am the dude"
+
+But strings can also hold complex values you cannot describe in pure numbers:
+
+
+myStringC = "rgba(255,0,0,0.1)"
+myStringD = "1px solid #FFFFFF"
+
+
+##### ARRAY
+
+Arrays contain an ordered set of values. The values can be any type. They can even be nested (for example an array with arrays).
+
+
+myListA = [1, 2, 3, 4, 5]  Just numbers
+*myListB = [1, "test", 22, [1, 2, 3]]  Mixed
+
+You can access any item in an array by it's number (it's called an index) which starts at 0:
+
+
+myListA[0]  Output: 1myListA[4]  Output: 5
+
+You can also count the items in an array:
+
+
+myListB.length  Output: 4
+
+Or grab a range from the array:
+
+
+myListB[0..2]  Output: [1, 2, 3]
+
+##### OBJECT
+
+This is an *object*. Objects are a bit like lists, but instead of by number, you can access them by a string (word). Much like a dictionary from a phone book (look up a person by last name). We call the 'lookup string' a key.
+
+
+myObjectA = {name:"Framer", age:12}
+
+
+You can also write objects like this, it's the exact same thing as above:
+
+
+myObjectB =
+    name: "Framer"
+    age: 12
+
+
+To find a value in an object you use the key:
+
+
+myObjectB["name"]  Output: "Framer"
+
+If you use a key that does not exist, you get the special undefined value:
+
+
+myObjectB["skdjslkdj"]  Output: undefined
+
+Once you have made an object, you can add more stuff in it like this:
+
+
+myObjectB["platform"] = "Mac"
+
+
+Or remove something like this:
+
+
+delete myObjectB["platform"]
+myObjectB["platform"]  Output: undefined
+
+
+
+## Functions
+
+Functions are bits of executable code. It's pretty much the same thing as a function in mathematics. They take input and generate output. The part in between is just a description how to get from one to the other. When you run a function for a specific set of inputs, programmers say you *call* the function, and the input(s) are *arguments*.
+
+Common examples of what you use functions for are:
+
+* Describe to do something, but use it later (when it gets *called*)
+* Wrap something you do multiple multiple times in a function so you can reuse it easily
+
+
+This is how you define a function, note it follows the standard way of defining variables. The *return* keyword passes back a value to the caller (by default, CoffeeScript returns the latest used variable).
+
+
+myFunction = (input) -> 
+    output = input * 2
+    return output
+
+
+To now use (or, *call*) the function with the number 42 (*argument*) you do this:
+
+
+myFunction(42)  Output: 84
+
+You can assign the output of a function directly to a new variable:
+
+
+myCalculatedNumber = myFunction(42)
+myCalculatedNumber  Output: 84
+
+A function can be defined with as many arguments as you like and they can be any type:
+
+
+myFunction = (argumentA, argumentB, argumentC) ->
+    return argumentA + argumentB + argumentC
+
+
+## Comparators
+
+Comparators compare things. The most common are equality and greater/smaller than.
+
+
+4 is 4  Output: true
+*4 isnt 4  Output: false
+*4 < 5  Output true
+*4 > 5  Output false
+
+You can combine multiple comparators with and and or:
+
+
+4 is 4 and 5 < 4  Output false
+*4 is 4 or 5 < 4  Output true
+
+
+
+## Conditionals
+
+Conditionals define your logic. You use them together with comparators to make decisions. They are all based around the *if*, *else if* and *else* keywords.
+
+
+if age > 21
+  console.log "Over 21!"
+
+
+A little more complicated example that checks for multiple things:
+
+
+if age < 21
+  console.log "Young"else if age < 65
+  console.log "Adult"else console.log "Senior"
+
+
+
+
+## Loops
+
+Loops are used to iterate over collections, as in do something for each item. Collections can be anArray or Object. They use the for keyword.
+
+To loop over an Array you can do this:
+
+
+myArray = [1, 2, 3, 4, 5]
+
+for number in myArray
+  number + 1
+ Output: 2, 3, 4, 5, 6
+
+An Object has a key and value (for example name=Koen) and you'll likely want to use both in your loop. For that, you can use of instead of in when you loop:
+
+
+myObject =
+  name: "Koen"
+  city: "Amsterdam"
+  age: 31
+
+for key, value of myObject
+  key, "=", value 
+ Output: name=Koen, city=Amsterdam, age=31
+
+
+
+## Common Errors
+
+* *SyntaxError ... unexpected ...*: the interpreter encountered code that it doesn't know what to do with. You likely made a typo.
+* *ReferenceError ... Can't find variable*: ...: you are using a variable that the interpreter doesn't know about. You likely forgot to declare it (at the right time).
+
+
+## More resources
+
+If you made it this far you should know enough to start playing around. Some good next steps would be:
+
+* [Convert any Javascript to CoffeeScript](http://js2coffee.org/)
+* [The official CoffeeScript Site](http://coffeescript.org/)
+* [The Little Book on CoffeeScript](http://arcturo.github.io/library/coffeescript)
+* [Code School CoffeeScript Course](http://coffeescript.codeschool.com/) (Paid)
+
+
+
+<hr>
+
 <!-- Resources -->
 
 <a name="resources"></a>
