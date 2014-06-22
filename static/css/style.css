@@ -340,8 +340,18 @@ p + h4 {
 	margin-top: 30px;
 }
 
+h5 {
+	line-height:1.7;
+	font-weight: 400;
+	color: #555;
+}
+
+pre + h5 {
+	margin-top: 40px;
+}
+
 #wrapper ul li {
-	line-height: 1.8;
+	line-height: 1.6;
 	font-size: 16px;
 	color: #888;
 	list-style-type: circle; 
