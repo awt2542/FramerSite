@@ -1689,10 +1689,6 @@ footer.global p, footer.global a {
   #wrapper.index {
     padding: 60px 0; }
 
-  /* Switch from 70 to 60px vertically VSPACE */
-  #example-block {
-    margin: 60px 0; }
-
   #code-block {
     margin-top: 60px; }
 
@@ -1765,10 +1761,8 @@ footer.global p, footer.global a {
   #features li {
     max-width: 240px; }
 
-  /* Vertical Spacing */
-  /*40px */
-  hr {
-    margin: 40px auto; }
+  #framer section ul li {
+    line-height: 1.55; }
 
   hr.big {
     margin: 60px auto; }
@@ -1904,6 +1898,12 @@ footer.global p, footer.global a {
   h5 {
     font-size: 30px;
     max-width: 500px; }
+
+  #example-block {
+    margin-bottom: 60px; }
+
+  hr.hidden {
+    margin: 40px 0; }
 
   #screenshot-copy li {
     max-width: 48%; }

@@ -954,8 +954,6 @@ body {
 
 #wrapper.index { padding: 60px 0; }
 
-/* Switch from 70 to 60px vertically VSPACE */
-#example-block { margin: 60px 0; }
 #code-block { margin-top: 60px; }
 #code-section { margin-bottom: 60px; }
 
@@ -1049,10 +1047,8 @@ nav#index {
 	max-width: 240px;
 }
 
-/* Vertical Spacing */
-/*40px */
-hr {
-	margin: 40px auto;
+#framer section ul li {
+	line-height: 1.55;
 }
 
 hr.big {
@@ -1214,6 +1210,14 @@ p { font-size: 16px; }
 h5 {
 	font-size: 30px;
 	max-width: 500px;
+}
+
+#example-block {
+	margin-bottom: 60px;
+}
+
+hr.hidden {
+	margin: 40px 0;
 }
 
 
