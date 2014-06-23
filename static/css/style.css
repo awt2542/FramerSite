@@ -184,6 +184,9 @@ hr {
 hr.big {
   margin: 80px auto; }
 
+hr.small {
+  margin: 30px auto; }
+
 hr.big.hidden, hr.hidden {
   border-color: #fff; }
 
@@ -697,14 +700,17 @@ section.mobile {
   max-width: 280px;
   width: 100%; }
 
+#framer section p, #framer section ul {
+  margin-bottom: 0; }
+
 #framer p a {
   color: #333;
   font-weight: 400;
   border-bottom: 1px solid #eee; }
 
 #framer ul section li {
-  color: rgba(97, 109, 133, 0.8);
-  line-height: 1.8;
+  color: rgba(97, 109, 133, 0.6);
+  line-height: 1.7;
   padding-left: 0;
   font-size: 16px;
   font-weight: 400;
@@ -738,7 +744,6 @@ section.mobile {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#71c3f0', endColorstr='#b8e1f8',GradientType=1 );
   height: 500px;
   width: 100%;
-  margin: 80px auto;
   padding: 0 40px; }
 
 #example-block .screen {
@@ -1167,7 +1172,7 @@ HEIGHT QUERIES
 #interaction {
   background: #191C22;
   padding: 100px 0 0 0;
-  margin: 100px 0 0 0;
+  margin: 80px 0 0 0;
   position: relative; }
 
 #interaction p {

@@ -117,6 +117,10 @@ hr.big {
 	margin: 80px auto;
 }
 
+hr.small {
+	margin: 30px auto;
+}
+
 hr.big.hidden, hr.hidden {
 	border-color: #fff;
 }
@@ -540,6 +544,10 @@ section.mobile {
 	float: left; max-width: 280px; width: 100%;
 }
 
+#framer section p, #framer section ul {
+	margin-bottom: 0;
+}
+
 #framer p a {
 	color: #333;
 	font-weight: 400;
@@ -547,7 +555,7 @@ section.mobile {
 }
 
 #framer ul section li {
-	color: $graphite80; line-height: 1.8;
+	color: $graphite60; line-height: 1.7;
 	padding-left: 0;
 	font-size: 16px;
 	font-weight: 400;
@@ -582,7 +590,6 @@ section.mobile {
 	
 	height: 500px;
 	width: 100%; 
-	margin: 80px auto;
 	padding: 0 40px;
 }
 
@@ -706,7 +713,7 @@ section.mobile {
 #interaction {
 	background: #191C22;
 	padding: 100px 0 0 0;
-	margin: 100px 0 0 0;
+	margin: 80px 0 0 0;
 	position: relative;
 
 }
