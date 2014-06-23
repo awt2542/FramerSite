@@ -1335,9 +1335,6 @@ h5 {
 	margin: 0;
 }
 
-p {
-	margin-bottom: 0;
-}
 
 #framer * {
 	text-align: left;
@@ -1363,15 +1360,16 @@ p {
 	height: 420px;
 }
 
-#example-block a.iphone{
-	width:178px; height: auto;
-}
+/*Resize Phones*/
 
 
-#example-block a.iphone.mid {
-	width: 207px; height: auto;
-	margin-left: -103px;
-}
+#example-block a.left { left: 0; }
+#example-block a.mid { margin-left: -92px; }
+#example-block a.right { right: 0; }
+
+#example-block a.left img { width: 162px; }
+#example-block a.mid img { width: 185px; }
+#example-block a.right img { width: 167px; }
 
 #used-by p {
 	margin-bottom: 20px;
@@ -1485,7 +1483,7 @@ footer.global {
 
 #bg {
 	background-size: 40%;
-	top: -320px;
+	top: -280px;
 }
 
 #header h1.title {
@@ -1649,9 +1647,8 @@ nav#index {
 	font-size: 10px;
 }
 
-#code-block div, #code-block pre {
-	border-radius: 0 !important;
-	padding-left: 10px;
+#used-by:after {
+	display: none;
 }
 
 #line-block {
@@ -1703,6 +1700,28 @@ nav#index {
 }
 }
 
+@media only screen and (max-width:380px) {
+
+#example-block {
+	height: 300px;
+}
+
+#example-block {
+	padding: 0 20px;
+}
+
+#example-block a.iphone { bottom: -40px; }
+#example-block a.iphone.mid { bottom: -60px; }
+
+#example-block a.left { left: 0; }
+#example-block a.mid { margin-left: -62px; }
+#example-block a.right { right: 0; }
+
+#example-block a.left img { width: 108px; }
+#example-block a.mid img { width: 124px; }
+#example-block a.right img { width: 111px; }
+
+}
 
 
 
