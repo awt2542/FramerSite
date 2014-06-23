@@ -175,10 +175,17 @@ img {
   max-width: 100%; }
 
 hr {
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  display: block;
   margin: 60px auto; }
 
 hr.big {
   margin: 80px auto; }
+
+hr.big.hidden, hr.hidden {
+  border-color: #fff; }
 
 /* ================= Post elements ================= */
 table {
@@ -303,6 +310,16 @@ p.title {
   font-size: 20px;
   line-height: 1.5; }
 
+p.small {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500; }
+
+a.small {
+  font-size: 14px;
+  font-weight: 400; }
+
 h1 {
   letter-spacing: -1px;
   font-weight: 200;
@@ -337,7 +354,16 @@ h3 {
 #interaction h1 {
   color: #fff; }
 
-h4 {
+#wrapper h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500; }
+
+#wrapper.index h4 {
   color: #888;
   text-transform: none;
   letter-spacing: 0;
@@ -715,15 +741,11 @@ section.mobile {
   left: 0;
   width: 100%; }
 
-#example-block h4 {
+#wrapper #example-block h4 {
   color: #fff;
   float: left;
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: left; }
+  text-align: left;
+  font-weight: 300; }
 
 #example-block a.more {
   color: #fff;
@@ -769,6 +791,18 @@ section.mobile {
   text-align: center;
   color: #D3D8E1;
   position: relative; }
+
+#used-by:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #D3D8E1;
+  top: 8px;
+  left: 0;
+  z-index: 0;
+  opacity: .5; }
 
 #used-by p {
   background: #fff;
@@ -1772,16 +1806,6 @@ p, #wrapper iframe {
 
 #wrapper ul {
   margin-bottom: 20px; }
-
-hr {
-  border: none;
-  width: 100%;
-  border-bottom: 1px solid #eee;
-  display: block;
-  margin: 60px auto; }
-
-hr.small {
-  margin: 40px auto; }
 
 table {
   margin: 40px 0; }
