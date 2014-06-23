@@ -793,8 +793,8 @@ section.mobile {
   color: #fff;
   float: right;
   font-size: 12px;
-  padding: 10px 16px 8px 16px;
-  border-radius: 5px;
+  padding: 11px 16px 8px 16px;
+  border-radius: 55px;
   box-shadow: inset 0 0 0 2px #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -820,7 +820,7 @@ section.mobile {
   width: 222px; }
 
 #example-block a.left {
-  left: 0px; }
+  left: -4px; }
 
 #example-block a.mid {
   left: 50%;
@@ -1182,18 +1182,10 @@ HEIGHT QUERIES
     fill: #fff; } }
 /* INTERACTION SECTION -------------------------*/
 #interaction {
-  background: #191C22;
-  padding: 100px 0 100px 0;
+  background: #22252C;
+  padding: 100px 0 140px 0;
   margin: 80px 0 0 0;
-  position: relative;
-  background: #282b31;
-  background: -moz-linear-gradient(-45deg, #282b31 0%, #1d2026 100%);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #282b31), color-stop(100%, #1d2026));
-  background: -webkit-linear-gradient(-45deg, #282b31 0%, #1d2026 100%);
-  background: -o-linear-gradient(-45deg, #282b31 0%, #1d2026 100%);
-  background: -ms-linear-gradient(-45deg, #282b31 0%, #1d2026 100%);
-  background: linear-gradient(135deg, #282b31 0%, #1d2026 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#282b31', endColorstr='#1d2026',GradientType=1 ); }
+  position: relative; }
 
 #interaction p {
   font-weight: 300;
@@ -1205,8 +1197,8 @@ HEIGHT QUERIES
 
 #interaction .ss-half {
   background: url("/static/images/ss-code.png") no-repeat;
-  width: 269px;
-  height: 636px;
+  width: 270px;
+  height: 657px;
   top: 0;
   position: absolute;
   left: -10px; }
@@ -1233,7 +1225,8 @@ HEIGHT QUERIES
 
 .feature-block p {
   font-size: 18px;
-  line-height: 1.6; }
+  line-height: 1.6;
+  margin-bottom: 0; }
 
 /*Feature lists*/
 .feature-list {
@@ -1292,9 +1285,9 @@ HEIGHT QUERIES
   margin-top: 30px; }
 
 #viewer {
-  padding: 100px 0 20px 0;
+  padding: 100px 0 40px 0;
   /* The extra 20 is to fix the overflow bug */
-  margin-bottom: -20px;
+  margin-bottom: 0px;
   position: relative;
   overflow: visible; }
 
@@ -1317,10 +1310,10 @@ HEIGHT QUERIES
 #viewer .ss-half {
   background: url("/static/images/ss-viewer.png") no-repeat;
   position: absolute;
-  left: -1080px;
-  width: 1318px;
-  height: 613px;
-  top: 40px; }
+  right: 0;
+  width: 270px;
+  height: 659px;
+  top: -20px; }
 
 /*Retina*/
 @media (-webkit-min-device-pixel-ratio: 1.5) {
@@ -2068,8 +2061,7 @@ footer.global p, footer.global a {
 
   #viewer .ss-half {
     position: relative;
-    left: -1300px;
-    margin-left: 95%;
+    left: 0;
     top: 0;
     height: 400px;
     margin-bottom: 40px;

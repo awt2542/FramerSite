@@ -620,7 +620,7 @@ section.mobile {
 }
 
 #example-block a.more {
-	color: #fff; float: right; font-size: 12px; padding: 10px 16px 8px 16px; border-radius: 5px;
+	color: #fff; float: right; font-size: 12px; padding: 11px 16px 8px 16px; border-radius: 55px;
 	box-shadow: inset 0 0 0 2px #fff; text-transform: uppercase; letter-spacing: 1px;
 	font-weight: 600;
 }
@@ -641,18 +641,14 @@ section.mobile {
 #example-block a.mid img { width: 247px; }
 #example-block a.right img { width: 222px; }
 
-#example-block a.left {
-	left: 0px;
-}
+#example-block a.left { left: -4px; }
 
 #example-block a.mid {
 	left: 50%; margin-left: -123px;
 	z-index: 50; bottom: -100px;
 }
 
-#example-block a.right {
-	right: 0px;
-}
+#example-block a.right { right: 0px; }
 
 #used-by {
 	margin-top: 80px;
@@ -710,19 +706,10 @@ section.mobile {
 /* INTERACTION SECTION -------------------------*/
 
 #interaction {
-	background: #191C22;
-	padding: 100px 0 100px 0;
+	background: #22252C;
+	padding: 100px 0 140px 0;
 	margin: 80px 0 0 0;
 	position: relative;
-	
-	background: rgb(40,43,49);
-	background: -moz-linear-gradient(-45deg,  rgba(40,43,49,1) 0%, rgba(29,32,38,1) 100%);
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(40,43,49,1)), color-stop(100%,rgba(29,32,38,1)));
-	background: -webkit-linear-gradient(-45deg,  rgba(40,43,49,1) 0%,rgba(29,32,38,1) 100%);
-	background: -o-linear-gradient(-45deg,  rgba(40,43,49,1) 0%,rgba(29,32,38,1) 100%);
-	background: -ms-linear-gradient(-45deg,  rgba(40,43,49,1) 0%,rgba(29,32,38,1) 100%);
-	background: linear-gradient(135deg,  rgba(40,43,49,1) 0%,rgba(29,32,38,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282b31', endColorstr='#1d2026',GradientType=1 );
 }
 
 #interaction p {
@@ -736,7 +723,7 @@ section.mobile {
 
 #interaction .ss-half {
 	background: url('/static/images/ss-code.png') no-repeat;
-	width: 269px; height: 636px;
+	width: 270px; height: 657px;
 	top: 0; position: absolute; left: -10px;
 }
 
@@ -770,8 +757,8 @@ section.mobile {
 .feature-block p {
 	font-size: 18px;
 	line-height: 1.6;
+	margin-bottom: 0;
 }
-
 
 
 /*Feature lists*/
@@ -808,7 +795,6 @@ section.mobile {
 	float: right;
 }
 
-
 #interaction li:nth-child(1) img { top: 3px; }
 #interaction li:nth-child(2) img { top: 5px; }
 #interaction li:nth-child(3) img { top: 2px; }
@@ -825,8 +811,8 @@ section.mobile {
 }
 
 #viewer {
-	padding: 100px 0 20px 0; /* The extra 20 is to fix the overflow bug */
-	margin-bottom: -20px;
+	padding: 100px 0 40px 0; /* The extra 20 is to fix the overflow bug */
+	margin-bottom: 0px;
 	position: relative;
 	overflow: visible;
 }
@@ -855,8 +841,9 @@ section.mobile {
 
 #viewer .ss-half {
 	background: url('/static/images/ss-viewer.png') no-repeat; 
-	position: absolute; left: -1080px; width: 1318px; height: 613px;
-	top: 40px;
+	position: absolute; right: 0; width: 270px; height: 659px;
+	top: -20px;
+
 }
 
 /*Retina*/
@@ -1388,7 +1375,7 @@ h5 {
 
 
 #viewer .ss-half {
-	position: relative; left: -1300px; margin-left: 95%;
+	position: relative; left: 0;
 	top: 0; height: 400px; margin-bottom: 40px;
 	margin-top: 40px;
 }
