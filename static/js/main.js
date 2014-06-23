@@ -1,5 +1,5 @@
 $('#topbar img').click( function(){
-		$("#sidebar").toggleClass("appear");
+	$("#sidebar").toggleClass("appear");
 });
 
 // To make images retina, add a class "2x" to the img element
@@ -75,9 +75,51 @@ $(document).ready(retina);
 }
 
 /* ========================= */
+
+function isMobile() {
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
+
+function setupDownloadLink() {
+
+	if (isMobile()) {
+		var mobileLink = "mailto:?subject=Check Out Framer Studio&body=Don't forget to check out Framer: http://framerjs.com"
+		$("a.downloadfs").attr("href", mobileLink);
+
+	} else {
+
+		var sparkleHost = "http://framerstudio-update.s3-website-us-east-1.amazonaws.com"
+
+		$.get(sparkleHost + "/latest.txt", function(result) {
+			
+			var downloadLink = sparkleHost + "/" + result;
+
+			$("a.downloadfs").click(function(event) {
+
+				event.preventDefault()
+
+				ga('send', 'event', 'Download', 'Framer Studio', downloadLink);
+
+				setTimeout(function() {
+					window.location.href = downloadLink;
+				}, 500);
+
+			});
+		});
+		
+	};
+};
+
+$(document).ready(function() {
+	setupDownloadLink();
+})
+
+/* ========================= */
 	 
 $(document).ready(function() {
 	
+
+
 	var carouselNode = document.getElementById('carousel');
 
 	if (carouselNode) {
@@ -110,9 +152,7 @@ $(document).ready(function() {
 
 	})
 
-
-			
-			
+		
 });
 	
 	
