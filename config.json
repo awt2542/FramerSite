@@ -2,5 +2,9 @@
     "aws-access-key": "AKIAIGCDN7OELHEQGXRQ",
     "aws-bucket-name": "studio-staging-2",
     "aws-bucket-website": "studio-staging-2.s3-website-us-east-1.amazonaws.com",
+    "fingerprint": [
+        "js",
+        "css"
+    ],
     "port": 8857
 }
