@@ -657,20 +657,6 @@ section.mobile {
 	position: relative;
 }
 
-#used-by:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: #D3D8E1;
-    top: 8px;
-    left: 0;
-    z-index: 0;
-    opacity: .5;
-}
-
-
 #used-by img {
 	position: relative;
 	vertical-align: middle;
@@ -1071,11 +1057,6 @@ h2.headline {
 }
 
 /*------------------------*/
-
-.half section {
-	max-width: 44%; 
-	float: left;
-}
 
 .inner {
 	max-width: 680px;
