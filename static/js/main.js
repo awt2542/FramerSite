@@ -87,7 +87,7 @@ $(document).ready(function() {
 		}, 1000);
 
 		$(window).scroll(function() {
-			if ($(window).scrollTop() > 1400){
+			if ($(window).scrollTop() > 1500){
 				 document.getElementById('carousel').play();
 			}	 
 		});

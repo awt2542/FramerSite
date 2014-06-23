@@ -680,10 +680,15 @@ section.mobile {
 .one-third section + section {
   margin-left: 30px; }
 
+/* ============= START ================*/
 #start img {
   position: relative;
   top: 15px; }
 
+#start p {
+  margin-bottom: 0; }
+
+/* =========== FRAMER BLOCK ===============*/
 #framer {
   position: relative; }
 
@@ -692,20 +697,6 @@ section.mobile {
   float: left;
   max-width: 280px;
   width: 100%; }
-
-#example-block .screen {
-  position: absolute;
-  top: 192px;
-  max-width: 206px;
-  left: 50%;
-  margin-left: -102px;
-  z-index: 100;
-  overflow: hidden; }
-
-#example-block video {
-  width: 100%;
-  border: none;
-  cursor: pointer; }
 
 #framer p a {
   color: #333;
@@ -735,17 +726,27 @@ section.mobile {
   font-size: 16px;
   display: inline-block; }
 
-#framer ul section li span {
-  width: 25px;
-  background: red;
-  display: inline-block; }
-
+/* =========== EXAMPLEBLOCK ===============*/
 #example-block {
-  background: rgba(77, 180, 236, 0.6);
-  height: 540px;
+  background: rgba(77, 180, 236, 0.8);
+  height: 500px;
   width: 100%;
-  margin: 70px 0 180px 0;
+  margin: 80px auto;
   padding: 0 40px; }
+
+#example-block .screen {
+  position: absolute;
+  top: 152px;
+  max-width: 206px;
+  left: 50%;
+  margin-left: -102px;
+  z-index: 100;
+  overflow: hidden; }
+
+#example-block video {
+  width: 100%;
+  border: none;
+  cursor: pointer; }
 
 #example-block .inner {
   padding: 0;
@@ -754,7 +755,7 @@ section.mobile {
 
 #example-block section {
   position: absolute;
-  top: 60px;
+  top: 40px;
   left: 0;
   width: 100%; }
 
@@ -996,6 +997,25 @@ footer.global a.coinbase-button {
   line-height: 1.6;
   opacity: .8; }
 
+@media only screen and (max-width: 900px) {
+  #line-block section {
+    max-width: 160px; }
+
+  #line-block section.mid {
+    margin-left: -80px; }
+
+  #line-block img.line-arrow.first {
+    left: 160px; }
+
+  #line-block img.line-arrow.second {
+    right: 160px; }
+
+  #line-block p {
+    font-size: 14px; } }
+@media only screen and (max-width: 640px) {
+  #features li {
+    font-size: 15px;
+    max-width: 240px; } }
 @media only screen and (max-width: 580px) {
   #features li {
     font-size: 13px;
@@ -1731,15 +1751,6 @@ footer.global p, footer.global a {
   .inner, #wrapper.index footer.global p {
     max-width: 600px; }
 
-  #example-block a.left {
-    left: 0; }
-
-  #example-block a.right {
-    right: 0; }
-
-  #example-block section {
-    padding: 0 20px; }
-
   #used-by img:nth-last-child(2) {
     margin-left: 24px; }
 
@@ -1795,29 +1806,11 @@ footer.global p, footer.global a {
   hr {
     margin: 40px auto; }
 
-  h1 {
+  #wrapper h1 {
     font-size: 44px; }
 
   h2.headline {
     font-size: 24px; }
-
-  #line-block section {
-    max-width: 160px; }
-
-  #line-block section.mid {
-    margin-left: -80px; }
-
-  #line-block img.line-arrow.first {
-    left: 160px; }
-
-  #line-block img.line-arrow.second {
-    right: 160px; }
-
-  #line-block p {
-    font-size: 14px; }
-
-  #example-block a.iphone {
-    bottom: -60px; }
 
   /*------------------------*/
   #header h1 {
@@ -1918,12 +1911,6 @@ footer.global p, footer.global a {
   #line-block img.line-arrow.second {
     right: 31%; }
 
-  #example-block a.iphone {
-    bottom: -15px; }
-
-  #example-block a.iphone:hover {
-    bottom: 0; }
-
   #used-by img:nth-last-child(2) {
     margin-left: 22px; } }
 /* MOBILE NAVIGATION ------------------- */
@@ -1956,10 +1943,6 @@ footer.global p, footer.global a {
 
   #carousel, #carousel-inapp {
     display: none; } }
-@media only screen and (max-width: 640px) {
-  #features li {
-    font-size: 15px;
-    max-width: 240px; } }
 @media only screen and (max-width: 580px) {
   #wrapper.index {
     padding: 40px 0; }
@@ -2136,13 +2119,7 @@ footer.global p, footer.global a {
     -webkit-font-smoothing: antialiased; }
 
   #footer-features {
-    display: none; }
-
-  #manifesto * {
-    text-align: left; }
-
-  #manifesto section + section {
-    margin-top: 20px; } }
+    display: none; } }
 @media only screen and (max-width: 440px) {
   #bg {
     background-size: 40%;
