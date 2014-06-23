@@ -75,19 +75,18 @@ $(window).load ->
 	
 	calculateElements()
 	
-	_lastSelectedElementName = $.cookie "nav"
-	
-	# console.log "_lastSelectedElementName", _lastSelectedElementName
-	
-	$(window).scroll highlightNavigation
-	
-	if _lastSelectedElementName
-		selectItemNamed _lastSelectedElementName
-	
+	# if window.location.hash
+
+	hash = window.location.hash[1..]
+
+	_startListeningForScroll = true
+
+	if hash
+		selectItemNamed hash
 	else
 		highlightNavigation()
 	
-	_startListeningForScroll = true
+	$(window).scroll highlightNavigation
 
 	
 
@@ -100,5 +99,10 @@ $(window).resize ->
 	highlightNavigation()
 
 $("#sidebar a").click ->
-	$.cookie "nav", $(this).attr "class"
-	selectItemNamed $(this).attr "class"
+
+	clickedClass = $(this).attr("class")
+
+	# $.cookie "nav", clickedClass
+	selectItemNamed clickedClass
+
+

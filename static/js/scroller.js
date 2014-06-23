@@ -62,15 +62,16 @@
   };
 
   $(window).load(function() {
+    var hash;
     calculateElements();
-    _lastSelectedElementName = $.cookie("nav");
-    $(window).scroll(highlightNavigation);
-    if (_lastSelectedElementName) {
-      selectItemNamed(_lastSelectedElementName);
+    hash = window.location.hash.slice(1);
+    _startListeningForScroll = true;
+    if (hash) {
+      selectItemNamed(hash);
     } else {
       highlightNavigation();
     }
-    return _startListeningForScroll = true;
+    return $(window).scroll(highlightNavigation);
   });
 
   $(window).scroll(function() {
@@ -84,8 +85,9 @@
   });
 
   $("#sidebar a").click(function() {
-    $.cookie("nav", $(this).attr("class"));
-    return selectItemNamed($(this).attr("class"));
+    var clickedClass;
+    clickedClass = $(this).attr("class");
+    return selectItemNamed(clickedClass);
   });
 
 }).call(this);

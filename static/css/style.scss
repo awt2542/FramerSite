@@ -651,25 +651,11 @@ section.mobile {
 #example-block a.right { right: 0px; }
 
 #used-by {
-	margin-top: 80px;
+	margin-top: 40px;
 	text-align: center;
 	color: #D3D8E1;
 	position: relative;
 }
-
-#used-by:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: #D3D8E1;
-    top: 8px;
-    left: 0;
-    z-index: 0;
-    opacity: .5;
-}
-
 
 #used-by img {
 	position: relative;
@@ -782,7 +768,7 @@ section.mobile {
 
 .feature-list li img {
 	float: left; position: relative; top: 3px;
-	margin-right: 12px;
+	margin-right: 12px; max-width: 17px;
 }
 
 
@@ -1071,11 +1057,6 @@ h2.headline {
 }
 
 /*------------------------*/
-
-.half section {
-	max-width: 44%; 
-	float: left;
-}
 
 .inner {
 	max-width: 680px;
