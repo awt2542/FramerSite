@@ -1795,6 +1795,10 @@ footer.global p, footer.global a {
     font-size: 24px; }
 
   /*------------------------*/
+  .half section {
+    max-width: 44%;
+    float: left; }
+
   .inner {
     max-width: 680px; }
 
@@ -1907,15 +1911,15 @@ footer.global p, footer.global a {
     background-size: 75%;
     top: -90px; }
 
-  p {
+  /*SWITCH FONT SIZE*/
+  p, .feature-block p {
     font-size: 16px; }
+
+  .feature-block p.title {
+    font-size: 20px; }
 
   #header h1, #footer h1 {
     font-size: 55px; }
-
-  h5 {
-    font-size: 30px;
-    max-width: 500px; }
 
   #example-block {
     margin-bottom: 60px; }
@@ -1993,7 +1997,11 @@ footer.global p, footer.global a {
   h4 {
     font-size: 20px; }
 
-  h5 {
+  /*Feature Blocks H4 / Headlines */
+  #wrapper.index .feature-block h4 {
+    font-size: 22px; }
+
+  #wrapper.index h5 {
     font-size: 24px;
     margin: 0; }
 
@@ -2012,6 +2020,9 @@ footer.global p, footer.global a {
 
   .feature-block p {
     text-align: left; }
+
+  .feature-block hr {
+    display: none; }
 
   #example-block {
     height: 390px; }
@@ -2055,37 +2066,15 @@ footer.global p, footer.global a {
     position: relative;
     left: 0px;
     top: 0;
-    height: 400px;
-    margin-bottom: 40px; }
+    float: right;
+    display: none; }
 
   #viewer .ss-half {
     position: relative;
     left: 0;
     top: 0;
-    height: 400px;
-    margin-bottom: 40px;
-    margin-top: 40px; }
-
-  /* --------- 4 Feature Blocks --------- */
-  .feature-list .right li, #interaction .feature-list li {
-    max-width: 46%;
     float: left;
-    margin-top: 40px; }
-
-  .feature-list .right li:nth-child(even), #interaction .feature-list li:nth-child(even) {
-    float: right; }
-
-  .feature-block section li + li {
-    margin-top: 0; }
-
-  .feature-block p.title {
-    font-size: 20px; }
-
-  .feature-block p {
-    font-size: 16px; }
-
-  .feature-list {
-    margin-top: 0; }
+    display: none; }
 
   /*------------------------------------------*/
   footer.global {
@@ -2156,16 +2145,13 @@ footer.global p, footer.global a {
     text-align: center; }
 
   /* --------- Full-width feature blocks --------- */
-  .feature-list .right li, #interaction .feature-list li {
+  .feature-list li, #interaction .feature-list li {
     max-width: 100%;
-    float: none;
-    margin-top: 40px; }
+    margin-top: 0;
+    float: left; }
 
-  .feature-list .right li:nth-child(even), #interaction .feature-list li:nth-child(even) {
-    float: none; }
-
-  .feature-block section li + li {
-    margin-top: 0; }
+  .feature-list li + li {
+    margin-top: 20px; }
 
   .feature-block p.title {
     font-size: 20px; }
