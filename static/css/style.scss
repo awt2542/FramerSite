@@ -384,7 +384,7 @@ p.author {
 #header form:after, #footer form:after{
 	content: "99"; display: inline-block; position: relative;
 	font-size: 12px; font-weight: 500; color: #fff;
-	left: -34px; top: -3px;
+	left: -38px; top: -3px;
 }
 
 #header form input[type="submit"]:hover, #footer form input[type="submit"]:hover {
@@ -437,7 +437,7 @@ p.author {
 	position: absolute; top: 0; left: 0;
 	background: url('/static/images/bg-icon.jpg') no-repeat 50%;	
 	background-size: contain; 
-	top: 0px;
+	top: 40px;
 	width: 1240px; height: 1380px;
 	z-index: 0;	left: 50%; margin-left: -620px;
 	
@@ -1087,15 +1087,15 @@ hr.big {
 	font-size: 44px;
 }
 
+#header h1 {
+	font-size: 60px;
+}
+
 h2.headline {
 	font-size: 24px;
 }
 
 /*------------------------*/
-
-#header h1 {
-	font-size: 64px;
-}
 
 .inner {
 	max-width: 680px;
@@ -1342,6 +1342,7 @@ h5 {
 
 #framer section ul {
 	max-width: 100%;
+	margin-top: 40px;
 }
 
 #framer ul li {
@@ -1357,11 +1358,10 @@ h5 {
 }
 
 #example-block {
-	height: 420px;
+	height: 390px;
 }
 
 /*Resize Phones*/
-
 
 #example-block a.left { left: 0; }
 #example-block a.mid { margin-left: -92px; }
@@ -1461,16 +1461,6 @@ footer.global {
 	border: none;
 }
 
-#features li {
-	float: left;
-	max-width: 260px;
-	list-style: none;
-	line-height: 1.8;
-	font-size: 16px;
-	font-weight: 200;
-	-webkit-font-smoothing: antialiased;
-}
-
 #footer-features {
 	display: none;
 }
@@ -1489,6 +1479,7 @@ footer.global {
 #header h1.title {
 	letter-spacing: 3px;
 	margin-top: 0px;
+	margin-bottom: 20px;
 }
 
 #header h1, h2, #footer h1 {
@@ -1587,7 +1578,7 @@ font-size: 14px;
 }
 
 #header form:after, #footer form:after{
-	left: -38px; top: -2px;
+	left: -42px; top: -2px;
 	font-size: 11px;
 }
 
