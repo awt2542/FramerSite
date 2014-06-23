@@ -1,6 +1,6 @@
 {
-    "aws-access-key": "AKIAIRFE7XFZEI2HPC5Q",
-    "aws-bucket-name": "studio-staging",
-    "aws-bucket-website": "studio-staging.s3-website-us-east-1.amazonaws.com",
+    "aws-access-key": "AKIAIGCDN7OELHEQGXRQ",
+    "aws-bucket-name": "studio-staging-2",
+    "aws-bucket-website": "studio-staging-2.s3-website-us-east-1.amazonaws.com",
     "port": 8857
 }
