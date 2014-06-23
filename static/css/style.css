@@ -744,7 +744,7 @@ section.mobile {
   background: rgba(77, 180, 236, 0.6);
   height: 540px;
   width: 100%;
-  margin: 70px 0 180px 0;
+  margin: 80px auto;
   padding: 0 40px; }
 
 #example-block .inner {
@@ -1731,15 +1731,6 @@ footer.global p, footer.global a {
   .inner, #wrapper.index footer.global p {
     max-width: 600px; }
 
-  #example-block a.left {
-    left: 0; }
-
-  #example-block a.right {
-    right: 0; }
-
-  #example-block section {
-    padding: 0 20px; }
-
   #used-by img:nth-last-child(2) {
     margin-left: 24px; }
 
@@ -1917,12 +1908,6 @@ footer.global p, footer.global a {
 
   #line-block img.line-arrow.second {
     right: 31%; }
-
-  #example-block a.iphone {
-    bottom: -15px; }
-
-  #example-block a.iphone:hover {
-    bottom: 0; }
 
   #used-by img:nth-last-child(2) {
     margin-left: 22px; } }
