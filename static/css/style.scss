@@ -664,10 +664,6 @@ section.mobile {
     opacity: .5;
 }
 
-#used-by p {
-	background: #fff; position: relative; z-index: 10; display: inline-block; 
-	padding: 0 20px;
-}
 
 #used-by img {
 	position: relative;
@@ -908,9 +904,10 @@ footer.global p, footer.global a{
 	color: #fff; box-shadow: none;
 }
 
+@media only screen and (min-width: 1024px) {
 /* CODE DRAW  ------------------------------ */
 .code-draw {
-	position: absolute; bottom: 104px; left: 15px; height: 16px; width: 280px; 
+	position: absolute; bottom: 104px; left: 15px; height: 16px; width: 240px; 
 	-webkit-animation: write-code 3s 2s linear forwards;
 	-moz-animation: write-code 3s 2s linear forwards;
 	-ms-animation: write-code 3s 2s linear forwards;
@@ -930,6 +927,7 @@ footer.global p, footer.global a{
 }
 
 @import 'animation';
+}
 
 @media only screen and (max-width: 1200px) {
 body {
@@ -947,7 +945,6 @@ body {
 
 /* Switch from 70 to 60px vertically VSPACE */
 #example-block { margin: 60px 0; }
-#used-by { margin-bottom: 60px; }
 #code-block { margin-top: 60px; }
 #code-section { margin-bottom: 60px; }
 
@@ -970,7 +967,7 @@ body {
 
 #sidebar {
 	width: 220px;
-	padding:60px;
+	padding:50px;
 } 
 
 #wrapper {
@@ -997,7 +994,7 @@ body {
 
 #screenshot video {
 	position: absolute; max-width: 112px;
-	top: 157px; left: 104px;
+	top: 157px; left: 93px;
 }
 
 #screenshot-copy p {
@@ -1012,11 +1009,11 @@ body {
 
 @media only screen and (max-width: 900px) {
 body {
-	padding-left: 180px;
+	padding-left: 200px;
 }
 
 #sidebar {
-	width: 180px;
+	width: 200px;
 	padding: 40px;
 }
 
@@ -1041,15 +1038,20 @@ nav#index {
 	max-width: 240px;
 }
 
-#header a {
-	font-size: 11px;
-}
-
 /* Vertical Spacing */
 /*40px */
 hr {
 	margin: 40px auto;
 }
+
+hr.big {
+	margin: 60px auto;
+}
+
+hr.big {
+	margin: 60px auto;
+}
+
 
 #wrapper h1 {
 	font-size: 44px;
@@ -1247,6 +1249,7 @@ hr {
 	margin: 40px auto;
 }
 
+
 #screenshot {
 	padding-bottom: 20px;
 	margin-bottom: 0;
@@ -1306,6 +1309,29 @@ p {
 .feature-block p{
 	text-align: left;
 }
+
+#example-block {
+	height: 420px;
+}
+
+#example-block a.iphone{
+	width:178px; height: auto;
+}
+
+
+#example-block a.iphone.mid {
+	width: 207px; height: auto;
+	margin-left: -103px;
+}
+
+#used-by p {
+	margin-bottom: 20px;
+}
+
+#used-by img {
+	margin-bottom: 10px;
+}
+
 
 #start img {
 	margin-bottom: 40px;
@@ -1530,10 +1556,6 @@ font-size: 14px;
 #wrapper { padding:20px; padding-top: 40px; }
 .inner, #wrapper.index footer.global p { padding: 0 20px; }
 #wrapper.index { padding: 40px 0; }
-
-/* Switch from 70 to 60px vertically VSPACE */
-#example-block { margin: 40px 0; }
-#used-by { margin-bottom: 40px; }
 
 footer.global {
 	padding-top: 40px;

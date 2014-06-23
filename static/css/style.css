@@ -822,13 +822,6 @@ section.mobile {
   z-index: 0;
   opacity: .5; }
 
-#used-by p {
-  background: #fff;
-  position: relative;
-  z-index: 10;
-  display: inline-block;
-  padding: 0 20px; }
-
 #used-by img {
   position: relative;
   vertical-align: middle;
@@ -1021,46 +1014,6 @@ footer.global a.coinbase-button {
     font-size: 13px;
     max-width: 180px; }
 
-  #example-block {
-    overflow: hidden;
-    height: 400px;
-    padding: 0; }
-
-  #example-block section {
-    position: relative;
-    top: 40px; }
-
-  #example-block a.iphone, #example-block a img {
-    bottom: -20px;
-    width: 200px;
-    height: auto; }
-
-  #example-block a.iphone:hover {
-    bottom: -5px; }
-
-  #example-block a.iphone.mid {
-    height: auto; }
-
-  #example-block a.iphone div {
-    display: none; }
-
-  #example-block a.left {
-    left: 50px; }
-
-  #example-block a.right {
-    right: 50px; }
-
-  #example-block a.mid {
-    margin-left: -100px; }
-
-  #used-by {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee; }
-
-  #used-by img {
-    margin-bottom: 10px; }
-
   table {
     border: none; }
 
@@ -1093,9 +1046,6 @@ footer.global a.coinbase-button {
     font-weight: 400;
     margin-bottom: 40px;
     -webkit-font-smoothing: antialiased; }
-
-  #used-by:after {
-    display: none; }
 
   #line-block section {
     position: relative;
@@ -1390,321 +1340,321 @@ footer.global p, footer.global a {
   color: #fff;
   box-shadow: none; }
 
-/* CODE DRAW  ------------------------------ */
-.code-draw {
-  position: absolute;
-  bottom: 104px;
-  left: 15px;
-  height: 16px;
-  width: 280px;
-  -webkit-animation: write-code 3s 2s linear forwards;
-  -moz-animation: write-code 3s 2s linear forwards;
-  -ms-animation: write-code 3s 2s linear forwards;
-  -o-animation: write-code 3s 2s linear forwards;
-  animation: write-code 3s 2s linear forwards;
-  background: #1D2026; }
-
-.code-draw-two {
-  position: absolute;
-  bottom: 90px;
-  left: 20px;
-  height: 16px;
-  width: 240px;
-  -webkit-animation: write-code-two 2s 6s linear forwards;
-  -moz-animation: write-code-two 2s 6s linear forwards;
-  -ms-animation: write-code-two 2s 6s linear forwards;
-  -o-animation: write-code-two 2s 6s linear forwards;
-  animation: write-code-two 2s 6s linear forwards;
-  background: #1D2026; }
+@media only screen and (min-width: 1024px) {
+  /* CODE DRAW  ------------------------------ */
+  .code-draw {
+    position: absolute;
+    bottom: 104px;
+    left: 15px;
+    height: 16px;
+    width: 240px;
+    -webkit-animation: write-code 3s 2s linear forwards;
+    -moz-animation: write-code 3s 2s linear forwards;
+    -ms-animation: write-code 3s 2s linear forwards;
+    -o-animation: write-code 3s 2s linear forwards;
+    animation: write-code 3s 2s linear forwards;
+    background: #1D2026; }
+
+  .code-draw-two {
+    position: absolute;
+    bottom: 90px;
+    left: 20px;
+    height: 16px;
+    width: 240px;
+    -webkit-animation: write-code-two 2s 6s linear forwards;
+    -moz-animation: write-code-two 2s 6s linear forwards;
+    -ms-animation: write-code-two 2s 6s linear forwards;
+    -o-animation: write-code-two 2s 6s linear forwards;
+    animation: write-code-two 2s 6s linear forwards;
+    background: #1D2026; }
 
-@-webkit-keyframes write-code {
-  20% {
-    left: 90px; }
+  @-webkit-keyframes write-code {
+    20% {
+      left: 90px; }
 
-  30% {
-    left: 90px; }
+    30% {
+      left: 90px; }
 
-  40% {
-    left: 95px; }
+    40% {
+      left: 95px; }
 
-  50% {
-    left: 100px; }
+    50% {
+      left: 100px; }
 
-  60% {
-    left: 120px; }
+    60% {
+      left: 120px; }
 
-  70% {
-    left: 160px; }
+    70% {
+      left: 160px; }
 
-  80% {
-    left: 165px; }
+    80% {
+      left: 165px; }
 
-  90% {
-    left: 200px; }
+    90% {
+      left: 200px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
+    100% {
+      left: 240px;
+      width: 60px; } }
 
-@-moz-keyframes write-code {
-  20% {
-    left: 90px; }
+  @-moz-keyframes write-code {
+    20% {
+      left: 90px; }
 
-  30% {
-    left: 90px; }
+    30% {
+      left: 90px; }
 
-  40% {
-    left: 95px; }
+    40% {
+      left: 95px; }
 
-  50% {
-    left: 100px; }
+    50% {
+      left: 100px; }
 
-  60% {
-    left: 120px; }
+    60% {
+      left: 120px; }
 
-  70% {
-    left: 160px; }
+    70% {
+      left: 160px; }
 
-  80% {
-    left: 165px; }
+    80% {
+      left: 165px; }
 
-  90% {
-    left: 200px; }
+    90% {
+      left: 200px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
+    100% {
+      left: 240px;
+      width: 60px; } }
 
-@-o-keyframes write-code {
-  20% {
-    left: 90px; }
+  @-o-keyframes write-code {
+    20% {
+      left: 90px; }
 
-  30% {
-    left: 90px; }
+    30% {
+      left: 90px; }
 
-  40% {
-    left: 95px; }
+    40% {
+      left: 95px; }
 
-  50% {
-    left: 100px; }
+    50% {
+      left: 100px; }
 
-  60% {
-    left: 120px; }
+    60% {
+      left: 120px; }
 
-  70% {
-    left: 160px; }
+    70% {
+      left: 160px; }
 
-  80% {
-    left: 165px; }
+    80% {
+      left: 165px; }
 
-  90% {
-    left: 200px; }
+    90% {
+      left: 200px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
+    100% {
+      left: 240px;
+      width: 60px; } }
 
-@-ms-keyframes write-code {
-  20% {
-    left: 90px; }
+  @-ms-keyframes write-code {
+    20% {
+      left: 90px; }
 
-  30% {
-    left: 90px; }
+    30% {
+      left: 90px; }
 
-  40% {
-    left: 95px; }
+    40% {
+      left: 95px; }
 
-  50% {
-    left: 100px; }
+    50% {
+      left: 100px; }
 
-  60% {
-    left: 120px; }
+    60% {
+      left: 120px; }
 
-  70% {
-    left: 160px; }
+    70% {
+      left: 160px; }
 
-  80% {
-    left: 165px; }
+    80% {
+      left: 165px; }
 
-  90% {
-    left: 200px; }
+    90% {
+      left: 200px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
+    100% {
+      left: 240px;
+      width: 60px; } }
 
-@keyframes write-code {
-  20% {
-    left: 90px; }
+  @keyframes write-code {
+    20% {
+      left: 90px; }
 
-  30% {
-    left: 90px; }
+    30% {
+      left: 90px; }
 
-  40% {
-    left: 95px; }
+    40% {
+      left: 95px; }
 
-  50% {
-    left: 100px; }
+    50% {
+      left: 100px; }
 
-  60% {
-    left: 120px; }
+    60% {
+      left: 120px; }
 
-  70% {
-    left: 160px; }
+    70% {
+      left: 160px; }
 
-  80% {
-    left: 165px; }
+    80% {
+      left: 165px; }
 
-  90% {
-    left: 200px; }
+    90% {
+      left: 200px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
+    100% {
+      left: 240px;
+      width: 60px; } }
 
-/*-----------------*/
-@-webkit-keyframes write-code-two {
-  20% {
-    left: 117px; }
+  /*-----------------*/
+  @-webkit-keyframes write-code-two {
+    20% {
+      left: 117px; }
 
-  30% {
-    left: 117px; }
+    30% {
+      left: 117px; }
 
-  40% {
-    left: 120px; }
+    40% {
+      left: 120px; }
 
-  60% {
-    left: 170px; }
+    60% {
+      left: 170px; }
 
-  70% {
-    left: 170px; }
+    70% {
+      left: 170px; }
 
-  80% {
-    left: 180px; }
+    80% {
+      left: 180px; }
 
-  90% {
-    left: 220px; }
+    90% {
+      left: 220px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
+    100% {
+      left: 240px;
+      width: 60px; } }
 
-@-moz-keyframes write-code-two {
-  20% {
-    left: 90px; }
+  @-moz-keyframes write-code-two {
+    20% {
+      left: 90px; }
 
-  30% {
-    left: 90px; }
+    30% {
+      left: 90px; }
 
-  40% {
-    left: 95px; }
+    40% {
+      left: 95px; }
 
-  50% {
-    left: 100px; }
+    50% {
+      left: 100px; }
 
-  60% {
-    left: 120px; }
+    60% {
+      left: 120px; }
 
-  70% {
-    left: 160px; }
+    70% {
+      left: 160px; }
 
-  80% {
-    left: 165px; }
+    80% {
+      left: 165px; }
 
-  90% {
-    left: 200px; }
+    90% {
+      left: 200px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
+    100% {
+      left: 240px;
+      width: 60px; } }
 
-@-o-keyframes write-code-two {
-  20% {
-    left: 90px; }
+  @-o-keyframes write-code-two {
+    20% {
+      left: 90px; }
 
-  30% {
-    left: 90px; }
+    30% {
+      left: 90px; }
 
-  40% {
-    left: 95px; }
+    40% {
+      left: 95px; }
 
-  50% {
-    left: 100px; }
+    50% {
+      left: 100px; }
 
-  60% {
-    left: 120px; }
+    60% {
+      left: 120px; }
 
-  70% {
-    left: 160px; }
+    70% {
+      left: 160px; }
 
-  80% {
-    left: 165px; }
+    80% {
+      left: 165px; }
 
-  90% {
-    left: 200px; }
+    90% {
+      left: 200px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
+    100% {
+      left: 240px;
+      width: 60px; } }
 
-@-ms-keyframes write-code-two {
-  20% {
-    left: 90px; }
+  @-ms-keyframes write-code-two {
+    20% {
+      left: 90px; }
 
-  30% {
-    left: 90px; }
+    30% {
+      left: 90px; }
 
-  40% {
-    left: 95px; }
+    40% {
+      left: 95px; }
 
-  50% {
-    left: 100px; }
+    50% {
+      left: 100px; }
 
-  60% {
-    left: 120px; }
+    60% {
+      left: 120px; }
 
-  70% {
-    left: 160px; }
+    70% {
+      left: 160px; }
 
-  80% {
-    left: 165px; }
+    80% {
+      left: 165px; }
 
-  90% {
-    left: 200px; }
+    90% {
+      left: 200px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
+    100% {
+      left: 240px;
+      width: 60px; } }
 
-@keyframes write-code-two {
-  20% {
-    left: 90px; }
+  @keyframes write-code-two {
+    20% {
+      left: 90px; }
 
-  30% {
-    left: 90px; }
+    30% {
+      left: 90px; }
 
-  40% {
-    left: 95px; }
+    40% {
+      left: 95px; }
 
-  50% {
-    left: 100px; }
+    50% {
+      left: 100px; }
 
-  60% {
-    left: 120px; }
+    60% {
+      left: 120px; }
 
-  70% {
-    left: 160px; }
+    70% {
+      left: 160px; }
 
-  80% {
-    left: 165px; }
+    80% {
+      left: 165px; }
 
-  90% {
-    left: 200px; }
+    90% {
+      left: 200px; }
 
-  100% {
-    left: 240px;
-    width: 60px; } }
-
+    100% {
+      left: 240px;
+      width: 60px; } } }
 @media only screen and (max-width: 1200px) {
   body {
     padding-left: 240px; }
@@ -1723,9 +1673,6 @@ footer.global p, footer.global a {
   #example-block {
     margin: 60px 0; }
 
-  #used-by {
-    margin-bottom: 60px; }
-
   #code-block {
     margin-top: 60px; }
 
@@ -1743,7 +1690,7 @@ footer.global p, footer.global a {
 
   #sidebar {
     width: 220px;
-    padding: 60px; }
+    padding: 50px; }
 
   #wrapper {
     max-width: 600px; }
@@ -1767,7 +1714,7 @@ footer.global p, footer.global a {
     position: absolute;
     max-width: 112px;
     top: 157px;
-    left: 104px; }
+    left: 93px; }
 
   #screenshot-copy p {
     font-size: 17px; }
@@ -1776,10 +1723,10 @@ footer.global p, footer.global a {
     max-width: 680px; } }
 @media only screen and (max-width: 900px) {
   body {
-    padding-left: 180px; }
+    padding-left: 200px; }
 
   #sidebar {
-    width: 180px;
+    width: 200px;
     padding: 40px; }
 
   #wrapper {
@@ -1798,13 +1745,16 @@ footer.global p, footer.global a {
   #features li {
     max-width: 240px; }
 
-  #header a {
-    font-size: 11px; }
-
   /* Vertical Spacing */
   /*40px */
   hr {
     margin: 40px auto; }
+
+  hr.big {
+    margin: 60px auto; }
+
+  hr.big {
+    margin: 60px auto; }
 
   #wrapper h1 {
     font-size: 44px; }
@@ -2022,6 +1972,24 @@ footer.global p, footer.global a {
   .feature-block p {
     text-align: left; }
 
+  #example-block {
+    height: 420px; }
+
+  #example-block a.iphone {
+    width: 178px;
+    height: auto; }
+
+  #example-block a.iphone.mid {
+    width: 207px;
+    height: auto;
+    margin-left: -103px; }
+
+  #used-by p {
+    margin-bottom: 20px; }
+
+  #used-by img {
+    margin-bottom: 10px; }
+
   #start img {
     margin-bottom: 40px; }
 
@@ -2230,13 +2198,6 @@ footer.global p, footer.global a {
 
   #wrapper.index {
     padding: 40px 0; }
-
-  /* Switch from 70 to 60px vertically VSPACE */
-  #example-block {
-    margin: 40px 0; }
-
-  #used-by {
-    margin-bottom: 40px; }
 
   footer.global {
     padding-top: 40px;
