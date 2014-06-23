@@ -1,4 +1,3 @@
-
 // Configuration
 var analyticsId = "UA-37076997-1";
 var analyticsDomains = ["framerjs.com", "fastspring.com"];
@@ -24,7 +23,7 @@ if (analyticsDomains) {
 	// ga("linker:autoLink", analyticsDomains, false);
 };
 
-// Make sure forms also track cross domain
+// Track forms cross domain
 
 $(document).ready(function() {
 	$("form").each(function() {
@@ -40,3 +39,54 @@ $(document).ready(function() {
 	})
 })
 
+
+// Track download links
+
+var downloadExtensions = ["zip", "pdf", "tar.gz"];
+
+function endsWith(str, suffix) {
+	return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
+function shouldTrackClick(href) {
+	
+	for (var i=0; i < downloadExtensions.length; i++) {
+		if (endsWith(href, downloadExtensions[i])) {
+			return true
+		}
+	}
+
+	return false;
+}
+
+function handleTrackClick(event, href) {
+	
+	event.preventDefault()
+
+	ga("send", "event", "button", "click", href);
+
+	window.setTimeout(function() {
+		window.location.href = href;
+	}, 500);
+
+}
+
+$(document).ready(function() {
+	$("a").each(function() {
+		
+		var node = $(this);
+		var href = $(this).attr("href");
+
+		if (!href)
+			return;
+
+		if (href.indexOf("#") != -1)
+			return;
+
+		if (shouldTrackClick(href)) {
+			node.click(function(event) {
+				handleTrackClick(event, href);
+			})
+		}
+	})
+})
