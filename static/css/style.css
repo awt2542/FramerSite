@@ -1248,7 +1248,7 @@ HEIGHT QUERIES
 .feature-list li {
   list-style: none;
   float: left;
-  max-width: 280px;
+  max-width: 46%;
   margin-top: 40px; }
 
 .feature-list li img {
@@ -1754,11 +1754,11 @@ footer.global p, footer.global a {
     max-width: 680px; } }
 @media only screen and (max-width: 900px) {
   body {
-    padding-left: 200px; }
+    padding-left: 190px; }
 
   #sidebar {
-    width: 200px;
-    padding: 40px; }
+    width: 190px;
+    padding: 45px; }
 
   #wrapper {
     padding: 40px;
@@ -1799,7 +1799,10 @@ footer.global p, footer.global a {
     max-width: 680px; }
 
   #screenshot-copy li {
-    max-width: 260px; } }
+    max-width: 45%; }
+
+  #screenshot-copy li:first-child {
+    margin-right: 10%; } }
 /* ================= Mobile (Navigation)  ================= */
 @media only screen and (max-width: 820px) {
   body {
@@ -1963,6 +1966,7 @@ footer.global p, footer.global a {
     margin: 20px auto; }
 
   #screenshot {
+    padding: 40px 0;
     padding-bottom: 20px;
     margin-bottom: 0;
     margin-top: 40px; }

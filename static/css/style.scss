@@ -496,7 +496,7 @@ section.mobile {
 	display: none;
 }
 
-#screenshot-copy li:first-child { margin-right: 40px }
+#screenshot-copy li:first-child { margin-right: 40px; }
 
 
 /* BODY SECTIONS -------------------------*/
@@ -801,7 +801,7 @@ section.mobile {
 
 .feature-list li { 
 	list-style: none;
-	float: left; max-width: 280px; 
+	float: left; max-width: 46%; 
 	margin-top: 40px; 
 }
 
@@ -1033,12 +1033,12 @@ body {
 
 @media only screen and (max-width: 900px) {
 body {
-	padding-left: 200px;
+	padding-left: 190px;
 }
 
 #sidebar {
-	width: 200px;
-	padding: 40px;
+	width: 190px;
+	padding: 45px;
 }
 
 #wrapper {
@@ -1094,8 +1094,13 @@ h2.headline {
 }
 
 #screenshot-copy li {
-	max-width: 260px;
+	max-width: 45%;
 }
+
+#screenshot-copy li:first-child { margin-right: 10%; }
+
+
+
 }
 
 
@@ -1286,6 +1291,7 @@ hr.hidden {
 
 
 #screenshot {
+	padding: 40px 0;
 	padding-bottom: 20px;
 	margin-bottom: 0;
 	margin-top: 40px;
