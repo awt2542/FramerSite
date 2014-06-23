@@ -456,14 +456,14 @@ p.author {
 
 
 #screenshot .video-wrapper {
-	width: 50%;
-	position: absolute; top: 0; right: 0;
+	width: 354px;
+	position: absolute; top: 0; left: 50%; 
 	height: 100%;
 }
 
 #screenshot video {
 	position: absolute; max-width: 111px;
-	top: 159px; left: 113px;
+	top: 159px; left: 114px;
 }
 
 #screenshot-copy {
@@ -724,7 +724,7 @@ section.mobile {
 #interaction .ss-half {
 	background: url('/static/images/ss-code.png') no-repeat;
 	width: 270px; height: 657px;
-	top: 0; position: absolute; left: -10px;
+	top: -15px; position: absolute; left: -10px;
 }
 
 /*Retina*/
@@ -841,7 +841,7 @@ section.mobile {
 
 #viewer .ss-half {
 	background: url('/static/images/ss-viewer.png') no-repeat; 
-	position: absolute; right: 0; width: 270px; height: 659px;
+	position: absolute; right: -10px; width: 270px; height: 659px;
 	top: -20px;
 
 }
@@ -998,9 +998,10 @@ body {
 	max-width: 628px; width: 100%;
 }
 
+
 #screenshot video {
 	position: absolute; max-width: 112px;
-	top: 157px; left: 93px;
+	top: 157px; left: 94px;
 }
 
 #screenshot-copy p {
@@ -1370,7 +1371,6 @@ h5 {
 #interaction .ss-half {
 	position: relative; left: 0px; 
 	top: 0; height: 400px; margin-bottom: 40px;
-	margin-top: 40px;
 }
 
 
