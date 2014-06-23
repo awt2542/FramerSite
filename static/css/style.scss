@@ -326,7 +326,7 @@ p.author {
 
 /*Other pages*/
 #wrapper.framerjs h1 {
-	margin: 60px 0;
+	margin: 40px 0;
 }
 
 #header h1.title {
@@ -459,8 +459,8 @@ p.author {
 }
 
 #screenshot video {
-	position: absolute; max-width: 112px;
-	top: 157px; left: 114px;
+	position: absolute; max-width: 111px;
+	top: 159px; left: 113px;
 }
 
 #screenshot-copy {
@@ -910,7 +910,7 @@ footer.global p, footer.global a{
 
 /* CODE DRAW  ------------------------------ */
 .code-draw {
-	position: absolute; bottom: 104px; left: 40px; height: 16px; width: 300px; 
+	position: absolute; bottom: 104px; left: 15px; height: 16px; width: 280px; 
 	-webkit-animation: write-code 3s 2s linear forwards;
 	-moz-animation: write-code 3s 2s linear forwards;
 	-ms-animation: write-code 3s 2s linear forwards;
@@ -920,7 +920,7 @@ footer.global p, footer.global a{
 }
 
 .code-draw-two {
-	position: absolute; bottom: 90px; left: 70px; height: 16px; width: 240px; 
+	position: absolute; bottom: 90px; left: 20px; height: 16px; width: 240px; 
 	-webkit-animation: write-code-two 2s 6s linear forwards;
 	-moz-animation: write-code-two 2s 6s linear forwards;
 	-ms-animation: write-code-two 2s 6s linear forwards;
