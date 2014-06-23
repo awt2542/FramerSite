@@ -8,6 +8,9 @@
   _startListeningForScroll = false;
 
   selectItemNamed = function(className) {
+    if (className === "examples" || className === "community") {
+      return;
+    }
     $("#sidebar a").removeClass("active");
     return $("#sidebar a." + className).addClass("active");
   };

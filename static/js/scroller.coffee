@@ -5,6 +5,10 @@ _startListeningForScroll = false
 
 
 selectItemNamed = (className) ->
+
+	if className in ["examples", "community"]
+		return
+
 	$("#sidebar a").removeClass "active"
 	$("#sidebar a.#{className}").addClass "active"	
 	
