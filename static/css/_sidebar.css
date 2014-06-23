@@ -12,6 +12,9 @@
   padding: 60px;
   overflow-y: auto; }
 
+#sidebar::-webkit-scrollbar {
+  display: none; }
+
 #sidebar ul {
   list-style: none; }
 
