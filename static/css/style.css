@@ -1,3 +1,4 @@
+@import url(fonts.css);
 /*=========================================
 Reset
 =========================================== */
@@ -1922,7 +1923,7 @@ footer.global p, footer.global a {
   #carousel, #carousel-inapp {
     display: none; } }
 @media only screen and (max-width: 630px) {
-  .half section {
+  .feature-block.half section {
     width: 42%; }
 
   .feature-block hr {
@@ -1955,6 +1956,9 @@ footer.global p, footer.global a {
     width: 100%;
     float: none;
     text-align: center; }
+
+  .feature-block.half section {
+    width: 100%; }
 
   .half .right {
     float: none;
@@ -2008,7 +2012,8 @@ footer.global p, footer.global a {
 
   #framer section ul {
     max-width: 100%;
-    margin-top: 40px; }
+    margin-top: 40px;
+    margin-left: 0; }
 
   #framer ul li {
     text-align: left; }

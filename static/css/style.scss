@@ -1221,7 +1221,7 @@ hr.hidden {
 }
 
 @media only screen and (max-width:630px) {
-.half section { width: 42%; }
+.feature-block.half section { width: 42%; }
 
 .feature-block hr {
 	margin: 20px auto;
@@ -1259,6 +1259,8 @@ hr.hidden {
 	float: none;
 	text-align: center;
 }
+
+.feature-block.half section { width: 100%; }
 
 .half .right {
 	float: none;
@@ -1326,6 +1328,7 @@ h4 {
 #framer section ul {
 	max-width: 100%;
 	margin-top: 40px;
+	margin-left: 0;
 }
 
 #framer ul li {
