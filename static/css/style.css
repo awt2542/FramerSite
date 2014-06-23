@@ -540,9 +540,9 @@ p.author {
   -webkit-font-smoothing: antialiased;
   padding: 12px 30px 9px 20px;
   border-radius: 50px;
-  width: 120px;
   position: relative;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  width: 120px; }
 
 #header form:after, #footer form:after {
   content: "99";
@@ -1331,9 +1331,6 @@ HEIGHT QUERIES
   font-size: 30px; }
 
 /* FOOTER  ------------------------------ */
-#footer {
-  text-align: center; }
-
 footer.global {
   margin: 0 auto;
   text-align: center;
