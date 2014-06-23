@@ -1209,7 +1209,7 @@ p.small {
 
 p { font-size: 16px; }
 
-#header h1, #footer h1 { font-size: 52px; }
+#header h1, #footer h1 { font-size: 55px; }
 
 h5 {
 	font-size: 30px;
@@ -1241,6 +1241,7 @@ h5 {
 }
 #header h2, #footer h2 {
 	font-size: 22px;
+	margin-bottom: 40px;
 }
 
 .half section {
@@ -1258,6 +1259,10 @@ h5 {
 
 hr {
 	margin: 40px auto;
+}
+
+hr.hidden {
+	margin: 20px auto;
 }
 
 

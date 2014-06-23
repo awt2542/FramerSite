@@ -1894,7 +1894,7 @@ footer.global p, footer.global a {
     font-size: 16px; }
 
   #header h1, #footer h1 {
-    font-size: 52px; }
+    font-size: 55px; }
 
   h5 {
     font-size: 30px;
@@ -1922,7 +1922,8 @@ footer.global p, footer.global a {
     font-weight: 200; }
 
   #header h2, #footer h2 {
-    font-size: 22px; }
+    font-size: 22px;
+    margin-bottom: 40px; }
 
   .half section {
     max-width: 100%;
@@ -1937,6 +1938,9 @@ footer.global p, footer.global a {
 
   hr {
     margin: 40px auto; }
+
+  hr.hidden {
+    margin: 20px auto; }
 
   #screenshot {
     padding-bottom: 20px;
