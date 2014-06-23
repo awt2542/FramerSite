@@ -1249,7 +1249,8 @@ HEIGHT QUERIES
   float: left;
   position: relative;
   top: 3px;
-  margin-right: 12px; }
+  margin-right: 12px;
+  max-width: 17px; }
 
 .feature-list li:nth-child(2) p.title {
   color: #4db4ec; }
