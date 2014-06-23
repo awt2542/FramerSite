@@ -293,7 +293,6 @@ td a + a:before {
 	box-shadow: inset 0 0 0 2px rgba(255,255,255,1);
 	border-radius: 6px;
 }
-
 */
 /* TYPOGRAPHY ------------------------------- */
 p {
@@ -1104,11 +1103,6 @@ section.mobile {
 /* FOOTER  ------------------------------ */
 #footer {
   text-align: center; }
-
-#footer h1 {
-  margin-bottom: 40px;
-  font-size: 44px;
-  letter-spacing: -1px; }
 
 footer.global {
   margin: 0 auto;
