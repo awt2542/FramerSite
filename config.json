@@ -1,7 +1,7 @@
 {
-    "aws-access-key": "AKIAIGCDN7OELHEQGXRQ",
-    "aws-bucket-name": "studio-staging-2",
-    "aws-bucket-website": "studio-staging-2.s3-website-us-east-1.amazonaws.com",
+    "aws-access-key": "AKIAJ653IBYMDXHPYFFA",
+    "aws-bucket-name": "framerjs.com",
+    "aws-bucket-website": "framerjs.com.s3-website-us-east-1.amazonaws.com",
     "fingerprint": [
         "js",
         "css"
