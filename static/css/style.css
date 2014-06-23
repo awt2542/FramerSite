@@ -1208,12 +1208,12 @@ HEIGHT QUERIES
   list-style: none;
   font-size: 15px; }
 
-.feature-block section li + li {
-  margin-top: 0; }
-
 .feature-block p {
   font-size: 18px;
   line-height: 1.6;
+  margin-bottom: 0; }
+
+.feature-list p {
   margin-bottom: 0; }
 
 /*Feature lists*/
@@ -1269,9 +1269,6 @@ HEIGHT QUERIES
 
 #interaction .feature-list li, #viewer .feature-list li {
   max-width: 100%; }
-
-#interaction .feature-list li + li, #viewer .feature-list li + li {
-  margin-top: 30px; }
 
 #viewer {
   padding: 100px 0 40px 0;
@@ -2073,7 +2070,7 @@ footer.global p, footer.global a {
   /*===== FOURBLOCKS ===== */
   #interaction .feature-list li, #viewer .feature-list li {
     list-style: none;
-    float: none;
+    float: left;
     display: inline-block;
     max-width: 46%;
     margin-top: 40px; }
@@ -2090,7 +2087,7 @@ footer.global p, footer.global a {
 
   #footer-features {
     display: none; } }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 500px) {
   /* --------- Full-width feature blocks --------- */
   .feature-list li, #interaction .feature-list li, #viewer .feature-list li {
     max-width: 100%;
@@ -2101,8 +2098,8 @@ footer.global p, footer.global a {
   .feature-list li:nth-child(even), #interaction .feature-list li:nth-child(even), #viewer .feature-list li:nth-child(even) {
     float: left; }
 
-  .feature-list li + li {
-    margin-top: 20px; } }
+  .feature-list li + li, #viewer .feature-list li + li, #interaction .feature-list li + li {
+    margin-top: 30px; } }
 @media only screen and (max-width: 440px) {
   #bg {
     background-size: 40%;

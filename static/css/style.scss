@@ -736,9 +736,6 @@ section.mobile {
 	font-size: 15px;
 }
 
-.feature-block section li+li {
-	margin-top: 0;
-}
 
 .feature-block p {
 	font-size: 18px;
@@ -746,6 +743,9 @@ section.mobile {
 	margin-bottom: 0;
 }
 
+.feature-list p {
+	margin-bottom: 0;
+}
 
 /*Feature lists*/
 
@@ -792,9 +792,6 @@ section.mobile {
 	max-width: 100%;
 }
 
-#interaction .feature-list li+li, #viewer .feature-list li+li {
-	margin-top: 30px;
-}
 
 #viewer {
 	padding: 100px 0 40px 0; /* The extra 20 is to fix the overflow bug */
@@ -1388,15 +1385,15 @@ h4 {
 
 /*===== FOURBLOCKS ===== */
 #interaction .feature-list li, #viewer .feature-list li {
-	list-style: none; float: none;
-	display: inline-block; max-width: 46%; 
+	list-style: none; float: left;
+	display: inline-block; max-width: 46%;
 	margin-top: 40px; 
 }
-
 
 .feature-list li:nth-child(even), #interaction .feature-list li:nth-child(even), #viewer .feature-list li:nth-child(even) {
 	float: right;
 }
+
 
 
 
@@ -1413,7 +1410,7 @@ footer.global {
 
 }
 
-@media only screen and (max-width:520px) {
+@media only screen and (max-width:500px) {
 
 /* --------- Full-width feature blocks --------- */
 .feature-list li, #interaction .feature-list li, #viewer .feature-list li  {
@@ -1425,8 +1422,8 @@ footer.global {
 	float: left;
 }
 
-.feature-list li+li {
-	margin-top: 20px;
+.feature-list li+li, #viewer .feature-list li+li, #interaction .feature-list li+li {
+	margin-top: 30px;
 }
 
 }
