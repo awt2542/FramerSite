@@ -758,6 +758,12 @@ section.mobile {
 	color: #818B9E;
 }
 
+#interaction p.title {
+	color: $green;
+	font-weight: 400;
+}
+
+
 /* INTERACTION & VIEWER SECTION ------------------------------ */
 .feature-block {
 	overflow: hidden !important;
@@ -777,31 +783,40 @@ section.mobile {
 	line-height: 1.6;
 }
 
-.feature-block p.title {
-	font-size: 22px;
-	margin-bottom: 10px;
-	line-height: 1.2;
-}
 
-.feature-block li img {
-	float: left; position: relative; top: 3px;
-	margin-right: 12px;
-}
 
 /*Feature lists*/
 
 .feature-list {
 	position: relative;
-	margin:  40px 0 60px 0;
+	margin:  0px 0 60px 0;
+}
+
+.feature-list p.title {
+	font-size: 22px;
+	margin-bottom: 10px;
+	line-height: 1.2;
+	color: $green; font-weight: 400; 
+}
+
+.feature-list li { 
+	list-style: none;
+	float: left; max-width: 280px; 
+	margin-top: 40px; 
+}
+
+.feature-list li img {
+	float: left; position: relative; top: 3px;
+	margin-right: 12px;
 }
 
 
-.feature-list .right li, #interaction .feature-list li {
-	max-width: 280px; float: left;
-	margin-top: 40px; list-style: none;
-}
+.feature-list li:nth-child(2) p.title{ color: $blue; }
+.feature-list li:nth-child(3) p.title{ color: #917BDF; }
+.feature-list li:last-child p.title{ color: #818B9E; }
 
-.feature-list .right li:nth-child(even), #interaction .feature-list li:nth-child(even) {
+
+.feature-list li:nth-child(even), #interaction .feature-list li:nth-child(even) {
 	float: right;
 }
 
