@@ -693,7 +693,6 @@ section.mobile {
   position: relative; }
 
 #framer ul {
-  margin: 40px 0 0 20px;
   float: left;
   max-width: 280px;
   width: 100%; }
@@ -729,6 +728,14 @@ section.mobile {
 /* =========== EXAMPLEBLOCK ===============*/
 #example-block {
   background: rgba(77, 180, 236, 0.8);
+  background: #71c3f0;
+  background: -moz-linear-gradient(left, #71c3f0 0%, #b8e1f8 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #71c3f0), color-stop(100%, #b8e1f8));
+  background: -webkit-linear-gradient(left, #71c3f0 0%, #b8e1f8 100%);
+  background: -o-linear-gradient(left, #71c3f0 0%, #b8e1f8 100%);
+  background: -ms-linear-gradient(left, #71c3f0 0%, #b8e1f8 100%);
+  background: linear-gradient(to right, #71c3f0 0%, #b8e1f8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#71c3f0', endColorstr='#b8e1f8',GradientType=1 );
   height: 500px;
   width: 100%;
   margin: 80px auto;
@@ -786,11 +793,14 @@ section.mobile {
   position: absolute;
   bottom: -70px; }
 
-#example-block img {
-  width: 218px; }
+#example-block a.left img {
+  width: 216px; }
 
 #example-block a.mid img {
   width: 247px; }
+
+#example-block a.right img {
+  width: 222px; }
 
 #example-block a.left {
   left: 0px; }

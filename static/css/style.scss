@@ -537,7 +537,6 @@ section.mobile {
 
 
 #framer ul {
-	margin: 40px 0 0 20px;
 	float: left; max-width: 280px; width: 100%;
 }
 
@@ -572,6 +571,15 @@ section.mobile {
 
 #example-block {
 	background: $blue80;
+	background: rgb(113,195,240);
+	background: -moz-linear-gradient(left,  rgba(113,195,240,1) 0%, rgba(184,225,248,1) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(113,195,240,1)), color-stop(100%,rgba(184,225,248,1)));
+	background: -webkit-linear-gradient(left,  rgba(113,195,240,1) 0%,rgba(184,225,248,1) 100%);
+	background: -o-linear-gradient(left,  rgba(113,195,240,1) 0%,rgba(184,225,248,1) 100%);
+	background: -ms-linear-gradient(left,  rgba(113,195,240,1) 0%,rgba(184,225,248,1) 100%);
+	background: linear-gradient(to right,  rgba(113,195,240,1) 0%,rgba(184,225,248,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#71c3f0', endColorstr='#b8e1f8',GradientType=1 );
+	
 	height: 500px;
 	width: 100%; 
 	margin: 80px auto;
@@ -623,13 +631,9 @@ section.mobile {
 
 }
 
-#example-block img {
-	width: 218px;
-}
-
-#example-block a.mid img {
-	width: 247px;
-}
+#example-block a.left img { width: 216px; }
+#example-block a.mid img { width: 247px; }
+#example-block a.right img { width: 222px; }
 
 #example-block a.left {
 	left: 0px;
