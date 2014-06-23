@@ -1,0 +1,83 @@
+/* ================= Sidebar ================= */
+
+#sidebar {
+	position: fixed;
+	top: 0; left: 0; bottom: 0; z-index: 100;
+	width: 240px; height: 100%;
+	background: #101216;
+	background: #15181d;
+	padding: 60px;
+	overflow-y: auto;
+}
+
+#sidebar ul {
+	list-style: none;
+}
+
+#sidebar nav {
+	padding-bottom: 60px;
+}
+
+#sidebar ul {
+	margin-bottom: 35px;
+}
+
+#sidebar ul li+li {
+	margin-top: 5px;
+}
+
+#sidebar ul li a {
+	color: #7C838D; color: #686f78;
+	color: #636d80;
+	font-weight: 400;
+	font-size: 16px;
+	position: relative;
+}
+
+#sidebar ul li svg {
+	display: inline-block;
+	margin-bottom: -4px;
+	margin-left: 2px;
+	/*To not move up any other nav items... */
+	position: relative; top: -1px;
+}
+
+/* Fade other nav items */
+#sidebar ul li a:hover {
+	opacity: 1;
+	color: #fff;
+}
+
+#sidebar ul li a.active {
+	color: #fff; 
+}
+
+#sidebar ul li.headline, #sidebar ul li.headline a {
+	color: #84D1FF; 
+	font-size: 16px;
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+#sidebar ul#community {
+	margin-top: -22px;
+}
+
+#sidebar ul li.headline.is-active a{
+	color: #fff;
+}
+
+#sidebar ul li.headline a:hover, #sidebar ul li.headline a:active {
+	color: #fff;
+	opacity: 1;
+}
+
+#sidebar ul li.headline a.active {
+	color: #fff;
+}
+
+#sidebar ul li.headline a.active svg path { fill: #fff; }
+
+#topbar {
+	display: none;
+}
