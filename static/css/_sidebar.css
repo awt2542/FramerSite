@@ -21,6 +21,9 @@
 #sidebar ul {
   margin-bottom: 35px; }
 
+#sidebar ul#examples {
+  margin-bottom: 0; }
+
 #sidebar ul li + li {
   margin-top: 5px; }
 
