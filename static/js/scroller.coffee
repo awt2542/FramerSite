@@ -62,7 +62,7 @@ highlightNavigation = ->
 		else
 			bestItem = itemsBelowViewPort[0]
 	
-	console.log "Best item #{bestItem?.name}"
+	# console.log "Best item #{bestItem?.name}"
 	
 	if _lastSelectedElementName == bestItem?.name
 		selectItemNamed bestItem?.name
@@ -77,7 +77,7 @@ $(window).load ->
 	
 	_lastSelectedElementName = $.cookie "nav"
 	
-	console.log "_lastSelectedElementName", _lastSelectedElementName
+	# console.log "_lastSelectedElementName", _lastSelectedElementName
 	
 	$(window).scroll highlightNavigation
 	

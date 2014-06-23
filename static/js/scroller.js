@@ -54,7 +54,6 @@
         bestItem = itemsBelowViewPort[0];
       }
     }
-    console.log("Best item " + (bestItem != null ? bestItem.name : void 0));
     if (_lastSelectedElementName === (bestItem != null ? bestItem.name : void 0)) {
       selectItemNamed(bestItem != null ? bestItem.name : void 0);
     }
@@ -65,7 +64,6 @@
   $(window).load(function() {
     calculateElements();
     _lastSelectedElementName = $.cookie("nav");
-    console.log("_lastSelectedElementName", _lastSelectedElementName);
     $(window).scroll(highlightNavigation);
     if (_lastSelectedElementName) {
       selectItemNamed(_lastSelectedElementName);
