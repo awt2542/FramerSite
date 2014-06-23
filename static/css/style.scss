@@ -520,10 +520,17 @@ section.mobile {
 	margin-left: 30px;
 }
 
+/* ============= START ================*/
 #start img {
 	position: relative; top: 15px;
 }
 
+#start p {
+	margin-bottom: 0;
+}
+
+
+/* =========== FRAMER BLOCK ===============*/
 #framer {
 	position: relative;
 }
@@ -532,19 +539,6 @@ section.mobile {
 #framer ul {
 	margin: 40px 0 0 20px;
 	float: left; max-width: 280px; width: 100%;
-}
-
-#example-block .screen {
-	position: absolute; top:192px;
-	max-width: 206px; left: 50%; margin-left: -102px;
-	z-index: 100; overflow: hidden;
-	
-}
-
-#example-block video {
-	width: 100%; 
-	border: none;
-	cursor: pointer;
 }
 
 #framer p a {
@@ -574,18 +568,28 @@ section.mobile {
 	display: inline-block;
 }
 
-#framer ul section li span {
-	width: 25px; background: red;
-	display: inline-block;
-}
+/* =========== EXAMPLEBLOCK ===============*/
 
 #example-block {
-	background: $blue60;
-	height: 540px;
+	background: $blue80;
+	height: 500px;
 	width: 100%; 
 	margin: 80px auto;
 	padding: 0 40px;
 }
+
+#example-block .screen {
+	position: absolute; top:152px;
+	max-width: 206px; left: 50%; margin-left: -102px;
+	z-index: 100; overflow: hidden;
+}
+
+#example-block video {
+	width: 100%; 
+	border: none;
+	cursor: pointer;
+}
+
 
 #example-block .inner {
 	padding: 0; max-width: 600px; margin: 0 auto;
@@ -593,7 +597,7 @@ section.mobile {
 
 #example-block section {
 	position: absolute; 
-	top: 60px; left: 0; width: 100%; 
+	top: 40px; left: 0; width: 100%; 
 }
 
 #wrapper #example-block h4 {
@@ -1047,36 +1051,12 @@ hr {
 	margin: 40px auto;
 }
 
-h1 {
+#wrapper h1 {
 	font-size: 44px;
 }
 
 h2.headline {
 	font-size: 24px;
-}
-
-#line-block section {
-	max-width: 160px;
-}
-
-#line-block section.mid {
-	margin-left: -80px;
-}
-
-#line-block img.line-arrow.first {
-	left: 160px;
-}
-
-#line-block img.line-arrow.second {
-	right: 160px;
-}
-
-#line-block p {
-	font-size: 14px;
-}
-
-#example-block a.iphone {
-	bottom: -60px;
 }
 
 /*------------------------*/
@@ -1205,26 +1185,18 @@ p.small {
 
 /* MOBILE NAVIGATION ------------------- */
 @media only screen and (max-width: 768px) {
-.half section {
-	width: 48%;
-}
+.half section { width: 48%; }
 
-.half section section {
-	width: 100%;
-}
+.half section section { width: 100%; }
 
 #bg {
 	background-size: 75%;
 	top: -90px;
 }
 
-p {
-	font-size: 16px;
-}
+p { font-size: 16px; }
 
-#header h1, #footer h1 {
-	font-size: 52px;
-}
+#header h1, #footer h1 { font-size: 52px; }
 
 h5 {
 	font-size: 30px;
@@ -1232,23 +1204,9 @@ h5 {
 }
 
 
-#screenshot-copy li {
-	max-width: 48%;
-}
-
+#screenshot-copy li { max-width: 48%; }
 #screenshot-copy li:first-child { margin-right: 2%; }
-
-#carousel, #carousel-inapp {
-	display: none;
-}
-}
-
-
-@media only screen and (max-width: 640px) {
-#features li {
-	font-size: 15px;
-	max-width: 240px;
-}
+#carousel, #carousel-inapp { display: none; }
 }
 
 
@@ -1442,14 +1400,6 @@ footer.global {
 
 #footer-features {
 	display: none;
-}
-
-#manifesto * {
-	text-align: left;
-}
-
-#manifesto section+section {
-	margin-top: 20px;
 }
 
 }

@@ -148,6 +148,38 @@ footer.global a.coinbase-button {
 	opacity: .8;
 }
 
+@media only screen and (max-width: 900px) {
+
+#line-block section {
+	max-width: 160px;
+}
+
+#line-block section.mid {
+	margin-left: -80px;
+}
+
+#line-block img.line-arrow.first {
+	left: 160px;
+}
+
+#line-block img.line-arrow.second {
+	right: 160px;
+}
+
+#line-block p {
+	font-size: 14px;
+}
+}
+
+
+@media only screen and (max-width: 640px) {
+#features li {
+	font-size: 15px;
+	max-width: 240px;
+}
+}
+
+
 @media only screen and (max-width: 580px) {
 #features li {
 	font-size: 13px;
