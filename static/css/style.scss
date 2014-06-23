@@ -1218,6 +1218,17 @@ hr.hidden {
 #carousel, #carousel-inapp { display: none; }
 }
 
+@media only screen and (max-width:630px) {
+.half section { width: 42%; }
+
+.feature-block hr {
+	margin: 20px auto;
+}
+
+#interaction { padding: 60px 0; }
+#viewer { padding-top: 60px; }
+
+}
 
 @media only screen and (max-width: 580px) {
 
@@ -1327,9 +1338,6 @@ h4 {
 	text-align: left;
 }
 
-.feature-block hr {
-	display: none;
-}
 
 #example-block {
 	height: 390px;
@@ -1378,6 +1386,20 @@ h4 {
 	display: none;
 }
 
+/*===== FOURBLOCKS ===== */
+#interaction .feature-list li, #viewer .feature-list li {
+	list-style: none; float: none;
+	display: inline-block; max-width: 46%; 
+	margin-top: 40px; 
+}
+
+
+.feature-list li:nth-child(even), #interaction .feature-list li:nth-child(even), #viewer .feature-list li:nth-child(even) {
+	float: right;
+}
+
+
+
 /*------------------------------------------*/
 
 footer.global {
@@ -1387,6 +1409,24 @@ footer.global {
 
 #footer-features {
 	display: none;
+}
+
+}
+
+@media only screen and (max-width:520px) {
+
+/* --------- Full-width feature blocks --------- */
+.feature-list li, #interaction .feature-list li, #viewer .feature-list li  {
+	max-width: 100%; 
+	margin-top: 0; float: left; clear: both;
+}
+
+.feature-list li:nth-child(even), #interaction .feature-list li:nth-child(even), #viewer .feature-list li:nth-child(even) {
+	float: left;
+}
+
+.feature-list li+li {
+	margin-top: 20px;
 }
 
 }
@@ -1460,25 +1500,6 @@ img.app-icon {
 section.mobile {
 	display: block;
 	text-align: center;
-}
-
-/* --------- Full-width feature blocks --------- */
-.feature-list li, #interaction .feature-list li {
-	max-width: 100%; 
-	margin-top: 0; float: left;
-}
-
-
-.feature-list li+li {
-	margin-top: 20px;
-}
-
-.feature-block p.title {
-	font-size: 20px;
-}
-
-.feature-block p {
-	font-size: 16px;
 }
 
 .feature-list {
