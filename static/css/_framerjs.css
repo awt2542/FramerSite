@@ -36,7 +36,7 @@ footer.global a.coinbase-button {
 
 #features li {
   float: left;
-  max-width: 260px;
+  max-width: 280px;
   list-style: none;
   line-height: 1.8;
   font-size: 16px;
@@ -144,46 +144,6 @@ footer.global a.coinbase-button {
     font-size: 13px;
     max-width: 180px; }
 
-  #example-block {
-    overflow: hidden;
-    height: 400px;
-    padding: 0; }
-
-  #example-block section {
-    position: relative;
-    top: 40px; }
-
-  #example-block a.iphone, #example-block a img {
-    bottom: -20px;
-    width: 200px;
-    height: auto; }
-
-  #example-block a.iphone:hover {
-    bottom: -5px; }
-
-  #example-block a.iphone.mid {
-    height: auto; }
-
-  #example-block a.iphone div {
-    display: none; }
-
-  #example-block a.left {
-    left: 50px; }
-
-  #example-block a.right {
-    right: 50px; }
-
-  #example-block a.mid {
-    margin-left: -100px; }
-
-  #used-by {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee; }
-
-  #used-by img {
-    margin-bottom: 10px; }
-
   table {
     border: none; }
 
@@ -216,9 +176,6 @@ footer.global a.coinbase-button {
     font-weight: 400;
     margin-bottom: 40px;
     -webkit-font-smoothing: antialiased; }
-
-  #used-by:after {
-    display: none; }
 
   #line-block section {
     position: relative;

@@ -54,8 +54,13 @@
   margin-bottom: 10px;
   font-weight: 500; }
 
-#sidebar ul#community {
-  margin-top: -22px; }
+#sidebar ul li.headline.link, #sidebar ul li.headline.link a {
+  color: #7C838D;
+  color: #686f78;
+  color: #636d80;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative; }
 
 #sidebar ul li.headline.is-active a {
   color: #fff; }
