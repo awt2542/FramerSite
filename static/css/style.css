@@ -196,7 +196,9 @@ hr.small {
   margin: 30px auto; }
 
 hr.big.hidden, hr.hidden {
-  border-color: #fff; }
+  border-color: #fff;
+  opacity: 0;
+  visibility: hidden; }
 
 /* ================= Post elements ================= */
 table {
@@ -506,7 +508,7 @@ p.author {
 
 #header a, #footer a {
   border: none;
-  padding: 12px 20px 9px;
+  padding: 12px 26px 9px;
   position: relative;
   border-radius: 50px;
   background: #4db4ec;
@@ -570,18 +572,18 @@ p.author {
 
 #header a.small, #footer a.small {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 500;
+  color: #616d85;
+  background: transparent;
+  border-radius: 0;
+  font-size: 14px;
   box-shadow: none;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(97, 109, 133, 0.6);
-  font-size: 12px;
   margin-top: 20px;
   width: auto;
   padding: 0;
-  line-height: 0;
+  line-height: 1.2;
   position: relative;
-  background: #fff; }
+  border-bottom: 1px solid rgba(97, 109, 133, 0.2); }
 
 /* SCREENSHOT -------------------------*/
 #screenshot {
@@ -1178,13 +1180,13 @@ HEIGHT QUERIES
 /* INTERACTION SECTION -------------------------*/
 #interaction {
   background: #191C22;
-  padding: 100px 0 0 0;
+  padding: 100px 0 100px 0;
   margin: 80px 0 0 0;
   position: relative; }
 
 #interaction p {
   font-weight: 300;
-  color: #fff; }
+  color: #818B9E; }
 
 #interaction h4 {
   color: #fff;
@@ -1192,10 +1194,10 @@ HEIGHT QUERIES
 
 #interaction .ss-half {
   background: url("/static/images/ss-code.png") no-repeat;
-  width: 665px;
-  height: 474px;
+  width: 269px;
+  height: 636px;
   top: 0;
-  position: relative;
+  position: absolute;
   left: -10px; }
 
 /*Retina*/
@@ -1204,20 +1206,7 @@ HEIGHT QUERIES
     background: url("/static/images/ss-code@2x.png") no-repeat;
     background-size: cover; } }
 #interaction p.title {
-  color: #7ddc16;
-  font-weight: 400; }
-
-#interaction li:nth-child(2) p.title {
-  color: #4db4ec; }
-
-#interaction li:nth-child(3) p.title {
-  color: #917BDF; }
-
-#interaction li:last-child p.title {
-  color: #818B9E; }
-
-#interaction p.title {
-  color: #7ddc16;
+  color: #fff;
   font-weight: 400; }
 
 /* INTERACTION & VIEWER SECTION ------------------------------ */
@@ -1241,7 +1230,7 @@ HEIGHT QUERIES
 
 .feature-list p.title {
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   line-height: 1.2;
   color: #7ddc16;
   font-weight: 400; }
@@ -1285,11 +1274,11 @@ HEIGHT QUERIES
 #viewer li:nth-child(4) img {
   top: 1px; }
 
-#viewer .feature-list li {
+#interaction .feature-list li, #viewer .feature-list li {
   max-width: 100%; }
 
-#viewer .feature-list li + li {
-  margin-top: 40px; }
+#interaction .feature-list li + li, #viewer .feature-list li + li {
+  margin-top: 30px; }
 
 #viewer {
   padding: 100px 0 20px 0;

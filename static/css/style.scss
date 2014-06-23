@@ -123,6 +123,7 @@ hr.small {
 
 hr.big.hidden, hr.hidden {
 	border-color: #fff;
+	opacity: 0; visibility: hidden;
 }
 
 @import "tables";
@@ -352,7 +353,7 @@ p.author {
 
 #header a, #footer a {
 	border: none;
-	padding:12px 20px 9px; position: relative; 
+	padding:12px 26px 9px; position: relative; 
 	border-radius: 50px; 
 	background: $blue; color: #fff;
 	text-transform: none; letter-spacing: 0; 
@@ -402,14 +403,12 @@ p.author {
 
 
 #header a.small, #footer a.small {
-	display: inline-block; font-weight: 400;
-	box-shadow: none; letter-spacing: 2px; text-transform: uppercase;
-	color: $graphite60;
-	 font-size: 12px;
+	display: inline-block; font-weight: 500;
+	color: $graphite; background: transparent; border-radius: 0;
+	font-size: 14px; box-shadow: none;
 	margin-top: 20px; width: auto;
-	padding: 0;
-	line-height: 0; position: relative;
-	background: #fff;
+	padding: 0; line-height: 1.2; position: relative;
+	border-bottom: 1px solid $graphite20;
 }
 
 /* SCREENSHOT -------------------------*/
@@ -710,7 +709,7 @@ section.mobile {
 
 #interaction {
 	background: #191C22;
-	padding: 100px 0 0 0;
+	padding: 100px 0 100px 0;
 	margin: 80px 0 0 0;
 	position: relative;
 
@@ -718,7 +717,7 @@ section.mobile {
 
 #interaction p {
 	font-weight: 300;
-	color: #fff; 
+	color: #818B9E; 
 }
 
 #interaction h4 {
@@ -727,8 +726,8 @@ section.mobile {
 
 #interaction .ss-half {
 	background: url('/static/images/ss-code.png') no-repeat;
-	width: 665px; height: 474px;
-	top: 0; position: relative; left: -10px;
+	width: 269px; height: 636px;
+	top: 0; position: absolute; left: -10px;
 }
 
 /*Retina*/
@@ -740,27 +739,9 @@ section.mobile {
 }
 
 #interaction p.title {
-	color: $green;
+	color: #fff;
 	font-weight: 400;
 }
-
-#interaction li:nth-child(2) p.title{
-	color: $blue;
-}
-
-#interaction li:nth-child(3) p.title{
-	color: #917BDF;
-}
-
-#interaction li:last-child p.title{
-	color: #818B9E;
-}
-
-#interaction p.title {
-	color: $green;
-	font-weight: 400;
-}
-
 
 /* INTERACTION & VIEWER SECTION ------------------------------ */
 .feature-block {
@@ -791,7 +772,7 @@ section.mobile {
 
 .feature-list p.title {
 	font-size: 22px;
-	margin-bottom: 10px;
+	margin-bottom: 6px;
 	line-height: 1.2;
 	color: $green; font-weight: 400; 
 }
@@ -825,13 +806,12 @@ section.mobile {
 #viewer li:nth-child(4) img { top: 1px; }
 
 
-#viewer .feature-list li {
+#interaction .feature-list li, #viewer .feature-list li {
 	max-width: 100%;
 }
 
-
-#viewer .feature-list li + li {
-	margin-top: 40px;
+#interaction .feature-list li+li, #viewer .feature-list li+li {
+	margin-top: 30px;
 }
 
 #viewer {
