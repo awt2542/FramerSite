@@ -36,3 +36,6 @@ update:
 
 upload:
 	cactus deploy
+
+optimize:
+	cd Examples; find ./static -name "*.png" -exec optipng -o3 {} \;
