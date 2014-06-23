@@ -1,3 +1,35 @@
+/* ==================================================== */
+/* ================= Vertical SPACING (VSPACE) ================= */
+/*40px between items, 70px between sections*/
+p, #wrapper iframe {
+  margin-bottom: 20px; }
+
+#features li {
+  margin-bottom: 40px; }
+
+#wrapper ul {
+  margin-bottom: 20px; }
+
+table {
+  margin: 40px 0; }
+
+table.last {
+  margin-bottom: 60px; }
+
+/*Bitcoin*/
+#bitcoin {
+  display: block;
+  margin-top: 20px; }
+
+footer.global a.coinbase-button {
+  padding: 8px 12px;
+  border: 1px solid #d6dbe3;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 1px; }
+
+/*-----------------------*/
 #features {
   /* Fix for list margin */
   margin-bottom: -40px; }
@@ -28,8 +60,7 @@
 
 #features li p {
   margin-bottom: 0;
-  margin-top: 10px;
-  -webkit-font-smoothing: subpixel-antialiased; }
+  margin-top: 0; }
 
 #features li:nth-child(even) {
   float: right; }
@@ -88,3 +119,191 @@
   font-size: 15px;
   line-height: 1.6;
   opacity: .8; }
+
+@media only screen and (max-width: 580px) {
+  #features li {
+    font-size: 13px;
+    max-width: 180px; }
+
+  #example-block {
+    overflow: hidden;
+    height: 400px;
+    padding: 0; }
+
+  #example-block section {
+    position: relative;
+    top: 40px; }
+
+  #example-block a.iphone, #example-block a img {
+    bottom: -20px;
+    width: 200px;
+    height: auto; }
+
+  #example-block a.iphone:hover {
+    bottom: -5px; }
+
+  #example-block a.iphone.mid {
+    height: auto; }
+
+  #example-block a.iphone div {
+    display: none; }
+
+  #example-block a.left {
+    left: 50px; }
+
+  #example-block a.right {
+    right: 50px; }
+
+  #example-block a.mid {
+    margin-left: -100px; }
+
+  #used-by {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; }
+
+  #used-by img {
+    margin-bottom: 10px; }
+
+  table {
+    border: none; }
+
+  table td, td, th {
+    padding: 10px 0;
+    background: transparent; }
+
+  table, thead th, th {
+    font-size: 13px; }
+
+  table.api td.group {
+    font-size: 11px; }
+
+  table .examples {
+    display: none; }
+
+  nav#index li a {
+    font-weight: 400;
+    -webkit-font-smoothing: subpixel-antialiased; }
+
+  h1, h1.title {
+    margin-bottom: 20px; }
+
+  h1, #footer h1 {
+    font-size: 36px; }
+
+  h2.headline {
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 40px;
+    -webkit-font-smoothing: antialiased; }
+
+  #used-by:after {
+    display: none; }
+
+  #line-block section {
+    position: relative;
+    display: inline-block;
+    float: left; }
+
+  #line-block section.right {
+    display: none; }
+
+  #line-block section.mid {
+    margin: 0;
+    left: 0;
+    float: right; }
+
+  #line-block section {
+    max-width: 44%;
+    min-width: 172px; }
+
+  #line-block p {
+    font-size: 15px; }
+
+  #line-block img.line-arrow.second {
+    display: none; }
+
+  #line-block img.line-arrow.first {
+    left: 50%; } }
+/* ========================= 
+HEIGHT QUERIES 
+=========================== */
+#sidebar ul svg {
+  opacity: 0; }
+
+@media only screen and (max-height: 720px) and (min-width: 640px) {
+  #sidebar ul#more section {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+
+  #sidebar ul#more section.appear {
+    visibility: visible;
+    max-height: 300px;
+    margin-bottom: 40px; }
+
+  #sidebar ul#more svg {
+    opacity: 1; }
+
+  #sidebar ul#more.flip svg {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+  #sidebar ul#more.flip svg path {
+    fill: #fff; } }
+@media only screen and (max-height: 620px) and (min-width: 640px) {
+  #sidebar ul#docs section {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+
+  #sidebar ul#docs {
+    margin-bottom: 20px; }
+
+  #sidebar ul#docs section.appear {
+    visibility: visible;
+    max-height: 300px;
+    margin-bottom: 35px; }
+
+  #sidebar ul#docs svg {
+    opacity: 1; }
+
+  #sidebar ul#docs.flip svg {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+  #sidebar ul#docs.flip svg path {
+    fill: #fff; } }
+@media only screen and (max-height: 540px) and (min-width: 640px) {
+  #sidebar ul#examples section {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+
+  #sidebar ul#examples {
+    margin-bottom: 20px; }
+
+  #sidebar ul#examples section.appear {
+    visibility: visible;
+    max-height: 300px;
+    margin-bottom: 35px; }
+
+  #sidebar ul#examples svg {
+    opacity: 1; }
+
+  #sidebar ul#examples.flip svg {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+  #sidebar ul#examples.flip svg path {
+    fill: #fff; } }
