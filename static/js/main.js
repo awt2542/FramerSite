@@ -89,7 +89,7 @@ function setupDownloadLink() {
 	} else {
 
 		// var sparkleHost = "http://framerstudio-update.s3-website-us-east-1.amazonaws.com"
-		var sparkleHost = "//s3.amazonaws.com/framerstudio-update"
+		var sparkleHost = "//studio.update.framerjs.com"
 
 		$.get(sparkleHost + "/latest.txt", function(result) {
 			
