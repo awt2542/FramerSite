@@ -2112,9 +2112,11 @@ footer.global p, footer.global a {
   /* --------- Full-width feature blocks --------- */
   .feature-list li, #interaction .feature-list li, #viewer .feature-list li {
     max-width: 100%;
-    margin-top: 0;
     float: left;
     clear: both; }
+
+  #interaction .feature-list li, #viewer .feature-list li {
+    margin-top: 0; }
 
   .feature-list li:nth-child(even), #interaction .feature-list li:nth-child(even), #viewer .feature-list li:nth-child(even) {
     float: left; }
@@ -2180,7 +2182,7 @@ footer.global p, footer.global a {
     display: block;
     text-align: center; }
 
-  .feature-list {
+  .feature-list li {
     margin-top: 0; }
 
   #header a, #footer a, #header form input[type="submit"], #footer form input[type="submit"] {
