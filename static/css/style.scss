@@ -684,7 +684,10 @@ section.mobile {
 #used-by img.apple { width: 26px; }
 #used-by img.groupon { width: 111px; }
 #used-by img.twitter { width: 35px; }
-#used-by img.stripe { width: 54px; }
+#used-by img.stripe { width: 60px; }
+#used-by img.spotify { width: 96px; }
+#used-by img.adobe { width: 101px; }
+#used-by img.instagram { width: 106px; top: 4px; }
 
 /* USED BY SECTION */
 
@@ -1410,10 +1413,9 @@ h4 {
 
 footer.global {
 	padding-top: 0; margin-top: 0; margin-bottom: 0px;
-	border: none;
 }
 
-#footer-features {
+#footer-features, #footer-features ~ hr {
 	display: none;
 }
 

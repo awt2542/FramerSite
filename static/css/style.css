@@ -880,7 +880,17 @@ section.mobile {
   width: 35px; }
 
 #used-by img.stripe {
-  width: 54px; }
+  width: 60px; }
+
+#used-by img.spotify {
+  width: 96px; }
+
+#used-by img.adobe {
+  width: 101px; }
+
+#used-by img.instagram {
+  width: 106px;
+  top: 4px; }
 
 /* USED BY SECTION */
 #used-by p {
@@ -2094,10 +2104,9 @@ footer.global p, footer.global a {
   footer.global {
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0px;
-    border: none; }
+    margin-bottom: 0px; }
 
-  #footer-features {
+  #footer-features, #footer-features ~ hr {
     display: none; } }
 @media only screen and (max-width: 500px) {
   /* --------- Full-width feature blocks --------- */
