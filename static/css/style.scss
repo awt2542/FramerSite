@@ -257,7 +257,7 @@ h3 {
 	text-align: left;
 }
 
-pre + #wrapper h5 {
+pre + #wrapper h5, pre ~ h4 {
 	margin-top: 40px;
 }
 

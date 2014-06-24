@@ -123,7 +123,8 @@ a:active, form:active {
 
 #sidebar ul#examples span, #sidebar ul#community span {
   font-weight: 600;
-  margin-left: 4px;
+  margin-left: 6px;
+  font-size: 13px;
   position: relative;
   display: inline-block;
   top: 1px; }
@@ -428,7 +429,7 @@ h3 {
   font-size: 18px;
   text-align: left; }
 
-pre + #wrapper h5 {
+pre + #wrapper h5, pre ~ h4 {
   margin-top: 40px; }
 
 h6 {
