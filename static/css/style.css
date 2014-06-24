@@ -496,7 +496,7 @@ p.author {
 
 /*Other pages*/
 #wrapper.framerjs h1 {
-  margin: 40px 0; }
+  margin: 40px 0 40px 0; }
 
 #header h1.title {
   font-size: 14px;
@@ -508,7 +508,7 @@ p.author {
   margin: 0; }
 
 #header h2, #footer h2 {
-  font-weight: 300;
+  font-weight: 200;
   color: rgba(97, 109, 133, 0.8);
   line-height: 1.4;
   font-size: 28px;
@@ -1779,7 +1779,7 @@ footer.global p, footer.global a {
 
   #sidebar {
     width: 190px;
-    padding: 45px; }
+    padding: 40px; }
 
   #wrapper {
     padding: 40px;
