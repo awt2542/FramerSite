@@ -684,7 +684,10 @@ section.mobile {
 #used-by img.apple { width: 26px; }
 #used-by img.groupon { width: 111px; }
 #used-by img.twitter { width: 35px; }
-#used-by img.stripe { width: 54px; }
+#used-by img.stripe { width: 60px; }
+#used-by img.spotify { width: 96px; }
+#used-by img.adobe { width: 101px; }
+#used-by img.instagram { width: 106px; top: 4px; }
 
 /* USED BY SECTION */
 
@@ -1410,10 +1413,9 @@ h4 {
 
 footer.global {
 	padding-top: 0; margin-top: 0; margin-bottom: 0px;
-	border: none;
 }
 
-#footer-features {
+#footer-features, #footer-features ~ hr {
 	display: none;
 }
 
@@ -1424,8 +1426,13 @@ footer.global {
 /* --------- Full-width feature blocks --------- */
 .feature-list li, #interaction .feature-list li, #viewer .feature-list li  {
 	max-width: 100%; 
-	margin-top: 0; float: left; clear: both;
+	float: left; clear: both;
 }
+
+#interaction .feature-list li, #viewer .feature-list li {
+	margin-top: 0;
+}
+
 
 .feature-list li:nth-child(even), #interaction .feature-list li:nth-child(even), #viewer .feature-list li:nth-child(even) {
 	float: left;
@@ -1488,6 +1495,13 @@ h5 {
 	font-size: 19px;
 	font-weight: 300;
 }
+
+#wrapper.index h5 {
+	font-size: 19px;
+	margin: 0; color: $graphite80;
+}
+
+
 img.app-icon {
 	width: 140px;
 	margin-left: -70px;
@@ -1508,8 +1522,13 @@ section.mobile {
 	text-align: center;
 }
 
+section.mobile h2 {
+	color: #333;
+	font-size: 24px;
+}
+
 .feature-list {
-	margin-top: 0;
+	margin-top: 20px;
 }
 
 
@@ -1656,6 +1675,9 @@ nav#index {
 #example-block a.mid img { width: 124px; }
 #example-block a.right img { width: 111px; }
 
+.feature-list li.feature-list li {
+	margin-top: 0;
+}
 }
 
 

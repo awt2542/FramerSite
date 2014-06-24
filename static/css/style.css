@@ -887,7 +887,17 @@ section.mobile {
   width: 35px; }
 
 #used-by img.stripe {
-  width: 54px; }
+  width: 60px; }
+
+#used-by img.spotify {
+  width: 96px; }
+
+#used-by img.adobe {
+  width: 101px; }
+
+#used-by img.instagram {
+  width: 106px;
+  top: 4px; }
 
 /* USED BY SECTION */
 #used-by p {
@@ -2101,18 +2111,19 @@ footer.global p, footer.global a {
   footer.global {
     padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0px;
-    border: none; }
+    margin-bottom: 0px; }
 
-  #footer-features {
+  #footer-features, #footer-features ~ hr {
     display: none; } }
 @media only screen and (max-width: 500px) {
   /* --------- Full-width feature blocks --------- */
   .feature-list li, #interaction .feature-list li, #viewer .feature-list li {
     max-width: 100%;
-    margin-top: 0;
     float: left;
     clear: both; }
+
+  #interaction .feature-list li, #viewer .feature-list li {
+    margin-top: 0; }
 
   .feature-list li:nth-child(even), #interaction .feature-list li:nth-child(even), #viewer .feature-list li:nth-child(even) {
     float: left; }
@@ -2161,6 +2172,11 @@ footer.global p, footer.global a {
     font-size: 19px;
     font-weight: 300; }
 
+  #wrapper.index h5 {
+    font-size: 19px;
+    margin: 0;
+    color: rgba(97, 109, 133, 0.8); }
+
   img.app-icon {
     width: 140px;
     margin-left: -70px;
@@ -2178,8 +2194,12 @@ footer.global p, footer.global a {
     display: block;
     text-align: center; }
 
+  section.mobile h2 {
+    color: #333;
+    font-size: 24px; }
+
   .feature-list {
-    margin-top: 0; }
+    margin-top: 20px; }
 
   #header a, #footer a, #header form input[type="submit"], #footer form input[type="submit"] {
     font-size: 14px; }
@@ -2318,4 +2338,7 @@ footer.global p, footer.global a {
     width: 124px; }
 
   #example-block a.right img {
-    width: 111px; } }
+    width: 111px; }
+
+  .feature-list li.feature-list li {
+    margin-top: 0; } }
