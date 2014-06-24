@@ -1,3 +1,4 @@
+@import url(fonts.css);
 /*=========================================
 Reset
 =========================================== */
@@ -722,7 +723,8 @@ section.mobile {
   float: left;
   max-width: 280px;
   width: 100%;
-  margin-left: 20px; }
+  left: 20px;
+  position: relative; }
 
 #framer section p, #framer section ul {
   margin-bottom: 0; }
@@ -732,16 +734,19 @@ section.mobile {
   font-weight: 400;
   border-bottom: 1px solid #eee; }
 
-#framer ul section li {
+#framer ul li + li {
+  margin: 0; }
+
+#framer ul li {
   color: rgba(97, 109, 133, 0.6);
-  line-height: 1.7;
+  line-height: 1.9;
   padding-left: 0;
   font-size: 16px;
   font-weight: 400;
   list-style: none;
   left: 0; }
 
-#framer ul section li:before {
+#framer ul li:before {
   content: url("/static/images/icon-check.png");
   display: inline-block;
   margin-right: 10px;
@@ -1767,6 +1772,12 @@ footer.global p, footer.global a {
   body {
     padding-left: 190px; }
 
+  .half section {
+    width: 50%; }
+
+  #framer section ul section {
+    width: 100%; }
+
   #sidebar {
     width: 190px;
     padding: 45px; }
@@ -1786,9 +1797,6 @@ footer.global p, footer.global a {
 
   #features li {
     max-width: 240px; }
-
-  #framer section ul li {
-    line-height: 1.55; }
 
   hr.big {
     margin: 60px auto; }
@@ -1909,7 +1917,7 @@ footer.global p, footer.global a {
 /* MOBILE NAVIGATION ------------------- */
 @media only screen and (max-width: 768px) {
   .half section {
-    width: 48%; }
+    width: 50%; }
 
   .half section section {
     width: 100%; }
@@ -1924,6 +1932,9 @@ footer.global p, footer.global a {
 
   .feature-block p.title {
     font-size: 20px; }
+
+  #framer ul li {
+    line-height: 1.7; }
 
   #header h1, #footer h1 {
     font-size: 55px; }
@@ -2027,18 +2038,21 @@ footer.global p, footer.global a {
     font-size: 24px;
     margin: 0; }
 
-  #framer * {
-    text-align: left; }
-
   #framer section ul {
     max-width: 100%;
     margin-top: 40px;
-    margin-left: 0; }
+    margin-left: 0;
+    position: static;
+    left: 0; }
 
   #framer ul li {
     text-align: left;
     float: left;
-    width: 44%; }
+    width: 50%;
+    line-height: 1.8; }
+
+  #framer ul li + li {
+    margin-top: 0; }
 
   #framer section.iphone-bg {
     display: none; }
@@ -2131,7 +2145,10 @@ footer.global p, footer.global a {
     float: left; }
 
   .feature-list li + li, #viewer .feature-list li + li, #interaction .feature-list li + li {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+
+  #framer ul li {
+    font-size: 14px; } }
 @media only screen and (max-width: 440px) {
   #bg {
     background-size: 40%;
@@ -2215,6 +2232,11 @@ footer.global p, footer.global a {
 
   .feature-list {
     margin-top: 20px; }
+
+  #framer ul li {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.8; }
 
   #header a, #footer a, #header form input[type="submit"], #footer form input[type="submit"] {
     font-size: 14px; }
