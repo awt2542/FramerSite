@@ -2036,7 +2036,9 @@ footer.global p, footer.global a {
     margin-left: 0; }
 
   #framer ul li {
-    text-align: left; }
+    text-align: left;
+    float: left;
+    width: 44%; }
 
   #framer section.iphone-bg {
     display: none; }
