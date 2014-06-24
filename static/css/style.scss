@@ -1,4 +1,4 @@
-
+@import "fonts.css";
 $grey: #1D2026; 
 	$grey80: rgba( $grey, 0.8 );
 	$grey60: rgba( $grey, 0.6 );
@@ -543,7 +543,7 @@ section.mobile {
 }
 
 #framer ul {
-	float: left; max-width: 280px; width: 100%; margin-left: 20px;
+	float: left; max-width: 280px; width: 100%; left: 20px; position: relative;
 }
 
 #framer section p, #framer section ul {
@@ -556,15 +556,19 @@ section.mobile {
 	border-bottom: 1px solid #eee;
 }
 
-#framer ul section li {
-	color: $graphite60; line-height: 1.7;
+#framer ul li+li {
+	margin: 0;
+}
+
+#framer ul li {
+	color: $graphite60; line-height: 1.9;
 	padding-left: 0;
 	font-size: 16px;
 	font-weight: 400;
 	list-style: none; left: 0; 
 }
 
-#framer ul section li:before {
+#framer ul li:before {
 	content: url("/static/images/icon-check.png");
 	display: inline-block; margin-right: 10px; position: relative; top: 1px;
 }
@@ -1012,6 +1016,14 @@ body {
 	padding-left: 190px;
 }
 
+.half section {
+	width: 50%;
+}
+
+#framer section ul section {
+	width: 100%;
+}
+
 #sidebar {
 	width: 190px;
 	padding: 45px;
@@ -1036,10 +1048,6 @@ nav#index {
 
 #features li {
 	max-width: 240px;
-}
-
-#framer section ul li {
-	line-height: 1.55;
 }
 
 hr.big {
@@ -1190,7 +1198,7 @@ p.small {
 
 /* MOBILE NAVIGATION ------------------- */
 @media only screen and (max-width: 768px) {
-.half section { width: 48%; }
+.half section { width: 50%; }
 
 .half section section { width: 100%; }
 
@@ -1207,6 +1215,9 @@ p, .feature-block p { font-size: 16px; }
 	font-size: 20px;
 }
 
+#framer ul li {
+	line-height: 1.7;
+}
 
 #header h1, #footer h1 { font-size: 55px; }
 
@@ -1326,20 +1337,25 @@ h4 {
 }
 
 
-#framer * {
-	text-align: left;
-}
 
 #framer section ul {
 	max-width: 100%;
 	margin-top: 40px;
 	margin-left: 0;
+	position: static; left: 0;
 }
 
 #framer ul li {
 	text-align: left;
-	float: left; width: 44%;
+	float: left;
+	width: 50%;
+	line-height: 1.8;
 }
+
+#framer ul li+li {
+	margin-top: 0;
+}
+
 
 #framer section.iphone-bg {
 	display: none;
@@ -1443,6 +1459,11 @@ footer.global {
 	margin-top: 30px;
 }
 
+
+#framer ul li {
+	font-size: 14px;
+}
+
 }
 
 
@@ -1544,6 +1565,13 @@ section.mobile h2 {
 .feature-list {
 	margin-top: 20px;
 }
+
+
+#framer ul li {
+	width: 100%; font-size: 16px;
+	line-height: 1.8;
+}
+
 
 
 #header a, #footer a, #header form input[type="submit"], #footer form input[type="submit"] {
