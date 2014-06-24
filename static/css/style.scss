@@ -1453,6 +1453,12 @@ footer.global {
 	top: -280px;
 }
 
+#wrapper h1 {
+	font-size: 30px;
+	letter-spacing: 0;
+	font-weight: 200;
+}
+
 #header h1.title {
 	letter-spacing: 3px;
 	margin-top: 0px;
@@ -1461,12 +1467,13 @@ footer.global {
 
 #header h1, h2, #footer h1 {
 	margin-top: 0px; 
-	font-size: 28px; font-weight: 300; letter-spacing: 0;
-	margin-bottom: 10px;
+	font-size: 30px; font-weight: 200; letter-spacing: 0;
+	margin-bottom: 10px; 
 }
 
 #header h1 {
 	margin-top: 20px;
+	width: 104%; position: relative; left: -2%;
 }
 
 #header h2, #footer h2 {
@@ -1483,12 +1490,18 @@ img.blueprint {
 	margin-top: 0;
 }
 
+
 .feature-block p.title {
 	font-size: 20px;	
 }
 
 p {
 	line-height: 1.5;
+}
+
+/*Feature Blocks H4 / Headlines */
+#wrapper.index .feature-block h4 {
+	font-size: 20px;
 }
 
 h5 {
@@ -1519,12 +1532,12 @@ img.app-icon {
 
 section.mobile {
 	display: block;
-	text-align: center;
+	text-align: center; 
 }
 
 section.mobile h2 {
 	color: #333;
-	font-size: 24px;
+	font-size: 24px; font-weight: 300;
 }
 
 .feature-list {
