@@ -29,11 +29,13 @@
 #sidebar ul#examples {
 	margin-bottom: 0;
 }
-
+#sidebar ul#examples span, #sidebar ul#community span {
+	font-weight:600; margin-left:4px;
+	position:relative; display:inline-block; top:1px;
+}
 #sidebar ul li+li {
 	margin-top: 5px;
 }
-
 #sidebar ul li a {
 	color: #7C838D; color: #686f78;
 	color: #636d80;
