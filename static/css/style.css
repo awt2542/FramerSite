@@ -2165,6 +2165,11 @@ footer.global p, footer.global a {
     font-size: 19px;
     font-weight: 300; }
 
+  #wrapper.index h5 {
+    font-size: 19px;
+    margin: 0;
+    color: rgba(97, 109, 133, 0.8); }
+
   img.app-icon {
     width: 140px;
     margin-left: -70px;
@@ -2182,8 +2187,12 @@ footer.global p, footer.global a {
     display: block;
     text-align: center; }
 
-  .feature-list li {
-    margin-top: 0; }
+  section.mobile h2 {
+    color: #333;
+    font-size: 24px; }
+
+  .feature-list {
+    margin-top: 20px; }
 
   #header a, #footer a, #header form input[type="submit"], #footer form input[type="submit"] {
     font-size: 14px; }
@@ -2322,4 +2331,7 @@ footer.global p, footer.global a {
     width: 124px; }
 
   #example-block a.right img {
-    width: 111px; } }
+    width: 111px; }
+
+  .feature-list li.feature-list li {
+    margin-top: 0; } }

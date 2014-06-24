@@ -1495,6 +1495,13 @@ h5 {
 	font-size: 19px;
 	font-weight: 300;
 }
+
+#wrapper.index h5 {
+	font-size: 19px;
+	margin: 0; color: $graphite80;
+}
+
+
 img.app-icon {
 	width: 140px;
 	margin-left: -70px;
@@ -1515,8 +1522,13 @@ section.mobile {
 	text-align: center;
 }
 
-.feature-list li {
-	margin-top: 0;
+section.mobile h2 {
+	color: #333;
+	font-size: 24px;
+}
+
+.feature-list {
+	margin-top: 20px;
 }
 
 
@@ -1663,6 +1675,9 @@ nav#index {
 #example-block a.mid img { width: 124px; }
 #example-block a.right img { width: 111px; }
 
+.feature-list li.feature-list li {
+	margin-top: 0;
+}
 }
 
 
