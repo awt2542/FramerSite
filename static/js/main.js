@@ -130,7 +130,7 @@ $(document).ready(function() {
 		}, 1000);
 
 		$(window).scroll(function() {
-			if ($(window).scrollTop() > 1500){
+			if ($(window).scrollTop() > 1400){
 				 document.getElementById('carousel').play();
 			}	 
 		});
