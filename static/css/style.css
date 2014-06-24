@@ -575,20 +575,23 @@ p.author {
 #header a.green:hover:after {
   color: #7DDC16; }
 
+textarea:focus, input:focus {
+  outline: 0; }
+
 #header a.small, #footer a.small {
   display: inline-block;
-  font-weight: 500;
+  font-weight: 300;
   color: rgba(97, 109, 133, 0.6);
   background: transparent;
   border-radius: 0;
-  font-size: 14px;
+  font-size: 16px;
   box-shadow: none;
   margin-top: 20px;
   width: auto;
+  margin-bottom: 0;
   padding: 0;
   line-height: 1.2;
-  position: relative;
-  border-bottom: 1px solid rgba(97, 109, 133, 0.2); }
+  position: relative; }
 
 /* SCREENSHOT -------------------------*/
 #screenshot {

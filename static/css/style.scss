@@ -405,15 +405,17 @@ p.author {
 #header a:hover:after { color: #4DB4EC; }
 #header a.green:hover:after { color: #7DDC16; }
 
-
+textarea:focus, input:focus{
+    outline: 0;
+}
 
 #header a.small, #footer a.small {
-	display: inline-block; font-weight: 500;
+	display: inline-block; font-weight: 300;
 	color: $graphite60; background: transparent; border-radius: 0;
-	font-size: 14px; box-shadow: none;
-	margin-top: 20px; width: auto;
+	font-size: 16px; box-shadow: none;
+	margin-top: 20px; width: auto; margin-bottom: 0;
 	padding: 0; line-height: 1.2; position: relative;
-	border-bottom: 1px solid rgba($graphite, 0.2);
+
 }
 
 /* SCREENSHOT -------------------------*/
