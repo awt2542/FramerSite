@@ -69,13 +69,21 @@ footer.global a.coinbase-button {
   position: relative;
   margin-top: 70px;
   width: 100%;
-  min-height: 300px;
-  padding-bottom: 40px;
-  margin-bottom: 60px;
-  border-bottom: 1px solid #eee; }
+  min-height: 400px;
+  border-bottom: 1px solid #eee;
+  background: #4DB4EC;
+  padding: 80px 0;
+  margin: 80px 0; }
 
-#line-block h3 {
-  margin-bottom: 20px; }
+#wrapper.index #line-block h4 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500; }
 
 #line-block section {
   max-width: 180px;
@@ -90,14 +98,14 @@ footer.global a.coinbase-button {
   top: 0; }
 
 #line-block section.left {
-  left: 0; }
+  left: 40px; }
 
 #line-block section.mid {
   left: 50%;
   margin-left: -90px; }
 
 #line-block section.right {
-  right: 0; }
+  right: 40px; }
 
 #line-block section img {
   margin-bottom: 20px; }
@@ -118,15 +126,13 @@ footer.global a.coinbase-button {
 #line-block p {
   font-size: 16px;
   line-height: 1.6;
-  opacity: .8; }
+  color: #fff !important; }
 
 #line-block svg {
   margin-bottom: 20px; }
 
-#line-block .right svg path#iphone, #line-block .right svg path#browser, #line-block .right svg path#iphone-home {
-  -webkit-transform: translate(-0.5px, -0.5px);
-  -moz-transform: translate(-0.5px, -0.5px);
-  transform: translate(-0.5px, -0.5px); }
+#line-block svg path {
+  -webkit-font-smoothing: subpixel-antialiased; }
 
 /*
 @-webkit-keyframes dash {
