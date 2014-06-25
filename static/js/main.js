@@ -152,8 +152,99 @@ $(document).ready(function() {
 		node.innerHTML = node.innerHTML.replace(/^\s+|\s+$/g, '');
 
 	})
-
-		
+	
 });
+		
+
 	
+/*SVG*/
+
+
+function pathAnimate(path, duration) {
+
+	var initial_ts = new Date().getTime();
+	var length = path.getTotalLength();
+	var handle = 0;
+	length = length + 30;
+	 
+	path.style.strokeDasharray = length + ' ' + length; 
+	path.style.strokeDashoffset = length;
 	
+	var draw = function() {
+	   var progress = (Date.now() - initial_ts)/duration;
+	   if (progress >= 1) {
+	     window.cancelAnimationFrame(handle);
+	   } else {
+	     path.style.strokeDashoffset = Math.floor(length * (1 - progress));
+	     handle = window.requestAnimationFrame(draw);
+	   }
+	};
+	
+	draw();
+}
+
+function pathAnimateBackwards(path, duration) {
+
+	var initial_ts = new Date().getTime();
+	var length = path.getTotalLength();
+	var handle = 0;
+	 
+	path.style.strokeDasharray = length + ' ' + length; 
+	path.style.strokeDashoffset = length;
+	
+	var draw = function() {
+	   var progress = (Date.now() - initial_ts)/duration;
+	   if (progress >= 1) {
+	     window.cancelAnimationFrame(handle);
+	   } else {
+	     path.style.strokeDashoffset = Math.floor(length * (progress - 1));
+	     handle = window.requestAnimationFrame(draw);
+	   }
+	};
+	
+	draw();
+}
+
+
+var generatorPath = document.querySelector('#line-block svg path#cog');
+var generatorCircle = document.querySelector('#line-block svg path#cog-circle');
+var generatorCircleInner = document.querySelector('#line-block svg path#cog-circle-inner');
+
+var prototypesPath = document.querySelector('#line-block .right svg path');
+var prototypesPathiPhone = document.querySelector('#line-block .right svg path#iphone');
+var prototypesPathLines = document.querySelector('#line-block .right svg path#iphone-lines');
+var prototypesPathHome = document.querySelector('#line-block .right svg path#iphone-home');
+
+var framerPathBack = document.querySelector('#line-block .mid svg path#back');
+var framerPathMid = document.querySelector('#line-block .mid svg path#mid');
+var framerPathFront = document.querySelector('#line-block .mid svg path#front');
+var framerPathCurl = document.querySelector('#line-block .mid svg path#curl');
+
+var headerWindow = document.querySelector('#illustration svg path#window');
+var headerWindowInner = document.querySelector('#illustration svg path#window-inner');
+var headeriPhone = document.querySelector('#illustration svg path#iphone-outer');
+var headeriPhoneInner = document.querySelector('#illustration svg path#iphone-inner');
+var headerSep = document.querySelector('#illustration svg path#separator');
+
+pathAnimate(generatorPath, 4000);
+pathAnimate(generatorCircle, 4000);
+pathAnimate(generatorCircleInner, 2000);
+
+pathAnimate(prototypesPath, 2000);
+pathAnimate(prototypesPathiPhone, 2000);
+pathAnimate(prototypesPathLines, 4000);
+
+pathAnimate(framerPathBack, 2000);
+pathAnimate(framerPathMid, 3000);
+pathAnimate(framerPathFront, 3000);
+pathAnimate(framerPathCurl, 2000);
+
+pathAnimate(headerWindow, 3000);
+pathAnimate(headerWindowInner, 2500);
+pathAnimate(headeriPhone, 3000);
+pathAnimate(headeriPhoneInner, 4000);
+pathAnimate(headerSep, 4000);
+
+
+
+
