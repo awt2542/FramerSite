@@ -331,7 +331,7 @@ p.author {
 }
 
 /*Other pages*/
-#wrapper.framerjs h1 {
+#wrapper.index.framerjs h1 {
 	margin: 40px 0 40px 0;
 }
 
@@ -1093,6 +1093,10 @@ body {
 	padding-left: 0;
 }
 
+#illustration {
+	display: none;
+}
+
 #sidebar {
 	width: 100%;
 	padding: 0;
@@ -1167,22 +1171,6 @@ nav#index li {
 
 p.small {
 	font-weight: 500;
-}
-
-#line-block section {
-	max-width: 150px;
-}
-
-#line-block p {
-	font-size: 13px;
-}
-
-#line-block img.line-arrow.first {
-	left: 31%;
-}
-
-#line-block img.line-arrow.second {
-	right: 31%;
 }
 
 
@@ -1263,8 +1251,18 @@ hr.hidden {
 	font-size: 40px;
 	font-weight: 200;
 }
+
+
+#wrapper.index.framerjs h1 {
+	margin: 20px 0;
+}
+
 #header h2, #footer h2 {
 	font-size: 22px;
+	margin-bottom: 40px;
+}
+
+#header h2.index.framerjs {
 	margin-bottom: 40px;
 }
 
