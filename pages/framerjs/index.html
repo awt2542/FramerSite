@@ -1,26 +1,23 @@
 {% extends "base.html" %}
-{% block isindex %}class="index framerjs"{% endblock isindex %}
+{% block isindex %}class="framerjs"{% endblock isindex %}
 {% block sidebarclass %}start{% endblock %}
 
-{% block content %}
-<div class="inner">
-
+{% block framerjsheader %}
 <!-- Header -->
-
-<header id="header" class="clearfix">
-	<h1 class="title">Open Source</h1>
-	
-	<h1>Framer.js</h1>
+<header id="header" class="framerjs clearfix">
+<div class="inner">
+	<h1>Framer</h1>
 	<h2 class="framerjs">A JavaScript framework for rapid prototyping. With Filters, Spring Physics and 3D effects.</h2>
 	
 	<a class="green" href="/static/downloads/Framer.zip">Download</a>
 	<a href="https://github.com/koenbok/framer" target="new">GitHub</a>
+</div>
 </header>
+{% endblock framerjsheader %}
 
-</div> <!--inner-->
-
+{% block content %}
+			
 	<figure id="line-block">
-		<div class="inner">
 		<section class="left">			
 			<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 			<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
@@ -29,10 +26,10 @@
 			    <desc>Created with Sketch.</desc>
 			    <defs></defs>
 			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-			        <g id="svg-generator" sketch:type="MSArtboardGroup" stroke="#FFFFFF" stroke-width="2">
-			            <path d="M36.4596348,96.2186891 C40.1845765,98.6264212 44.31018,100.467336 48.7144053,101.619393 L52.0197096,111.16805 C52.5598188,112.728365 54.3426021,114 55.9987856,114 L63.0012144,114 C64.6577357,114 66.438891,112.732093 66.9802904,111.16805 L70.2855947,101.619393 L70.2855947,101.619393 C74.1188469,100.616691 77.7410367,99.0921637 81.0717012,97.126274 L81.0717012,97.126274 L90.1016814,101.553762 C91.582326,102.279737 93.7372459,101.92318 94.9069295,100.753496 L99.7532848,95.9071408 C100.9164,94.7440252 101.28126,92.5860743 100.553551,91.1018926 L96.126102,82.0719926 C98.1412412,78.6579503 99.6926416,74.9375987 100.693644,70.9975973 L100.693644,70.9975973 L110.16805,67.6455902 C111.728365,67.0935568 113,65.3012143 113,63.6452267 L113,56.3550824 C113,54.7038012 111.732093,52.9080711 110.16805,52.3547189 L100.396997,48.8977593 C99.2367096,44.7998013 97.4770947,40.9536097 95.2188468,37.4598788 L95.2188468,37.4598788 L100.954633,27.5723518 C101.792997,26.1271537 101.513963,24.0251102 100.344157,22.8553039 L96.4377787,18.948926 C95.2696553,17.7808026 93.1560782,17.5058003 91.7207309,18.3384498 L81.6157778,24.2003654 C78.1367782,22.0762263 74.3285817,20.4381715 70.2855947,19.3806069 L70.2855947,19.3806069 L66.9802904,9.83195004 C66.438891,8.26790722 64.6577357,7 63.0012144,7 L55.9987856,7 C54.3426021,7 52.5598188,8.27163456 52.0197096,9.83195004 L48.7144053,19.3806069 C44.8810413,20.3833383 41.258752,21.9079253 37.9280074,23.873898 L28.8981074,19.4464492 C27.4139257,18.7187403 25.2559748,19.0835996 24.0928592,20.2467152 L19.2465039,25.0930705 C18.0768203,26.2627541 17.7202633,28.417674 18.4462379,29.8983186 L22.873726,38.9282988 L22.873726,38.9282988 C21.0480568,42.0213979 19.6030336,45.3659183 18.6031005,48.8974157 L8.83195004,52.3544098 C7.27163456,52.9064432 6,54.6987857 6,56.3547733 L6,63.6449176 C6,65.2961988 7.26790722,67.0919289 8.83195004,67.6452811 L18.3062699,70.9972577 L18.3062699,70.9972577 C19.3606458,75.1474856 21.025721,79.054003 23.2002119,82.6155264 L17.3382604,92.7205415 C16.4998964,94.1657395 16.7789303,96.2677831 17.9487366,97.4375893 L21.8551145,101.343967 C23.0232379,102.512091 25.136815,102.787093 26.5721623,101.954443 L36.4596348,96.2186891 Z" id="cog" sketch:type="MSShapeGroup"></path>
-			            <path d="M59.5,86 C73.5832611,86 85,74.5832611 85,60.5 C85,46.4167389 73.5832611,35 59.5,35 C45.4167389,35 34,46.4167389 34,60.5 C34,74.5832611 45.4167389,86 59.5,86 L59.5,86 L59.5,86 Z" id="cog-circle" sketch:type="MSShapeGroup"></path>
-			            <path d="M79,60.5 C79,49.7304474 70.2695526,41 59.5,41 C48.7304474,41 40,49.7304474 40,60.5 C40,71.2695526 48.7304474,80 59.5,80 C70.2695526,80 79,71.2695526 79,60.5 Z" id="cog-circle-inner" sketch:type="MSShapeGroup"></path>
+			        <g id="svg-generator" sketch:type="MSArtboardGroup" stroke="#5CC3FF" stroke-width="2">
+			            <path d="M24.7155233,39.7444681 C22.8835452,42.808105 21.4448269,46.1339967 20.469092,49.6524194 L12.83195,52.3544098 C11.2716346,52.9064432 10,54.6987857 10,56.3547733 L10,63.6449176 C10,65.2961988 11.2679072,67.0919289 12.83195,67.6452811 L20.1801009,70.2450275 L20.1801009,70.2450275 C21.1875172,74.3233742 22.8128702,78.1582279 24.9511242,81.6445529 L24.9511242,81.6445529 L20.1666875,89.8921143 C19.3283236,91.3373124 19.6073575,93.4393559 20.7771637,94.6091622 L24.6835416,98.5155401 C25.8516651,99.6836635 27.9652421,99.9586658 29.4005895,99.1260162 L37.4334156,94.4661482 C41.0758552,96.8373583 45.1234067,98.6385401 49.4495653,99.7431886 L52.0197096,107.16805 C52.5598188,108.728365 54.3426021,110 55.9987856,110 L63.0012144,110 C64.6577357,110 66.438891,108.732093 66.9802904,107.16805 L69.5504347,99.7431886 L69.5504347,99.7431886 C73.3642099,98.7693729 76.9614654,97.2542459 80.2555319,95.2844767 L80.2555319,95.2844767 L87.2732542,98.725335 C88.7538989,99.4513096 90.9088188,99.0947525 92.0785024,97.925069 L96.9248577,93.0787137 C98.0879733,91.9155981 98.4528326,89.7576472 97.7251237,88.2734655 L94.2843036,81.2558212 C96.3066003,77.8739765 97.8496994,74.172563 98.8198155,70.2453662 L98.8198155,70.2453662 L106.16805,67.6455902 C107.728365,67.0935568 109,65.3012143 109,63.6452267 L109,56.3550824 C109,54.7038012 107.732093,52.9080711 106.16805,52.3547189 L98.531003,49.6527622 C97.4143468,45.6260498 95.6912759,41.8515099 93.4663064,38.4336587 L98.1262057,30.4007789 C98.9645697,28.9555809 98.6855357,26.8535373 97.5157295,25.683731 L93.6093516,21.7773532 C92.4412281,20.6092297 90.3276511,20.3342274 88.8923038,21.166877 L80.6448037,25.951278 L80.6448037,25.951278 C77.2455664,23.8664032 73.5149899,22.2691275 69.5504347,21.2568114 L69.5504347,21.2568114 L66.9802904,13.83195 C66.438891,12.2679072 64.6577357,11 63.0012144,11 L55.9987856,11 C54.3426021,11 52.5598188,12.2716346 52.0197096,13.83195 L49.4495653,21.2568114 C45.6356784,22.2306556 42.038324,23.7458429 38.7441788,25.7156964 L31.7265345,22.2748763 C30.2423528,21.5471674 28.0844019,21.9120267 26.9212863,23.0751423 L22.074931,27.9214976 C20.9052475,29.0911812 20.5486904,31.2461011 21.274665,32.7267458 L24.7155233,39.7444681 Z" id="cog" sketch:type="MSShapeGroup"></path>
+			            <path d="M87,60.5 C87,45.3121694 74.6878306,33 59.5,33 C44.3121694,33 32,45.3121694 32,60.5 C32,75.6878306 44.3121694,88 59.5,88 C74.6878306,88 87,75.6878306 87,60.5 Z" id="cog-circle" sketch:type="MSShapeGroup"></path>
+			            <path d="M81,60.5 C81,48.6258779 71.3741221,39 59.5,39 C47.6258779,39 38,48.6258779 38,60.5 C38,72.3741221 47.6258779,82 59.5,82 C71.3741221,82 81,72.3741221 81,60.5 Z" id="cog-circle-inner" sketch:type="MSShapeGroup"></path>
 			        </g>
 			    </g>
 			</svg>
@@ -40,11 +37,8 @@
 			<h4>Generator.app</h4>
 			<p>Generate resources from Sketch &amp; Photoshop</p>
 		</section>
-
 		
-		<img class="2x line-arrow first" src="/static/images/line-arrow.png">
-		
-		<section class="mid">
+		<section class="right">
 		<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 		<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 		    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
@@ -52,68 +46,39 @@
 		    <desc>Created with Sketch.</desc>
 		    <defs></defs>
 		    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-		        <g id="svg-framerjs" sketch:type="MSArtboardGroup" stroke="#FFFFFF" stroke-width="2" fill="#4DB4EC">
-		            <path d="M15.9908122,34.0667392 C12.1024854,33.9830043 9.10178189,37.0592607 9.28865365,40.9398336 L12.4145725,105.852562 C12.6013994,109.732202 15.9087562,112.873137 19.7961791,112.868044 L83.1510768,112.785037 C87.0409987,112.779941 89.9925182,109.629024 89.7438372,105.752834 L85.6909828,42.5810014 C85.442142,38.7023194 82.0835333,35.4900432 78.1999781,35.406411 L15.9908122,34.0667392 Z" id="back" sketch:type="MSShapeGroup" transform="translate(49.450204, 73.650015) rotate(-15.000000) translate(-49.450204, -73.650015) "></path>
-		            <path d="M27.6157924,17.8565993 C23.7368837,17.6040829 20.5976232,20.5529673 20.6040449,24.4352424 L20.7112657,89.2560398 C20.7176933,93.1418405 23.8701505,96.4537723 27.7469097,96.6531601 L90.9280161,99.9026643 C94.8072674,100.10218 97.8717537,97.1113338 97.7728148,93.2254512 L96.1463416,29.3447313 C96.0473683,25.4574923 92.8243393,22.1016669 88.9437489,21.849041 L27.6157924,17.8565993 Z" id="mid" sketch:type="MSShapeGroup" transform="translate(59.212377, 58.865122) rotate(-15.000000) translate(-59.212377, -58.865122) "></path>
-		            <path d="M31.3671598,46.4025527 L25.6824741,19.0098963 C24.8905295,15.1937721 27.3666717,11.6190588 31.2091414,11.0065117 L93.4194952,1.08925162 C97.2627241,0.476583518 101.020653,3.0619048 101.814759,6.86345807 L114.982368,69.8995531 C115.776431,73.7008986 113.312836,77.2987301 109.479677,77.9350706 L102.615665,79.0745614 C101.530625,78.7716826 100.377295,78.3634314 99.1639014,77.8226935 C82.345854,70.3278815 53.9891468,57.737268 35.9999983,50.0000002 C34.5670892,49.3836952 32.9126645,47.9744288 31.3671598,46.4025527 Z" id="front" sketch:type="MSShapeGroup"></path>
-		            <path d="M33,46.9999998 C33,46.9999998 35.0000002,50.0000004 40,43.0000004 C45,36 46.9429977,27.0243064 61,40 C65.9828258,44.5995312 88.0077352,64.4781723 98.017997,73.5073893 C101.065928,76.2566115 105,77 105,77" id="curl" sketch:type="MSShapeGroup"></path>
+		        <g id="svg-framerjs" sketch:type="MSArtboardGroup">
+		            <path d="M34.6486837,102.15357 C31.0945674,92.7531262 27.7809343,68.7943859 59.6562407,60.253425 C91.5317921,51.7123984 91.4438634,32.0657101 88.3380323,20.4745998" id="curve" stroke="#5CC3FF" stroke-width="2" sketch:type="MSShapeGroup" transform="translate(60.790594, 61.432270) rotate(-345.000000) translate(-60.790594, -61.432270) "></path>
+		            <path d="M25,107 C28.8659932,107 32,103.865993 32,100 C32,96.1340068 28.8659932,93 25,93 C21.1340068,93 18,96.1340068 18,100 C18,103.865993 21.1340068,107 25,107 Z M98,31 C101.865993,31 105,27.8659932 105,24 C105,20.1340068 101.865993,17 98,17 C94.1340068,17 91,20.1340068 91,24 C91,27.8659932 94.1340068,31 98,31 Z" id="circle-curve" stroke="#5CC3FF" stroke-width="2" stroke-linecap="square" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+		            <path d="M18.5,60 L100.506096,60" id="line-mid" stroke="#5CC3FF" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+		            <circle id="circle-bg" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="61" cy="60" r="12"></circle>
+		            <path d="M60.5,75 C68.5081289,75 75,68.5081289 75,60.5 C75,52.4918711 68.5081289,46 60.5,46 C52.4918711,46 46,52.4918711 46,60.5 C46,68.5081289 52.4918711,75 60.5,75 Z" id="circle-mid" stroke="#5CC3FF" stroke-width="2" stroke-linecap="square" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+		            <path d="M60.5,70 C65.7467051,70 70,65.7467051 70,60.5 C70,55.2532949 65.7467051,51 60.5,51 C55.2532949,51 51,55.2532949 51,60.5 C51,65.7467051 55.2532949,70 60.5,70 Z" id="circle-mid-inner" stroke="#5CC3FF" stroke-width="2" stroke-linecap="square" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+		            <path d="M16,65 C18.7614237,65 21,62.7614237 21,60 C21,57.2385763 18.7614237,55 16,55 C13.2385763,55 11,57.2385763 11,60 C11,62.7614237 13.2385763,65 16,65 Z M105,65 C107.761424,65 110,62.7614237 110,60 C110,57.2385763 107.761424,55 105,55 C102.238576,55 100,57.2385763 100,60 C100,62.7614237 102.238576,65 105,65 Z" id="handles" stroke="#5CC3FF" stroke-width="2" stroke-linecap="square" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
 		        </g>
 		    </g>
 		</svg>
 		<h4>Framer.js</h4>
 		<p>Edit JavaScript to add interaction &amp; animation</p>
 		</section>
-		
-		<img class="2x line-arrow second" src="/static/images/line-arrow.png">
-		
-		<section class="right">
-		
-		<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-		<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-		    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-		    <title>svg-prototypes</title>
-		    <desc>Created with Sketch.</desc>
-		    <defs></defs>
-		    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-		        <g id="svg-prototypes" sketch:type="MSArtboardGroup">
-		            <path d="M11,18.8886549 L11,103.111345 C11,105.811275 13.3125403,108 16.1484227,108 L111.851577,108 C114.694973,108 117,105.814805 117,103.111345 L117,18.8886549 C117,16.1887253 114.68746,14 111.851577,14 L16.1484227,14 C13.3050274,14 11,16.185195 11,18.8886549 Z" id="browser" stroke="#FFFFFF" stroke-width="2" sketch:type="MSShapeGroup"></path>
-		            <path d="M0,38 L0,120 L43,120 L43,38 L0,38 Z" id="iphone-bg" fill="#4DB4EC" sketch:type="MSShapeGroup"></path>
-		            <path d="M8.00532213,38 C5.24095905,38 3,40.2370612 3,43.0017363 L3,111.998264 C3,114.760646 5.23628439,117 8.00532213,117 L37.9946779,117 C40.759041,117 43,114.762939 43,111.998264 L43,43.0017363 C43,40.2393536 40.7637156,38 37.9946779,38 L8.00532213,38 L8.00532213,38 Z" id="iphone" stroke="#FFFFFF" stroke-width="2" sketch:type="MSShapeGroup"></path>
-		            <path d="M4,48 L40.0637642,48 M12,26 L115.490196,26 M4,107 L42.0131569,107" id="iphone-lines" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-		        </g>
-		    </g>
-		</svg>
-		
-		<h4>Prototypes</h4>
-		<p>View in the browser on desktop &amp; mobile</p>
-		</section>
-		</div> <!--inner-->
+				
+	
 	</figure>
 
-<div class="inner">
-<a name="overview"></a>
-
-<section id="overview">	
-	<p>Framer consists of two parts: Framer.js and Framer Generator. Framer.js is a <strong>JavaScript Framework</strong> that enables you to define interactions and animations in a simple, readable way.</p>
-
-	<p>Framer <strong>Generator</strong> is a desktop app that extracts layers out of Sketch or Photoshop files and exports them to a Framer project folder, where you can easily add interaction and animation to the layers.</p>
-</section>
-
-<hr> 
+	<hr class="big">
 
 {% filter markdown %}
 
 <!-- Install -->
 <!-- <a name="installation"></a> -->
 
-### Installation
+#### Installation
 To get started, <a href="/static/downloads/Framer.zip">download</a> Framer and unzip it. 
 
-Open <strong>index.html</strong> to view the default prototype and you'll see the logo bounce on a click. To add interactions and animations, start editing <strong>app.js</strong> (in your code-editor). Try it by adding a state to imageLayer:
+Open <strong>index.html</strong> to view the default prototype and you'll see the logo bounce on a click. To add interactions and animations, start editing <strong>app.js</strong> (in your code-editor). Try it by adding a state to the imageLayer:
 
 <pre><code data-language="coffeescript">fifth: { y:200, scale:0.8, rotationZ:200, blur:2 }</code></pre>
 
-The imageLayer will now move up, scale, rotate and blur on the fourth click. Framer works, congrats! Note: Framer runs best in WebKit, so please use Safari. Chrome works too, but has been rocky since they switched to Blink.
+The imageLayer will now move up, scale, rotate and blur on the fourth click. You've just added some interaction! Note: Framer runs best in WebKit, so please use Safari. Chrome works too, but has been rocky since they switched to Blink.
 
 <hr>
 
@@ -123,49 +88,26 @@ The imageLayer will now move up, scale, rotate and blur on the fourth click. Fra
 
 #### JavaScript
 
-Framer makes it easier to prototype animations and interactions, but you will benefit from understanding a bit of JavaScript. If you don't know JavaScript or are just beginning, don't worry. There are many great resources to get started. It's also good to know that JavaScript is worth learning apart from Framer, as you can do web, application, and backend development with it.
+If you don't know JavaScript or are just beginning, don't worry. There are many great resources to get started. JavaScript is worth learning on its own, as you can do web, application, and back-end development with it. <br> See <a href="http://www.codecademy.com/tracks/javascript/">Code Academy</a> and <a href="https://developer.mozilla.org/en-US/learn/javascript">Mozilla's Dev Center</a> to get started.
 
-<table class="last">
-		<tbody><tr>
-			<th width="170px">Site</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td><a href="http://www.codecademy.com/tracks/javascript/" target="_blank">Codecademy</a></td>
-			<td>Free high quality online JavaScript course</td>
-		</tr>
-		<tr>
-			<td><a href="https://developer.mozilla.org/en-US/learn/javascript" target="_blank">Mozilla Dev Center</a></td>
-			<td>Mozilla's resources to get started with JavaScript</td>
-		</tr>
-	</tbody>
-</table>
 
 <hr>
 
 <!-- Generator -->
 <a name="generator"></a>
-### Generator
-
-<img src="/static/images/icon-generator.png" class="2x" style="float:left; padding:8px 20px 0px 0">
-
-The Framer Generator.app takes static mockups from <a href="http://bohemiancoding.com/sketch/" target="_blank">Sketch</a> or <a href="http://www.adobe.com/products/photoshop.html" target="_blank">Photoshop</a> and turns them into ready-to-go Framer projects. From these apps, it extracts resources and folder hierarchy so you can start adding interactions and animations immediately.
-
+#### Generator
  
-With a Sketch or Photoshop file active, open Framer Generator and click <strong>Import</strong>. Only layer groups are imported; single layers are ignored. The hierarchy of your groups determine the layer hierarchy in Framer. After importing you will be presented with a folder containing your Framer project.
+With a Sketch or Photoshop file open, open Framer Generator and click <strong>Import</strong>. Only layer groups are imported; single layers are ignored. The hierarchy of your layer groups is respected.
 
-Open index.html to view the project, and start editing app.js to add behavior. You can safely move things around in Sketch or Photoshop and import again. Framer Generator will update the images and hierarchy, but leave your code safe.
+You can safely move things around in Sketch or Photoshop and re-import. Generator will update the images and any changes in hierarchy, but leave your code intact.
 
-The basics for converting Sketch and Photoshop files:
 <ul>
-	<li>Every layer group will become a Framer Layer, with an image of all the layers</li>
 	<li>By default your layers are imported under a myLayers object</li>
-	<li>Access any layer by its group name: myLayers.GroupName or myLayers["Group Name"]. For example, if you had a layer group named 'avatar' in Photoshop, you would access it in Framer with myLayers.avatar</li>
-	<li>Framer respects the group hierarchy, so a group in a group will become a subLayer</li>
-	<li>Groups with vector masks will become layers with clip enabled</li>
-	<li>Group names should be unique. If they're not, Framer will rename them on export</li>
+	<li>Access any layer by its group name: myLayers.GroupName.</li>
+	<li>Groups within groups will become subLayers.</li>
+	<li>Groups with vector masks will become layers with clip enabled.</li>
+	<li>Group names should be unique. If they're not, Framer will rename them.</li>
 </ul>
 
-</div> <!--inner-->
 {% endfilter %}	
 {% endblock content%}

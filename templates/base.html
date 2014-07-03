@@ -17,7 +17,7 @@
 
 </head>
 <body>
-	{% block framerjsheader %}{% endblock %}
+	
 	{% block sidebar %}
 	<header id="topbar"> <img class="2x" src="/static/images/menu-icon.png"></header>
 	
@@ -77,7 +77,7 @@
 		</nav>
 	</aside>
 	{% endblock sidebar %}
-	
+	{% block framerjsheader %}{% endblock %}
 	<section id="wrapper" {% block isindex %}{% endblock isindex %}>
 	{% block content %}
 	Main content
