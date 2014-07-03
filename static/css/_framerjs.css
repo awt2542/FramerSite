@@ -31,8 +31,7 @@ footer.global a.coinbase-button {
 
 #header.framerjs {
   background: #4DB4EC;
-  padding: 100px 0;
-  margin-bottom: 40px; }
+  padding: 100px 0; }
 
 #header.framerjs h1, #header.framerjs h2 {
   color: #fff; }
@@ -345,6 +344,15 @@ footer.global a.coinbase-button {
     font-size: 15px;
     max-width: 240px; } }
 @media only screen and (max-width: 580px) {
+  #header.framerjs {
+    padding: 60px 0; }
+
+  #header.framerjs h1 {
+    font-weight: 300; }
+
+  #header.framerjs h2 {
+    margin-bottom: 60px; }
+
   #features li {
     font-size: 13px;
     max-width: 180px; }
@@ -387,26 +395,8 @@ footer.global a.coinbase-button {
     display: inline-block;
     float: left; }
 
-  #line-block section.right {
-    display: none; }
-
-  #line-block section.mid {
-    margin: 0;
-    left: 0;
-    float: right; }
-
-  #line-block section {
-    max-width: 44%;
-    min-width: 172px; }
-
   #line-block p {
-    font-size: 15px; }
-
-  #line-block img.line-arrow.second {
-    display: none; }
-
-  #line-block img.line-arrow.first {
-    left: 50%; } }
+    font-size: 16px; } }
 /* ========================= 
 HEIGHT QUERIES 
 =========================== */
