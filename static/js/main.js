@@ -76,44 +76,44 @@ $(document).ready(retina);
 
 /* ========================= */
 
-// function isMobile() {
-// 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-// }
+function isMobile() {
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
 
-// function setupDownloadLink() {
+function setupDownloadLink() {
 
-// 	if (isMobile()) {
-// 		var mobileLink = "mailto:?subject=Check Out Framer Studio&body=Don't forget to check out Framer: http://framerjs.com"
-// 		$("a.downloadfs").attr("href", mobileLink);
+	if (isMobile()) {
+		var mobileLink = "mailto:?subject=Check Out Framer Studio&body=Don't forget to check out Framer: http://framerjs.com"
+		$("a.downloadfs").attr("href", mobileLink);
 
-// 	} else {
+	} else {
 
-// 		// var sparkleHost = "http://framerstudio-update.s3-website-us-east-1.amazonaws.com"
-// 		var sparkleHost = "http://studio.update.framerjs.com"
+		// var sparkleHost = "http://framerstudio-update.s3-website-us-east-1.amazonaws.com"
+		var sparkleHost = "http://studio.update.framerjs.com"
 
-// 		$.get(sparkleHost + "/latest.txt", function(result) {
+		$.get(sparkleHost + "/latest.txt", function(result) {
 			
-// 			var downloadLink = sparkleHost + "/" + result;
+			var downloadLink = sparkleHost + "/" + result;
 
-// 			$("a.downloadfs").click(function(event) {
+			$("a.downloadfs").click(function(event) {
 
-// 				event.preventDefault()
+				event.preventDefault()
 
-// 				ga('send', 'event', 'Download', 'Framer Studio', downloadLink);
+				ga('send', 'event', 'Download', 'Framer Studio', downloadLink);
 
-// 				setTimeout(function() {
-// 					window.location.href = downloadLink;
-// 				}, 500);
+				setTimeout(function() {
+					window.location.href = downloadLink;
+				}, 500);
 
-// 			});
-// 		});
+			});
+		});
 		
-// 	};
-// };
+	};
+};
 
-// $(document).ready(function() {
-// 	setupDownloadLink();
-// })
+$(document).ready(function() {
+	setupDownloadLink();
+})
 
 /* ========================= */
 	 
