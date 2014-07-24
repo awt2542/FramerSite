@@ -82,12 +82,29 @@ The imageLayer will now move up, scale, rotate and blur on the fourth click. You
 
 <hr>
 
-<!-- JavaScript -->
-<!-- <a name="javascript"></a> -->
-#### JavaScript
+<section id="code-block" class="clearfix">
+<div><iframe src="../static/example/codeblock/index.html"></iframe></div>
 
-If you don't know JavaScript or are just beginning, don't worry. There are many great resources to get started. JavaScript is worth learning on its own, as you can do web, application, and back-end development with it. <br> See <a href="http://www.codecademy.com/tracks/javascript/">Code Academy</a> and <a href="https://developer.mozilla.org/en-US/learn/javascript">Mozilla's Dev Center</a> to get started.
+<pre><code data-language="javascript"># Define the imageLayer
+Icon = new Layer x:0, y:0, width:128, height:128
+Icon.image = "images/icon.png"
+Icon.center()
 
+# Define states
+Icon.states.add
+	bounce: {scale: 0.8}
+	hue: {hueRotate: -20}
+	rotate: {rotationZ: 90}
+
+# Set the animation options
+Icon.states.animationOptions =
+	curve: "spring(600,18,0)"
+
+# On click, go to the next state
+Icon.on Events.Click, ->
+	Icon.states.next()
+</code></pre>
+</section>
 
 <hr>
 

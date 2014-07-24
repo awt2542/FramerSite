@@ -1,0 +1,90 @@
+/*@font-face {
+	font-family: 'Fakt Air';
+	src: url('framerjs.com/static/css/fonts/FaktPro-Air.eot');
+	src: url('framerjs.com/static/css/fonts/FaktPro-Air.eot?#iefix') format('embedded-opentype'),
+	     url('framerjs.com/static/css/fonts/FaktPro-Air.woff') format('woff'),
+	     url('framerjs.com/static/css/fonts/FaktPro-Air.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fakt Hair';
+	src: url('framerjs.com/static/css/fonts/FaktPro-Hair.eot');
+	src: url('framerjs.com/static/css/fonts/FaktPro-Hair.eot?#iefix') format('embedded-opentype'),
+	     url('http://static.tumblr.com/nlywmlg/mVPn97qi3/faktpro-hair.woff') format('woff'),
+	     url('framerjs.com/static/css/fonts/FaktPro-Hair.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}*/
+
+@font-face {
+	font-family: 'Fakt';
+	src: url('http://static.tumblr.com/nlywmlg/dPRn97z72/faktpro-thin.eot');
+	src: url('http://static.tumblr.com/nlywmlg/dPRn97z72/faktpro-thin.eot?#iefix') format('embedded-opentype'),
+	     url('http://static.tumblr.com/nlywmlg/jU2n97qim/faktpro-thin.woff') format('woff'),
+	     url('http://static.tumblr.com/nlywmlg/8o6n97z6r/faktpro-thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+/*
+@font-face {
+	font-family: 'Fakt';
+	src: url('framerjs.com/static/css/fonts/FaktPro-ThinItalic.eot');
+	src: url('framerjs.com/static/css/fonts/FaktPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+	     url('framerjs.com/static/css/fonts/FaktPro-ThinItalic.woff') format('woff'),
+	     url('framerjs.com/static/css/fonts/FaktPro-ThinItalic.ttf') format('truetype');
+	font-weight: 100;
+	font-style: italic;
+}*/
+
+@font-face {
+	font-family: 'Fakt';
+	src: url('http://static.tumblr.com/nlywmlg/3RWn97z7i/faktpro-light.eot');
+	src: url('http://static.tumblr.com/nlywmlg/3RWn97z7i/faktpro-light.eot?#iefix') format('embedded-opentype'),
+	     url('http://static.tumblr.com/nlywmlg/6K0n97q8q/faktpro-light.woff') format('woff'),
+	     url('http://static.tumblr.com/nlywmlg/pu4n97z7x/faktpro-light.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Fakt';
+	src: url('http://static.tumblr.com/nlywmlg/Nb2n97z88/faktpro-blond.eot');
+	src: url('http://static.tumblr.com/nlywmlg/Nb2n97z88/faktpro-blond.eot?#iefix') format('embedded-opentype'),
+	     url('http://static.tumblr.com/nlywmlg/vurn97qh6/faktpro-blond.woff') format('woff'),
+	     url('http://static.tumblr.com/nlywmlg/pEln97z8t/faktpro-blond.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fakt';
+	src: url('http://static.tumblr.com/nlywmlg/rUgn97z9h/faktpro-normal.eot');
+	src: url('http://static.tumblr.com/nlywmlg/rUgn97z9h/faktpro-normal.eot?#iefix') format('embedded-opentype'),
+	     url('http://static.tumblr.com/nlywmlg/I7Xn97z95/faktpro-normal.woff') format('woff'),
+	     url('http://static.tumblr.com/nlywmlg/ejIn97z9x/faktpro-normal.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fakt';
+	src: url('http://static.tumblr.com/nlywmlg/jbOn97za9/faktpro-medium.eot');
+	src: url('http://static.tumblr.com/nlywmlg/jbOn97za9/faktpro-medium.eot?#iefix') format('embedded-opentype'),
+	     url('http://static.tumblr.com/nlywmlg/Hhvn97zb2/faktpro-medium.woff') format('woff'),
+	     url('http://static.tumblr.com/nlywmlg/G96n97zal/faktpro-medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fakt';
+	src: url('framerjs.com/static/css/fonts/FaktPro-SemiBold.eot');
+	src: url('framerjs.com/static/css/fonts/FaktPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+	     url('http://static.tumblr.com/nlywmlg/Qtsn97qhq/faktpro-semibold.woff') format('woff'),
+	     url('framerjs.com/static/css/fonts/FaktPro-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
