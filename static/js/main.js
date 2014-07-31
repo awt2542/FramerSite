@@ -199,19 +199,19 @@ var framerCircleCurve = document.querySelector('#line-block .right svg path#circ
 var framerCircleMid = document.querySelector('#line-block .right svg path#circle-mid');
 var framerCurve = document.querySelector('#line-block .right svg path#curve');
 
-pathAnimate(generatorPath, 3000);
-pathAnimate(generatorCircle, 4000);
-pathAnimate(generatorCircleInner, 2000);
+pathAnimate(generatorPath, 2000);
+pathAnimate(generatorCircle, 3000);
+pathAnimate(generatorCircleInner, 1000);
 
 //pathAnimate(prototypesPath, 2000);
 //pathAnimate(prototypesPathiPhone, 2000);
 //pathAnimate(prototypesPathLines, 4000);
 
-pathAnimate(framerLineMid, 2000);
-pathAnimate(framerHandleCircle, 3000);
-pathAnimate(framerCircleMid, 3000);
-pathAnimate(framerCurve, 3400);
-pathAnimate(framerCircleCurve, 2000);
+pathAnimate(framerLineMid, 1000);
+pathAnimate(framerHandleCircle, 2000);
+pathAnimate(framerCircleMid, 2000);
+pathAnimate(framerCurve, 2400);
+pathAnimate(framerCircleCurve, 1000);
 
 
 

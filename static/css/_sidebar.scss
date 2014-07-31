@@ -26,10 +26,10 @@
 	margin-bottom: 35px;
 }
 
-#sidebar ul#examples {
+#sidebar ul#examples, #sidebar ul#community {
 	margin-bottom: 0;
 }
-#sidebar ul#examples span, #sidebar ul#community span {
+#sidebar ul#examples span, #sidebar ul#community span, #sidebar ul#blog span {
 	font-weight:600; margin-left:6px; font-size: 13px;
 	position:relative; display:inline-block; top:1px;
 }

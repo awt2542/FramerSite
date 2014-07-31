@@ -7,16 +7,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+*/
 @font-face {
 	font-family: 'Fakt Hair';
-	src: url('framerjs.com/static/css/fonts/FaktPro-Hair.eot');
-	src: url('framerjs.com/static/css/fonts/FaktPro-Hair.eot?#iefix') format('embedded-opentype'),
+	src: url('http://static.tumblr.com/nlywmlg/wVtn9iqlc/faktpro-hair.eot');
+	src: url('http://static.tumblr.com/nlywmlg/wVtn9iqlc/faktpro-hair.eot?#iefix') format('embedded-opentype'),
 	     url('http://static.tumblr.com/nlywmlg/mVPn97qi3/faktpro-hair.woff') format('woff'),
-	     url('framerjs.com/static/css/fonts/FaktPro-Hair.ttf') format('truetype');
+	     url('http://static.tumblr.com/nlywmlg/wG0n9iqm3/faktpro-hair.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
-}*/
+}
 
 @font-face {
 	font-family: 'Fakt';
